@@ -1,7 +1,15 @@
 source,url,type
-CNIL,https://www.cnil.fr/fr/rss.xml,PDP
-NOYB,https://noyb.eu/fr/rss.xml,PDP
-ANSSI CERT-FR,https://www.cert.ssi.gouv.fr/feed/,CYBER
-INPI,https://www.inpi.fr/fr/rss.xml,PI
 Légifrance JORF,https://www.legifrance.gouv.fr/rss/jorf.xml,AUTO
 Village de la Justice,https://smtp.legiteam.net/newsletters/index.php?action=archive&nl=1&rss=1,INSTITUTIONNEL
+Cour de cassation,https://www.courdecassation.fr/rss.xml,INSTITUTIONNEL
+Sénat - Textes récents,https://www.senat.fr/dossiers-legislatifs/textes-recents.rss,INSTITUTIONNEL
+EUR-Lex Actualités,https://eur-lex.europa.eu/EN/display-news.rss,INSTITUTIONNEL
+CNIL,https://www.cnil.fr/fr/rss.xml,PDP
+NOYB,https://noyb.eu/fr/rss.xml,PDP
+EDPB (Comité Européen Data),https://edpb.europa.eu/news/news/rss.xml,PDP
+ANSSI (CERT-FR),https://www.cert.ssi.gouv.fr/feed/,CYBER
+Cybermalveillance.gouv.fr,https://www.cybermalveillance.gouv.fr/feed,CYBER
+INPI,https://www.inpi.fr/fr/rss.xml,PI
+Transparency International,https://www.transparency.org/en/news/rss,ANTICOR
+AFA (Anticorruption),https://www.agence-francaise-anticorruption.gouv.fr/fr/rss.xml,ANTICOR
+Cosmetics Business,https://www.cosmeticsbusiness.com/rss,COSMETIQUE
