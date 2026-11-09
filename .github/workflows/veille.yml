@@ -1,0 +1,41 @@
+name: Veille Juridique Quotidienne
+
+on:
+  schedule:
+    # 06:30 UTC = 07:30 (heure d'hiver) ou 08:30 (heure d'été) du lundi au vendredi
+    - cron: '30 6 * * 1-5'
+  workflow_dispatch: # Permet de lancer le script manuellement avec un bouton
+
+permissions:
+  contents: write # Nécessaire pour sauvegarder l'historique de dédoublonnage
+
+jobs:
+  run-veille:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Exécuter la veille
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+        run: python main.py
+
+      - name: Sauvegarder la mémoire des articles traités
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add veille_history.db
+          git commit -m "Auto: màj historique veille [skip ci]" || echo "Aucun nouvel article à enregistrer"
+          git push
