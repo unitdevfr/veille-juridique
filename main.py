@@ -10,7 +10,7 @@ import feedparser
 import requests
 
 # Secrets injectés via GitHub Actions
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = (os.getenv("GEMINI_API_KEY") or "").strip()
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECIPIENT = os.getenv("EMAIL_RECIPIENT")
@@ -88,9 +88,10 @@ def load_sources():
 # ==========================================
 
 def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
-    """Détermine la catégorie (si AUTO) et génère un résumé en 2-3 phrases."""
+    """Détermine la catégorie et génère un résumé en 2-3 phrases."""
     if not GEMINI_API_KEY:
-        return default_category if default_category != "AUTO" else "AUTRE", ""
+        print(f"⚠️ [Gemini] Clé API absente. Impossible de résumer : {title[:30]}...")
+        return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
     headers = {"Content-Type": "application/json"}
@@ -100,10 +101,10 @@ Titre : {title}
 Extrait du flux : {summary_raw[:500]}
 
 Tâches :
-1. Catégorie : Choisis STRICTEMENT une catégorie parmi : PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
-2. Résumé : Rédige une synthèse claire et synthétique de 2 à 3 phrases maximum expliquant l'enjeu juridique, l'impact concret ou l'action requise.
+1. Catégorie : Choisis STRICTEMENT parmi : PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
+2. Résumé : Rédige une synthèse claire de 2 à 3 phrases maximum expliquant l'enjeu juridique ou l'action requise.
 
-Format de réponse obligatoire (respecte scrupuleusement les balises) :
+Format obligatoire :
 CATEGORIE: <CODE>
 RESUME: <Ton résumé synthétique>"""
 
@@ -113,11 +114,11 @@ RESUME: <Ton résumé synthétique>"""
     }
 
     try:
-        res = requests.post(endpoint, json=payload, headers=headers, timeout=12)
+        res = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+        
         if res.status_code == 200:
             content = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
             
-            # Extraction de la catégorie
             category = default_category
             if default_category == "AUTO":
                 for cat in CATEGORY_LABELS.keys():
@@ -127,15 +128,17 @@ RESUME: <Ton résumé synthétique>"""
                 if category == "AUTO":
                     category = "AUTRE"
 
-            # Extraction du résumé
             if "RESUME:" in content:
                 ai_summary = content.split("RESUME:", 1)[1].strip()
             else:
                 ai_summary = content
 
             return category, ai_summary
+        else:
+            print(f"❌ [Erreur Gemini {res.status_code}] : {res.text}")
+            
     except Exception as e:
-        print(f"Erreur API Gemini : {e}")
+        print(f"❌ [Exception Gemini] : {e}")
 
     return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
