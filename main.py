@@ -88,21 +88,19 @@ def load_sources():
 # ==========================================
 
 def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
-    """Détermine la catégorie et génère un résumé en 2-3 phrases."""
+    """Détermine la catégorie et génère un résumé en 2-3 phrases via l'API Gemini."""
     if not GEMINI_API_KEY:
-        print(f"⚠️ [Gemini] Clé API absente. Impossible de résumer : {title[:30]}...")
+        print(f"⚠️ [Gemini] Clé API absente. Impossible d'analyser : {title[:30]}...")
         return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
-    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
     headers = {"Content-Type": "application/json"}
-    
     prompt = f"""Tu es un analyste juridique expert. Analyse cet article :
 Titre : {title}
 Extrait du flux : {summary_raw[:500]}
 
 Tâches :
 1. Catégorie : Choisis STRICTEMENT parmi : PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
-2. Résumé : Rédige une synthèse claire de 2 à 3 phrases maximum expliquant l'enjeu juridique ou l'action requise.
+2. Résumé : Rédige une synthèse claire de 2 à 3 phrases maximum expliquant l'enjeu juridique, l'impact ou l'action requise.
 
 Format obligatoire :
 CATEGORIE: <CODE>
@@ -110,35 +108,39 @@ RESUME: <Ton résumé synthétique>"""
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 200}
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 250}
     }
 
-    try:
-        res = requests.post(endpoint, json=payload, headers=headers, timeout=15)
-        
-        if res.status_code == 200:
-            content = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-            
-            category = default_category
-            if default_category == "AUTO":
-                for cat in CATEGORY_LABELS.keys():
-                    if f"CATEGORIE: {cat}" in content.upper() or cat in content.split("\n")[0].upper():
-                        category = cat
-                        break
-                if category == "AUTO":
-                    category = "AUTRE"
+    # Liste des modèles récents avec repli automatique
+    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
 
-            if "RESUME:" in content:
-                ai_summary = content.split("RESUME:", 1)[1].strip()
-            else:
-                ai_summary = content
+    for model_name in models_to_try:
+        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+        try:
+            res = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+            if res.status_code == 200:
+                content = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+                
+                category = default_category
+                if default_category == "AUTO":
+                    for cat in CATEGORY_LABELS.keys():
+                        if f"CATEGORIE: {cat}" in content.upper() or cat in content.split("\n")[0].upper():
+                            category = cat
+                            break
+                    if category == "AUTO":
+                        category = "AUTRE"
 
-            return category, ai_summary
-        else:
-            print(f"❌ [Erreur Gemini {res.status_code}] : {res.text}")
-            
-    except Exception as e:
-        print(f"❌ [Exception Gemini] : {e}")
+                if "RESUME:" in content:
+                    ai_summary = content.split("RESUME:", 1)[1].strip()
+                else:
+                    ai_summary = content
+
+                return category, ai_summary
+            elif res.status_code != 404:
+                print(f"❌ [Erreur Gemini {res.status_code} sur {model_name}] : {res.text}")
+                break
+        except Exception as e:
+            print(f"❌ [Exception Gemini sur {model_name}] : {e}")
 
     return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
