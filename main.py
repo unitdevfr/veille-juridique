@@ -2,18 +2,19 @@ import csv
 import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import json
 import os
+import re
 import smtplib
 import sqlite3
 import time
 import feedparser
 import requests
 
-# Secrets injectés via GitHub Actions
 GEMINI_API_KEY = (os.getenv("GEMINI_API_KEY") or "").strip()
-EMAIL_SENDER = os.getenv("EMAIL_SENDER")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
-EMAIL_RECIPIENT = os.getenv("EMAIL_RECIPIENT")
+EMAIL_SENDER = (os.getenv("EMAIL_SENDER") or "").strip()
+EMAIL_PASSWORD = (os.getenv("EMAIL_PASSWORD") or "").strip()
+EMAIL_RECIPIENT = (os.getenv("EMAIL_RECIPIENT") or "").strip()
 
 DB_PATH = "veille_history.db"
 
@@ -27,8 +28,49 @@ CATEGORY_LABELS = {
     "AUTRE": "📌 Autres sujets"
 }
 
+ACTIVE_GEMINI_ENDPOINT = None
+
 # ==========================================
-# 1. GESTION DU DÉDOUBLONNAGE (SQLITE)
+# 1. TEST ET SELECTION DU MODELE GEMINI
+# ==========================================
+
+def init_gemini_endpoint():
+    """Teste gemini-3.5 en priorité puis bascule sur les versions stables."""
+    if not GEMINI_API_KEY:
+        print("⚠️ GEMINI_API_KEY absente.")
+        return None
+
+    candidates = [
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5:generateContent",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+        "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent"
+    ]
+
+    test_payload = {
+        "contents": [{"parts": [{"text": "ping"}]}],
+        "generationConfig": {"maxOutputTokens": 5}
+    }
+
+    for base_url in candidates:
+        url = f"{base_url}?key={GEMINI_API_KEY}"
+        model_name = base_url.split("/models/")[1].split(":")[0]
+        try:
+            res = requests.post(url, json=test_payload, headers={"Content-Type": "application/json"}, timeout=8)
+            if res.status_code == 200:
+                print(f"✅ Modèle Gemini opérationnel retenu : {model_name}")
+                return url
+            else:
+                print(f"ℹ️ {model_name} non disponible (HTTP {res.status_code})")
+        except Exception as e:
+            print(f"ℹ️ Erreur contact {model_name} : {e}")
+
+    print("❌ Aucun endpoint Gemini n'a validé le test.")
+    return None
+
+# ==========================================
+# 2. DEDOUBLONNAGE PERSISTANT (SQLITE)
 # ==========================================
 
 def init_db():
@@ -64,7 +106,7 @@ def mark_article_seen(link, title, published_date):
     conn.close()
 
 # ==========================================
-# 2. CHARGEMENT DES SOURCES CSV
+# 3. LECTURE DU FICHIER SOURCES CSV
 # ==========================================
 
 def load_sources():
@@ -84,68 +126,64 @@ def load_sources():
     return sources
 
 # ==========================================
-# 3. ANALYSE ET RÉSUMÉ PAR GEMINI
+# 4. ANALYSE ET SYNTHESE EN JSON
 # ==========================================
 
 def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
-    """Détermine la catégorie et génère un résumé en 2-3 phrases via l'API Gemini."""
-    if not GEMINI_API_KEY:
-        print(f"⚠️ [Gemini] Clé API absente. Impossible d'analyser : {title[:30]}...")
+    """Génère la catégorie et le résumé sous forme de JSON structuré."""
+    if not ACTIVE_GEMINI_ENDPOINT:
         return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
     headers = {"Content-Type": "application/json"}
-    prompt = f"""Tu es un analyste juridique expert. Analyse cet article :
+    prompt = f"""Tu es un analyste juridique expert. Pour l'article suivant :
 Titre : {title}
-Extrait du flux : {summary_raw[:500]}
+Extrait : {summary_raw[:500]}
 
-Tâches :
-1. Catégorie : Choisis STRICTEMENT parmi : PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
-2. Résumé : Rédige une synthèse claire de 2 à 3 phrases maximum expliquant l'enjeu juridique, l'impact ou l'action requise.
+Génère une réponse au format JSON strict avec exactement ces deux clés :
+- "categorie" : une seule valeur parmi PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE
+- "resume" : une synthèse claire de 2 à 3 phrases expliquant l'enjeu juridique, l'impact direct ou l'action requise.
 
-Format obligatoire :
-CATEGORIE: <CODE>
-RESUME: <Ton résumé synthétique>"""
+Réponds UNIQUEMENT le bloc JSON brut, sans backticks markdown."""
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 250}
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 350
+        }
     }
 
-    # Liste des modèles récents avec repli automatique
-    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
-
-    for model_name in models_to_try:
-        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
-        try:
-            res = requests.post(endpoint, json=payload, headers=headers, timeout=15)
-            if res.status_code == 200:
-                content = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+    try:
+        res = requests.post(ACTIVE_GEMINI_ENDPOINT, json=payload, headers=headers, timeout=15)
+        if res.status_code == 200:
+            raw_text = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            
+            # Nettoyage des balises markdown si l'IA en ajoute
+            clean_json_str = re.sub(r"^```json\s*|^```\s*|```$", "", raw_text, flags=re.MULTILINE).strip()
+            
+            try:
+                data = json.loads(clean_json_str)
+                category = data.get("categorie", default_category).strip().upper()
+                if category not in CATEGORY_LABELS:
+                    category = default_category if default_category != "AUTO" else "AUTRE"
                 
-                category = default_category
-                if default_category == "AUTO":
-                    for cat in CATEGORY_LABELS.keys():
-                        if f"CATEGORIE: {cat}" in content.upper() or cat in content.split("\n")[0].upper():
-                            category = cat
-                            break
-                    if category == "AUTO":
-                        category = "AUTRE"
-
-                if "RESUME:" in content:
-                    ai_summary = content.split("RESUME:", 1)[1].strip()
-                else:
-                    ai_summary = content
-
-                return category, ai_summary
-            elif res.status_code != 404:
-                print(f"❌ [Erreur Gemini {res.status_code} sur {model_name}] : {res.text}")
-                break
-        except Exception as e:
-            print(f"❌ [Exception Gemini sur {model_name}] : {e}")
+                ai_summary = data.get("resume", "").strip()
+                if ai_summary:
+                    print(f"   ↳ Résumé généré ({len(ai_summary)} car.)")
+                    return category, ai_summary
+            except Exception:
+                # Repli en cas de texte non JSON
+                print("   ⚠️ Réponse non JSON, extraction brute...")
+                return (default_category if default_category != "AUTO" else "AUTRE"), clean_json_str[:300]
+        else:
+            print(f"❌ [Gemini HTTP {res.status_code}] : {res.text[:140]}")
+    except Exception as e:
+        print(f"❌ [Exception Gemini] : {e}")
 
     return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
 # ==========================================
-# 4. RÉCUPÉRATION ET TRAITEMENT DES FLUX
+# 5. SCRUTAGE DES FLUX & LIMITATION DE DEBIT
 # ==========================================
 
 def fetch_new_articles():
@@ -158,7 +196,6 @@ def fetch_new_articles():
         try:
             feed = feedparser.parse(s["url"])
             
-            # Parcours sans limite artificielle de quantité
             for entry in feed.entries:
                 link = getattr(entry, "link", None)
                 title = getattr(entry, "title", "Sans titre").strip()
@@ -168,7 +205,6 @@ def fetch_new_articles():
                 if not link or is_article_seen(link):
                     continue
 
-                # Filtrage 48h si la date de publication est normalisée
                 parsed_time = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
                 if parsed_time:
                     try:
@@ -179,12 +215,14 @@ def fetch_new_articles():
                     except Exception:
                         pass
 
-                # Analyse Gemini (catégorisation + synthèse de 2-3 phrases)
                 category, ai_summary = analyze_with_gemini(
                     title=title, 
                     summary_raw=summary_raw, 
                     default_category=s["type"]
                 )
+
+                # Temporisation pour éviter le rate-limiting HTTP 429
+                time.sleep(1.2)
 
                 new_articles.append({
                     "title": title,
@@ -202,7 +240,7 @@ def fetch_new_articles():
     return new_articles
 
 # ==========================================
-# 5. CONSTRUCTION DE L'EMAIL HTML ÉPURÉ
+# 6. GABARIT HTML DE L'EMAIL
 # ==========================================
 
 def build_html_digest(articles):
@@ -238,13 +276,13 @@ def build_html_digest(articles):
                 summary_block = ""
                 if art.get("summary"):
                     summary_block = f"""
-                    <p style="margin: 6px 0 0 0; font-size: 13px; color: #475569; line-height: 1.5; background-color: #f8fafc; padding: 8px 10px; border-radius: 4px; border: 1px solid #f1f5f9;">
+                    <div style="margin-top: 8px; font-size: 13px; color: #334155; line-height: 1.5; background-color: #f1f5f9; padding: 10px 12px; border-radius: 4px; border-left: 3px solid #3b82f6;">
                       {art['summary']}
-                    </p>
+                    </div>
                     """
 
                 html += f"""
-                <div style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+                <div style="padding: 14px 0; border-bottom: 1px solid #f1f5f9;">
                   <div>
                     <a href="{art['link']}" target="_blank" style="color: #1d4ed8; text-decoration: none; font-weight: 600; font-size: 14px; line-height: 1.3;">
                       {art['title']}
@@ -258,7 +296,7 @@ def build_html_digest(articles):
 
     html += """
         <p style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 14px;">
-          Pipeline de veille automatisé • GitHub Actions & Gemini Flash
+          Pipeline de veille automatisé • GitHub Actions & Gemini
         </p>
       </div>
     </body></html>
@@ -266,7 +304,7 @@ def build_html_digest(articles):
     return html
 
 # ==========================================
-# 6. ENVOI DE L'EMAIL MULTI-DESTINATAIRES
+# 7. EXPEDITION SMTP MULTI-DESTINATAIRES
 # ==========================================
 
 def send_email(subject, html_content):
@@ -274,13 +312,9 @@ def send_email(subject, html_content):
         print("Aucun destinataire configuré.")
         return
 
-    # Nettoyage et découpage de la liste des destinataires
-    recipients = [
-        email.strip() 
-        for email in EMAIL_RECIPIENT.replace("\n", "").replace("\r", "").split(",") 
-        if email.strip()
-    ]
-    
+    raw_recipients = EMAIL_RECIPIENT.replace("\r", "").replace("\n", "").split(",")
+    recipients = [email.strip() for email in raw_recipients if email.strip()]
+
     if not recipients:
         print("Liste de destinataires vide après nettoyage.")
         return
@@ -293,15 +327,17 @@ def send_email(subject, html_content):
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(EMAIL_SENDER, EMAIL_PASSWORD)
-        # On passe obligatoirement la liste 'recipients' à sendmail
         server.sendmail(EMAIL_SENDER, recipients, msg.as_string())
 
 # ==========================================
-# POINT D'ENTRÉE PRINCIPAL
+# POINT D'ENTREE
 # ==========================================
 
 def main():
+    global ACTIVE_GEMINI_ENDPOINT
     init_db()
+    ACTIVE_GEMINI_ENDPOINT = init_gemini_endpoint()
+    
     articles = fetch_new_articles()
     if not articles:
         print("Aucun nouvel article pertinent aujourd'hui. Fin.")
