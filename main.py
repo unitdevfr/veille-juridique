@@ -9,7 +9,7 @@ import time
 import feedparser
 import requests
 
-# Secrets injectés via les variables d'environnement GitHub Actions
+# Secrets injectés via GitHub Actions
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
@@ -84,50 +84,68 @@ def load_sources():
     return sources
 
 # ==========================================
-# 3. TYPAGE AUTOMATIQUE PAR GEMINI
+# 3. ANALYSE ET RÉSUMÉ PAR GEMINI
 # ==========================================
 
-def classify_with_gemini(title, summary=""):
+def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
+    """Détermine la catégorie (si AUTO) et génère un résumé en 2-3 phrases."""
     if not GEMINI_API_KEY:
-        return "AUTRE"
+        return default_category if default_category != "AUTO" else "AUTRE", ""
 
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
     headers = {"Content-Type": "application/json"}
     
-    prompt = f"""Tu es un assistant de veille juridique. Classe ce titre dans UNE SEULE de ces catégories strictes :
-PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
-
+    prompt = f"""Tu es un analyste juridique expert. Analyse cet article :
 Titre : {title}
-Extrait : {summary[:200]}
+Extrait du flux : {summary_raw[:500]}
 
-Réponds uniquement avec le code de la catégorie en majuscules (ex: PDP). Rien d'autre."""
+Tâches :
+1. Catégorie : Choisis STRICTEMENT une catégorie parmi : PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE.
+2. Résumé : Rédige une synthèse claire et synthétique de 2 à 3 phrases maximum expliquant l'enjeu juridique, l'impact concret ou l'action requise.
+
+Format de réponse obligatoire (respecte scrupuleusement les balises) :
+CATEGORIE: <CODE>
+RESUME: <Ton résumé synthétique>"""
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.0, "maxOutputTokens": 10}
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 200}
     }
 
     try:
-        res = requests.post(endpoint, json=payload, headers=headers, timeout=10)
+        res = requests.post(endpoint, json=payload, headers=headers, timeout=12)
         if res.status_code == 200:
-            result = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-            for cat in CATEGORY_LABELS.keys():
-                if cat in result.upper():
-                    return cat
-        return "AUTRE"
+            content = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            
+            # Extraction de la catégorie
+            category = default_category
+            if default_category == "AUTO":
+                for cat in CATEGORY_LABELS.keys():
+                    if f"CATEGORIE: {cat}" in content.upper() or cat in content.split("\n")[0].upper():
+                        category = cat
+                        break
+                if category == "AUTO":
+                    category = "AUTRE"
+
+            # Extraction du résumé
+            if "RESUME:" in content:
+                ai_summary = content.split("RESUME:", 1)[1].strip()
+            else:
+                ai_summary = content
+
+            return category, ai_summary
     except Exception as e:
-        print(f"Erreur classification Gemini : {e}")
-        return "AUTRE"
+        print(f"Erreur API Gemini : {e}")
+
+    return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
 # ==========================================
-# 4. RÉCUPÉRATION ET FILTRAGE DES FLUX
+# 4. RÉCUPÉRATION ET TRAITEMENT DES FLUX
 # ==========================================
 
 def fetch_new_articles():
     sources = load_sources()
     new_articles = []
-    
-    # Garde-fou temporel : ignorer tout ce qui a plus de 48 heures
     cutoff_time = time.time() - (48 * 3600)
     
     for s in sources:
@@ -135,17 +153,16 @@ def fetch_new_articles():
         try:
             feed = feedparser.parse(s["url"])
             
-            # Parcours de l'intégralité des articles du flux sans limite de volume
             for entry in feed.entries:
                 link = getattr(entry, "link", None)
                 title = getattr(entry, "title", "Sans titre").strip()
-                summary = getattr(entry, "summary", "")
+                summary_raw = getattr(entry, "summary", "")
                 pub_date = getattr(entry, "published", str(datetime.date.today()))
 
                 if not link or is_article_seen(link):
                     continue
 
-                # Filtrage temporel si la date est standardisée
+                # Filtrage 48h si format de date standard disponible
                 parsed_time = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
                 if parsed_time:
                     try:
@@ -156,14 +173,19 @@ def fetch_new_articles():
                     except Exception:
                         pass
 
-                # Attribution de catégorie (manuelle ou via IA)
-                category = classify_with_gemini(title, summary) if s["type"] == "AUTO" else s["type"]
+                # Analyse Gemini (catégorisation + résumé court)
+                category, ai_summary = analyze_with_gemini(
+                    title=title, 
+                    summary_raw=summary_raw, 
+                    default_category=s["type"]
+                )
 
                 new_articles.append({
                     "title": title,
                     "link": link,
                     "source": s["source"],
                     "category": category,
+                    "summary": ai_summary,
                     "pub_date": pub_date
                 })
                 mark_article_seen(link, title, pub_date)
@@ -174,7 +196,7 @@ def fetch_new_articles():
     return new_articles
 
 # ==========================================
-# 5. CONSTRUCTION DU GABARIT HTML
+# 5. CONSTRUCTION DE L'EMAIL HTML ÉPURÉ
 # ==========================================
 
 def build_html_digest(articles):
@@ -187,53 +209,78 @@ def build_html_digest(articles):
     <!DOCTYPE html>
     <html>
     <head><meta charset="utf-8"></head>
-    <body style="font-family: Arial, sans-serif; background-color: #f7fafc; padding: 20px; color: #2d3748;">
-      <div style="max-width: 650px; margin: auto; background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
-        <h2 style="color: #1a365d; border-bottom: 2px solid #3182ce; padding-bottom: 8px; margin-top: 0;">Veille Juridique Quotidienne</h2>
-        <p style="font-size: 13px; color: #718096;">{date_str} — <strong>{len(articles)}</strong> nouvelle(s) publication(s)</p>
+    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; padding: 24px; color: #1e293b; margin: 0;">
+      <div style="max-width: 680px; margin: auto; background: #ffffff; padding: 28px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        
+        <h2 style="color: #0f172a; margin: 0 0 6px 0; font-size: 20px;">Veille Réglementaire & Juridique</h2>
+        <p style="font-size: 13px; color: #64748b; margin: 0 0 24px 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
+          {date_str} — <strong>{len(articles)}</strong> publication(s) retenue(s)
+        </p>
     """
 
     for cat_key, cat_label in CATEGORY_LABELS.items():
         if cat_key in grouped:
             arts = grouped[cat_key]
             html += f"""
-            <div style="margin-top: 20px;">
-              <div style="background-color: #ebf8ff; color: #2b6cb0; font-weight: bold; font-size: 14px; padding: 6px 10px; border-left: 4px solid #3182ce;">
+            <div style="margin-top: 26px;">
+              <div style="background-color: #f1f5f9; color: #0f172a; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 12px; border-left: 4px solid #2563eb; border-radius: 2px;">
                 {cat_label} ({len(arts)})
               </div>
-              <ul style="padding-left: 20px; margin: 10px 0;">
+              <div style="margin-top: 10px;">
             """
             for art in arts:
+                summary_block = ""
+                if art.get("summary"):
+                    summary_block = f"""
+                    <p style="margin: 6px 0 0 0; font-size: 13px; color: #475569; line-height: 1.5; background-color: #f8fafc; padding: 8px 10px; border-radius: 4px; border: 1px solid #f1f5f9;">
+                      {art['summary']}
+                    </p>
+                    """
+
                 html += f"""
-                <li style="margin-bottom: 8px;">
-                  <a href="{art['link']}" target="_blank" style="color: #2b6cb0; text-decoration: none; font-weight: bold;">{art['title']}</a>
-                  <span style="font-size: 12px; color: #a0aec0;"> — {art['source']}</span>
-                </li>
+                <div style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+                  <div>
+                    <a href="{art['link']}" target="_blank" style="color: #1d4ed8; text-decoration: none; font-weight: 600; font-size: 14px; line-height: 1.3;">
+                      {art['title']}
+                    </a>
+                    <span style="font-size: 11px; color: #94a3b8; margin-left: 6px;">({art['source']})</span>
+                  </div>
+                  {summary_block}
+                </div>
                 """
-            html += "</ul></div>"
+            html += "</div></div>"
 
     html += """
-        <hr style="border: none; border-top: 1px solid #edf2f7; margin-top: 25px;" />
-        <p style="font-size: 11px; color: #a0aec0; text-align: center;">Système automatisé de veille - GitHub Actions</p>
+        <p style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 14px;">
+          Pipeline de veille automatisé • GitHub Actions & Gemini Flash
+        </p>
       </div>
     </body></html>
     """
     return html
 
 # ==========================================
-# 6. EXPÉDITION DE L'EMAIL (SMTP GMAIL)
+# 6. ENVOI DE L'EMAIL MULTI-DESTINATAIRES
 # ==========================================
 
 def send_email(subject, html_content):
+    if not EMAIL_RECIPIENT:
+        print("Aucun destinataire configuré.")
+        return
+
+    recipients = [email.strip() for email in EMAIL_RECIPIENT.split(",") if email.strip()]
+    if not recipients:
+        return
+
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = EMAIL_SENDER
-    msg["To"] = EMAIL_RECIPIENT
+    msg["To"] = ", ".join(recipients)
     msg.attach(MIMEText(html_content, "html", "utf-8"))
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(EMAIL_SENDER, EMAIL_PASSWORD)
-        server.sendmail(EMAIL_SENDER, EMAIL_RECIPIENT, msg.as_string())
+        server.sendmail(EMAIL_SENDER, recipients, msg.as_string())
 
 # ==========================================
 # POINT D'ENTRÉE
