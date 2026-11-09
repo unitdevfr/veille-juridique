@@ -4,10 +4,10 @@ on:
   schedule:
     # 06:30 UTC = 07:30 (heure d'hiver) ou 08:30 (heure d'été) du lundi au vendredi
     - cron: '30 6 * * 1-5'
-  workflow_dispatch: # Permet de lancer le script manuellement avec un bouton
+  workflow_dispatch:
 
 permissions:
-  contents: write # Nécessaire pour sauvegarder l'historique de dédoublonnage
+  contents: write
 
 jobs:
   run-veille:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Récupérer le code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -38,4 +40,5 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add veille_history.db
           git commit -m "Auto: màj historique veille [skip ci]" || echo "Aucun nouvel article à enregistrer"
-          git push
+          git pull --rebase origin main
+          git push origin main
