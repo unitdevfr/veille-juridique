@@ -1,0 +1,7 @@
+source,url,type
+CNIL,https://www.cnil.fr/fr/rss.xml,PDP
+NOYB,https://noyb.eu/fr/rss.xml,PDP
+ANSSI CERT-FR,https://www.cert.ssi.gouv.fr/feed/,CYBER
+INPI,https://www.inpi.fr/fr/rss.xml,PI
+Légifrance JORF,https://www.legifrance.gouv.fr/rss/jorf.xml,AUTO
+Village de la Justice,https://smtp.legiteam.net/newsletters/index.php?action=archive&nl=1&rss=1,INSTITUTIONNEL
