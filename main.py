@@ -153,6 +153,7 @@ def fetch_new_articles():
         try:
             feed = feedparser.parse(s["url"])
             
+            # Parcours sans limite artificielle de quantité
             for entry in feed.entries:
                 link = getattr(entry, "link", None)
                 title = getattr(entry, "title", "Sans titre").strip()
@@ -162,7 +163,7 @@ def fetch_new_articles():
                 if not link or is_article_seen(link):
                     continue
 
-                # Filtrage 48h si format de date standard disponible
+                # Filtrage 48h si la date de publication est normalisée
                 parsed_time = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
                 if parsed_time:
                     try:
@@ -173,7 +174,7 @@ def fetch_new_articles():
                     except Exception:
                         pass
 
-                # Analyse Gemini (catégorisation + résumé court)
+                # Analyse Gemini (catégorisation + synthèse de 2-3 phrases)
                 category, ai_summary = analyze_with_gemini(
                     title=title, 
                     summary_raw=summary_raw, 
@@ -268,8 +269,15 @@ def send_email(subject, html_content):
         print("Aucun destinataire configuré.")
         return
 
-    recipients = [email.strip() for email in EMAIL_RECIPIENT.split(",") if email.strip()]
+    # Nettoyage et découpage de la liste des destinataires
+    recipients = [
+        email.strip() 
+        for email in EMAIL_RECIPIENT.replace("\n", "").replace("\r", "").split(",") 
+        if email.strip()
+    ]
+    
     if not recipients:
+        print("Liste de destinataires vide après nettoyage.")
         return
 
     msg = MIMEMultipart("alternative")
@@ -280,10 +288,11 @@ def send_email(subject, html_content):
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(EMAIL_SENDER, EMAIL_PASSWORD)
+        # On passe obligatoirement la liste 'recipients' à sendmail
         server.sendmail(EMAIL_SENDER, recipients, msg.as_string())
 
 # ==========================================
-# POINT D'ENTRÉE
+# POINT D'ENTRÉE PRINCIPAL
 # ==========================================
 
 def main():
