@@ -31,46 +31,70 @@ CATEGORY_LABELS = {
 ACTIVE_GEMINI_ENDPOINT = None
 
 # ==========================================
-# 1. TEST ET SELECTION DU MODELE GEMINI
+# 1. DÉTECTION OFFICIELLE DES MODÈLES ACTIFS
 # ==========================================
 
 def init_gemini_endpoint():
-    """Teste gemini-3.5 en priorité puis bascule sur les versions stables."""
+    """Interroge Google ListModels pour récupérer et activer le modèle disponible."""
     if not GEMINI_API_KEY:
         print("⚠️ GEMINI_API_KEY absente.")
         return None
 
-    candidates = [
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5:generateContent",
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
-        "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent"
+    list_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
+    try:
+        res = requests.get(list_url, timeout=12)
+        if res.status_code == 200:
+            models_data = res.json().get("models", [])
+            
+            # Filtre les modèles compatibles avec la génération de texte
+            compatible = [
+                m["name"] for m in models_data 
+                if "generateContent" in m.get("supportedGenerationMethods", [])
+            ]
+            
+            print(f"📋 Modèles disponibles sur votre clé Google : {compatible}")
+
+            # Priorité aux modèles Flash récents, sinon le premier modèle compatible
+            flash_models = [m for m in compatible if "flash" in m.lower()]
+            chosen = flash_models[0] if flash_models else (compatible[0] if compatible else None)
+
+            if chosen:
+                endpoint = f"https://generativelanguage.googleapis.com/v1beta/{chosen}:generateContent?key={GEMINI_API_KEY}"
+                print(f"✅ Modèle Gemini sélectionné : {chosen}")
+                return endpoint
+        else:
+            print(f"❌ Erreur ListModels ({res.status_code}) : {res.text}")
+    except Exception as e:
+        print(f"❌ Erreur connexion ListModels : {e}")
+
+    # Filet de sécurité manuel si ListModels n'a pas répondu
+    fallback_models = [
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-exp",
+        "gemini-1.5-flash-latest",
+        "gemini-1.5-pro-latest"
     ]
-
-    test_payload = {
-        "contents": [{"parts": [{"text": "ping"}]}],
-        "generationConfig": {"maxOutputTokens": 5}
-    }
-
-    for base_url in candidates:
-        url = f"{base_url}?key={GEMINI_API_KEY}"
-        model_name = base_url.split("/models/")[1].split(":")[0]
+    print("🔄 Test de repli sur les modèles standards...")
+    for model_name in fallback_models:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
         try:
-            res = requests.post(url, json=test_payload, headers={"Content-Type": "application/json"}, timeout=8)
-            if res.status_code == 200:
-                print(f"✅ Modèle Gemini opérationnel retenu : {model_name}")
+            test_res = requests.post(
+                url,
+                json={"contents": [{"parts": [{"text": "ping"}]}], "generationConfig": {"maxOutputTokens": 5}},
+                headers={"Content-Type": "application/json"},
+                timeout=6
+            )
+            if test_res.status_code == 200:
+                print(f"✅ Modèle de repli validé : {model_name}")
                 return url
-            else:
-                print(f"ℹ️ {model_name} non disponible (HTTP {res.status_code})")
-        except Exception as e:
-            print(f"ℹ️ Erreur contact {model_name} : {e}")
+        except Exception:
+            pass
 
-    print("❌ Aucun endpoint Gemini n'a validé le test.")
+    print("❌ Aucun modèle Gemini n'a pu être validé.")
     return None
 
 # ==========================================
-# 2. DEDOUBLONNAGE PERSISTANT (SQLITE)
+# 2. DÉDOUBLONNAGE (SQLITE)
 # ==========================================
 
 def init_db():
@@ -106,7 +130,7 @@ def mark_article_seen(link, title, published_date):
     conn.close()
 
 # ==========================================
-# 3. LECTURE DU FICHIER SOURCES CSV
+# 3. CHARGEMENT DU CSV
 # ==========================================
 
 def load_sources():
@@ -126,11 +150,11 @@ def load_sources():
     return sources
 
 # ==========================================
-# 4. ANALYSE ET SYNTHESE EN JSON
+# 4. ANALYSE ET SYNTHÈSE (JSON STRICT)
 # ==========================================
 
 def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
-    """Génère la catégorie et le résumé sous forme de JSON structuré."""
+    """Génère la catégorie et la synthèse opérationnelle en 2-3 phrases."""
     if not ACTIVE_GEMINI_ENDPOINT:
         return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
@@ -143,7 +167,7 @@ Génère une réponse au format JSON strict avec exactement ces deux clés :
 - "categorie" : une seule valeur parmi PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE
 - "resume" : une synthèse claire de 2 à 3 phrases expliquant l'enjeu juridique, l'impact direct ou l'action requise.
 
-Réponds UNIQUEMENT le bloc JSON brut, sans backticks markdown."""
+Réponds UNIQUEMENT le bloc JSON brut, sans balises Markdown."""
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
@@ -157,12 +181,10 @@ Réponds UNIQUEMENT le bloc JSON brut, sans backticks markdown."""
         res = requests.post(ACTIVE_GEMINI_ENDPOINT, json=payload, headers=headers, timeout=15)
         if res.status_code == 200:
             raw_text = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-            
-            # Nettoyage des balises markdown si l'IA en ajoute
-            clean_json_str = re.sub(r"^```json\s*|^```\s*|```$", "", raw_text, flags=re.MULTILINE).strip()
+            clean_json = re.sub(r"^```json\s*|^```\s*|```$", "", raw_text, flags=re.MULTILINE).strip()
             
             try:
-                data = json.loads(clean_json_str)
+                data = json.loads(clean_json)
                 category = data.get("categorie", default_category).strip().upper()
                 if category not in CATEGORY_LABELS:
                     category = default_category if default_category != "AUTO" else "AUTRE"
@@ -172,9 +194,8 @@ Réponds UNIQUEMENT le bloc JSON brut, sans backticks markdown."""
                     print(f"   ↳ Résumé généré ({len(ai_summary)} car.)")
                     return category, ai_summary
             except Exception:
-                # Repli en cas de texte non JSON
-                print("   ⚠️ Réponse non JSON, extraction brute...")
-                return (default_category if default_category != "AUTO" else "AUTRE"), clean_json_str[:300]
+                print("   ⚠️ Repli d'extraction brute")
+                return (default_category if default_category != "AUTO" else "AUTRE"), clean_json[:300]
         else:
             print(f"❌ [Gemini HTTP {res.status_code}] : {res.text[:140]}")
     except Exception as e:
@@ -183,7 +204,7 @@ Réponds UNIQUEMENT le bloc JSON brut, sans backticks markdown."""
     return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
 # ==========================================
-# 5. SCRUTAGE DES FLUX & LIMITATION DE DEBIT
+# 5. SCRUTAGE DES FLUX
 # ==========================================
 
 def fetch_new_articles():
@@ -221,7 +242,7 @@ def fetch_new_articles():
                     default_category=s["type"]
                 )
 
-                # Temporisation pour éviter le rate-limiting HTTP 429
+                # Pause anti rate-limiting
                 time.sleep(1.2)
 
                 new_articles.append({
@@ -240,7 +261,7 @@ def fetch_new_articles():
     return new_articles
 
 # ==========================================
-# 6. GABARIT HTML DE L'EMAIL
+# 6. GABARIT HTML
 # ==========================================
 
 def build_html_digest(articles):
@@ -304,7 +325,7 @@ def build_html_digest(articles):
     return html
 
 # ==========================================
-# 7. EXPEDITION SMTP MULTI-DESTINATAIRES
+# 7. ENVOI SMTP MULTI-DESTINATAIRES
 # ==========================================
 
 def send_email(subject, html_content):
@@ -330,7 +351,7 @@ def send_email(subject, html_content):
         server.sendmail(EMAIL_SENDER, recipients, msg.as_string())
 
 # ==========================================
-# POINT D'ENTREE
+# POINT D'ENTRÉE
 # ==========================================
 
 def main():
