@@ -5,10 +5,11 @@ from email.mime.text import MIMEText
 import os
 import smtplib
 import sqlite3
+import time
 import feedparser
 import requests
 
-# Secrets injectés par GitHub Actions
+# Secrets injectés via les variables d'environnement GitHub Actions
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
@@ -25,6 +26,10 @@ CATEGORY_LABELS = {
     "INSTITUTIONNEL": "🏛️ Institutionnel & Affaires",
     "AUTRE": "📌 Autres sujets"
 }
+
+# ==========================================
+# 1. GESTION DU DÉDOUBLONNAGE (SQLITE)
+# ==========================================
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -58,9 +63,14 @@ def mark_article_seen(link, title, published_date):
     conn.commit()
     conn.close()
 
+# ==========================================
+# 2. CHARGEMENT DES SOURCES CSV
+# ==========================================
+
 def load_sources():
     sources = []
     if not os.path.exists("sources.csv"):
+        print("Fichier sources.csv introuvable.")
         return sources
     with open("sources.csv", mode="r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -72,6 +82,10 @@ def load_sources():
                     "type": row.get("type", "AUTRE").strip()
                 })
     return sources
+
+# ==========================================
+# 3. TYPAGE AUTOMATIQUE PAR GEMINI
+# ==========================================
 
 def classify_with_gemini(title, summary=""):
     if not GEMINI_API_KEY:
@@ -105,14 +119,23 @@ Réponds uniquement avec le code de la catégorie en majuscules (ex: PDP). Rien 
         print(f"Erreur classification Gemini : {e}")
         return "AUTRE"
 
+# ==========================================
+# 4. RÉCUPÉRATION ET FILTRAGE DES FLUX
+# ==========================================
+
 def fetch_new_articles():
     sources = load_sources()
     new_articles = []
+    
+    # Garde-fou temporel : ignorer tout ce qui a plus de 48 heures
+    cutoff_time = time.time() - (48 * 3600)
     
     for s in sources:
         print(f"Scrutage : {s['source']}...")
         try:
             feed = feedparser.parse(s["url"])
+            
+            # Parcours de l'intégralité des articles du flux sans limite de volume
             for entry in feed.entries:
                 link = getattr(entry, "link", None)
                 title = getattr(entry, "title", "Sans titre").strip()
@@ -122,6 +145,18 @@ def fetch_new_articles():
                 if not link or is_article_seen(link):
                     continue
 
+                # Filtrage temporel si la date est standardisée
+                parsed_time = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
+                if parsed_time:
+                    try:
+                        entry_timestamp = time.mktime(parsed_time)
+                        if entry_timestamp < cutoff_time:
+                            mark_article_seen(link, title, pub_date)
+                            continue
+                    except Exception:
+                        pass
+
+                # Attribution de catégorie (manuelle ou via IA)
                 category = classify_with_gemini(title, summary) if s["type"] == "AUTO" else s["type"]
 
                 new_articles.append({
@@ -132,10 +167,15 @@ def fetch_new_articles():
                     "pub_date": pub_date
                 })
                 mark_article_seen(link, title, pub_date)
+
         except Exception as e:
             print(f"Erreur sur {s['source']} : {e}")
 
     return new_articles
+
+# ==========================================
+# 5. CONSTRUCTION DU GABARIT HTML
+# ==========================================
 
 def build_html_digest(articles):
     date_str = datetime.datetime.now().strftime("%d/%m/%Y")
@@ -149,7 +189,7 @@ def build_html_digest(articles):
     <head><meta charset="utf-8"></head>
     <body style="font-family: Arial, sans-serif; background-color: #f7fafc; padding: 20px; color: #2d3748;">
       <div style="max-width: 650px; margin: auto; background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
-        <h2 style="color: #1a365d; border-bottom: 2px solid #3182ce; padding-bottom: 8px; margin-top:0;">Veille Juridique Quotidienne</h2>
+        <h2 style="color: #1a365d; border-bottom: 2px solid #3182ce; padding-bottom: 8px; margin-top: 0;">Veille Juridique Quotidienne</h2>
         <p style="font-size: 13px; color: #718096;">{date_str} — <strong>{len(articles)}</strong> nouvelle(s) publication(s)</p>
     """
 
@@ -180,6 +220,10 @@ def build_html_digest(articles):
     """
     return html
 
+# ==========================================
+# 6. EXPÉDITION DE L'EMAIL (SMTP GMAIL)
+# ==========================================
+
 def send_email(subject, html_content):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
@@ -191,18 +235,22 @@ def send_email(subject, html_content):
         server.login(EMAIL_SENDER, EMAIL_PASSWORD)
         server.sendmail(EMAIL_SENDER, EMAIL_RECIPIENT, msg.as_string())
 
+# ==========================================
+# POINT D'ENTRÉE
+# ==========================================
+
 def main():
     init_db()
     articles = fetch_new_articles()
     if not articles:
-        print("Aucun nouvel article. Fin.")
+        print("Aucun nouvel article pertinent aujourd'hui. Fin.")
         return
 
-    print(f"{len(articles)} article(s) trouvé(s). Envoi de l'email...")
+    print(f"{len(articles)} article(s) retenu(s). Envoi de l'email...")
     html_report = build_html_digest(articles)
     subject = f"Veille Juridique - {datetime.datetime.now().strftime('%d/%m/%Y')} ({len(articles)} articles)"
     send_email(subject, html_report)
-    print("Email envoyé.")
+    print("Email envoyé avec succès.")
 
 if __name__ == "__main__":
     main()
