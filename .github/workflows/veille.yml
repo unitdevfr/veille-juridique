@@ -1,9 +1,9 @@
 name: Veille Juridique Quotidienne
 
 on:
-  schedule:
-    # 06:30 UTC = 07:30 (heure d'hiver) ou 08:30 (heure d'été) du lundi au vendredi
-    - cron: '30 6 * * 1-5'
+schedule:
+    # 07h30 UTC = 08h30 heure française (du lundi au vendredi)
+    - cron: '30 7 * * 1-5'
   workflow_dispatch:
 
 permissions:
