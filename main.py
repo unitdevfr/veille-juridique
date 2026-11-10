@@ -247,63 +247,125 @@ def fetch_new_articles():
 # 6. GABARIT HTML DE L'EMAIL
 # ==========================================
 
+CATEGORY_THEMES = {
+    "PDP": {"label": "Protection des Données (PDP)", "color": "#2563eb", "bg": "#eff6ff", "badge": "#dbeafe"},
+    "CYBER": {"label": "Cybersécurité", "color": "#dc2626", "bg": "#fef2f2", "badge": "#fee2e2"},
+    "ANTICOR": {"label": "Anticorruption & Conformité", "color": "#b45309", "bg": "#fffbeb", "badge": "#fef3c7"},
+    "PI": {"label": "Propriété Intellectuelle", "color": "#059669", "bg": "#ecfdf5", "badge": "#d1fae5"},
+    "COSMETIQUE": {"label": "Cosmétique & Réglementaire", "color": "#db2777", "bg": "#fdf2f8", "badge": "#fce7f3"},
+    "INSTITUTIONNEL": {"label": "Institutionnel & Affaires", "color": "#4f46e5", "bg": "#eef2ff", "badge": "#e0e7ff"},
+    "AUTRE": {"label": "Autres parutions", "color": "#475569", "bg": "#f8fafc", "badge": "#e2e8f0"}
+}
+
 def build_html_digest(articles):
-    date_str = datetime.datetime.now().strftime("%d/%m/%Y")
+    date_str = datetime.datetime.now().strftime("%d %B %Y").capitalize()
     grouped = {}
     for art in articles:
         grouped.setdefault(art["category"], []).append(art)
 
+    # En-tête global
     html = f"""
     <!DOCTYPE html>
-    <html>
-    <head><meta charset="utf-8"></head>
-    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; padding: 24px; color: #1e293b; margin: 0;">
-      <div style="max-width: 680px; margin: auto; background: #ffffff; padding: 28px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+    <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Veille Juridique</title>
+    </head>
+    <body style="margin: 0; padding: 24px 12px; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+      <div style="max-width: 640px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
         
-        <h2 style="color: #0f172a; margin: 0 0 6px 0; font-size: 20px;">Veille Réglementaire & Juridique</h2>
-        <p style="font-size: 13px; color: #64748b; margin: 0 0 24px 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
-          {date_str} — <strong>{len(articles)}</strong> publication(s) retenue(s)
-        </p>
+        <!-- Header -->
+        <div style="padding: 28px 28px 20px 28px; background-color: #0f172a; color: #ffffff;">
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #94a3b8; margin-bottom: 6px;">
+            Brief Quotidien
+          </div>
+          <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; color: #ffffff;">
+            Veille Juridique & Réglementaire
+          </h1>
+          <div style="margin-top: 10px; font-size: 13px; color: #cbd5e1; display: flex; align-items: center;">
+            <span>📅 {date_str}</span>
+            <span style="margin: 0 8px; color: #475569;">•</span>
+            <span style="background-color: #1e293b; color: #38bdf8; padding: 2px 8px; border-radius: 9999px; font-weight: 600; font-size: 12px;">
+              {len(articles)} parution{'s' if len(articles) > 1 else ''}
+            </span>
+          </div>
+        </div>
+
+        <!-- Contenu -->
+        <div style="padding: 20px 24px;">
     """
 
-    for cat_key, cat_label in CATEGORY_LABELS.items():
+    for cat_key, theme in CATEGORY_THEMES.items():
         if cat_key in grouped:
             arts = grouped[cat_key]
             html += f"""
-            <div style="margin-top: 26px;">
-              <div style="background-color: #f1f5f9; color: #0f172a; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 12px; border-left: 4px solid #2563eb; border-radius: 2px;">
-                {cat_label} ({len(arts)})
+            <div style="margin-top: 24px; margin-bottom: 12px;">
+              <!-- En-tête Catégorie -->
+              <div style="display: inline-block; background-color: {theme['bg']}; color: {theme['color']}; border: 1px solid {theme['badge']}; font-weight: 700; font-size: 12px; letter-spacing: 0.4px; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; margin-bottom: 8px;">
+                {theme['label']} ({len(arts)})
               </div>
-              <div style="margin-top: 10px;">
+
+              <!-- Liste des cartes articles -->
+              <div style="border-top: 2px solid {theme['color']}; padding-top: 4px;">
             """
+
             for art in arts:
-                summary_block = ""
+                summary_html = ""
                 if art.get("summary"):
-                    summary_block = f"""
-                    <div style="margin-top: 8px; font-size: 13px; color: #334155; line-height: 1.5; background-color: #f1f5f9; padding: 10px 12px; border-radius: 4px; border-left: 3px solid #3b82f6;">
-                      {art['summary']}
+                    summary_html = f"""
+                    <div style="margin-top: 10px; background-color: #f8fafc; border-left: 3px solid {theme['color']}; border-radius: 0 6px 6px 0; padding: 10px 12px;">
+                      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 4px;">
+                        Analyse synthétique
+                      </div>
+                      <div style="font-size: 13px; line-height: 1.55; color: #334155;">
+                        {art['summary']}
+                      </div>
                     </div>
                     """
 
                 html += f"""
-                <div style="padding: 14px 0; border-bottom: 1px solid #f1f5f9;">
+                <div style="padding: 16px 0; border-bottom: 1px solid #f1f5f9;">
+                  <!-- Meta Source -->
+                  <div style="margin-bottom: 6px;">
+                    <span style="background-color: #f1f5f9; color: #475569; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 4px;">
+                      {art['source']}
+                    </span>
+                  </div>
+
+                  <!-- Titre et Lien -->
                   <div>
-                    <a href="{art['link']}" target="_blank" style="color: #1d4ed8; text-decoration: none; font-weight: 600; font-size: 14px; line-height: 1.3;">
+                    <a href="{art['link']}" target="_blank" style="color: #0f172a; text-decoration: none; font-size: 15px; font-weight: 600; line-height: 1.35; display: inline-block;">
                       {art['title']}
                     </a>
-                    <span style="font-size: 11px; color: #94a3b8; margin-left: 6px;">({art['source']})</span>
                   </div>
-                  {summary_block}
+
+                  <!-- Bloc Synthèse IA -->
+                  {summary_html}
+
+                  <!-- Lien direct -->
+                  <div style="margin-top: 8px;">
+                    <a href="{art['link']}" target="_blank" style="color: {theme['color']}; text-decoration: none; font-size: 12px; font-weight: 600;">
+                      Consulter la publication &rarr;
+                    </a>
+                  </div>
                 </div>
                 """
+
             html += "</div></div>"
 
+    # Pied de page
     html += """
-        <p style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 14px;">
-          Pipeline de veille automatisé • GitHub Actions & Gemini
-        </p>
+        </div>
+        <div style="padding: 20px 28px; background-color: #f8fafc; border-top: 1px solid #e2e8f0; text-align: center;">
+          <p style="margin: 0; font-size: 12px; color: #64748b; line-height: 1.5;">
+            Rapport automatisé généré quotidiennement via <strong>GitHub Actions</strong> & <strong>Google Gemini</strong>.
+          </p>
+        </div>
+
       </div>
-    </body></html>
+    </body>
+    </html>
     """
     return html
 
