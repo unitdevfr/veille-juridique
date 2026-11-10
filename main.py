@@ -31,20 +31,20 @@ CATEGORY_LABELS = {
 ACTIVE_GEMINI_ENDPOINT = None
 
 # ==========================================
-# 1. VALIDATION ET SÉLECTION DU MODÈLE GEMINI
+# 1. SÉLECTION ET VALIDATION DU MODÈLE
 # ==========================================
 
 def init_gemini_endpoint():
-    """Valide et active en priorité gemini-3.5-flash avec test réel de génération."""
+    """Valide en priorité le modèle flash-lite le plus stable et disponible."""
     if not GEMINI_API_KEY:
         print("⚠️ GEMINI_API_KEY absente.")
         return None
 
-    # Ordre de priorité basé sur les modèles actifs de votre compte
+    # Ordre de priorité : modèles lite ultra-rapides d'abord
     priority_models = [
-        "gemini-3.5-flash",
         "gemini-3.1-flash-lite",
-        "gemini-3-flash-preview",
+        "gemini-3.5-flash-lite",
+        "gemini-3.5-flash",
         "gemini-flash-latest"
     ]
 
@@ -69,7 +69,7 @@ def init_gemini_endpoint():
     return None
 
 # ==========================================
-# 2. GESTION DU DÉDOUBLONNAGE (SQLITE)
+# 2. DÉDOUBLONNAGE (SQLITE)
 # ==========================================
 
 def init_db():
@@ -105,7 +105,7 @@ def mark_article_seen(link, title, published_date):
     conn.close()
 
 # ==========================================
-# 3. CHARGEMENT DES SOURCES CSV
+# 3. CHARGEMENT DU CSV
 # ==========================================
 
 def load_sources():
@@ -125,11 +125,11 @@ def load_sources():
     return sources
 
 # ==========================================
-# 4. ANALYSE ET RÉSUMÉ EN JSON STRICT
+# 4. ANALYSE ET SYNTHÈSE (JSON STRICT NATIF)
 # ==========================================
 
 def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
-    """Catégorise et synthétise l'article en 2-3 phrases."""
+    """Génère la catégorie et la synthèse opérationnelle avec gestion des quotas."""
     if not ACTIVE_GEMINI_ENDPOINT:
         return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
@@ -138,28 +138,27 @@ def analyze_with_gemini(title, summary_raw="", default_category="AUTO"):
 Titre : {title}
 Extrait : {summary_raw[:500]}
 
-Génère une réponse au format JSON strict avec exactement ces deux clés :
+Génère un objet JSON avec exactement deux champs :
 - "categorie" : une seule valeur parmi PDP, CYBER, ANTICOR, PI, COSMETIQUE, INSTITUTIONNEL, AUTRE
-- "resume" : une synthèse claire de 2 à 3 phrases expliquant l'enjeu juridique, l'impact concret ou l'action requise.
-
-Réponds UNIQUEMENT le bloc JSON brut, sans balises Markdown."""
+- "resume" : une synthèse claire de 2 à 3 phrases expliquant l'enjeu juridique, l'impact direct ou l'action requise."""
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 350
+            "maxOutputTokens": 350,
+            "response_mime_type": "application/json"
         }
     }
 
-    try:
-        res = requests.post(ACTIVE_GEMINI_ENDPOINT, json=payload, headers=headers, timeout=15)
-        if res.status_code == 200:
-            raw_text = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-            clean_json = re.sub(r"^```json\s*|^```\s*|```$", "", raw_text, flags=re.MULTILINE).strip()
-            
-            try:
-                data = json.loads(clean_json)
+    # 2 tentatives avec backoff si quota ou surcharge temporaire
+    for attempt in (1, 2):
+        try:
+            res = requests.post(ACTIVE_GEMINI_ENDPOINT, json=payload, headers=headers, timeout=20)
+            if res.status_code == 200:
+                raw_json = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+                data = json.loads(raw_json)
+                
                 category = data.get("categorie", default_category).strip().upper()
                 if category not in CATEGORY_LABELS:
                     category = default_category if default_category != "AUTO" else "AUTRE"
@@ -168,18 +167,27 @@ Réponds UNIQUEMENT le bloc JSON brut, sans balises Markdown."""
                 if ai_summary:
                     print(f"   ↳ Résumé généré ({len(ai_summary)} car.)")
                     return category, ai_summary
-            except Exception:
-                print("   ⚠️ Repli d'extraction brute")
-                return (default_category if default_category != "AUTO" else "AUTRE"), clean_json[:300]
-        else:
-            print(f"❌ [Gemini HTTP {res.status_code}] : {res.text[:140]}")
-    except Exception as e:
-        print(f"❌ [Exception Gemini] : {e}")
+                return category, ""
+
+            elif res.status_code in (429, 503) and attempt == 1:
+                print(f"   ⚠️ Rate-limit / Surcharge Google ({res.status_code}), pause de 6s avant relance...")
+                time.sleep(6)
+                continue
+            else:
+                print(f"❌ [Gemini HTTP {res.status_code}] : {res.text[:140]}")
+                break
+
+        except requests.exceptions.RequestException as e:
+            if attempt == 1:
+                print("   ⚠️ Timeout réseau, relance dans 3s...")
+                time.sleep(3)
+                continue
+            print(f"❌ [Exception Gemini] : {e}")
 
     return (default_category if default_category != "AUTO" else "AUTRE"), ""
 
 # ==========================================
-# 5. SCRUTAGE DES FLUX
+# 5. SCRUTAGE DES FLUX & RESPECT DES QUOTAS
 # ==========================================
 
 def fetch_new_articles():
@@ -217,7 +225,8 @@ def fetch_new_articles():
                     default_category=s["type"]
                 )
 
-                time.sleep(1.2)
+                # Pause de 4.2 secondes pour garantir <= 14 requêtes par minute (limite gratuite : 15 RPM)
+                time.sleep(4.2)
 
                 new_articles.append({
                     "title": title,
@@ -299,7 +308,7 @@ def build_html_digest(articles):
     return html
 
 # ==========================================
-# 7. EXPÉDITION MULTI-DESTINATAIRES
+# 7. ENVOI MULTI-DESTINATAIRES
 # ==========================================
 
 def send_email(subject, html_content):
@@ -325,7 +334,7 @@ def send_email(subject, html_content):
         server.sendmail(EMAIL_SENDER, recipients, msg.as_string())
 
 # ==========================================
-# POINT D'ENTRÉE PRINCIPAL
+# POINT D'ENTRÉE
 # ==========================================
 
 def main():
