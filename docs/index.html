@@ -5,405 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>Veille Juridique</title>
-
   <meta name="theme-color" content="#090d16">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Veille Pro">
-
-  <link rel="manifest" href='data:application/manifest+json,{
-    "name": "Veille Juridique & Réglementaire",
-    "short_name": "Veille Pro",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#f8fafc",
-    "theme_color": "#090d16",
-    "icons": [{
-      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23090d16%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>",
-      "sizes": "512x512",
-      "type": "image/svg+xml"
-    }]
-  }'>
-
+  <link rel="manifest" href='data:application/manifest+json,{"name":"Veille Juridique","short_name":"Veille Pro","start_url":".","display":"standalone","background_color":"#f8fafc","theme_color":"#090d16","icons":[{"src":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23090d16%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>","sizes":"512x512","type":"image/svg+xml"}]}'>
   <style>
     :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: #e2e8f0;
-      --border-light: #f1f5f9;
-      --text: #0f172a;
-      --text-body: #475569;
-      --text-muted: #64748b;
-      --hover-bg: #f1f5f9;
-      --accent: #0284c7;
-      --crit-bg: #fef2f2;
-      --crit-text: #dc2626;
-      --imp-bg: #fffbeb;
-      --imp-text: #b45309;
-      --read-bg: #ecfdf5;
-      --read-text: #059669;
+      --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0; --border-light: #f1f5f9;
+      --text: #0f172a; --text-body: #475569; --text-muted: #64748b; --hover-bg: #f1f5f9;
+      --accent: #0284c7; --crit-bg: #fef2f2; --crit-text: #dc2626;
+      --imp-bg: #fffbeb; --imp-text: #b45309; --read-bg: #ecfdf5; --read-text: #059669;
     }
-
     html.dark {
-      --bg: #090d16;
-      --card: #111827;
-      --border: #1e293b;
-      --border-light: #1e293b;
-      --text: #f1f5f9;
-      --text-body: #cbd5e1;
-      --text-muted: #94a3b8;
-      --hover-bg: #1e293b;
-      --accent: #38bdf8;
-      --crit-bg: rgba(220, 38, 38, 0.16);
-      --crit-text: #f87171;
-      --imp-bg: rgba(217, 119, 6, 0.16);
-      --imp-text: #fbbf24;
-      --read-bg: rgba(16, 185, 129, 0.15);
-      --read-text: #34d399;
+      --bg: #090d16; --card: #111827; --border: #1e293b; --border-light: #1e293b;
+      --text: #f1f5f9; --text-body: #cbd5e1; --text-muted: #94a3b8; --hover-bg: #1e293b;
+      --accent: #38bdf8; --crit-bg: rgba(220,38,38,.16); --crit-text: #f87171;
+      --imp-bg: rgba(217,119,6,.16); --imp-text: #fbbf24; --read-bg: rgba(16,185,129,.15); --read-text: #34d399;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -webkit-tap-highlight-color: transparent;
-      padding-bottom: 64px;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      background: var(--bg); color: var(--text); padding-bottom: 64px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
     }
-
     button, input, select { font-family: inherit; }
     button { background: none; border: none; cursor: pointer; color: inherit; }
-
     header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background-color: rgba(9, 13, 22, 0.96);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: #ffffff;
-      border-bottom: 1px solid #1e293b;
+      position: sticky; top: 0; z-index: 30; color: #fff;
+      background: rgba(9,13,22,.96); backdrop-filter: blur(10px); border-bottom: 1px solid #1e293b;
     }
-
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    .header-top {
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      min-width: 0;
-    }
-
-    .brand-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background-color: #38bdf8;
-      flex-shrink: 0;
-    }
-
-    .brand h1 {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .badge-count {
-      font-size: 11px;
-      font-weight: 600;
-      background-color: #1e293b;
-      color: #cbd5e1;
-      padding: 2px 8px;
-      border-radius: 999px;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      flex-shrink: 0;
-    }
-
+    .container { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+    .header-top { height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+    .brand-dot { width: 9px; height: 9px; border-radius: 50%; background: #38bdf8; flex-shrink: 0; }
+    .brand h1 { font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .badge-count { font-size: 11px; font-weight: 600; background: #1e293b; color: #cbd5e1; padding: 2px 8px; border-radius: 999px; }
+    .header-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
     .icon-btn {
-      position: relative;
-      padding: 7px 10px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 500;
-      color: #cbd5e1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.15s, color 0.15s;
+      position: relative; padding: 7px 10px; border-radius: 8px; font-size: 12px; font-weight: 500;
+      color: #cbd5e1; display: inline-flex; align-items: center; justify-content: center;
     }
-
-    .icon-btn:hover { background-color: #1e293b; }
-    .icon-btn.active-sky { background-color: rgba(56, 189, 248, 0.18); color: #38bdf8; }
-    .icon-btn.active-amber { background-color: rgba(251, 191, 36, 0.18); color: #fbbf24; }
-
-    .notif-dot {
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: #38bdf8;
-    }
-
-    .drawer {
-      padding: 6px 0 12px;
-      border-top: 1px solid #1e293b;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
+    .icon-btn:hover { background: #1e293b; }
+    .icon-btn.active-sky { background: rgba(56,189,248,.18); color: #38bdf8; }
+    .icon-btn.active-amber { background: rgba(251,191,36,.18); color: #fbbf24; }
+    .notif-dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: #38bdf8; }
+    .drawer { padding: 6px 0 12px; border-top: 1px solid #1e293b; display: flex; flex-direction: column; gap: 8px; }
     .drawer input, .drawer select {
-      width: 100%;
-      background-color: #111827;
-      color: #f8fafc;
-      border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 8px 11px;
-      font-size: 13px;
-      outline: none;
+      width: 100%; background: #111827; color: #f8fafc; border: 1px solid #1e293b;
+      border-radius: 8px; padding: 8px 11px; font-size: 13px; outline: none;
     }
-
     .drawer input:focus, .drawer select:focus { border-color: #38bdf8; }
-
-    .drawer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .pills-bar {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 2px 0 10px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
+    .drawer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .pills-bar { display: flex; align-items: center; gap: 6px; padding: 2px 0 10px; overflow-x: auto; scrollbar-width: none; }
     .pills-bar::-webkit-scrollbar { display: none; }
-
     .pill {
-      flex-shrink: 0;
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 500;
-      background-color: #111827;
-      color: #94a3b8;
-      border: 1px solid #1e293b;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s;
+      flex-shrink: 0; padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 500;
+      background: #111827; color: #94a3b8; border: 1px solid #1e293b; display: inline-flex; align-items: center; gap: 6px;
     }
-
-    .pill:hover { color: #f8fafc; }
-
-    .pill.active {
-      background-color: #ffffff;
-      color: #090d16;
-      border-color: #ffffff;
-      font-weight: 600;
-    }
-
-    .pill-sep {
-      width: 1px;
-      height: 16px;
-      background-color: #1e293b;
-      flex-shrink: 0;
-      margin: 0 2px;
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
+    .pill.active { background: #fff; color: #090d16; border-color: #fff; font-weight: 600; }
+    .pill-sep { width: 1px; height: 16px; background: #1e293b; flex-shrink: 0; margin: 0 2px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
     main { padding-top: 16px; }
-
-    .status-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11.5px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      padding: 0 2px;
-    }
-
-    .reset-link {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 11.5px;
-    }
-
-    .cards-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .card {
-      background-color: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      transition: opacity 0.2s, background-color 0.2s, border-color 0.2s;
-    }
-
-    .card.is-read { opacity: 0.55; }
-
-    .card-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .meta-left {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11.5px;
-      color: var(--text-muted);
-      min-width: 0;
-    }
-
-    .meta-cat {
-      font-weight: 600;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-    .meta-src {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
+    .status-bar { display: flex; align-items: center; justify-content: space-between; font-size: 11.5px; color: var(--text-muted); margin-bottom: 12px; }
+    .reset-link { color: var(--accent); font-weight: 600; font-size: 11.5px; }
+    .cards-list { display: flex; flex-direction: column; gap: 12px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .card.is-read { opacity: .55; }
+    .card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+    .meta-left { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--text-muted); min-width: 0; }
+    .meta-cat { font-weight: 600; color: var(--text); white-space: nowrap; }
+    .meta-src { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .meta-date { white-space: nowrap; flex-shrink: 0; }
-
-    .tag-impact {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      flex-shrink: 0;
-    }
-
-    .tag-critique { background-color: var(--crit-bg); color: var(--crit-text); }
-    .tag-important { background-color: var(--imp-bg); color: var(--imp-text); }
-
-    .card-title {
-      font-size: 15.5px;
-      font-weight: 600;
-      line-height: 1.38;
-      margin-bottom: 8px;
-    }
-
-    .card-title a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
+    .tag-impact { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; flex-shrink: 0; }
+    .tag-critique { background: var(--crit-bg); color: var(--crit-text); }
+    .tag-important { background: var(--imp-bg); color: var(--imp-text); }
+    .card-title { font-size: 15.5px; font-weight: 600; line-height: 1.38; margin-bottom: 8px; }
+    .card-title a { color: var(--text); text-decoration: none; }
     .card-title a:hover { color: var(--accent); }
-
-    .card-summary {
-      font-size: 13.5px;
-      line-height: 1.55;
-      color: var(--text-body);
-      margin-bottom: 12px;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 10px;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .source-link {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    .source-link:hover { color: var(--text); }
-
-    .card-actions {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .btn-read {
-      padding: 4px 10px;
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .btn-read:hover { background-color: var(--hover-bg); color: var(--text); }
-    .btn-read.done { background-color: var(--read-bg); color: var(--read-text); }
-
-    .btn-save {
-      padding: 5px;
-      border-radius: 7px;
-      color: var(--text-muted);
-      display: inline-flex;
-    }
-
+    .card-summary { font-size: 13.5px; line-height: 1.55; color: var(--text-body); margin-bottom: 12px; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-light); }
+    .source-link { font-size: 12px; font-weight: 500; color: var(--text-muted); text-decoration: none; }
+    .card-actions { display: flex; align-items: center; gap: 4px; }
+    .btn-read { padding: 4px 10px; border-radius: 7px; font-size: 12px; font-weight: 500; color: var(--text-muted); }
+    .btn-read:hover { background: var(--hover-bg); color: var(--text); }
+    .btn-read.done { background: var(--read-bg); color: var(--read-text); }
+    .btn-save { padding: 5px; border-radius: 7px; color: var(--text-muted); display: inline-flex; }
     .btn-save.saved { color: #f59e0b; }
-
-    .empty-box {
-      background-color: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 36px 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 13.5px;
-    }
-
+    .empty-box { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 36px 20px; text-align: center; color: var(--text-muted); font-size: 13.5px; }
     .hidden { display: none !important; }
   </style>
 </head>
 <body>
-
   <header>
     <div class="container">
       <div class="header-top">
@@ -412,381 +105,17 @@
           <h1>Veille Réglementaire</h1>
           <span id="unread-badge" class="badge-count">0</span>
         </div>
-
         <div class="header-actions">
           <button id="btn-unread" class="icon-btn" onclick="toggleQuickFilter('unreadOnly')">Non lus</button>
-
           <button id="btn-saved" class="icon-btn" onclick="toggleQuickFilter('savedOnly')" title="Favoris">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
-            </svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
           </button>
-
-          <button id="btn-theme" class="icon-btn" onclick="toggleTheme()" title="Changer de thème">
-            <span id="theme-icon">🌙</span>
-          </button>
-
-          <button id="btn-drawer" class="icon-btn" onclick="toggleDrawer()" title="Rechercher et filtrer">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
+          <button id="btn-theme" class="icon-btn" onclick="toggleTheme()" title="Thème"><span id="theme-icon">🌙</span></button>
+          <button id="btn-drawer" class="icon-btn" onclick="toggleDrawer()" title="Rechercher">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             <span id="drawer-dot" class="notif-dot hidden"></span>
           </button>
         </div>
       </div>
-
       <div id="filter-drawer" class="drawer hidden">
-        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher par mot-clé...">
-        <div class="drawer-grid">
-          <select id="source-filter" onchange="applyFilters()">
-            <option value="ALL">Toutes les sources</option>
-          </select>
-          <select id="period-filter" onchange="applyFilters()">
-            <option value="ALL">Toute période</option>
-            <option value="24H">Dernières 24h</option>
-            <option value="7D">7 derniers jours</option>
-          </select>
-        </div>
-      </div>
-
-      <div id="pills-bar" class="pills-bar"></div>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="status-bar">
-      <span id="results-count">Chargement...</span>
-      <button id="reset-btn" class="reset-link hidden" onclick="resetAllFilters()">Tout effacer</button>
-    </div>
-
-    <div id="articles-container" class="cards-list"></div>
-  </main>
-
-  <script>
-    const CATEGORIES = {
-      PDP: { label: "Données (PDP)", color: "#3b82f6" },
-      CYBER: { label: "Cybersécurité", color: "#ef4444" },
-      ANTICOR: { label: "Anticorruption", color: "#f59e0b" },
-      PI: { label: "Propriété Intel.", color: "#10b981" },
-      COSMETIQUE: { label: "Cosmétique", color: "#ec4899" },
-      INSTITUTIONNEL: { label: "Institutionnel", color: "#6366f1" },
-      AUTRE: { label: "Autres", color: "#64748b" }
-    };
-
-    function getStoredArray(key) {
-      try {
-        const val = JSON.parse(localStorage.getItem(key) || "[]");
-        return Array.isArray(val) ? val : [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function escapeHtml(str) {
-      return String(str || "")
-        .replace(/&/g, "&")
-        .replace(/</g, "<")
-        .replace(/>/g, ">")
-        .replace(/"/g, """);
-    }
-
-    let allArticles = [];
-    let state = {
-      category: "ALL",
-      impact: "ALL",
-      unreadOnly: false,
-      savedOnly: false,
-      drawerOpen: false,
-      readIds: getStoredArray("vj_read_ids"),
-      savedIds: getStoredArray("vj_saved_ids")
-    };
-
-    function initTheme() {
-      const saved = localStorage.getItem("vj_theme");
-      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = saved ? saved === "dark" : prefersDark;
-      document.documentElement.classList.toggle("dark", isDark);
-      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
-    }
-
-    function toggleTheme() {
-      const isDark = !document.documentElement.classList.contains("dark");
-      document.documentElement.classList.toggle("dark", isDark);
-      localStorage.setItem("vj_theme", isDark ? "dark" : "light");
-      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
-    }
-
-    const DEMO_ARTICLES = [
-      {
-        title: "Directive NIS 2 : calendrier de transposition et obligations de notification des incidents majeurs",
-        link: "https://www.ssi.gouv.fr",
-        source: "ANSSI (CERT-FR)",
-        category: "CYBER",
-        impact: "CRITIQUE",
-        summary: "L'ANSSI détaille le mécanisme de signalement en deux étapes (alerte précoce sous 24h puis rapport circonstancié sous 72h) applicable aux entités essentielles et importantes.",
-        pub_date: new Date(Date.now() - 2 * 3600 * 1000).toISOString()
-      }
-    ];
-
-    async function loadArticles() {
-      try {
-        const response = await fetch("./articles.json?t=" + Date.now());
-        if (!response.ok) throw new Error("Absent");
-        const data = await response.json();
-        allArticles = Array.isArray(data) && data.length > 0 ? data : DEMO_ARTICLES;
-      } catch (err) {
-        allArticles = DEMO_ARTICLES;
-      }
-
-      populateSourcesDropdown();
-      renderPillsBar();
-      applyFilters();
-    }
-
-    function populateSourcesDropdown() {
-      const select = document.getElementById("source-filter");
-      const sources = [...new Set(allArticles.map(a => a.source).filter(Boolean))].sort();
-      sources.forEach(src => {
-        const opt = document.createElement("option");
-        opt.value = src;
-        opt.textContent = src;
-        select.appendChild(opt);
-      });
-    }
-
-    function toggleDrawer() {
-      state.drawerOpen = !state.drawerOpen;
-      document.getElementById("filter-drawer").classList.toggle("hidden", !state.drawerOpen);
-      if (state.drawerOpen) document.getElementById("search-input").focus();
-    }
-
-    function toggleQuickFilter(key) {
-      state[key] = !state[key];
-      document.getElementById("btn-unread").classList.toggle("active-sky", state.unreadOnly);
-      document.getElementById("btn-saved").classList.toggle("active-amber", state.savedOnly);
-      applyFilters();
-    }
-
-    function renderPillsBar() {
-      const bar = document.getElementById("pills-bar");
-      bar.innerHTML = "";
-
-      const makePill = (label, isActive, onClick, dotColor = null) => {
-        const btn = document.createElement("button");
-        btn.onclick = onClick;
-        btn.className = "pill" + (isActive ? " active" : "");
-        btn.innerHTML = `${dotColor ? `<span class="dot" style="background-color:${dotColor}"></span>` : ""}<span>${escapeHtml(label)}</span>`;
-        bar.appendChild(btn);
-      };
-
-      makePill("Tout", state.category === "ALL" && state.impact === "ALL", () => {
-        state.category = "ALL";
-        state.impact = "ALL";
-        renderPillsBar();
-        applyFilters();
-      });
-
-      const critCount = allArticles.filter(a => (a.impact || "").toUpperCase() === "CRITIQUE").length;
-      if (critCount > 0) {
-        makePill(`Critique (${critCount})`, state.impact === "CRITIQUE", () => {
-          state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE";
-          renderPillsBar();
-          applyFilters();
-        }, "#ef4444");
-      }
-
-      const impCount = allArticles.filter(a => (a.impact || "").toUpperCase() === "IMPORTANT").length;
-      if (impCount > 0) {
-        makePill(`Important (${impCount})`, state.impact === "IMPORTANT", () => {
-          state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT";
-          renderPillsBar();
-          applyFilters();
-        }, "#f59e0b");
-      }
-
-      const sep = document.createElement("span");
-      sep.className = "pill-sep";
-      bar.appendChild(sep);
-
-      Object.entries(CATEGORIES).forEach(([key, meta]) => {
-        if (!allArticles.some(a => a.category === key)) return;
-        makePill(meta.label, state.category === key, () => {
-          state.category = state.category === key ? "ALL" : key;
-          renderPillsBar();
-          applyFilters();
-        }, meta.color);
-      });
-    }
-
-    function resetAllFilters() {
-      state.category = "ALL";
-      state.impact = "ALL";
-      state.unreadOnly = false;
-      state.savedOnly = false;
-      document.getElementById("search-input").value = "";
-      document.getElementById("source-filter").value = "ALL";
-      document.getElementById("period-filter").value = "ALL";
-      document.getElementById("btn-unread").classList.remove("active-sky");
-      document.getElementById("btn-saved").classList.remove("active-amber");
-      renderPillsBar();
-      applyFilters();
-    }
-
-    function applyFilters() {
-      const query = document.getElementById("search-input").value.toLowerCase().trim();
-      const sourceFilter = document.getElementById("source-filter").value;
-      const periodFilter = document.getElementById("period-filter").value;
-      const now = Date.now();
-
-      document.getElementById("unread-badge").textContent = allArticles.filter(a => !state.readIds.includes(a.link)).length;
-
-      const hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
-      document.getElementById("drawer-dot").classList.toggle("hidden", !hasDrawerFilter);
-
-      const filtered = allArticles.filter(art => {
-        const artImpact = (art.impact || "INFORMATIF").toUpperCase();
-        if (state.category !== "ALL" && art.category !== state.category) return false;
-        if (state.impact !== "ALL" && artImpact !== state.impact) return false;
-        if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
-        if (state.unreadOnly && state.readIds.includes(art.link)) return false;
-        if (state.savedOnly && !state.savedIds.includes(art.link)) return false;
-
-        if (periodFilter !== "ALL" && art.pub_date) {
-          const pubTime = new Date(art.pub_date).getTime();
-          if (!isNaN(pubTime)) {
-            const ageHours = (now - pubTime) / 3600000;
-            if (periodFilter === "24H" && ageHours > 24) return false;
-            if (periodFilter === "7D" && ageHours > 168) return false;
-          }
-        }
-
-        if (query) {
-          const haystack = `${art.title || ""} ${art.summary || ""} ${art.source || ""}`.toLowerCase();
-          if (!haystack.includes(query)) return false;
-        }
-
-        return true;
-      });
-
-      const hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.unreadOnly || state.savedOnly || hasDrawerFilter;
-      document.getElementById("reset-btn").classList.toggle("hidden", !hasAnyFilter);
-      document.getElementById("results-count").textContent = `${filtered.length} article${filtered.length > 1 ? "s" : ""}`;
-
-      renderCards(filtered);
-    }
-
-    function formatRelativeDate(dateStr) {
-      if (!dateStr) return "";
-      const date = new Date(dateStr);
-      if (isNaN(date.getTime())) return "";
-      const diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
-      if (diffHours < 1) return "À l'instant";
-      if (diffHours < 24) return `${diffHours}h`;
-      const diffDays = Math.floor(diffHours / 24);
-      if (diffDays === 1) return "Hier";
-      if (diffDays < 7) return `${diffDays}j`;
-      return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
-    }
-
-    function toggleRead(link) {
-      state.readIds = state.readIds.includes(link)
-        ? state.readIds.filter(id => id !== link)
-        : [...state.readIds, link];
-      localStorage.setItem("vj_read_ids", JSON.stringify(state.readIds));
-      applyFilters();
-    }
-
-    function toggleSaved(link) {
-      state.savedIds = state.savedIds.includes(link)
-        ? state.savedIds.filter(id => id !== link)
-        : [...state.savedIds, link];
-      localStorage.setItem("vj_saved_ids", JSON.stringify(state.savedIds));
-      applyFilters();
-    }
-
-    function renderCards(articles) {
-      const container = document.getElementById("articles-container");
-      if (articles.length === 0) {
-        container.innerHTML = `
-          <div class="empty-box">
-            <p>Aucun article pour cette sélection.</p>
-            <button class="reset-link" style="margin-top:10px" onclick="resetAllFilters()">Réinitialiser les filtres</button>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = articles.map((art, idx) => {
-        const cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
-        const impact = (art.impact || "INFORMATIF").toUpperCase();
-        const isRead = state.readIds.includes(art.link);
-        const isSaved = state.savedIds.includes(art.link);
-
-        let impactTag = "";
-        if (impact === "CRITIQUE") impactTag = `<span class="tag-impact tag-critique">Critique</span>`;
-        else if (impact === "IMPORTANT") impactTag = `<span class="tag-impact tag-important">Important</span>`;
-
-        return `
-          <article class="card ${isRead ? "is-read" : ""}" data-idx="${idx}">
-            <div class="card-meta">
-              <div class="meta-left">
-                <span class="dot" style="background-color:${cat.color}"></span>
-                <span class="meta-cat">${escapeHtml(cat.label)}</span>
-                <span>•</span>
-                <span class="meta-src">${escapeHtml(art.source)}</span>
-                <span>•</span>
-                <span class="meta-date">${formatRelativeDate(art.pub_date)}</span>
-              </div>
-              ${impactTag}
-            </div>
-
-            <h2 class="card-title">
-              <a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}">${escapeHtml(art.title)}</a>
-            </h2>
-
-            ${art.summary ? `<p class="card-summary">${escapeHtml(art.summary)}</p>` : ""}
-
-            <div class="card-footer">
-              <a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}" class="source-link">Source officielle ↗</a>
-              <div class="card-actions">
-                <button class="btn-read ${isRead ? "done" : ""}" data-read="${idx}">
-                  ${isRead ? "✓ Lu" : "Marquer lu"}
-                </button>
-                <button class="btn-save ${isSaved ? "saved" : ""}" data-save="${idx}" title="Sauvegarder">
-                  <svg width="16" height="16" fill="${isSaved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </article>
-        `;
-      }).join("");
-
-      container.dataset.current = JSON.stringify(articles.map(a => a.link));
-    }
-
-    document.getElementById("articles-container").addEventListener("click", (e) => {
-      const links = JSON.parse(e.currentTarget.dataset.current || "[]");
-      const openEl = e.target.closest("[data-open]");
-      if (openEl) {
-        const link = links[openEl.dataset.open];
-        if (link && !state.readIds.includes(link)) toggleRead(link);
-        return;
-      }
-      const readEl = e.target.closest("[data-read]");
-      if (readEl) {
-        toggleRead(links[readEl.dataset.read]);
-        return;
-      }
-      const saveEl = e.target.closest("[data-save]");
-      if (saveEl) {
-        toggleSaved(links[saveEl.dataset.save]);
-      }
-    });
-
-    initTheme();
-    loadArticles();
-  </script>
-</body>
-</html>
+        <input type="text" id="search-input" oninput="applyFilters()"
