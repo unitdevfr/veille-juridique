@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Veille Juridique">
 
-  <!-- Manifest PWA intégré (aucun fichier externe requis) -->
+  <!-- Manifest PWA intégré -->
   <link rel="manifest" href='data:application/manifest+json,{
     "name": "Veille Juridique & Réglementaire",
     "short_name": "Veille Pro",
@@ -20,16 +20,15 @@
     "background_color": "#f8fafc",
     "theme_color": "#0f172a",
     "icons": [{
-      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns=%22[http://www.w3.org/2000/svg%22](http://www.w3.org/2000/svg%22) viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>",
       "sizes": "512x512",
       "type": "image/svg+xml"
     }]
   }'>
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
   <style>
-    /* Masquer les barres de défilement sur les filtres horizontaux */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     body { -webkit-tap-highlight-color: transparent; }
@@ -37,11 +36,11 @@
 </head>
 <body class="bg-slate-100 text-slate-900 font-sans antialiased pb-16">
 
-  <!-- EN-TÊTE FIXE STYLE GROUND NEWS -->
+  <!-- EN-TÊTE FIXE -->
   <header class="sticky top-0 z-30 bg-slate-900 text-white shadow-md">
-    <div class="max-w-3xl mx-auto px-4 pt-3 pb-2">
+    <div class="max-w-3xl mx-auto px-4 pt-3 pb-2.5">
       <!-- Ligne supérieure : Titre + Compteur + Actions rapides -->
-      <div class="flex items-center justify-between gap-2 mb-3">
+      <div class="flex items-center justify-between gap-2 mb-2.5">
         <div class="flex items-center gap-2.5">
           <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold text-sm">
             VJ
@@ -53,7 +52,7 @@
         </div>
 
         <div class="flex items-center gap-1.5">
-          <!-- Bouton Non lus uniquement -->
+          <!-- Bouton Non lus -->
           <button id="btn-unread" onclick="toggleFilter('unreadOnly')"
             class="px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-sky-400"></span>
@@ -72,25 +71,34 @@
         </div>
       </div>
 
-      <!-- Barre de recherche & Filtres secondaires -->
-      <div class="flex gap-2 mb-2.5">
-        <div class="relative flex-1">
-          <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher un texte, mot-clé..."
-            class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 rounded-lg pl-8 pr-3 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400">
-          <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </div>
+      <!-- Barre de recherche -->
+      <div class="relative mb-2">
+        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher un texte, mot-clé..."
+          class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 rounded-lg pl-8 pr-3 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400">
+        <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+
+      <!-- Grille de 3 filtres compacts : Impact / Source / Période -->
+      <div class="grid grid-cols-3 gap-1.5">
+        <select id="impact-filter" onchange="applyFilters()"
+          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400 truncate">
+          <option value="ALL">Tous impacts</option>
+          <option value="CRITIQUE">🔴 Critique</option>
+          <option value="IMPORTANT">🟠 Important</option>
+          <option value="INFORMATIF">🔵 Informatif</option>
+        </select>
 
         <select id="source-filter" onchange="applyFilters()"
-          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2.5 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400 max-w-[135px] truncate">
+          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400 truncate">
           <option value="ALL">Toutes sources</option>
         </select>
 
         <select id="period-filter" onchange="applyFilters()"
-          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400">
-          <option value="ALL">Tout</option>
-          <option value="24H">24h</option>
+          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400 truncate">
+          <option value="ALL">Toute période</option>
+          <option value="24H">24 heures</option>
           <option value="7D">7 jours</option>
         </select>
       </div>
@@ -99,14 +107,12 @@
     <!-- BARRE DE CATÉGORIES DÉFILANTE -->
     <div class="bg-slate-800/90 border-t border-slate-700/80">
       <div id="category-bar" class="max-w-3xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
-        <!-- Généré dynamiquement en JS -->
       </div>
     </div>
   </header>
 
   <!-- CONTENEUR PRINCIPAL DES CARTES -->
   <main class="max-w-3xl mx-auto px-4 pt-4">
-    <!-- Indicateur de résultats -->
     <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
       <span id="results-count">0 publication affichée</span>
       <button onclick="resetAllFilters()" id="reset-btn" class="hidden text-sky-600 font-semibold hover:underline">
@@ -114,28 +120,40 @@
       </button>
     </div>
 
-    <!-- Liste des articles -->
     <div id="articles-container" class="space-y-3.5">
-      <!-- Cartes injectées en JS -->
     </div>
   </main>
 
   <script>
-    // ==========================================
-    // CONFIGURATION DES THÈMES PAR CATÉGORIE
-    // ==========================================
     const CATEGORIES = {
-      ALL: { label: "Toutes", color: "#0284c7", badgeBg: "bg-sky-100 text-sky-800 border-sky-200", border: "border-sky-500" },
-      PDP: { label: "Protection Données", color: "#2563eb", badgeBg: "bg-blue-100 text-blue-800 border-blue-200", border: "border-blue-500" },
-      CYBER: { label: "Cybersécurité", color: "#dc2626", badgeBg: "bg-red-100 text-red-800 border-red-200", border: "border-red-500" },
-      ANTICOR: { label: "Anticorruption", color: "#d97706", badgeBg: "bg-amber-100 text-amber-800 border-amber-200", border: "border-amber-500" },
-      PI: { label: "Propriété Intellectuelle", color: "#059669", badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200", border: "border-emerald-500" },
-      COSMETIQUE: { label: "Cosmétique", color: "#db2777", badgeBg: "bg-pink-100 text-pink-800 border-pink-200", border: "border-pink-500" },
-      INSTITUTIONNEL: { label: "Institutionnel", color: "#4f46e5", badgeBg: "bg-indigo-100 text-indigo-800 border-indigo-200", border: "border-indigo-500" },
-      AUTRE: { label: "Autres", color: "#475569", badgeBg: "bg-slate-200 text-slate-800 border-slate-300", border: "border-slate-400" }
+      ALL: { label: "Toutes", badgeBg: "bg-sky-100 text-sky-800 border-sky-200", border: "border-sky-500" },
+      PDP: { label: "Protection Données", badgeBg: "bg-blue-100 text-blue-800 border-blue-200", border: "border-blue-500" },
+      CYBER: { label: "Cybersécurité", badgeBg: "bg-red-100 text-red-800 border-red-200", border: "border-red-500" },
+      ANTICOR: { label: "Anticorruption", badgeBg: "bg-amber-100 text-amber-800 border-amber-200", border: "border-amber-500" },
+      PI: { label: "Propriété Intellectuelle", badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200", border: "border-emerald-500" },
+      COSMETIQUE: { label: "Cosmétique", badgeBg: "bg-pink-100 text-pink-800 border-pink-200", border: "border-pink-500" },
+      INSTITUTIONNEL: { label: "Institutionnel", badgeBg: "bg-indigo-100 text-indigo-800 border-indigo-200", border: "border-indigo-500" },
+      AUTRE: { label: "Autres", badgeBg: "bg-slate-200 text-slate-800 border-slate-300", border: "border-slate-400" }
     };
 
-    // État de l'application & persistance locale
+    const IMPACTS = {
+      CRITIQUE: {
+        label: "Critique",
+        badgeClass: "bg-red-600 text-white border-red-700",
+        cardClass: "border-red-300 ring-1 ring-red-100"
+      },
+      IMPORTANT: {
+        label: "Important",
+        badgeClass: "bg-amber-100 text-amber-800 border-amber-300",
+        cardClass: "border-slate-200"
+      },
+      INFORMATIF: {
+        label: "Informatif",
+        badgeClass: "bg-slate-100 text-slate-600 border-slate-200",
+        cardClass: "border-slate-200"
+      }
+    };
+
     let allArticles = [];
     let state = {
       category: "ALL",
@@ -145,37 +163,36 @@
       savedIds: JSON.parse(localStorage.getItem("vj_saved_ids") || "[]")
     };
 
-    // Données de démonstration si articles.json n'est pas encore généré
     const DEMO_ARTICLES = [
       {
-        title: "Nouvelles recommandations sur la sécurisation des API et le chiffrement des données de santé",
-        link: "https://www.cnil.fr",
-        source: "CNIL",
-        category: "PDP",
-        summary: "La CNIL précise les mesures techniques obligatoires pour l'authentification forte et le cloisonnement des bases hébergeant des données sensibles. Une mise en conformité des prestataires techniques est attendue sous six mois.",
-        pub_date: new Date().toISOString()
-      },
-      {
         title: "Directive NIS 2 : calendrier de transposition et obligations de notification des incidents majeurs",
-        link: "https://www.ssi.gouv.fr",
+        link: "[https://www.ssi.gouv.fr](https://www.ssi.gouv.fr)",
         source: "ANSSI (CERT-FR)",
         category: "CYBER",
+        impact: "CRITIQUE",
         summary: "L'ANSSI détaille le mécanisme de signalement en deux étapes (alerte précoce sous 24h puis rapport circonstancié sous 72h) applicable aux entités essentielles et importantes.",
-        pub_date: new Date(Date.now() - 5 * 3600 * 1000).toISOString()
+        pub_date: new Date(Date.now() - 2 * 3600 * 1000).toISOString()
       },
       {
-        title: "Révision du règlement européen sur les allégations environnementales des produits cosmétiques",
-        link: "https://eur-lex.europa.eu",
-        source: "EUR-Lex Actualités",
-        category: "COSMETIQUE",
-        summary: "Les mentions liées à la neutralité carbone et à la biodégradabilité devront désormais s'appuyer sur une analyse du cycle de vie vérifiée par un organisme indépendant avant mise sur le marché.",
+        title: "Nouvelles recommandations sur la sécurisation des API et le chiffrement des données de santé",
+        link: "[https://www.cnil.fr](https://www.cnil.fr)",
+        source: "CNIL",
+        category: "PDP",
+        impact: "IMPORTANT",
+        summary: "La CNIL précise les mesures techniques obligatoires pour l'authentification forte et le cloisonnement des bases hébergeant des données sensibles.",
+        pub_date: new Date(Date.now() - 6 * 3600 * 1000).toISOString()
+      },
+      {
+        title: "Bilan annuel des dépôts de brevets et dessins industriels en Europe",
+        link: "[https://www.inpi.fr](https://www.inpi.fr)",
+        source: "INPI",
+        category: "PI",
+        impact: "INFORMATIF",
+        summary: "Publication des statistiques annuelles sur l'innovation industrielle et la répartition sectorielle des titres déposés.",
         pub_date: new Date(Date.now() - 26 * 3600 * 1000).toISOString()
       }
     ];
 
-    // ==========================================
-    // CHARGEMENT DES DONNÉES
-    // ==========================================
     async function loadArticles() {
       try {
         const response = await fetch("./articles.json?t=" + Date.now());
@@ -204,9 +221,6 @@
       });
     }
 
-    // ==========================================
-    // RENDU DE LA BARRE DE CATÉGORIES
-    // ==========================================
     function renderCategoryBar() {
       const bar = document.getElementById("category-bar");
       bar.innerHTML = "";
@@ -242,9 +256,6 @@
       });
     }
 
-    // ==========================================
-    // FILTRAGE ET AFFICHAGE DES CARTES
-    // ==========================================
     function toggleFilter(key) {
       state[key] = !state[key];
       const btnUnread = document.getElementById("btn-unread");
@@ -266,9 +277,10 @@
       state.unreadOnly = false;
       state.savedOnly = false;
       document.getElementById("search-input").value = "";
+      document.getElementById("impact-filter").value = "ALL";
       document.getElementById("source-filter").value = "ALL";
       document.getElementById("period-filter").value = "ALL";
-      toggleFilter("reset"); // rafraîchit les styles boutons
+      toggleFilter("reset");
       state.unreadOnly = false;
       state.savedOnly = false;
       renderCategoryBar();
@@ -277,16 +289,18 @@
 
     function applyFilters() {
       const query = document.getElementById("search-input").value.toLowerCase().trim();
+      const impactFilter = document.getElementById("impact-filter").value;
       const sourceFilter = document.getElementById("source-filter").value;
       const periodFilter = document.getElementById("period-filter").value;
       const now = Date.now();
 
-      // Mise à jour compteur non lus global
       const totalUnread = allArticles.filter(a => !state.readIds.includes(a.link)).length;
       document.getElementById("unread-badge").textContent = totalUnread;
 
       const filtered = allArticles.filter(art => {
+        const artImpact = (art.impact || "INFORMATIF").toUpperCase();
         if (state.category !== "ALL" && art.category !== state.category) return false;
+        if (impactFilter !== "ALL" && artImpact !== impactFilter) return false;
         if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
         if (state.unreadOnly && state.readIds.includes(art.link)) return false;
         if (state.savedOnly && !state.savedIds.includes(art.link)) return false;
@@ -308,7 +322,7 @@
         return true;
       });
 
-      const hasActiveFilter = state.category !== "ALL" || state.unreadOnly || state.savedOnly || query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
+      const hasActiveFilter = state.category !== "ALL" || impactFilter !== "ALL" || state.unreadOnly || state.savedOnly || query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
       document.getElementById("reset-btn").classList.toggle("hidden", !hasActiveFilter);
       document.getElementById("results-count").textContent = `${filtered.length} publication${filtered.length > 1 ? "s" : ""} affichée${filtered.length > 1 ? "s" : ""}`;
 
@@ -364,16 +378,21 @@
 
       container.innerHTML = articles.map(art => {
         const theme = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+        const impactKey = (art.impact || "INFORMATIF").toUpperCase();
+        const impactMeta = IMPACTS[impactKey] || IMPACTS.INFORMATIF;
         const isRead = state.readIds.includes(art.link);
         const isSaved = state.savedIds.includes(art.link);
         const encodedLink = encodeURIComponent(art.link);
 
         return `
-          <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition ${isRead ? "opacity-65" : ""}">
+          <article class="bg-white rounded-xl border ${impactMeta.cardClass} shadow-sm overflow-hidden transition ${isRead ? "opacity-65" : ""}">
             <div class="p-4">
               <!-- Ligne Métadonnées -->
               <div class="flex items-center justify-between gap-2 mb-2">
-                <div class="flex items-center gap-2 flex-wrap">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide border ${impactMeta.badgeClass}">
+                    ${impactMeta.label}
+                  </span>
                   <span class="px-2 py-0.5 rounded text-[11px] font-bold border ${theme.badgeBg}">
                     ${theme.label}
                   </span>
@@ -440,7 +459,6 @@
       }).join("");
     }
 
-    // Démarrage
     loadArticles();
   </script>
 </body>
