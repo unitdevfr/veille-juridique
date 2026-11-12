@@ -1,0 +1,587 @@
+[
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1470/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans le noyau Linux de SUSE expose les systèmes à des risques d'atteinte à la confidentialité et à l'intégrité des données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour prévenir toute exploitation malveillante et assurer la conformité aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1469/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans le noyau Linux d'Ubuntu expose les systèmes à une exécution de code arbitraire et à une compromission de l'intégrité des données. Il est impératif de procéder immédiatement à la mise à jour des noyaux affectés pour se conformer aux obligations de sécurité des systèmes d'information et prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans les produits VMware (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1474/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité critique d'exécution de code à distance a été identifiée dans les produits VMware, exposant les systèmes à une compromission totale. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur sans délai pour prévenir toute exploitation malveillante et garantir la conformité aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans les produits Mitel (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1477/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité d'exécution de code à distance a été identifiée dans les produits Mitel, exposant les systèmes à des compromissions majeures. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour prévenir toute exploitation malveillante et assurer la continuité de la sécurité des systèmes d'information.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1471/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans le noyau Linux de Red Hat expose les systèmes à des risques d'exécution de code à distance et d'élévation de privilèges. Une action immédiate de mise à jour des correctifs de sécurité est impérative pour garantir la conformité aux obligations de protection des données et assurer la continuité opérationnelle.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Foxit (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1478/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités SSRF et XSS dans les produits Foxit expose les systèmes d'information à des risques d'exécution de code arbitraire et d'accès non autorisé. Il est impératif de déployer les correctifs de sécurité fournis par l'éditeur sans délai pour prévenir toute exploitation malveillante et garantir la conformité aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits IBM (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1472/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans les produits IBM expose les infrastructures à des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif de procéder immédiatement à l'application des correctifs de sécurité fournis par l'éditeur pour prévenir toute compromission des systèmes et garantir la conformité aux obligations de sécurité des réseaux et systèmes d'information.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de Debian (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1473/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans le noyau Linux de Debian expose les systèmes à des risques d'élévation de privilèges et de compromission de données. Une mise à jour immédiate des noyaux affectés est impérative pour se conformer aux obligations de sécurité des systèmes d'information et prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Cisco (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1476/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités permettant l'exécution de code arbitraire à distance sur les produits Cisco expose les systèmes à des risques élevés d'intrusion et de compromission de données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais afin de se conformer aux obligations de diligence en matière de cybersécurité et de prévenir toute violation de données.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Splunk (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1475/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans les produits Splunk expose l'entreprise à des risques d'exécution de code à distance et de compromission de l'intégrité et de la confidentialité des données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais afin de se conformer aux obligations de sécurité des systèmes d'information et de prévenir toute violation de données à caractère personnel.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Alpine (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1480/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité critique a été identifiée dans Alpine, permettant le contournement des politiques de sécurité en place. Cette faille expose l'infrastructure à des accès non autorisés, nécessitant une intervention immédiate pour appliquer les correctifs de sécurité et prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Mattermost Server (06 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1479/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Des vulnérabilités non spécifiées ont été identifiées dans Mattermost Server, exposant les infrastructures à des risques d'exploitation potentiels. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dès leur publication pour prévenir toute compromission de la confidentialité et de l'intégrité des données traitées.",
+    "pub_date": "2026-11-06T00:00:00+00:00"
+  },
+  {
+    "title": "Activités cyber offensives ciblant la France menées par des acteurs iraniens liés au CGRI (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-009/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Le C4 a identifié des cyberattaques de déstabilisation contre la France imputées aux unités iraniennes Shahid Shoostari et Shahid Kaveh. Cet événement souligne une menace persistante sur la sécurité nationale, nécessitant un renforcement immédiat des mesures de vigilance et des protocoles de réponse aux incidents pour les infrastructures critiques.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Moodle (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1481/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité de contournement de la politique de sécurité a été identifiée dans Moodle, exposant les données traitées par la plateforme. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour prévenir toute exploitation malveillante et assurer la conformité aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Xen (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1485/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans l'hyperviseur Xen expose les systèmes à des risques d'élévation de privilèges, de fuite de données et de déni de service. Il est impératif de procéder immédiatement à la mise à jour des correctifs de sécurité pour garantir la conformité aux obligations de protection des données et assurer la continuité des services critiques.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits VMware (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1486/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans les produits VMware expose les infrastructures critiques à des risques d'exploitation non spécifiés. Il est impératif de procéder à une veille active des correctifs publiés par l'éditeur et de planifier leur déploiement immédiat pour assurer la continuité de service et la conformité aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Sonicwall SonicOS (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1483/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans SonicOS expose les infrastructures à des risques de déni de service, de fuite de données et de contournement des politiques de sécurité. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur sans délai pour assurer la conformité aux obligations de protection des données et maintenir l'intégrité du système d'information.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Apache HTTP Server (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1484/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans Apache HTTP Server expose les systèmes à des risques d'exploitation non spécifiés par l'éditeur. Il est impératif de procéder à une analyse d'exposition et d'appliquer les correctifs de sécurité dès leur publication pour garantir la conformité aux obligations de protection des données et de continuité de service.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Synology (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1482/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans les produits Synology expose les entreprises à des risques d'exécution de code à distance et de violation de la confidentialité des données. Il est impératif de procéder immédiatement à la mise à jour des systèmes affectés pour se conformer aux obligations de sécurité imposées par le RGPD et limiter les risques de compromission.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits SAP (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1497/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans les produits SAP expose l'organisation à des risques majeurs d'exécution de code à distance et de fuite de données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour assurer la continuité de service et la conformité aux obligations de protection des données.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Atlassian Confluence Data Center (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1492/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité d'exécution de code à distance (RCE) a été identifiée dans Atlassian Confluence Data Center, exposant les systèmes à une compromission totale. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur sans délai pour prévenir toute exfiltration de données ou intrusion malveillante. Cette faille constitue un risque majeur pour la conformité et la continuité des opérations de l'entreprise.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Roundcube (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1489/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans Roundcube, incluant l'exécution de code arbitraire et des failles SSRF/CSRF, expose les systèmes à des compromissions majeures. Il est impératif de procéder immédiatement à la mise à jour des instances concernées pour prévenir toute exploitation malveillante et garantir la sécurité des données traitées.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Synology DSM (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1493/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans Synology DSM expose les infrastructures à des risques de déni de service, de fuite de données et d'attaques SSRF. Il est impératif de procéder immédiatement à la mise à jour des systèmes pour prévenir toute exploitation malveillante et garantir la conformité aux obligations de sécurité des données.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Siemens SIMATIC (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1495/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de vulnérabilités critiques dans Siemens SIMATIC expose les systèmes industriels à des risques d'exécution de code à distance et de contournement de sécurité. Les entreprises utilisatrices doivent impérativement appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir toute compromission de leurs infrastructures critiques et se conformer aux obligations de cybersécurité en vigueur.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Mozilla Firefox (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1490/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans Mozilla Firefox, incluant une élévation de privilèges, expose les systèmes d'information à des risques d'intrusion et de compromission de données. Il est impératif de déployer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais afin de se conformer aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans OpenSSL (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1496/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La découverte de multiples vulnérabilités dans OpenSSL expose les systèmes à des risques de déni de service, de fuite de données et de contournement des politiques de sécurité. Il est impératif de procéder immédiatement à la mise à jour des bibliothèques OpenSSL pour garantir la conformité aux obligations de sécurité des systèmes d'information et protéger l'intégrité des données traitées.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Schneider Electric EcoStruxure (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1494/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La vulnérabilité identifiée dans Schneider Electric EcoStruxure permet une exécution de code arbitraire, exposant les systèmes industriels à des risques majeurs d'intrusion et de contrôle non autorisé. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur et de renforcer la segmentation réseau pour prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le greffon OpenID Connect OpenID Provider (OIDC OP) pour Shibboleth (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1491/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Des vulnérabilités critiques dans le greffon OIDC OP pour Shibboleth permettent un contournement des politiques de sécurité, exposant les systèmes d'authentification à des accès non autorisés. Il est impératif de procéder immédiatement à la mise à jour des composants affectés pour garantir l'intégrité des accès et la conformité aux exigences de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Google Chrome (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1488/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Google a identifié plusieurs vulnérabilités dans Chrome, dont la faille CVE-2026-125350 qui fait actuellement l'objet d'une exploitation active. Il est impératif de procéder immédiatement à la mise à jour des navigateurs pour prévenir tout risque d'intrusion ou de compromission des données, conformément aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Point de situation de l’opération REACTIV – octobre 2026 (12 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-010/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "L'opération REACTIV marque une réponse étatique renforcée face à la recrudescence des cyberattaques ciblant les services publics. Cette initiative impose une vigilance accrue sur la protection des données sensibles et nécessite une mise en conformité rigoureuse des systèmes d'information face aux nouvelles directives de l'ANSSI.",
+    "pub_date": "2026-11-12T00:00:00+00:00"
+  },
+  {
+    "title": "Cybersécurité des collectivités territoriales : la CNIL prononce dix sanctions",
+    "link": "https://www.cnil.fr/fr/sanctions-cybersecurite-collectivites-territoriales",
+    "source": "CNIL",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "La CNIL a sanctionné dix collectivités territoriales et un établissement public pour des manquements à la sécurité des données personnelles. Ces décisions soulignent l'obligation légale de renforcer la protection des systèmes d'information et imposent aux organismes publics de mettre en conformité leurs mesures de sécurité pour éviter de futures sanctions.",
+    "pub_date": "2026-11-09T12:00:00+00:00"
+  },
+  {
+    "title": "Recherches internes : quelles sont les obligations pour les professionnels de santé ?",
+    "link": "https://www.cnil.fr/fr/recherches-internes-sante-quelles-obligations",
+    "source": "CNIL",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "La CNIL rappelle les obligations de conformité pour les recherches internes menées par les professionnels de santé, notamment en matière de protection des données de santé. Les établissements doivent s'assurer que ces projets respectent les méthodologies de référence ou font l'objet d'une autorisation préalable pour garantir la sécurité et la confidentialité des patients.",
+    "pub_date": "2026-11-06T12:00:00+00:00"
+  },
+  {
+    "title": "Colgate-Palmolive fined $930,000 by US authorities over ‘violations’ of chemical reporting",
+    "link": "https://www.cosmeticsbusiness.com/colgate-palmolive-fined-930-000-chemical-reporting",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "IMPORTANT",
+    "summary": "Colgate-Palmolive a conclu un accord amiable avec l'EPA pour un montant de 930 000 dollars suite au non-respect des obligations de déclaration de substances chimiques importées entre 2016 et 2019. Cet incident souligne l'importance critique de la conformité aux réglementations environnementales sur les substances chimiques pour éviter des sanctions financières et des risques réputationnels.",
+    "pub_date": "2026-11-12T11:20:00+00:00"
+  },
+  {
+    "title": "Découvrez les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4067&message=4141",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article constitue une revue de presse générale proposée par le Village de la Justice couvrant des thématiques variées telles que le management et les carrières juridiques. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
+    "pub_date": "2026-11-12T12:26:21.241058+00:00"
+  },
+  {
+    "title": "Droit des affaires, fiscalité, IA… êtes-vous à jour ?",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4065&message=4139",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article annonce une journée de formation dédiée aux évolutions transversales du droit des affaires, de la fiscalité et de l'intelligence artificielle. Il s'agit d'une initiative de veille professionnelle visant à accompagner les praticiens dans l'adaptation de leurs méthodes face aux mutations technologiques et réglementaires actuelles.",
+    "pub_date": "2026-11-12T12:26:26.137940+00:00"
+  },
+  {
+    "title": "Découvrez les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4066&message=4140",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article constitue une revue de presse générale proposée par le Village de la Justice couvrant des thématiques variées telles que le management et les carrières juridiques. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
+    "pub_date": "2026-11-12T12:26:31.123816+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4057&message=4131",
+    "source": "Village de la Justice",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "",
+    "pub_date": "2026-11-12T12:27:25.136346+00:00"
+  },
+  {
+    "title": "Avocats, les transformations du droit se jouent aussi les 24 et 25 novembre 2026",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4060&message=4134",
+    "source": "Village de la Justice",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "",
+    "pub_date": "2026-11-12T12:28:38.521184+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4059&message=4133",
+    "source": "Village de la Justice",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "",
+    "pub_date": "2026-11-12T12:29:17.881799+00:00"
+  },
+  {
+    "title": "Budget juridique 2027 : le kit pratique pour convaincre le COMEX",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4053&message=4127",
+    "source": "Village de la Justice",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "",
+    "pub_date": "2026-11-12T12:30:25.516204+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4055&message=4129",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article présente une revue de presse générale concernant les actualités juridiques, le management et les carrières au sein du Village de la justice. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
+    "pub_date": "2026-11-12T12:31:10.629927+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4054&message=4128",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article présente une revue de presse générale concernant les actualités juridiques, le management et les carrières au sein du Village de la justice. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
+    "pub_date": "2026-11-12T12:31:17.052452+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice.",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4051&message=4125",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article constitue une revue de presse généraliste publiée par le Village de la Justice couvrant les actualités juridiques, le management et les carrières. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité spécifique pour les entreprises.",
+    "pub_date": "2026-11-12T12:31:54.902504+00:00"
+  },
+  {
+    "title": "La CNIL sera présente au Salon des maires et des collectivités locales 2026",
+    "link": "https://www.cnil.fr/fr/salon-maires-collectivites-2026",
+    "source": "CNIL",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La CNIL annonce sa participation au Salon des maires et des collectivités locales 2026 afin de renforcer le dialogue avec les acteurs territoriaux. Cet événement constitue une opportunité de sensibilisation et d'accompagnement sur les enjeux de protection des données personnelles, sans toutefois introduire de nouvelle obligation réglementaire immédiate.",
+    "pub_date": "2026-11-10T12:00:00+00:00"
+  },
+  {
+    "title": "Bulletin d'actualité CERTFR-2026-ACT-047 (09 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-047/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "INFORMATIF",
+    "summary": "Ce bulletin du CERT-FR synthétise les vulnérabilités critiques identifiées au cours de la semaine écoulée. Il constitue une veille opérationnelle essentielle pour orienter la priorisation des correctifs de sécurité, bien qu'il ne dispense pas d'une analyse exhaustive des avis techniques complets.",
+    "pub_date": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Apple (10 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1487/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "INFORMATIF",
+    "summary": "",
+    "pub_date": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "title": "Are we going back to the 2000s celebrity fragrance wardrobe era?",
+    "link": "https://www.cosmeticsbusiness.com/return-to-the-2000s-celebrity-fragrance-wardrobe",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article analyse le retour de la tendance des parfums de célébrités, rappelant l'ère des années 2000. D'un point de vue juridique et réglementaire, cette multiplication des lancements impose une vigilance accrue sur la conformité des étiquetages, la sécurité des ingrédients et la protection des droits de propriété intellectuelle liés à l'image des personnalités.",
+    "pub_date": "2026-11-12T12:33:00+00:00"
+  },
+  {
+    "title": "Are we nearing peak K-beauty? Industry experts weigh in…",
+    "link": "https://www.cosmeticsbusiness.com/k-beauty-nearing-peak-fatigue-industry-experts-views",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article analyse la saturation du marché de la K-beauty face à son expansion croissante dans le commerce de détail occidental. Il souligne l'influence majeure des innovations coréennes sur les standards de l'industrie, tout en projetant les évolutions stratégiques du secteur à l'horizon 2027.",
+    "pub_date": "2026-11-12T12:29:00+00:00"
+  },
+  {
+    "title": "Symrise names Martin Huber new CFO to support ‘next phase of durable growth’",
+    "link": "https://www.cosmeticsbusiness.com/symrise-names-martin-huber-new-cfo-to-support",
+    "source": "Cosmetics Business",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Symrise a annoncé la nomination de Martin Huber au poste de directeur financier à compter du 1er avril 2027, en remplacement d'Olaf Klinger. Cette transition de gouvernance s'inscrit dans la stratégie de croissance à long terme de l'entreprise et ne présente aucun risque juridique ou de cybersécurité immédiat.",
+    "pub_date": "2026-11-12T12:23:00+00:00"
+  },
+  {
+    "title": "L'Oréal leads funding round for Chinese biotech company PAM2L",
+    "link": "https://www.cosmeticsbusiness.com/lor%C3%A9al-leads-funding-round-for-biotech-company-PAM2L",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'Oréal, via son fonds BOLD, réalise un investissement minoritaire dans la biotech chinoise PAM2L pour explorer de nouveaux bio-actifs. Cette opération stratégique vise à renforcer l'expertise en formulation du groupe tout en sécurisant l'accès à des innovations scientifiques propriétaires.",
+    "pub_date": "2026-11-12T12:13:00+00:00"
+  },
+  {
+    "title": "Live shopping is boosting beauty, converting digital discovery to in-store sales",
+    "link": "https://www.cosmeticsbusiness.com/live-shopping-is-boosting-beauty-in-store-sales",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'essor du live shopping sur les plateformes sociales comme TikTok Shop transforme le parcours client en favorisant la conversion du numérique vers le point de vente physique, particulièrement dans le secteur cosmétique. Cet enjeu stratégique nécessite une vigilance accrue sur la conformité des pratiques publicitaires et la protection des données personnelles lors des interactions en direct.",
+    "pub_date": "2026-11-12T12:09:00+00:00"
+  },
+  {
+    "title": "Neom Wellbeing CEO Isabel Malbois exits the business after five years",
+    "link": "https://www.cosmeticsbusiness.com/neom-wellbeing-ceo-isabel-malbois-exits-the-business",
+    "source": "Cosmetics Business",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Isabel Malbois quitte son poste de PDG de la marque britannique Neom Wellbeing après cinq ans de mandat. Le cofondateur Oliver Mennell reprend la direction de l'entreprise en tant que président exécutif, marquant une transition dans la gouvernance de la société.",
+    "pub_date": "2026-11-12T11:18:00+00:00"
+  },
+  {
+    "title": "Stress-resilient skin",
+    "link": "https://www.cosmeticsbusiness.com/stress-resilient-skin",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Cet article présente une innovation technologique utilisant des cellules souches végétales pour atténuer les effets du stress psychologique sur la peau. D'un point de vue juridique, l'enjeu réside dans la conformité des allégations cosmétiques associées à cette technologie, qui doivent être étayées par des preuves scientifiques rigoureuses conformément aux règlements sur les produits cosmétiques.",
+    "pub_date": "2026-11-12T09:30:00+00:00"
+  },
+  {
+    "title": "How body contouring and firming products are getting a boost from the GLP-1 era",
+    "link": "https://www.cosmeticsbusiness.com/how-body-contouring-and-firming-products-are-getting",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'essor des produits de soin raffermissants est corrélé à l'utilisation croissante des traitements GLP-1, créant une nouvelle dynamique de marché pour le secteur cosmétique. Cet enjeu souligne la nécessité pour les entreprises de surveiller les allégations marketing liées à ces produits afin de se conformer aux réglementations sur la publicité et la sécurité des consommateurs.",
+    "pub_date": "2026-11-11T20:51:00+00:00"
+  },
+  {
+    "title": "TRI-K introduces TRIglyphix Soothe: advanced scalp soothing for lasting comfort",
+    "link": "https://www.cosmeticsbusiness.com/tri-k-introduces-triglyphix-soothe-advanced-scalp-soothing",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "TRI-K a lancé l'ingrédient TRIglyphix Soothe, destiné à apaiser les cuirs chevelus sensibles, lors du salon in-cosmetics Asia. Cette innovation permet aux formulateurs de répondre à la demande croissante pour des produits de soin capillaire ciblés, sans implication juridique ou de cybersécurité immédiate.",
+    "pub_date": "2026-11-11T14:52:00+00:00"
+  },
+  {
+    "title": "Influencer Stella Tzortzi on building a brand inspired by Mediterranean hair oiling rituals",
+    "link": "https://www.cosmeticsbusiness.com/influencer-stella-tzortzi-on-building-cee-cee",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'influenceuse Stella Tzortzi lance sa marque de soins capillaires Cee Cee, basée sur des rituels méditerranéens traditionnels. Cet article souligne l'émergence de nouvelles marques de cosmétiques naturelles portées par des créateurs de contenu, sans soulever de problématiques juridiques ou de cybersécurité immédiates.",
+    "pub_date": "2026-11-11T12:45:00+00:00"
+  },
+  {
+    "title": "Cardi B brings Grow-Good Beauty to Canada",
+    "link": "https://www.cosmeticsbusiness.com/cardi-b-brings-grow-good-beauty-to-canada",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque de soins capillaires Grow-Good Beauty, fondée par Cardi B, étend ses activités commerciales au Canada via un modèle de vente directe aux consommateurs. Cette expansion nécessite une mise en conformité avec les réglementations canadiennes sur les produits cosmétiques et les lois sur la protection des consommateurs en ligne.",
+    "pub_date": "2026-11-11T12:42:00+00:00"
+  },
+  {
+    "title": "Shiseido returns to profit in Q3 26, but Drunk Elephant records ‘severe underperformance’",
+    "link": "https://www.cosmeticsbusiness.com/shiseido-returns-to-profit-in-q3-26",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Shiseido a renoué avec la rentabilité au troisième trimestre 2026, malgré une baisse significative de 23 % des ventes mondiales de la marque Drunk Elephant. Cette contre-performance est principalement attribuée à des difficultés opérationnelles dans le secteur du commerce électronique aux États-Unis.",
+    "pub_date": "2026-11-11T12:35:00+00:00"
+  },
+  {
+    "title": "Phlur opens festive pop-up with Space NK to ‘build’ hype around Heavy Cream franchise",
+    "link": "https://www.cosmeticsbusiness.com/phlur-opens-festive-pop-up-with-space-nk",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque de parfumerie Phlur collabore avec le détaillant Space NK pour une opération marketing éphémère visant à promouvoir ses nouvelles gammes de produits. Cette initiative commerciale ne présente pas d'enjeu juridique ou de cybersécurité particulier, relevant d'une stratégie de développement de marque classique.",
+    "pub_date": "2026-11-11T12:32:00+00:00"
+  },
+  {
+    "title": "Indie brand Monte Club is shaking up the tired male grooming industry",
+    "link": "https://www.cosmeticsbusiness.com/indie-brand-monte-club-is-shaking-up-male-grooming",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque indépendante Monte Club cherche à dynamiser le secteur du soin masculin grâce à une stratégie marketing innovante et des produits primés. Cette actualité souligne l'évolution concurrentielle du marché des cosmétiques sans soulever d'enjeux juridiques ou de conformité immédiats.",
+    "pub_date": "2026-11-11T12:25:00+00:00"
+  },
+  {
+    "title": "Olaplex helps Henkel’s sales in Q3 as hair care acquisitions set to boost growth",
+    "link": "https://www.cosmeticsbusiness.com/olaplex-helps-henkel-sales-q3-hair-acquistions-boost-growth",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Henkel renforce son portefeuille dans le secteur des soins capillaires grâce à l'acquisition des marques Olaplex et Not Your Mother's. Cette stratégie vise à stimuler la croissance annuelle du groupe pour atteindre un objectif de 2 milliards d'euros de chiffre d'affaires d'ici 2030.",
+    "pub_date": "2026-11-11T11:44:00+00:00"
+  },
+  {
+    "title": "Sol de Janeiro and Smashbox among brands donating $83 million excess stock in new initiative",
+    "link": "https://www.cosmeticsbusiness.com/sol-de-janeiro-smashbox-brands-donating-excess-stock-beauty-vessel",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La start-up Vessel lance une initiative visant à réduire le gaspillage des stocks invendus dans l'industrie cosmétique en facilitant le don de produits plutôt que leur destruction. Ce modèle répond aux enjeux croissants de responsabilité sociétale des entreprises (RSE) et aux nouvelles réglementations européennes et internationales visant à interdire la destruction des invendus non alimentaires.",
+    "pub_date": "2026-11-11T11:30:00+00:00"
+  },
+  {
+    "title": "Why do chemicals in beauty products have a bad reputation? How better science communication can tackle misinformation",
+    "link": "https://www.cosmeticsbusiness.com/chemicals-beauty-products-bad-reputation-science-comms-tackle-misinformation",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'industrie cosmétique fait face à un défi croissant de désinformation concernant la sécurité des ingrédients chimiques. L'enjeu est de renforcer la communication scientifique pour aligner la perception publique sur les données réglementaires et techniques, afin de protéger la réputation du secteur.",
+    "pub_date": "2026-11-11T11:10:00+00:00"
+  },
+  {
+    "title": "From twist to drop: Meet Virospack autofill",
+    "link": "https://www.cosmeticsbusiness.com/from-twist-to-drop-meet-virospack-autofill",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Virospack a lancé l'Autofiller, un compte-gouttes à bouton-poussoir automatisé destiné aux sérums et huiles de faible viscosité. Cette innovation technique vise à améliorer l'expérience utilisateur et la précision du dosage dans le secteur de la cosmétique, sans implication juridique ou de cybersécurité particulière.",
+    "pub_date": "2026-11-11T08:00:00+00:00"
+  },
+  {
+    "title": "Maybelline New York updates its 35-year-old ‘Maybe she’s born with it’ tagline",
+    "link": "https://www.cosmeticsbusiness.com/maybelline-new-york-updates-its-35-year-old-tagline",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Maybelline New York a modernisé son slogan historique pour refléter une évolution dans la perception de la beauté et l'identité de la marque. Cette mise à jour stratégique de la propriété intellectuelle n'entraîne aucune obligation juridique immédiate mais marque un repositionnement marketing global.",
+    "pub_date": "2026-11-10T14:15:00+00:00"
+  }
+]
