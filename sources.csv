@@ -1,15 +1,46 @@
 source,url,type
-Légifrance JORF,https://www.legifrance.gouv.fr/rss/jorf.xml,AUTO
-Village de la Justice,https://smtp.legiteam.net/newsletters/index.php?action=archive&nl=1&rss=1,INSTITUTIONNEL
+Légifrance JORF,https://www.legifrance.gouv.fr/rss/jorf.xml,INSTITUTIONNEL
 Cour de cassation,https://www.courdecassation.fr/rss.xml,INSTITUTIONNEL
-Sénat - Textes récents,https://www.senat.fr/dossiers-legislatifs/textes-recents.rss,INSTITUTIONNEL
-EUR-Lex Actualités,https://eur-lex.europa.eu/EN/display-news.rss,INSTITUTIONNEL
+Sénat - Textes récents,https://www.senat.fr/rss/textes.xml,INSTITUTIONNEL
+Assemblée Nationale,https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires,INSTITUTIONNEL
+DAJ Bercy,https://news.google.com/rss/search?q=site:economie.gouv.fr/daj&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+DGCCRF,https://news.google.com/rss/search?q=site:economie.gouv.fr/dgccrf&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+EUR-Lex Actualités,https://eur-lex.europa.eu/FR/display-feed.rss?rssId=162,INSTITUTIONNEL
+Curia - CJUE,https://news.google.com/rss/search?q=site:curia.europa.eu&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+EU Law Tracker,https://news.google.com/rss/search?q=site:law-tracker.europa.eu&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+Union Européenne - Presse,https://news.google.com/rss/search?q=site:european-union.europa.eu&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+ICC France,https://news.google.com/rss/search?q=site:icc-france.fr&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
+Europe Enterprise Network,https://news.google.com/rss/search?q=site:een-france.fr&hl=fr&gl=FR&ceid=FR:fr,INSTITUTIONNEL
 CNIL,https://www.cnil.fr/fr/rss.xml,PDP
-NOYB,https://noyb.eu/fr/rss.xml,PDP
-EDPB (Comité Européen Data),https://edpb.europa.eu/news/news/rss.xml,PDP
+EDPB (Comité Européen Data),https://www.edpb.europa.eu/feed/news_en,PDP
+NOYB,https://noyb.eu/en/rss.xml,PDP
+IAPP - Daily Dashboard,https://iapp.org/news/feed/,PDP
+AFCDP,https://news.google.com/rss/search?q=site:afcdp.net&hl=fr&gl=FR&ceid=FR:fr,PDP
+CEDPO,https://news.google.com/rss/search?q=site:cedpo.eu&hl=fr&gl=FR&ceid=FR:fr,PDP
+DPO Consulting,https://news.google.com/rss/search?q=site:dpoconsulting.fr&hl=fr&gl=FR&ceid=FR:fr,PDP
+HAAS Avocats,https://news.google.com/rss/search?q=site:haas-avocats.com&hl=fr&gl=FR&ceid=FR:fr,PDP
+FLIT Network,https://news.google.com/rss/search?q=site:flit-network.com&hl=fr&gl=FR&ceid=FR:fr,PDP
 ANSSI (CERT-FR),https://www.cert.ssi.gouv.fr/feed/,CYBER
 Cybermalveillance.gouv.fr,https://www.cybermalveillance.gouv.fr/feed,CYBER
-INPI,https://www.inpi.fr/fr/rss.xml,PI
-Transparency International,https://www.transparency.org/en/news/rss,ANTICOR
 AFA (Anticorruption),https://www.agence-francaise-anticorruption.gouv.fr/fr/rss.xml,ANTICOR
+Transparency International,https://www.transparency.org/en/rss/news,ANTICOR
+VIGO Avocats,https://news.google.com/rss/search?q=site:vigo-avocats.com&hl=fr&gl=FR&ceid=FR:fr,ANTICOR
+EQS - The Fine Print,https://news.google.com/rss/search?q=site:eqs.com&hl=fr&gl=FR&ceid=FR:fr,ANTICOR
+French Compliance Society,https://news.google.com/rss/search?q=site:frenchcompliancesociety.com&hl=fr&gl=FR&ceid=FR:fr,ANTICOR
+INPI,https://www.inpi.fr/fr/rss.xml,PI
+EUIPO,https://news.google.com/rss/search?q=site:euipo.europa.eu&hl=fr&gl=FR&ceid=FR:fr,PI
 Cosmetics Business,https://www.cosmeticsbusiness.com/rss,COSMETIQUE
+FEBEA,https://news.google.com/rss/search?q=site:febea.fr&hl=fr&gl=FR&ceid=FR:fr,COSMETIQUE
+COSMED,https://news.google.com/rss/search?q=site:cosmed.fr&hl=fr&gl=FR&ceid=FR:fr,COSMETIQUE
+Village de la Justice,https://smtp.legiteam.net/newsletters/index.php?action=archive&nl=1&rss=1,AUTO
+Le Monde du Droit,https://news.google.com/rss/search?q=site:lemondedudroit.fr&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Lettre des Juristes d'Affaires,https://news.google.com/rss/search?q=site:lja.fr&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Le Club des Juristes,https://news.google.com/rss/search?q=site:leclubdesjuristes.com&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Lefebvre Dalloz,https://news.google.com/rss/search?q=site:lefebvre-dalloz.fr&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Cercle Montesquieu,https://news.google.com/rss/search?q=site:cercle-montesquieu.fr&hl=fr&gl=FR&ceid=FR:fr,AUTO
+AFJE,https://news.google.com/rss/search?q=site:afje.org&hl=fr&gl=FR&ceid=FR:fr,AUTO
+La Robe Numérique,https://news.google.com/rss/search?q=site:larobenumerique.com&hl=fr&gl=FR&ceid=FR:fr,AUTO
+CMS Law,https://news.google.com/rss/search?q=site:cms.law&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Lexbase,https://news.google.com/rss/search?q=site:lexbase.fr&hl=fr&gl=FR&ceid=FR:fr,AUTO
+Juritravail,https://news.google.com/rss/search?q=site:juritravail.com&hl=fr&gl=FR&ceid=FR:fr,AUTO
+ARST Avocats,https://news.google.com/rss/search?q=site:arst-avocats.com&hl=fr&gl=FR&ceid=FR:fr,AUTO
