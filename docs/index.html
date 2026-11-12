@@ -114,12 +114,11 @@
   </main>
 
   <script>
-    window.onerror = function(m) { document.getElementById("results-count").textContent = "Erreur JS : " + m; };
-    document.getElementById("results-count").textContent = "Script actif — lecture des données...";
-  </script>
+    window.onerror = function(m) {
+      document.getElementById("results-count").textContent = "Erreur JS : " + m;
+    };
 
-  <script>
-    const CATEGORIES = {
+    var CATEGORIES = {
       PDP: { label: "Données (PDP)", color: "#3b82f6" },
       CYBER: { label: "Cybersécurité", color: "#ef4444" },
       ANTICOR: { label: "Anticorruption", color: "#f59e0b" },
@@ -130,45 +129,61 @@
     };
 
     function getStoredArray(key) {
-      try { const v = JSON.parse(localStorage.getItem(key) || "[]"); return Array.isArray(v) ? v : []; }
-      catch (e) { return []; }
+      try {
+        var v = JSON.parse(localStorage.getItem(key) || "[]");
+        return Array.isArray(v) ? v : [];
+      } catch (e) {
+        return [];
+      }
     }
 
     function escapeHtml(str) {
-      return String(str || "").replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, """);
+      return String(str || "")
+        .replace(/&/g, "&")
+        .replace(/</g, "<")
+        .replace(/>/g, ">")
+        .replace(/"/g, """);
     }
 
-    let allArticles = [];
-    let dataStatus = "sync";
-    let state = {
-      category: "ALL", impact: "ALL", unreadOnly: false, savedOnly: false, drawerOpen: false,
-      readIds: getStoredArray("vj_read_ids"), savedIds: getStoredArray("vj_saved_ids")
+    var allArticles = [];
+    var dataStatus = "sync";
+    var state = {
+      category: "ALL",
+      impact: "ALL",
+      unreadOnly: false,
+      savedOnly: false,
+      drawerOpen: false,
+      readIds: getStoredArray("vj_read_ids"),
+      savedIds: getStoredArray("vj_saved_ids")
     };
 
     function initTheme() {
-      const saved = localStorage.getItem("vj_theme");
-      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = saved ? saved === "dark" : prefersDark;
+      var saved = localStorage.getItem("vj_theme");
+      var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var isDark = saved ? saved === "dark" : prefersDark;
       document.documentElement.classList.toggle("dark", isDark);
       document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
     }
 
     function toggleTheme() {
-      const isDark = !document.documentElement.classList.contains("dark");
+      var isDark = !document.documentElement.classList.contains("dark");
       document.documentElement.classList.toggle("dark", isDark);
       localStorage.setItem("vj_theme", isDark ? "dark" : "light");
       document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
     }
 
-    const DEMO_ARTICLES = [{
+    var DEMO_ARTICLES = [{
       title: "Directive NIS 2 : obligations de notification des incidents majeurs (Mode aperçu)",
-      link: "https://www.ssi.gouv.fr", source: "ANSSI (CERT-FR)", category: "CYBER", impact: "CRITIQUE",
+      link: "https://www.ssi.gouv.fr",
+      source: "ANSSI (CERT-FR)",
+      category: "CYBER",
+      impact: "CRITIQUE",
       summary: "Le fichier docs/articles.json n'est pas encore publié sur GitHub Pages. Vérifiez l'onglet Actions sur GitHub.",
       pub_date: new Date().toISOString()
     }];
 
     async function loadArticles() {
-      const cached = getStoredArray("vj_cache_articles");
+      var cached = getStoredArray("vj_cache_articles");
       allArticles = cached.length > 0 ? cached : DEMO_ARTICLES;
       dataStatus = cached.length > 0 ? "cache" : "sync";
       populateSourcesDropdown();
@@ -176,14 +191,16 @@
       applyFilters();
 
       try {
-        const response = await fetch("./articles.json?t=" + Date.now());
+        var response = await fetch("./articles.json?t=" + Date.now());
         if (!response.ok) throw new Error("HTTP " + response.status);
-        const raw = await response.json();
-        const valid = Array.isArray(raw) ? raw.filter(a => a && typeof a === "object" && a.title && a.link) : [];
+        var raw = await response.json();
+        var valid = Array.isArray(raw) ? raw.filter(function(a) { return a && typeof a === "object" && a.title && a.link; }) : [];
         if (valid.length > 0) {
           allArticles = valid;
           dataStatus = "live";
-          try { localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100))); } catch (e) {}
+          try {
+            localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100)));
+          } catch (e) {}
           populateSourcesDropdown();
           renderPillsBar();
           applyFilters();
@@ -200,14 +217,24 @@
     }
 
     function populateSourcesDropdown() {
-      const select = document.getElementById("source-filter");
-      const currentVal = select.value;
+      var select = document.getElementById("source-filter");
+      var currentVal = select.value;
       select.innerHTML = '<option value="ALL">Toutes les sources</option>';
-      [...new Set(allArticles.map(a => a && a.source).filter(Boolean))].sort().forEach(src => {
-        const opt = document.createElement("option");
-        opt.value = src; opt.textContent = src; select.appendChild(opt);
+      var seen = {};
+      var sources = [];
+      allArticles.forEach(function(a) {
+        if (a && a.source && !seen[a.source]) {
+          seen[a.source] = true;
+          sources.push(a.source);
+        }
       });
-      if ([...select.options].some(o => o.value === currentVal)) select.value = currentVal;
+      sources.sort().forEach(function(src) {
+        var opt = document.createElement("option");
+        opt.value = src;
+        opt.textContent = src;
+        select.appendChild(opt);
+      });
+      if (seen[currentVal]) select.value = currentVal;
     }
 
     function toggleDrawer() {
@@ -223,168 +250,220 @@
       applyFilters();
     }
 
+    function makePill(bar, label, isActive, onClick, dotColor) {
+      var btn = document.createElement("button");
+      btn.onclick = onClick;
+      btn.className = "pill" + (isActive ? " active" : "");
+      var dotHtml = dotColor ? '<span class="dot" style="background:' + dotColor + '"></span>' : '';
+      btn.innerHTML = dotHtml + '<span>' + escapeHtml(label) + '</span>';
+      bar.appendChild(btn);
+    }
+
     function renderPillsBar() {
-      const bar = document.getElementById("pills-bar");
+      var bar = document.getElementById("pills-bar");
       bar.innerHTML = "";
-      const makePill = (label, isActive, onClick, dotColor) => {
-        const btn = document.createElement("button");
-        btn.onclick = onClick;
-        btn.className = "pill" + (isActive ? " active" : "");
-        btn.innerHTML = (dotColor ? `<span class="dot" style="background:${dotColor}"></span>` : "") + `<span>${escapeHtml(label)}</span>`;
-        bar.appendChild(btn);
-      };
 
-      makePill("Tout", state.category === "ALL" && state.impact === "ALL", () => {
-        state.category = "ALL"; state.impact = "ALL"; renderPillsBar(); applyFilters();
-      });
+      makePill(bar, "Tout", state.category === "ALL" && state.impact === "ALL", function() {
+        state.category = "ALL";
+        state.impact = "ALL";
+        renderPillsBar();
+        applyFilters();
+      }, null);
 
-      const critCount = allArticles.filter(a => String(a.impact || "").toUpperCase() === "CRITIQUE").length;
-      if (critCount > 0) makePill(`Critique (${critCount})`, state.impact === "CRITIQUE", () => {
-        state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE"; renderPillsBar(); applyFilters();
-      }, "#ef4444");
+      var critCount = allArticles.filter(function(a) { return String(a.impact || "").toUpperCase() === "CRITIQUE"; }).length;
+      if (critCount > 0) {
+        makePill(bar, "Critique (" + critCount + ")", state.impact === "CRITIQUE", function() {
+          state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE";
+          renderPillsBar();
+          applyFilters();
+        }, "#ef4444");
+      }
 
-      const impCount = allArticles.filter(a => String(a.impact || "").toUpperCase() === "IMPORTANT").length;
-      if (impCount > 0) makePill(`Important (${impCount})`, state.impact === "IMPORTANT", () => {
-        state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT"; renderPillsBar(); applyFilters();
-      }, "#f59e0b");
+      var impCount = allArticles.filter(function(a) { return String(a.impact || "").toUpperCase() === "IMPORTANT"; }).length;
+      if (impCount > 0) {
+        makePill(bar, "Important (" + impCount + ")", state.impact === "IMPORTANT", function() {
+          state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT";
+          renderPillsBar();
+          applyFilters();
+        }, "#f59e0b");
+      }
 
-      const sep = document.createElement("span");
+      var sep = document.createElement("span");
       sep.className = "pill-sep";
       bar.appendChild(sep);
 
-      Object.entries(CATEGORIES).forEach(([key, meta]) => {
-        if (!allArticles.some(a => a.category === key)) return;
-        makePill(meta.label, state.category === key, () => {
-          state.category = state.category === key ? "ALL" : key; renderPillsBar(); applyFilters();
+      Object.keys(CATEGORIES).forEach(function(key) {
+        var meta = CATEGORIES[key];
+        var exists = allArticles.some(function(a) { return a.category === key; });
+        if (!exists) return;
+        makePill(bar, meta.label, state.category === key, function() {
+          state.category = state.category === key ? "ALL" : key;
+          renderPillsBar();
+          applyFilters();
         }, meta.color);
       });
     }
 
     function resetAllFilters() {
-      state.category = "ALL"; state.impact = "ALL"; state.unreadOnly = false; state.savedOnly = false;
+      state.category = "ALL";
+      state.impact = "ALL";
+      state.unreadOnly = false;
+      state.savedOnly = false;
       document.getElementById("search-input").value = "";
       document.getElementById("source-filter").value = "ALL";
       document.getElementById("period-filter").value = "ALL";
       document.getElementById("btn-unread").classList.remove("active-sky");
       document.getElementById("btn-saved").classList.remove("active-amber");
-      renderPillsBar(); applyFilters();
+      renderPillsBar();
+      applyFilters();
     }
 
     function applyFilters() {
-      const query = document.getElementById("search-input").value.toLowerCase().trim();
-      const sourceFilter = document.getElementById("source-filter").value;
-      const periodFilter = document.getElementById("period-filter").value;
-      const now = Date.now();
+      var query = document.getElementById("search-input").value.toLowerCase().trim();
+      var sourceFilter = document.getElementById("source-filter").value;
+      var periodFilter = document.getElementById("period-filter").value;
+      var now = Date.now();
 
-      document.getElementById("unread-badge").textContent = allArticles.filter(a => !state.readIds.includes(a.link)).length;
-      const hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
+      var unreadTotal = allArticles.filter(function(a) { return state.readIds.indexOf(a.link) === -1; }).length;
+      document.getElementById("unread-badge").textContent = unreadTotal;
+
+      var hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
       document.getElementById("drawer-dot").classList.toggle("hidden", !hasDrawerFilter);
 
-      const filtered = allArticles.filter(art => {
-        const artImpact = String(art.impact || "INFORMATIF").toUpperCase();
+      var filtered = allArticles.filter(function(art) {
+        var artImpact = String(art.impact || "INFORMATIF").toUpperCase();
         if (state.category !== "ALL" && art.category !== state.category) return false;
         if (state.impact !== "ALL" && artImpact !== state.impact) return false;
         if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
-        if (state.unreadOnly && state.readIds.includes(art.link)) return false;
-        if (state.savedOnly && !state.savedIds.includes(art.link)) return false;
+        if (state.unreadOnly && state.readIds.indexOf(art.link) !== -1) return false;
+        if (state.savedOnly && state.savedIds.indexOf(art.link) === -1) return false;
         if (periodFilter !== "ALL" && art.pub_date) {
-          const pubTime = new Date(art.pub_date).getTime();
+          var pubTime = new Date(art.pub_date).getTime();
           if (!isNaN(pubTime)) {
-            const ageHours = (now - pubTime) / 3600000;
+            var ageHours = (now - pubTime) / 3600000;
             if (periodFilter === "24H" && ageHours > 24) return false;
             if (periodFilter === "7D" && ageHours > 168) return false;
           }
         }
-        if (query && !`${art.title || ""} ${art.summary || ""} ${art.source || ""}`.toLowerCase().includes(query)) return false;
+        if (query) {
+          var haystack = ((art.title || "") + " " + (art.summary || "") + " " + (art.source || "")).toLowerCase();
+          if (haystack.indexOf(query) === -1) return false;
+        }
         return true;
       });
 
-      const hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.unreadOnly || state.savedOnly || hasDrawerFilter;
+      var hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.unreadOnly || state.savedOnly || hasDrawerFilter;
       document.getElementById("reset-btn").classList.toggle("hidden", !hasAnyFilter);
 
-      const statusEl = document.getElementById("results-count");
-      if (dataStatus === "sync") statusEl.textContent = "Synchronisation avec articles.json...";
-      else if (dataStatus.startsWith("missing:")) statusEl.innerHTML = `Aperçu (${escapeHtml(dataStatus.split(":")[1])}) — <a href="./articles.json" target="_blank" style="color:var(--accent);text-decoration:underline">tester articles.json</a>`;
-      else if (dataStatus === "empty") statusEl.textContent = "Fichier articles.json vide";
-      else statusEl.textContent = `${filtered.length} article${filtered.length > 1 ? "s" : ""}`;
+      var statusEl = document.getElementById("results-count");
+      if (dataStatus === "sync") {
+        statusEl.textContent = "Synchronisation avec articles.json...";
+      } else if (dataStatus.indexOf("missing:") === 0) {
+        statusEl.innerHTML = 'Aperçu (' + escapeHtml(dataStatus.split(":")[1]) + ') — <a href="./articles.json" target="_blank" style="color:var(--accent);text-decoration:underline">tester articles.json</a>';
+      } else if (dataStatus === "empty") {
+        statusEl.textContent = "Fichier articles.json vide";
+      } else {
+        statusEl.textContent = filtered.length + " article" + (filtered.length > 1 ? "s" : "");
+      }
 
       renderCards(filtered);
     }
 
     function formatRelativeDate(dateStr) {
       if (!dateStr) return "";
-      const date = new Date(dateStr);
+      var date = new Date(dateStr);
       if (isNaN(date.getTime())) return "";
-      const diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
+      var diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
       if (diffHours < 1) return "À l'instant";
-      if (diffHours < 24) return `${diffHours}h`;
-      const diffDays = Math.floor(diffHours / 24);
+      if (diffHours < 24) return diffHours + "h";
+      var diffDays = Math.floor(diffHours / 24);
       if (diffDays === 1) return "Hier";
-      if (diffDays < 7) return `${diffDays}j`;
+      if (diffDays < 7) return diffDays + "j";
       return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
     }
 
     function toggleRead(link) {
-      state.readIds = state.readIds.includes(link) ? state.readIds.filter(id => id !== link) : [...state.readIds, link];
+      if (state.readIds.indexOf(link) !== -1) {
+        state.readIds = state.readIds.filter(function(id) { return id !== link; });
+      } else {
+        state.readIds.push(link);
+      }
       localStorage.setItem("vj_read_ids", JSON.stringify(state.readIds));
       applyFilters();
     }
 
     function toggleSaved(link) {
-      state.savedIds = state.savedIds.includes(link) ? state.savedIds.filter(id => id !== link) : [...state.savedIds, link];
+      if (state.savedIds.indexOf(link) !== -1) {
+        state.savedIds = state.savedIds.filter(function(id) { return id !== link; });
+      } else {
+        state.savedIds.push(link);
+      }
       localStorage.setItem("vj_saved_ids", JSON.stringify(state.savedIds));
       applyFilters();
     }
 
     function renderCards(articles) {
-      const container = document.getElementById("articles-container");
+      var container = document.getElementById("articles-container");
       if (articles.length === 0) {
-        container.innerHTML = `<div class="empty-box"><p>Aucun article pour cette sélection.</p><button class="reset-link" style="margin-top:10px" onclick="resetAllFilters()">Réinitialiser les filtres</button></div>`;
+        container.innerHTML = '<div class="empty-box"><p>Aucun article pour cette sélection.</p><button class="reset-link" style="margin-top:10px" onclick="resetAllFilters()">Réinitialiser les filtres</button></div>';
         return;
       }
-      container.innerHTML = articles.map((art, idx) => {
-        const cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
-        const impact = String(art.impact || "INFORMATIF").toUpperCase();
-        const isRead = state.readIds.includes(art.link);
-        const isSaved = state.savedIds.includes(art.link);
-        const impactTag = impact === "CRITIQUE" ? `<span class="tag-impact tag-critique">Critique</span>` : impact === "IMPORTANT" ? `<span class="tag-impact tag-important">Important</span>` : "";
-        return `
-          <article class="card ${isRead ? "is-read" : ""}">
-            <div class="card-meta">
-              <div class="meta-left">
-                <span class="dot" style="background:${cat.color}"></span>
-                <span class="meta-cat">${escapeHtml(cat.label)}</span>
-                <span>•</span>
-                <span class="meta-src">${escapeHtml(art.source)}</span>
-                <span>•</span>
-                <span class="meta-date">${formatRelativeDate(art.pub_date)}</span>
-              </div>
-              ${impactTag}
-            </div>
-            <h2 class="card-title"><a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}">${escapeHtml(art.title)}</a></h2>
-            ${art.summary ? `<p class="card-summary">${escapeHtml(art.summary)}</p>` : ""}
-            <div class="card-footer">
-              <a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}" class="source-link">Source officielle ↗</a>
-              <div class="card-actions">
-                <button class="btn-read ${isRead ? "done" : ""}" data-read="${idx}">${isRead ? "✓ Lu" : "Marquer lu"}</button>
-                <button class="btn-save ${isSaved ? "saved" : ""}" data-save="${idx}" title="Sauvegarder">
-                  <svg width="16" height="16" fill="${isSaved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-                </button>
-              </div>
-            </div>
-          </article>`;
-      }).join("");
-      container.dataset.current = JSON.stringify(articles.map(a => a.link));
+
+      var html = "";
+      for (var i = 0; i < articles.length; i++) {
+        var art = articles[i];
+        var cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+        var impact = String(art.impact || "INFORMATIF").toUpperCase();
+        var isRead = state.readIds.indexOf(art.link) !== -1;
+        var isSaved = state.savedIds.indexOf(art.link) !== -1;
+        var impactTag = "";
+        if (impact === "CRITIQUE") {
+          impactTag = '<span class="tag-impact tag-critique">Critique</span>';
+        } else if (impact === "IMPORTANT") {
+          impactTag = '<span class="tag-impact tag-important">Important</span>';
+        }
+
+        html += '<article class="card' + (isRead ? ' is-read' : '') + '">';
+        html += '<div class="card-meta"><div class="meta-left">';
+        html += '<span class="dot" style="background:' + cat.color + '"></span>';
+        html += '<span class="meta-cat">' + escapeHtml(cat.label) + '</span>';
+        html += '<span>•</span><span class="meta-src">' + escapeHtml(art.source) + '</span>';
+        html += '<span>•</span><span class="meta-date">' + formatRelativeDate(art.pub_date) + '</span>';
+        html += '</div>' + impactTag + '</div>';
+        html += '<h2 class="card-title"><a href="' + escapeHtml(art.link) + '" target="_blank" data-open="' + i + '">' + escapeHtml(art.title) + '</a></h2>';
+        if (art.summary) {
+          html += '<p class="card-summary">' + escapeHtml(art.summary) + '</p>';
+        }
+        html += '<div class="card-footer">';
+        html += '<a href="' + escapeHtml(art.link) + '" target="_blank" data-open="' + i + '" class="source-link">Source officielle ↗</a>';
+        html += '<div class="card-actions">';
+        html += '<button class="btn-read' + (isRead ? ' done' : '') + '" data-read="' + i + '">' + (isRead ? '✓ Lu' : 'Marquer lu') + '</button>';
+        html += '<button class="btn-save' + (isSaved ? ' saved' : '') + '" data-save="' + i + '" title="Sauvegarder">';
+        html += '<svg width="16" height="16" fill="' + (isSaved ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>';
+        html += '</button></div></div></article>';
+      }
+
+      container.innerHTML = html;
+      container.dataset.current = JSON.stringify(articles.map(function(a) { return a.link; }));
     }
 
-    document.getElementById("articles-container").addEventListener("click", (e) => {
-      const links = JSON.parse(e.currentTarget.dataset.current || "[]");
-      const openEl = e.target.closest("[data-open]");
-      if (openEl && links[openEl.dataset.open] && !state.readIds.includes(links[openEl.dataset.open])) { toggleRead(links[openEl.dataset.open]); return; }
-      const readEl = e.target.closest("[data-read]");
-      if (readEl) { toggleRead(links[readEl.dataset.read]); return; }
-      const saveEl = e.target.closest("[data-save]");
-      if (saveEl) { toggleSaved(links[saveEl.dataset.save]); }
+    document.getElementById("articles-container").addEventListener("click", function(e) {
+      var links = JSON.parse(e.currentTarget.dataset.current || "[]");
+      var openEl = e.target.closest("[data-open]");
+      if (openEl) {
+        var openLink = links[openEl.dataset.open];
+        if (openLink && state.readIds.indexOf(openLink) === -1) toggleRead(openLink);
+        return;
+      }
+      var readEl = e.target.closest("[data-read]");
+      if (readEl) {
+        toggleRead(links[readEl.dataset.read]);
+        return;
+      }
+      var saveEl = e.target.closest("[data-save]");
+      if (saveEl) {
+        toggleSaved(links[saveEl.dataset.save]);
+      }
     });
 
     initTheme();
