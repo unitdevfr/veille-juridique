@@ -114,10 +114,13 @@
   </main>
 
   <script>
-    window.onerror = function(m) {
-      document.getElementById("results-count").textContent = "Erreur JS : " + m;
+    window.onerror = function(m, u, l) {
+      document.getElementById("results-count").textContent = "Erreur L" + l + " : " + m;
     };
+    document.getElementById("results-count").textContent = "Lecture de articles.json...";
+  </script>
 
+  <script>
     var CATEGORIES = {
       PDP: { label: "Données (PDP)", color: "#3b82f6" },
       CYBER: { label: "Cybersécurité", color: "#ef4444" },
@@ -182,7 +185,7 @@
       pub_date: new Date().toISOString()
     }];
 
-    async function loadArticles() {
+    function loadArticles() {
       var cached = getStoredArray("vj_cache_articles");
       allArticles = cached.length > 0 ? cached : DEMO_ARTICLES;
       dataStatus = cached.length > 0 ? "cache" : "sync";
@@ -190,30 +193,33 @@
       renderPillsBar();
       applyFilters();
 
-      try {
-        var response = await fetch("./articles.json?t=" + Date.now());
-        if (!response.ok) throw new Error("HTTP " + response.status);
-        var raw = await response.json();
-        var valid = Array.isArray(raw) ? raw.filter(function(a) { return a && typeof a === "object" && a.title && a.link; }) : [];
-        if (valid.length > 0) {
-          allArticles = valid;
-          dataStatus = "live";
-          try {
-            localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100)));
-          } catch (e) {}
-          populateSourcesDropdown();
-          renderPillsBar();
-          applyFilters();
-        } else {
-          dataStatus = "empty";
-          applyFilters();
-        }
-      } catch (err) {
-        if (cached.length === 0) {
-          dataStatus = "missing:" + err.message;
-          applyFilters();
-        }
-      }
+      fetch("./articles.json?t=" + Date.now())
+        .then(function(response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          return response.json();
+        })
+        .then(function(raw) {
+          var valid = Array.isArray(raw) ? raw.filter(function(a) { return a && typeof a === "object" && a.title && a.link; }) : [];
+          if (valid.length > 0) {
+            allArticles = valid;
+            dataStatus = "live";
+            try {
+              localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100)));
+            } catch (e) {}
+            populateSourcesDropdown();
+            renderPillsBar();
+            applyFilters();
+          } else {
+            dataStatus = "empty";
+            applyFilters();
+          }
+        })
+        .catch(function(err) {
+          if (cached.length === 0) {
+            dataStatus = "missing:" + err.message;
+            applyFilters();
+          }
+        });
     }
 
     function populateSourcesDropdown() {
