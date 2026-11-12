@@ -2,8 +2,8 @@ name: Veille Juridique Quotidienne
 
 on:
   schedule:
-    # 07h30 UTC = 08h30 heure française (heure d'hiver CET) du lundi au vendredi
-    - cron: '48 7 * * 1-5'
+    # 07h17 UTC = 08h17 heure française (heure d'hiver CET) du lundi au vendredi
+    - cron: '17 7 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -33,7 +33,7 @@ jobs:
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
-        run: python main.py
+        run: python -u main.py
 
       - name: Sauvegarder l'historique SQLite et le flux PWA
         run: |
@@ -41,7 +41,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add veille_history.db docs/articles.json
           if ! git diff --staged --quiet; then
-            git commit -m "Auto: màj historique veille et flux PWA [skip ci]"
+            git commit -m "Auto: maj historique veille et flux PWA"
             git pull --rebase
             git push
           else
