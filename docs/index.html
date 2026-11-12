@@ -9,7 +9,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Veille Pro">
-  <link rel="manifest" href='data:application/manifest+json,{"name":"Veille Juridique","short_name":"Veille Pro","start_url":".","display":"standalone","background_color":"#f8fafc","theme_color":"#090d16","icons":[{"src":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23090d16%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>","sizes":"512x512","type":"image/svg+xml"}]}'>
   <style>
     :root { --bg:#f8fafc; --card:#fff; --border:#e2e8f0; --border-l:#f1f5f9; --text:#0f172a; --body:#475569; --muted:#64748b; --hover:#f1f5f9; --accent:#0284c7; --crit-bg:#fef2f2; --crit-tx:#dc2626; --imp-bg:#fffbeb; --imp-tx:#b45309; --read-bg:#ecfdf5; --read-tx:#059669; }
     html.dark { --bg:#090d16; --card:#111827; --border:#1e293b; --border-l:#1e293b; --text:#f1f5f9; --body:#cbd5e1; --muted:#94a3b8; --hover:#1e293b; --accent:#38bdf8; --crit-bg:rgba(220,38,38,.16); --crit-tx:#f87171; --imp-bg:rgba(217,119,6,.16); --imp-tx:#fbbf24; --read-bg:rgba(16,185,129,.15); --read-tx:#34d399; }
@@ -59,12 +58,12 @@
     .card-summary { font-size:13.5px; line-height:1.55; color:var(--body); margin-bottom:12px; }
     .card-footer { display:flex; align-items:center; justify-content:space-between; padding-top:10px; border-top:1px solid var(--border-l); }
     .source-link { font-size:12px; font-weight:500; color:var(--muted); text-decoration:none; }
-    .card-actions { display:flex; align-items:center; gap:4px; }
+    .card-actions { display:flex; align-items:center; gap:6px; }
     .btn-read { padding:4px 10px; border-radius:7px; font-size:12px; font-weight:500; color:var(--muted); }
     .btn-read:hover { background:var(--hover); color:var(--text); }
     .btn-read.done { background:var(--read-bg); color:var(--read-tx); }
-    .btn-save { padding:5px; border-radius:7px; color:var(--muted); display:inline-flex; }
-    .btn-save.saved { color:#f59e0b; }
+    .btn-save { padding:4px 8px; border-radius:7px; font-size:12px; font-weight:600; color:var(--muted); }
+    .btn-save.saved { color:#f59e0b; background:rgba(245,158,11,.12); }
     .empty-box { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:36px 20px; text-align:center; color:var(--muted); font-size:13.5px; }
     .hidden { display:none !important; }
   </style>
@@ -75,28 +74,26 @@
       <div class="header-top">
         <div class="brand">
           <span class="brand-dot"></span>
-          <h1>Veille Réglementaire</h1>
+          <h1>Veille Reglementaire</h1>
           <span id="unread-badge" class="badge-count">0</span>
         </div>
         <div class="header-actions">
           <button id="btn-unread" class="icon-btn" onclick="toggleQuickFilter('unreadOnly')">Non lus</button>
-          <button id="btn-saved" class="icon-btn" onclick="toggleQuickFilter('savedOnly')" title="Favoris">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
-          <button id="btn-theme" class="icon-btn" onclick="toggleTheme()" title="Thème"><span id="theme-icon">🌙</span></button>
-          <button id="btn-drawer" class="icon-btn" onclick="toggleDrawer()" title="Rechercher">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <button id="btn-saved" class="icon-btn" onclick="toggleQuickFilter('savedOnly')">Favoris</button>
+          <button id="btn-theme" class="icon-btn" onclick="toggleTheme()"><span id="theme-icon">Sombre</span></button>
+          <button id="btn-drawer" class="icon-btn" onclick="toggleDrawer()">
+            <span>Filtres</span>
             <span id="drawer-dot" class="notif-dot hidden"></span>
           </button>
         </div>
       </div>
       <div id="filter-drawer" class="drawer hidden">
-        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher par mot-clé...">
+        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher par mot-cle...">
         <div class="drawer-grid">
           <select id="source-filter" onchange="applyFilters()"><option value="ALL">Toutes les sources</option></select>
           <select id="period-filter" onchange="applyFilters()">
-            <option value="ALL">Toute période</option>
-            <option value="24H">Dernières 24h</option>
+            <option value="ALL">Toute periode</option>
+            <option value="24H">Dernieres 24h</option>
             <option value="7D">7 derniers jours</option>
           </select>
         </div>
@@ -107,7 +104,7 @@
 
   <main class="container">
     <div class="status-bar">
-      <span id="results-count">Démarrage...</span>
+      <span id="results-count">Chargement...</span>
       <button id="reset-btn" class="reset-link hidden" onclick="resetAllFilters()">Tout effacer</button>
     </div>
     <div id="articles-container" class="cards-list"></div>
@@ -117,16 +114,13 @@
     window.onerror = function(m, u, l) {
       document.getElementById("results-count").textContent = "Erreur L" + l + " : " + m;
     };
-    document.getElementById("results-count").textContent = "Lecture de articles.json...";
-  </script>
 
-  <script>
     var CATEGORIES = {
-      PDP: { label: "Données (PDP)", color: "#3b82f6" },
-      CYBER: { label: "Cybersécurité", color: "#ef4444" },
+      PDP: { label: "Donnees (PDP)", color: "#3b82f6" },
+      CYBER: { label: "Cybersecurite", color: "#ef4444" },
       ANTICOR: { label: "Anticorruption", color: "#f59e0b" },
-      PI: { label: "Propriété Intel.", color: "#10b981" },
-      COSMETIQUE: { label: "Cosmétique", color: "#ec4899" },
+      PI: { label: "Propriete Intel.", color: "#10b981" },
+      COSMETIQUE: { label: "Cosmetique", color: "#ec4899" },
       INSTITUTIONNEL: { label: "Institutionnel", color: "#6366f1" },
       AUTRE: { label: "Autres", color: "#64748b" }
     };
@@ -138,14 +132,6 @@
       } catch (e) {
         return [];
       }
-    }
-
-    function escapeHtml(str) {
-      return String(str || "")
-        .replace(/&/g, "&")
-        .replace(/</g, "<")
-        .replace(/>/g, ">")
-        .replace(/"/g, """);
     }
 
     var allArticles = [];
@@ -165,23 +151,23 @@
       var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
       var isDark = saved ? saved === "dark" : prefersDark;
       document.documentElement.classList.toggle("dark", isDark);
-      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
+      document.getElementById("theme-icon").textContent = isDark ? "Clair" : "Sombre";
     }
 
     function toggleTheme() {
       var isDark = !document.documentElement.classList.contains("dark");
       document.documentElement.classList.toggle("dark", isDark);
       localStorage.setItem("vj_theme", isDark ? "dark" : "light");
-      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
+      document.getElementById("theme-icon").textContent = isDark ? "Clair" : "Sombre";
     }
 
     var DEMO_ARTICLES = [{
-      title: "Directive NIS 2 : obligations de notification des incidents majeurs (Mode aperçu)",
+      title: "Directive NIS 2 : obligations de notification (Mode apercu)",
       link: "https://www.ssi.gouv.fr",
       source: "ANSSI (CERT-FR)",
       category: "CYBER",
       impact: "CRITIQUE",
-      summary: "Le fichier docs/articles.json n'est pas encore publié sur GitHub Pages. Vérifiez l'onglet Actions sur GitHub.",
+      summary: "Synchronisation avec docs/articles.json en cours...",
       pub_date: new Date().toISOString()
     }];
 
@@ -203,9 +189,7 @@
           if (valid.length > 0) {
             allArticles = valid;
             dataStatus = "live";
-            try {
-              localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100)));
-            } catch (e) {}
+            try { localStorage.setItem("vj_cache_articles", JSON.stringify(valid.slice(0, 100))); } catch (e) {}
             populateSourcesDropdown();
             renderPillsBar();
             applyFilters();
@@ -225,21 +209,20 @@
     function populateSourcesDropdown() {
       var select = document.getElementById("source-filter");
       var currentVal = select.value;
-      select.innerHTML = '<option value="ALL">Toutes les sources</option>';
+      while (select.options.length > 1) { select.remove(1); }
       var seen = {};
       var sources = [];
-      allArticles.forEach(function(a) {
-        if (a && a.source && !seen[a.source]) {
-          seen[a.source] = true;
-          sources.push(a.source);
-        }
-      });
-      sources.sort().forEach(function(src) {
+      for (var i = 0; i < allArticles.length; i++) {
+        var s = allArticles[i] && allArticles[i].source;
+        if (s && !seen[s]) { seen[s] = true; sources.push(s); }
+      }
+      sources.sort();
+      for (var j = 0; j < sources.length; j++) {
         var opt = document.createElement("option");
-        opt.value = src;
-        opt.textContent = src;
+        opt.value = sources[j];
+        opt.textContent = sources[j];
         select.appendChild(opt);
-      });
+      }
       if (seen[currentVal]) select.value = currentVal;
     }
 
@@ -260,8 +243,15 @@
       var btn = document.createElement("button");
       btn.onclick = onClick;
       btn.className = "pill" + (isActive ? " active" : "");
-      var dotHtml = dotColor ? '<span class="dot" style="background:' + dotColor + '"></span>' : '';
-      btn.innerHTML = dotHtml + '<span>' + escapeHtml(label) + '</span>';
+      if (dotColor) {
+        var dot = document.createElement("span");
+        dot.className = "dot";
+        dot.style.backgroundColor = dotColor;
+        btn.appendChild(dot);
+      }
+      var span = document.createElement("span");
+      span.textContent = label;
+      btn.appendChild(span);
       bar.appendChild(btn);
     }
 
@@ -276,7 +266,14 @@
         applyFilters();
       }, null);
 
-      var critCount = allArticles.filter(function(a) { return String(a.impact || "").toUpperCase() === "CRITIQUE"; }).length;
+      var critCount = 0;
+      var impCount = 0;
+      for (var i = 0; i < allArticles.length; i++) {
+        var imp = String(allArticles[i].impact || "").toUpperCase();
+        if (imp === "CRITIQUE") critCount++;
+        if (imp === "IMPORTANT") impCount++;
+      }
+
       if (critCount > 0) {
         makePill(bar, "Critique (" + critCount + ")", state.impact === "CRITIQUE", function() {
           state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE";
@@ -285,7 +282,6 @@
         }, "#ef4444");
       }
 
-      var impCount = allArticles.filter(function(a) { return String(a.impact || "").toUpperCase() === "IMPORTANT"; }).length;
       if (impCount > 0) {
         makePill(bar, "Important (" + impCount + ")", state.impact === "IMPORTANT", function() {
           state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT";
@@ -298,16 +294,22 @@
       sep.className = "pill-sep";
       bar.appendChild(sep);
 
-      Object.keys(CATEGORIES).forEach(function(key) {
-        var meta = CATEGORIES[key];
-        var exists = allArticles.some(function(a) { return a.category === key; });
-        if (!exists) return;
-        makePill(bar, meta.label, state.category === key, function() {
-          state.category = state.category === key ? "ALL" : key;
-          renderPillsBar();
-          applyFilters();
-        }, meta.color);
-      });
+      var keys = Object.keys(CATEGORIES);
+      for (var k = 0; k < keys.length; k++) {
+        (function(key) {
+          var meta = CATEGORIES[key];
+          var exists = false;
+          for (var m = 0; m < allArticles.length; m++) {
+            if (allArticles[m].category === key) { exists = true; break; }
+          }
+          if (!exists) return;
+          makePill(bar, meta.label, state.category === key, function() {
+            state.category = state.category === key ? "ALL" : key;
+            renderPillsBar();
+            applyFilters();
+          }, meta.color);
+        })(keys[k]);
+      }
     }
 
     function resetAllFilters() {
@@ -330,33 +332,38 @@
       var periodFilter = document.getElementById("period-filter").value;
       var now = Date.now();
 
-      var unreadTotal = allArticles.filter(function(a) { return state.readIds.indexOf(a.link) === -1; }).length;
+      var unreadTotal = 0;
+      for (var u = 0; u < allArticles.length; u++) {
+        if (state.readIds.indexOf(allArticles[u].link) === -1) unreadTotal++;
+      }
       document.getElementById("unread-badge").textContent = unreadTotal;
 
       var hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
       document.getElementById("drawer-dot").classList.toggle("hidden", !hasDrawerFilter);
 
-      var filtered = allArticles.filter(function(art) {
+      var filtered = [];
+      for (var i = 0; i < allArticles.length; i++) {
+        var art = allArticles[i];
         var artImpact = String(art.impact || "INFORMATIF").toUpperCase();
-        if (state.category !== "ALL" && art.category !== state.category) return false;
-        if (state.impact !== "ALL" && artImpact !== state.impact) return false;
-        if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
-        if (state.unreadOnly && state.readIds.indexOf(art.link) !== -1) return false;
-        if (state.savedOnly && state.savedIds.indexOf(art.link) === -1) return false;
+        if (state.category !== "ALL" && art.category !== state.category) continue;
+        if (state.impact !== "ALL" && artImpact !== state.impact) continue;
+        if (sourceFilter !== "ALL" && art.source !== sourceFilter) continue;
+        if (state.unreadOnly && state.readIds.indexOf(art.link) !== -1) continue;
+        if (state.savedOnly && state.savedIds.indexOf(art.link) === -1) continue;
         if (periodFilter !== "ALL" && art.pub_date) {
           var pubTime = new Date(art.pub_date).getTime();
           if (!isNaN(pubTime)) {
             var ageHours = (now - pubTime) / 3600000;
-            if (periodFilter === "24H" && ageHours > 24) return false;
-            if (periodFilter === "7D" && ageHours > 168) return false;
+            if (periodFilter === "24H" && ageHours > 24) continue;
+            if (periodFilter === "7D" && ageHours > 168) continue;
           }
         }
         if (query) {
           var haystack = ((art.title || "") + " " + (art.summary || "") + " " + (art.source || "")).toLowerCase();
-          if (haystack.indexOf(query) === -1) return false;
+          if (haystack.indexOf(query) === -1) continue;
         }
-        return true;
-      });
+        filtered.push(art);
+      }
 
       var hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.unreadOnly || state.savedOnly || hasDrawerFilter;
       document.getElementById("reset-btn").classList.toggle("hidden", !hasAnyFilter);
@@ -365,7 +372,7 @@
       if (dataStatus === "sync") {
         statusEl.textContent = "Synchronisation avec articles.json...";
       } else if (dataStatus.indexOf("missing:") === 0) {
-        statusEl.innerHTML = 'Aperçu (' + escapeHtml(dataStatus.split(":")[1]) + ') — <a href="./articles.json" target="_blank" style="color:var(--accent);text-decoration:underline">tester articles.json</a>';
+        statusEl.textContent = "Apercu (" + dataStatus.split(":")[1] + ")";
       } else if (dataStatus === "empty") {
         statusEl.textContent = "Fichier articles.json vide";
       } else {
@@ -380,7 +387,7 @@
       var date = new Date(dateStr);
       if (isNaN(date.getTime())) return "";
       var diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
-      if (diffHours < 1) return "À l'instant";
+      if (diffHours < 1) return "Recent";
       if (diffHours < 24) return diffHours + "h";
       var diffDays = Math.floor(diffHours / 24);
       if (diffDays === 1) return "Hier";
@@ -410,67 +417,125 @@
 
     function renderCards(articles) {
       var container = document.getElementById("articles-container");
+      container.innerHTML = "";
+
       if (articles.length === 0) {
-        container.innerHTML = '<div class="empty-box"><p>Aucun article pour cette sélection.</p><button class="reset-link" style="margin-top:10px" onclick="resetAllFilters()">Réinitialiser les filtres</button></div>';
+        var empty = document.createElement("div");
+        empty.className = "empty-box";
+        empty.textContent = "Aucun article pour cette selection.";
+        container.appendChild(empty);
         return;
       }
 
-      var html = "";
       for (var i = 0; i < articles.length; i++) {
-        var art = articles[i];
-        var cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
-        var impact = String(art.impact || "INFORMATIF").toUpperCase();
-        var isRead = state.readIds.indexOf(art.link) !== -1;
-        var isSaved = state.savedIds.indexOf(art.link) !== -1;
-        var impactTag = "";
-        if (impact === "CRITIQUE") {
-          impactTag = '<span class="tag-impact tag-critique">Critique</span>';
-        } else if (impact === "IMPORTANT") {
-          impactTag = '<span class="tag-impact tag-important">Important</span>';
-        }
+        (function(art) {
+          var cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+          var impact = String(art.impact || "INFORMATIF").toUpperCase();
+          var isRead = state.readIds.indexOf(art.link) !== -1;
+          var isSaved = state.savedIds.indexOf(art.link) !== -1;
 
-        html += '<article class="card' + (isRead ? ' is-read' : '') + '">';
-        html += '<div class="card-meta"><div class="meta-left">';
-        html += '<span class="dot" style="background:' + cat.color + '"></span>';
-        html += '<span class="meta-cat">' + escapeHtml(cat.label) + '</span>';
-        html += '<span>•</span><span class="meta-src">' + escapeHtml(art.source) + '</span>';
-        html += '<span>•</span><span class="meta-date">' + formatRelativeDate(art.pub_date) + '</span>';
-        html += '</div>' + impactTag + '</div>';
-        html += '<h2 class="card-title"><a href="' + escapeHtml(art.link) + '" target="_blank" data-open="' + i + '">' + escapeHtml(art.title) + '</a></h2>';
-        if (art.summary) {
-          html += '<p class="card-summary">' + escapeHtml(art.summary) + '</p>';
-        }
-        html += '<div class="card-footer">';
-        html += '<a href="' + escapeHtml(art.link) + '" target="_blank" data-open="' + i + '" class="source-link">Source officielle ↗</a>';
-        html += '<div class="card-actions">';
-        html += '<button class="btn-read' + (isRead ? ' done' : '') + '" data-read="' + i + '">' + (isRead ? '✓ Lu' : 'Marquer lu') + '</button>';
-        html += '<button class="btn-save' + (isSaved ? ' saved' : '') + '" data-save="' + i + '" title="Sauvegarder">';
-        html += '<svg width="16" height="16" fill="' + (isSaved ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>';
-        html += '</button></div></div></article>';
+          var card = document.createElement("article");
+          card.className = "card" + (isRead ? " is-read" : "");
+
+          var meta = document.createElement("div");
+          meta.className = "card-meta";
+
+          var metaLeft = document.createElement("div");
+          metaLeft.className = "meta-left";
+
+          var dot = document.createElement("span");
+          dot.className = "dot";
+          dot.style.backgroundColor = cat.color;
+
+          var catSpan = document.createElement("span");
+          catSpan.className = "meta-cat";
+          catSpan.textContent = cat.label;
+
+          var sep1 = document.createElement("span");
+          sep1.textContent = "-";
+
+          var srcSpan = document.createElement("span");
+          srcSpan.className = "meta-src";
+          srcSpan.textContent = art.source || "";
+
+          var sep2 = document.createElement("span");
+          sep2.textContent = "-";
+
+          var dateSpan = document.createElement("span");
+          dateSpan.className = "meta-date";
+          dateSpan.textContent = formatRelativeDate(art.pub_date);
+
+          metaLeft.appendChild(dot);
+          metaLeft.appendChild(catSpan);
+          metaLeft.appendChild(sep1);
+          metaLeft.appendChild(srcSpan);
+          metaLeft.appendChild(sep2);
+          metaLeft.appendChild(dateSpan);
+          meta.appendChild(metaLeft);
+
+          if (impact === "CRITIQUE" || impact === "IMPORTANT") {
+            var tag = document.createElement("span");
+            tag.className = "tag-impact " + (impact === "CRITIQUE" ? "tag-critique" : "tag-important");
+            tag.textContent = impact === "CRITIQUE" ? "Critique" : "Important";
+            meta.appendChild(tag);
+          }
+
+          var h2 = document.createElement("h2");
+          h2.className = "card-title";
+          var titleLink = document.createElement("a");
+          titleLink.href = art.link;
+          titleLink.target = "_blank";
+          titleLink.textContent = art.title;
+          titleLink.onclick = function() {
+            if (!isRead) toggleRead(art.link);
+          };
+          h2.appendChild(titleLink);
+
+          card.appendChild(meta);
+          card.appendChild(h2);
+
+          if (art.summary) {
+            var p = document.createElement("p");
+            p.className = "card-summary";
+            p.textContent = art.summary;
+            card.appendChild(p);
+          }
+
+          var footer = document.createElement("div");
+          footer.className = "card-footer";
+
+          var srcLink = document.createElement("a");
+          srcLink.href = art.link;
+          srcLink.target = "_blank";
+          srcLink.className = "source-link";
+          srcLink.textContent = "Lire la source";
+          srcLink.onclick = function() {
+            if (!isRead) toggleRead(art.link);
+          };
+
+          var actions = document.createElement("div");
+          actions.className = "card-actions";
+
+          var btnRead = document.createElement("button");
+          btnRead.className = "btn-read" + (isRead ? " done" : "");
+          btnRead.textContent = isRead ? "Lu" : "Marquer lu";
+          btnRead.onclick = function() { toggleRead(art.link); };
+
+          var btnSave = document.createElement("button");
+          btnSave.className = "btn-save" + (isSaved ? " saved" : "");
+          btnSave.textContent = isSaved ? "Favori *" : "Favori";
+          btnSave.onclick = function() { toggleSaved(art.link); };
+
+          actions.appendChild(btnRead);
+          actions.appendChild(btnSave);
+          footer.appendChild(srcLink);
+          footer.appendChild(actions);
+          card.appendChild(footer);
+
+          container.appendChild(card);
+        })(articles[i]);
       }
-
-      container.innerHTML = html;
-      container.dataset.current = JSON.stringify(articles.map(function(a) { return a.link; }));
     }
-
-    document.getElementById("articles-container").addEventListener("click", function(e) {
-      var links = JSON.parse(e.currentTarget.dataset.current || "[]");
-      var openEl = e.target.closest("[data-open]");
-      if (openEl) {
-        var openLink = links[openEl.dataset.open];
-        if (openLink && state.readIds.indexOf(openLink) === -1) toggleRead(openLink);
-        return;
-      }
-      var readEl = e.target.closest("[data-read]");
-      if (readEl) {
-        toggleRead(links[readEl.dataset.read]);
-        return;
-      }
-      var saveEl = e.target.closest("[data-save]");
-      if (saveEl) {
-        toggleSaved(links[saveEl.dataset.save]);
-      }
-    });
 
     initTheme();
     loadArticles();
