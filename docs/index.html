@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Veille Juridique</title>
+
+  <!-- Configuration PWA Mobile (Android / iOS) -->
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Veille Juridique">
+
+  <!-- Manifest PWA intégré (aucun fichier externe requis) -->
+  <link rel="manifest" href='data:application/manifest+json,{
+    "name": "Veille Juridique & Réglementaire",
+    "short_name": "Veille Pro",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#0f172a",
+    "icons": [{
+      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2268%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }]
+  }'>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Masquer les barres de défilement sur les filtres horizontaux */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    body { -webkit-tap-highlight-color: transparent; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans antialiased pb-16">
+
+  <!-- EN-TÊTE FIXE STYLE GROUND NEWS -->
+  <header class="sticky top-0 z-30 bg-slate-900 text-white shadow-md">
+    <div class="max-w-3xl mx-auto px-4 pt-3 pb-2">
+      <!-- Ligne supérieure : Titre + Compteur + Actions rapides -->
+      <div class="flex items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold text-sm">
+            VJ
+          </div>
+          <div>
+            <h1 class="text-base font-bold tracking-tight leading-none">Veille Réglementaire</h1>
+            <p id="last-update" class="text-[11px] text-slate-400 mt-0.5">Chargement du flux...</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+          <!-- Bouton Non lus uniquement -->
+          <button id="btn-unread" onclick="toggleFilter('unreadOnly')"
+            class="px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            <span>Non lus</span>
+            <span id="unread-badge" class="bg-slate-700 text-white px-1.5 py-0.2 rounded text-[10px]">0</span>
+          </button>
+
+          <!-- Bouton Favoris -->
+          <button id="btn-saved" onclick="toggleFilter('savedOnly')"
+            class="p-1.5 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 transition"
+            title="Articles sauvegardés">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barre de recherche & Filtres secondaires -->
+      <div class="flex gap-2 mb-2.5">
+        <div class="relative flex-1">
+          <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher un texte, mot-clé..."
+            class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 rounded-lg pl-8 pr-3 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400">
+          <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <select id="source-filter" onchange="applyFilters()"
+          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2.5 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400 max-w-[135px] truncate">
+          <option value="ALL">Toutes sources</option>
+        </select>
+
+        <select id="period-filter" onchange="applyFilters()"
+          class="bg-slate-800 text-xs text-slate-200 rounded-lg px-2 py-1.5 border border-slate-700 focus:outline-none focus:border-sky-400">
+          <option value="ALL">Tout</option>
+          <option value="24H">24h</option>
+          <option value="7D">7 jours</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- BARRE DE CATÉGORIES DÉFILANTE -->
+    <div class="bg-slate-800/90 border-t border-slate-700/80">
+      <div id="category-bar" class="max-w-3xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
+        <!-- Généré dynamiquement en JS -->
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEUR PRINCIPAL DES CARTES -->
+  <main class="max-w-3xl mx-auto px-4 pt-4">
+    <!-- Indicateur de résultats -->
+    <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+      <span id="results-count">0 publication affichée</span>
+      <button onclick="resetAllFilters()" id="reset-btn" class="hidden text-sky-600 font-semibold hover:underline">
+        Réinitialiser les filtres
+      </button>
+    </div>
+
+    <!-- Liste des articles -->
+    <div id="articles-container" class="space-y-3.5">
+      <!-- Cartes injectées en JS -->
+    </div>
+  </main>
+
+  <script>
+    // ==========================================
+    // CONFIGURATION DES THÈMES PAR CATÉGORIE
+    // ==========================================
+    const CATEGORIES = {
+      ALL: { label: "Toutes", color: "#0284c7", badgeBg: "bg-sky-100 text-sky-800 border-sky-200", border: "border-sky-500" },
+      PDP: { label: "Protection Données", color: "#2563eb", badgeBg: "bg-blue-100 text-blue-800 border-blue-200", border: "border-blue-500" },
+      CYBER: { label: "Cybersécurité", color: "#dc2626", badgeBg: "bg-red-100 text-red-800 border-red-200", border: "border-red-500" },
+      ANTICOR: { label: "Anticorruption", color: "#d97706", badgeBg: "bg-amber-100 text-amber-800 border-amber-200", border: "border-amber-500" },
+      PI: { label: "Propriété Intellectuelle", color: "#059669", badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200", border: "border-emerald-500" },
+      COSMETIQUE: { label: "Cosmétique", color: "#db2777", badgeBg: "bg-pink-100 text-pink-800 border-pink-200", border: "border-pink-500" },
+      INSTITUTIONNEL: { label: "Institutionnel", color: "#4f46e5", badgeBg: "bg-indigo-100 text-indigo-800 border-indigo-200", border: "border-indigo-500" },
+      AUTRE: { label: "Autres", color: "#475569", badgeBg: "bg-slate-200 text-slate-800 border-slate-300", border: "border-slate-400" }
+    };
+
+    // État de l'application & persistance locale
+    let allArticles = [];
+    let state = {
+      category: "ALL",
+      unreadOnly: false,
+      savedOnly: false,
+      readIds: JSON.parse(localStorage.getItem("vj_read_ids") || "[]"),
+      savedIds: JSON.parse(localStorage.getItem("vj_saved_ids") || "[]")
+    };
+
+    // Données de démonstration si articles.json n'est pas encore généré
+    const DEMO_ARTICLES = [
+      {
+        title: "Nouvelles recommandations sur la sécurisation des API et le chiffrement des données de santé",
+        link: "https://www.cnil.fr",
+        source: "CNIL",
+        category: "PDP",
+        summary: "La CNIL précise les mesures techniques obligatoires pour l'authentification forte et le cloisonnement des bases hébergeant des données sensibles. Une mise en conformité des prestataires techniques est attendue sous six mois.",
+        pub_date: new Date().toISOString()
+      },
+      {
+        title: "Directive NIS 2 : calendrier de transposition et obligations de notification des incidents majeurs",
+        link: "https://www.ssi.gouv.fr",
+        source: "ANSSI (CERT-FR)",
+        category: "CYBER",
+        summary: "L'ANSSI détaille le mécanisme de signalement en deux étapes (alerte précoce sous 24h puis rapport circonstancié sous 72h) applicable aux entités essentielles et importantes.",
+        pub_date: new Date(Date.now() - 5 * 3600 * 1000).toISOString()
+      },
+      {
+        title: "Révision du règlement européen sur les allégations environnementales des produits cosmétiques",
+        link: "https://eur-lex.europa.eu",
+        source: "EUR-Lex Actualités",
+        category: "COSMETIQUE",
+        summary: "Les mentions liées à la neutralité carbone et à la biodégradabilité devront désormais s'appuyer sur une analyse du cycle de vie vérifiée par un organisme indépendant avant mise sur le marché.",
+        pub_date: new Date(Date.now() - 26 * 3600 * 1000).toISOString()
+      }
+    ];
+
+    // ==========================================
+    // CHARGEMENT DES DONNÉES
+    // ==========================================
+    async function loadArticles() {
+      try {
+        const response = await fetch("./articles.json?t=" + Date.now());
+        if (!response.ok) throw new Error("Fichier articles.json absent");
+        const data = await response.json();
+        allArticles = Array.isArray(data) && data.length > 0 ? data : DEMO_ARTICLES;
+        document.getElementById("last-update").textContent = `${allArticles.length} articles archivés`;
+      } catch (err) {
+        allArticles = DEMO_ARTICLES;
+        document.getElementById("last-update").textContent = "Mode aperçu (en attente de articles.json)";
+      }
+
+      populateSourcesDropdown();
+      renderCategoryBar();
+      applyFilters();
+    }
+
+    function populateSourcesDropdown() {
+      const select = document.getElementById("source-filter");
+      const sources = [...new Set(allArticles.map(a => a.source))].sort();
+      sources.forEach(src => {
+        const opt = document.createElement("option");
+        opt.value = src;
+        opt.textContent = src;
+        select.appendChild(opt);
+      });
+    }
+
+    // ==========================================
+    // RENDU DE LA BARRE DE CATÉGORIES
+    // ==========================================
+    function renderCategoryBar() {
+      const bar = document.getElementById("category-bar");
+      bar.innerHTML = "";
+
+      Object.entries(CATEGORIES).forEach(([key, meta]) => {
+        const count = key === "ALL"
+          ? allArticles.length
+          : allArticles.filter(a => a.category === key).length;
+
+        if (key !== "ALL" && count === 0) return;
+
+        const isActive = state.category === key;
+        const btn = document.createElement("button");
+        btn.onclick = () => {
+          state.category = key;
+          renderCategoryBar();
+          applyFilters();
+        };
+
+        btn.className = `shrink-0 px-3 py-1 rounded-full text-xs font-semibold transition flex items-center gap-1.5 ${
+          isActive
+            ? "bg-sky-500 text-white shadow-sm"
+            : "bg-slate-700/70 text-slate-300 hover:bg-slate-700"
+        }`;
+
+        btn.innerHTML = `
+          <span>${meta.label}</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-sky-600 text-white" : "bg-slate-800 text-slate-400"}">
+            ${count}
+          </span>
+        `;
+        bar.appendChild(btn);
+      });
+    }
+
+    // ==========================================
+    // FILTRAGE ET AFFICHAGE DES CARTES
+    // ==========================================
+    function toggleFilter(key) {
+      state[key] = !state[key];
+      const btnUnread = document.getElementById("btn-unread");
+      const btnSaved = document.getElementById("btn-saved");
+
+      btnUnread.className = state.unreadOnly
+        ? "px-2.5 py-1.5 rounded-lg text-xs font-semibold border border-sky-400 bg-sky-500/20 text-sky-300 transition flex items-center gap-1.5"
+        : "px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-800 text-slate-300 transition flex items-center gap-1.5";
+
+      btnSaved.className = state.savedOnly
+        ? "p-1.5 rounded-lg border border-amber-400 bg-amber-500/20 text-amber-300 transition"
+        : "p-1.5 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 transition";
+
+      applyFilters();
+    }
+
+    function resetAllFilters() {
+      state.category = "ALL";
+      state.unreadOnly = false;
+      state.savedOnly = false;
+      document.getElementById("search-input").value = "";
+      document.getElementById("source-filter").value = "ALL";
+      document.getElementById("period-filter").value = "ALL";
+      toggleFilter("reset"); // rafraîchit les styles boutons
+      state.unreadOnly = false;
+      state.savedOnly = false;
+      renderCategoryBar();
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById("search-input").value.toLowerCase().trim();
+      const sourceFilter = document.getElementById("source-filter").value;
+      const periodFilter = document.getElementById("period-filter").value;
+      const now = Date.now();
+
+      // Mise à jour compteur non lus global
+      const totalUnread = allArticles.filter(a => !state.readIds.includes(a.link)).length;
+      document.getElementById("unread-badge").textContent = totalUnread;
+
+      const filtered = allArticles.filter(art => {
+        if (state.category !== "ALL" && art.category !== state.category) return false;
+        if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
+        if (state.unreadOnly && state.readIds.includes(art.link)) return false;
+        if (state.savedOnly && !state.savedIds.includes(art.link)) return false;
+
+        if (periodFilter !== "ALL" && art.pub_date) {
+          const pubTime = new Date(art.pub_date).getTime();
+          if (!isNaN(pubTime)) {
+            const ageHours = (now - pubTime) / (1000 * 3600);
+            if (periodFilter === "24H" && ageHours > 24) return false;
+            if (periodFilter === "7D" && ageHours > 168) return false;
+          }
+        }
+
+        if (query) {
+          const haystack = `${art.title} ${art.summary || ""} ${art.source}`.toLowerCase();
+          if (!haystack.includes(query)) return false;
+        }
+
+        return true;
+      });
+
+      const hasActiveFilter = state.category !== "ALL" || state.unreadOnly || state.savedOnly || query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
+      document.getElementById("reset-btn").classList.toggle("hidden", !hasActiveFilter);
+      document.getElementById("results-count").textContent = `${filtered.length} publication${filtered.length > 1 ? "s" : ""} affichée${filtered.length > 1 ? "s" : ""}`;
+
+      renderCards(filtered);
+    }
+
+    function formatRelativeDate(dateStr) {
+      if (!dateStr) return "";
+      const date = new Date(dateStr);
+      if (isNaN(date.getTime())) return dateStr;
+      const diffHours = Math.floor((Date.now() - date.getTime()) / (1000 * 3600));
+      if (diffHours < 1) return "À l'instant";
+      if (diffHours < 24) return `Il y a ${diffHours}h`;
+      const diffDays = Math.floor(diffHours / 24);
+      if (diffDays === 1) return "Hier";
+      if (diffDays < 7) return `Il y a ${diffDays}j`;
+      return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+    }
+
+    function toggleRead(link) {
+      if (state.readIds.includes(link)) {
+        state.readIds = state.readIds.filter(id => id !== link);
+      } else {
+        state.readIds.push(link);
+      }
+      localStorage.setItem("vj_read_ids", JSON.stringify(state.readIds));
+      applyFilters();
+    }
+
+    function toggleSaved(link) {
+      if (state.savedIds.includes(link)) {
+        state.savedIds = state.savedIds.filter(id => id !== link);
+      } else {
+        state.savedIds.push(link);
+      }
+      localStorage.setItem("vj_saved_ids", JSON.stringify(state.savedIds));
+      applyFilters();
+    }
+
+    function renderCards(articles) {
+      const container = document.getElementById("articles-container");
+      if (articles.length === 0) {
+        container.innerHTML = `
+          <div class="bg-white rounded-xl p-8 text-center border border-slate-200 shadow-sm">
+            <p class="text-slate-500 text-sm font-medium">Aucune publication ne correspond à ces critères.</p>
+            <button onclick="resetAllFilters()" class="mt-3 px-4 py-1.5 bg-slate-900 text-white text-xs font-semibold rounded-lg">
+              Afficher tout le flux
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = articles.map(art => {
+        const theme = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+        const isRead = state.readIds.includes(art.link);
+        const isSaved = state.savedIds.includes(art.link);
+        const encodedLink = encodeURIComponent(art.link);
+
+        return `
+          <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition ${isRead ? "opacity-65" : ""}">
+            <div class="p-4">
+              <!-- Ligne Métadonnées -->
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2 py-0.5 rounded text-[11px] font-bold border ${theme.badgeBg}">
+                    ${theme.label}
+                  </span>
+                  <span class="text-xs font-semibold text-slate-600">
+                    ${art.source}
+                  </span>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">
+                  ${formatRelativeDate(art.pub_date)}
+                </span>
+              </div>
+
+              <!-- Titre -->
+              <h2 class="text-[15px] font-bold text-slate-900 leading-snug mb-2.5">
+                <a href="${art.link}" target="_blank" onclick="if(!state.readIds.includes(decodeURIComponent('${encodedLink}'))) toggleRead(decodeURIComponent('${encodedLink}'))" class="hover:text-sky-700">
+                  ${art.title}
+                </a>
+              </h2>
+
+              <!-- Encart Synthèse IA -->
+              ${art.summary ? `
+                <div class="bg-slate-50 border-l-4 ${theme.border} rounded-r-lg p-3 mb-3">
+                  <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Synthèse opérationnelle
+                  </div>
+                  <p class="text-[13px] text-slate-700 leading-relaxed">
+                    ${art.summary}
+                  </p>
+                </div>
+              ` : ""}
+
+              <!-- Barre d'actions carte -->
+              <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                <a href="${art.link}" target="_blank"
+                   onclick="if(!state.readIds.includes(decodeURIComponent('${encodedLink}'))) toggleRead(decodeURIComponent('${encodedLink}'))"
+                   class="text-xs font-bold text-sky-600 hover:text-sky-800 flex items-center gap-1">
+                  <span>Lire le texte</span>
+                  <span>&rarr;</span>
+                </a>
+
+                <div class="flex items-center gap-2">
+                  <button onclick="toggleRead(decodeURIComponent('${encodedLink}'))"
+                    class="px-2.5 py-1 rounded-md text-xs font-medium transition flex items-center gap-1 ${
+                      isRead
+                        ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    }">
+                    <span>${isRead ? "✓ Lu" : "Marquer lu"}</span>
+                  </button>
+
+                  <button onclick="toggleSaved(decodeURIComponent('${encodedLink}'))"
+                    class="p-1.5 rounded-md transition ${
+                      isSaved ? "text-amber-500 bg-amber-50" : "text-slate-400 hover:text-slate-600 hover:bg-slate-100"
+                    }" title="Sauvegarder">
+                    <svg class="w-4 h-4" fill="${isSaved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    // Démarrage
+    loadArticles();
+  </script>
+</body>
+</html>
