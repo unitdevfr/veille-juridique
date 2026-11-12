@@ -118,4 +118,299 @@
         </div>
       </div>
       <div id="filter-drawer" class="drawer hidden">
-        <input type="text" id="search-input" oninput="applyFilters()"
+        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher par mot-clé...">
+        <div class="drawer-grid">
+          <select id="source-filter" onchange="applyFilters()"><option value="ALL">Toutes les sources</option></select>
+          <select id="period-filter" onchange="applyFilters()">
+            <option value="ALL">Toute période</option>
+            <option value="24H">Dernières 24h</option>
+            <option value="7D">7 derniers jours</option>
+          </select>
+        </div>
+      </div>
+      <div id="pills-bar" class="pills-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="status-bar">
+      <span id="results-count">Initialisation...</span>
+      <button id="reset-btn" class="reset-link hidden" onclick="resetAllFilters()">Tout effacer</button>
+    </div>
+    <div id="articles-container" class="cards-list"></div>
+  </main>
+
+  <script>
+    window.onerror = function(msg) {
+      document.getElementById("results-count").textContent = "Erreur : " + msg;
+    };
+
+    const CATEGORIES = {
+      PDP: { label: "Données (PDP)", color: "#3b82f6" },
+      CYBER: { label: "Cybersécurité", color: "#ef4444" },
+      ANTICOR: { label: "Anticorruption", color: "#f59e0b" },
+      PI: { label: "Propriété Intel.", color: "#10b981" },
+      COSMETIQUE: { label: "Cosmétique", color: "#ec4899" },
+      INSTITUTIONNEL: { label: "Institutionnel", color: "#6366f1" },
+      AUTRE: { label: "Autres", color: "#64748b" }
+    };
+
+    function getStoredArray(key) {
+      try { const v = JSON.parse(localStorage.getItem(key) || "[]"); return Array.isArray(v) ? v : []; }
+      catch (e) { return []; }
+    }
+
+    function escapeHtml(str) {
+      return String(str || "").replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, """);
+    }
+
+    let allArticles = [];
+    let isDemoMode = false;
+    let state = {
+      category: "ALL", impact: "ALL", unreadOnly: false, savedOnly: false, drawerOpen: false,
+      readIds: getStoredArray("vj_read_ids"), savedIds: getStoredArray("vj_saved_ids")
+    };
+
+    function initTheme() {
+      const saved = localStorage.getItem("vj_theme");
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = saved ? saved === "dark" : prefersDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
+    }
+
+    function toggleTheme() {
+      const isDark = !document.documentElement.classList.contains("dark");
+      document.documentElement.classList.toggle("dark", isDark);
+      localStorage.setItem("vj_theme", isDark ? "dark" : "light");
+      document.getElementById("theme-icon").textContent = isDark ? "☀️" : "🌙";
+    }
+
+    const DEMO_ARTICLES = [{
+      title: "Directive NIS 2 : obligations de notification des incidents majeurs (Mode aperçu)",
+      link: "https://www.ssi.gouv.fr", source: "ANSSI (CERT-FR)", category: "CYBER", impact: "CRITIQUE",
+      summary: "Le fichier articles.json n'est pas encore accessible sur GitHub Pages. Vérifiez sa présence dans le dossier docs/ sur GitHub.",
+      pub_date: new Date().toISOString()
+    }];
+
+    async function loadArticles() {
+      const controller = window.AbortController ? new AbortController() : null;
+      const timer = controller ? setTimeout(() => controller.abort(), 5000) : null;
+      try {
+        const response = await fetch("./articles.json?t=" + Date.now(), controller ? { signal: controller.signal } : {});
+        if (timer) clearTimeout(timer);
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const data = await response.json();
+        if (Array.isArray(data) && data.length > 0) {
+          allArticles = data;
+          isDemoMode = false;
+        } else {
+          allArticles = DEMO_ARTICLES;
+          isDemoMode = true;
+        }
+      } catch (err) {
+        allArticles = DEMO_ARTICLES;
+        isDemoMode = true;
+      }
+      populateSourcesDropdown();
+      renderPillsBar();
+      applyFilters();
+    }
+
+    function populateSourcesDropdown() {
+      const select = document.getElementById("source-filter");
+      const sources = [...new Set(allArticles.map(a => a && a.source).filter(Boolean))].sort();
+      sources.forEach(src => {
+        const opt = document.createElement("option");
+        opt.value = src; opt.textContent = src; select.appendChild(opt);
+      });
+    }
+
+    function toggleDrawer() {
+      state.drawerOpen = !state.drawerOpen;
+      document.getElementById("filter-drawer").classList.toggle("hidden", !state.drawerOpen);
+      if (state.drawerOpen) document.getElementById("search-input").focus();
+    }
+
+    function toggleQuickFilter(key) {
+      state[key] = !state[key];
+      document.getElementById("btn-unread").classList.toggle("active-sky", state.unreadOnly);
+      document.getElementById("btn-saved").classList.toggle("active-amber", state.savedOnly);
+      applyFilters();
+    }
+
+    function renderPillsBar() {
+      const bar = document.getElementById("pills-bar");
+      bar.innerHTML = "";
+      const makePill = (label, isActive, onClick, dotColor) => {
+        const btn = document.createElement("button");
+        btn.onclick = onClick;
+        btn.className = "pill" + (isActive ? " active" : "");
+        btn.innerHTML = (dotColor ? `<span class="dot" style="background:${dotColor}"></span>` : "") + `<span>${escapeHtml(label)}</span>`;
+        bar.appendChild(btn);
+      };
+
+      makePill("Tout", state.category === "ALL" && state.impact === "ALL", () => {
+        state.category = "ALL"; state.impact = "ALL"; renderPillsBar(); applyFilters();
+      });
+
+      const critCount = allArticles.filter(a => String(a.impact || "").toUpperCase() === "CRITIQUE").length;
+      if (critCount > 0) {
+        makePill(`Critique (${critCount})`, state.impact === "CRITIQUE", () => {
+          state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE"; renderPillsBar(); applyFilters();
+        }, "#ef4444");
+      }
+
+      const impCount = allArticles.filter(a => String(a.impact || "").toUpperCase() === "IMPORTANT").length;
+      if (impCount > 0) {
+        makePill(`Important (${impCount})`, state.impact === "IMPORTANT", () => {
+          state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT"; renderPillsBar(); applyFilters();
+        }, "#f59e0b");
+      }
+
+      const sep = document.createElement("span");
+      sep.className = "pill-sep";
+      bar.appendChild(sep);
+
+      Object.entries(CATEGORIES).forEach(([key, meta]) => {
+        if (!allArticles.some(a => a.category === key)) return;
+        makePill(meta.label, state.category === key, () => {
+          state.category = state.category === key ? "ALL" : key; renderPillsBar(); applyFilters();
+        }, meta.color);
+      });
+    }
+
+    function resetAllFilters() {
+      state.category = "ALL"; state.impact = "ALL"; state.unreadOnly = false; state.savedOnly = false;
+      document.getElementById("search-input").value = "";
+      document.getElementById("source-filter").value = "ALL";
+      document.getElementById("period-filter").value = "ALL";
+      document.getElementById("btn-unread").classList.remove("active-sky");
+      document.getElementById("btn-saved").classList.remove("active-amber");
+      renderPillsBar(); applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById("search-input").value.toLowerCase().trim();
+      const sourceFilter = document.getElementById("source-filter").value;
+      const periodFilter = document.getElementById("period-filter").value;
+      const now = Date.now();
+
+      document.getElementById("unread-badge").textContent = allArticles.filter(a => !state.readIds.includes(a.link)).length;
+      const hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
+      document.getElementById("drawer-dot").classList.toggle("hidden", !hasDrawerFilter);
+
+      const filtered = allArticles.filter(art => {
+        const artImpact = String(art.impact || "INFORMATIF").toUpperCase();
+        if (state.category !== "ALL" && art.category !== state.category) return false;
+        if (state.impact !== "ALL" && artImpact !== state.impact) return false;
+        if (sourceFilter !== "ALL" && art.source !== sourceFilter) return false;
+        if (state.unreadOnly && state.readIds.includes(art.link)) return false;
+        if (state.savedOnly && !state.savedIds.includes(art.link)) return false;
+        if (periodFilter !== "ALL" && art.pub_date) {
+          const pubTime = new Date(art.pub_date).getTime();
+          if (!isNaN(pubTime)) {
+            const ageHours = (now - pubTime) / 3600000;
+            if (periodFilter === "24H" && ageHours > 24) return false;
+            if (periodFilter === "7D" && ageHours > 168) return false;
+          }
+        }
+        if (query && !`${art.title || ""} ${art.summary || ""} ${art.source || ""}`.toLowerCase().includes(query)) return false;
+        return true;
+      });
+
+      const hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.unreadOnly || state.savedOnly || hasDrawerFilter;
+      document.getElementById("reset-btn").classList.toggle("hidden", !hasAnyFilter);
+      document.getElementById("results-count").textContent = isDemoMode
+        ? "Mode aperçu (en attente de docs/articles.json)"
+        : `${filtered.length} article${filtered.length > 1 ? "s" : ""}`;
+
+      renderCards(filtered);
+    }
+
+    function formatRelativeDate(dateStr) {
+      if (!dateStr) return "";
+      const date = new Date(dateStr);
+      if (isNaN(date.getTime())) return "";
+      const diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
+      if (diffHours < 1) return "À l'instant";
+      if (diffHours < 24) return `${diffHours}h`;
+      const diffDays = Math.floor(diffHours / 24);
+      if (diffDays === 1) return "Hier";
+      if (diffDays < 7) return `${diffDays}j`;
+      return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+    }
+
+    function toggleRead(link) {
+      state.readIds = state.readIds.includes(link) ? state.readIds.filter(id => id !== link) : [...state.readIds, link];
+      localStorage.setItem("vj_read_ids", JSON.stringify(state.readIds));
+      applyFilters();
+    }
+
+    function toggleSaved(link) {
+      state.savedIds = state.savedIds.includes(link) ? state.savedIds.filter(id => id !== link) : [...state.savedIds, link];
+      localStorage.setItem("vj_saved_ids", JSON.stringify(state.savedIds));
+      applyFilters();
+    }
+
+    function renderCards(articles) {
+      const container = document.getElementById("articles-container");
+      if (articles.length === 0) {
+        container.innerHTML = `<div class="empty-box"><p>Aucun article pour cette sélection.</p><button class="reset-link" style="margin-top:10px" onclick="resetAllFilters()">Réinitialiser les filtres</button></div>`;
+        return;
+      }
+
+      container.innerHTML = articles.map((art, idx) => {
+        const cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+        const impact = String(art.impact || "INFORMATIF").toUpperCase();
+        const isRead = state.readIds.includes(art.link);
+        const isSaved = state.savedIds.includes(art.link);
+        let impactTag = "";
+        if (impact === "CRITIQUE") impactTag = `<span class="tag-impact tag-critique">Critique</span>`;
+        else if (impact === "IMPORTANT") impactTag = `<span class="tag-impact tag-important">Important</span>`;
+
+        return `
+          <article class="card ${isRead ? "is-read" : ""}">
+            <div class="card-meta">
+              <div class="meta-left">
+                <span class="dot" style="background:${cat.color}"></span>
+                <span class="meta-cat">${escapeHtml(cat.label)}</span>
+                <span>•</span>
+                <span class="meta-src">${escapeHtml(art.source)}</span>
+                <span>•</span>
+                <span class="meta-date">${formatRelativeDate(art.pub_date)}</span>
+              </div>
+              ${impactTag}
+            </div>
+            <h2 class="card-title"><a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}">${escapeHtml(art.title)}</a></h2>
+            ${art.summary ? `<p class="card-summary">${escapeHtml(art.summary)}</p>` : ""}
+            <div class="card-footer">
+              <a href="${escapeHtml(art.link)}" target="_blank" data-open="${idx}" class="source-link">Source officielle ↗</a>
+              <div class="card-actions">
+                <button class="btn-read ${isRead ? "done" : ""}" data-read="${idx}">${isRead ? "✓ Lu" : "Marquer lu"}</button>
+                <button class="btn-save ${isSaved ? "saved" : ""}" data-save="${idx}" title="Sauvegarder">
+                  <svg width="16" height="16" fill="${isSaved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+      container.dataset.current = JSON.stringify(articles.map(a => a.link));
+    }
+
+    document.getElementById("articles-container").addEventListener("click", (e) => {
+      const links = JSON.parse(e.currentTarget.dataset.current || "[]");
+      const openEl = e.target.closest("[data-open]");
+      if (openEl && links[openEl.dataset.open] && !state.readIds.includes(links[openEl.dataset.open])) { toggleRead(links[openEl.dataset.open]); return; }
+      const readEl = e.target.closest("[data-read]");
+      if (readEl) { toggleRead(links[readEl.dataset.read]); return; }
+      const saveEl = e.target.closest("[data-save]");
+      if (saveEl) { toggleSaved(links[saveEl.dataset.save]); }
+    });
+
+    initTheme();
+    loadArticles();
+  </script>
+</body>
+</html>
