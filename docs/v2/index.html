@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Veille Juridique V2</title>
+  <meta name="theme-color" content="#090d16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Veille V2">
+  <link rel="manifest" href='data:application/manifest+json,{"name":"Veille Juridique V2","short_name":"Veille V2","start_url":".","display":"standalone","background_color":"#f8fafc","theme_color":"#090d16","icons":[{"src":"data:image/svg+xml,<svg xmlns=%22[http://www.w3.org/2000/svg%22](http://www.w3.org/2000/svg%22) viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23090d16%22/><text x=%2250%22 y=%2268%22 font-size=%2245%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V2</text></svg>","sizes":"512x512","type":"image/svg+xml"}]}'>
+  <style>
+    :root {
+      --bg:#f8fafc; --card:#fff; --border:#e2e8f0; --border-l:#f1f5f9;
+      --text:#0f172a; --body:#475569; --muted:#64748b; --hover:#f1f5f9;
+      --accent:#0284c7; --crit-bg:#fef2f2; --crit-tx:#dc2626;
+      --imp-bg:#fffbeb; --imp-tx:#b45309; --read-bg:#ecfdf5; --read-tx:#059669;
+      --rel-bg:#f0f9ff; --rel-tx:#0369a1;
+      --act-bg:#f0fdf4; --act-bd:#bbf7d0; --act-tx:#166534;
+      --due-bg:#fef3c7; --due-tx:#92400e;
+      --role-bg:#f1f5f9; --role-tx:#334155;
+    }
+    html.dark {
+      --bg:#090d16; --card:#111827; --border:#1e293b; --border-l:#1e293b;
+      --text:#f1f5f9; --body:#cbd5e1; --muted:#94a3b8; --hover:#1e293b;
+      --accent:#38bdf8; --crit-bg:rgba(220,38,38,.16); --crit-tx:#f87171;
+      --imp-bg:rgba(217,119,6,.16); --imp-tx:#fbbf24; --read-bg:rgba(16,185,129,.15); --read-tx:#34d399;
+      --rel-bg:rgba(56,189,248,.12); --rel-tx:#38bdf8;
+      --act-bg:rgba(22,101,52,.22); --act-bd:rgba(74,222,128,.25); --act-tx:#86efac;
+      --due-bg:rgba(217,119,6,.2); --due-tx:#fcd34d;
+      --role-bg:#1e293b; --role-tx:#cbd5e1;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); padding-bottom:64px; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-font-smoothing:antialiased; }
+    button, input, select { font-family:inherit; }
+    button { background:none; border:none; cursor:pointer; color:inherit; }
+    header { position:sticky; top:0; z-index:30; color:#fff; background:rgba(9,13,22,.96); backdrop-filter:blur(10px); border-bottom:1px solid #1e293b; }
+    .container { max-width:680px; margin:0 auto; padding:0 16px; }
+    .header-top { height:54px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .brand { display:flex; align-items:center; gap:8px; min-width:0; }
+    .brand-dot { width:9px; height:9px; border-radius:50%; background:#38bdf8; flex-shrink:0; }
+    .brand h1 { font-size:15.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .v2-tag { font-size:10px; font-weight:700; background:rgba(56,189,248,.2); color:#38bdf8; border:1px solid rgba(56,189,248,.4); padding:1px 6px; border-radius:6px; flex-shrink:0; }
+    .badge-count { font-size:11px; font-weight:600; background:#1e293b; color:#cbd5e1; padding:2px 8px; border-radius:999px; flex-shrink:0; }
+    .header-actions { display:flex; align-items:center; gap:4px; flex-shrink:0; }
+    .icon-btn { position:relative; padding:7px 9px; border-radius:8px; font-size:12px; font-weight:500; color:#cbd5e1; display:inline-flex; align-items:center; justify-content:center; }
+    .icon-btn:hover { background:#1e293b; }
+    .icon-btn.active-sky { background:rgba(56,189,248,.18); color:#38bdf8; }
+    .icon-btn.active-amber { background:rgba(251,191,36,.18); color:#fbbf24; }
+    .notif-dot { position:absolute; top:6px; right:6px; width:7px; height:7px; border-radius:50%; background:#38bdf8; }
+    .drawer { padding:6px 0 12px; border-top:1px solid #1e293b; display:flex; flex-direction:column; gap:8px; }
+    .drawer input, .drawer select { width:100%; background:#111827; color:#f8fafc; border:1px solid #1e293b; border-radius:8px; padding:8px 11px; font-size:13px; outline:none; }
+    .drawer-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .pills-bar { display:flex; align-items:center; gap:6px; padding:2px 0 10px; overflow-x:auto; scrollbar-width:none; }
+    .pills-bar::-webkit-scrollbar { display:none; }
+    .pill { flex-shrink:0; padding:5px 12px; border-radius:999px; font-size:12px; font-weight:500; background:#111827; color:#94a3b8; border:1px solid #1e293b; display:inline-flex; align-items:center; gap:6px; }
+    .pill.active { background:#fff; color:#090d16; border-color:#fff; font-weight:600; }
+    .pill-sep { width:1px; height:16px; background:#1e293b; flex-shrink:0; margin:0 2px; }
+    .dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+    main { padding-top:16px; }
+    .status-bar { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11.5px; color:var(--muted); margin-bottom:12px; }
+    .status-actions { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .action-link { color:var(--accent); font-weight:600; font-size:11.5px; }
+    .cards-list { display:flex; flex-direction:column; gap:12px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; }
+    .card.is-read { opacity:.55; }
+    .card-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+    .meta-left { display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--muted); min-width:0; }
+    .meta-cat { font-weight:600; color:var(--text); white-space:nowrap; }
+    .meta-src { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .meta-date { white-space:nowrap; flex-shrink:0; }
+    .meta-tags { display:flex; align-items:center; gap:5px; flex-shrink:0; }
+    .tag-role { font-size:10px; font-weight:600; background:var(--role-bg); color:var(--role-tx); padding:2px 7px; border-radius:6px; }
+    .tag-impact { font-size:10px; font-weight:700; text-transform:uppercase; padding:2px 8px; border-radius:999px; }
+    .tag-critique { background:var(--crit-bg); color:var(--crit-tx); }
+    .tag-important { background:var(--imp-bg); color:var(--imp-tx); }
+    .card-title { font-size:15.5px; font-weight:600; line-height:1.38; margin-bottom:8px; }
+    .card-title a { color:var(--text); text-decoration:none; }
+    .card-title a:hover { color:var(--accent); }
+    .card-summary { font-size:13.5px; line-height:1.55; color:var(--body); margin-bottom:10px; }
+    .action-box { background:var(--act-bg); border:1px solid var(--act-bd); color:var(--act-tx); border-radius:9px; padding:8px 11px; font-size:12.5px; line-height:1.45; margin-bottom:10px; }
+    .action-label { font-weight:700; text-transform:uppercase; font-size:10.5px; letter-spacing:0.3px; margin-right:5px; }
+    .due-pill { display:inline-block; background:var(--due-bg); color:var(--due-tx); font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px; margin-bottom:10px; }
+    .rel-box { margin-bottom:12px; }
+    .rel-toggle { font-size:11.5px; font-weight:600; color:var(--rel-tx); background:var(--rel-bg); padding:4px 10px; border-radius:999px; display:inline-block; }
+    .rel-list { margin-top:8px; padding-left:10px; border-left:2px solid var(--border); display:flex; flex-direction:column; gap:6px; }
+    .rel-item { font-size:12px; color:var(--muted); text-decoration:none; line-height:1.35; }
+    .rel-item:hover { color:var(--accent); }
+    .card-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; padding-top:10px; border-top:1px solid var(--border-l); }
+    .source-link { font-size:12px; font-weight:500; color:var(--muted); text-decoration:none; }
+    .card-actions { display:flex; align-items:center; gap:4px; }
+    .btn-act { padding:4px 9px; border-radius:7px; font-size:12px; font-weight:500; color:var(--muted); }
+    .btn-act:hover { background:var(--hover); color:var(--text); }
+    .btn-act.done { background:var(--read-bg); color:var(--read-tx); }
+    .btn-act.saved { color:#f59e0b; background:rgba(245,158,11,.12); font-weight:600; }
+    .empty-box { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:36px 20px; text-align:center; color:var(--muted); font-size:13.5px; }
+    .hidden { display:none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <h1>Veille Reglementaire</h1>
+          <span class="v2-tag">V2</span>
+          <span id="unread-badge" class="badge-count">0</span>
+        </div>
+        <div class="header-actions">
+          <button id="btn-unread" class="icon-btn" onclick="toggleQuickFilter('unreadOnly')">Non lus</button>
+          <button id="btn-saved" class="icon-btn" onclick="toggleQuickFilter('savedOnly')">Favoris</button>
+          <button id="btn-theme" class="icon-btn" onclick="toggleTheme()"><span id="theme-icon">Sombre</span></button>
+          <button id="btn-drawer" class="icon-btn" onclick="toggleDrawer()">
+            <span>Filtres</span>
+            <span id="drawer-dot" class="notif-dot hidden"></span>
+          </button>
+        </div>
+      </div>
+      <div id="filter-drawer" class="drawer hidden">
+        <input type="text" id="search-input" oninput="applyFilters()" placeholder="Rechercher titre, resume, action ou cible...">
+        <div class="drawer-grid">
+          <select id="source-filter" onchange="applyFilters()"><option value="ALL">Toutes les sources</option></select>
+          <select id="period-filter" onchange="applyFilters()">
+            <option value="ALL">Toute periode</option>
+            <option value="24H">Dernieres 24h</option>
+            <option value="7D">7 derniers jours</option>
+          </select>
+        </div>
+      </div>
+      <div id="pills-bar" class="pills-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="status-bar">
+      <span id="results-count">Chargement V2...</span>
+      <div class="status-actions">
+        <button id="mark-all-btn" class="action-link hidden" onclick="markVisibleAsRead()">Tout marquer lu</button>
+        <button id="reset-btn" class="action-link hidden" onclick="resetAllFilters()">Tout effacer</button>
+      </div>
+    </div>
+    <div id="articles-container" class="cards-list"></div>
+  </main>
+
+  <script>
+    window.onerror = function(m, u, l) {
+      document.getElementById("results-count").textContent = "Erreur L" + l + " : " + m;
+    };
+
+    var CATEGORIES = {
+      PDP: { label: "Donnees (PDP)", color: "#3b82f6" },
+      CYBER: { label: "Cybersecurite", color: "#ef4444" },
+      ANTICOR: { label: "Anticorruption", color: "#f59e0b" },
+      PI: { label: "Propriete Intel.", color: "#10b981" },
+      COSMETIQUE: { label: "Cosmetique", color: "#ec4899" },
+      INSTITUTIONNEL: { label: "Institutionnel", color: "#6366f1" },
+      AUTRE: { label: "Autres", color: "#64748b" }
+    };
+
+    function getStoredArray(key) {
+      try {
+        var v = JSON.parse(localStorage.getItem(key) || "[]");
+        return Array.isArray(v) ? v : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    var allArticles = [];
+    var currentFiltered = [];
+    var dataStatus = "sync";
+    var state = {
+      category: "ALL",
+      impact: "ALL",
+      actionOnly: false,
+      unreadOnly: false,
+      savedOnly: false,
+      drawerOpen: false,
+      readIds: getStoredArray("vj2_read_ids"),
+      savedIds: getStoredArray("vj2_saved_ids")
+    };
+
+    function initTheme() {
+      var saved = localStorage.getItem("vj2_theme");
+      var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var isDark = saved ? saved === "dark" : prefersDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      document.getElementById("theme-icon").textContent = isDark ? "Clair" : "Sombre";
+    }
+
+    function toggleTheme() {
+      var isDark = !document.documentElement.classList.contains("dark");
+      document.documentElement.classList.toggle("dark", isDark);
+      localStorage.setItem("vj2_theme", isDark ? "dark" : "light");
+      document.getElementById("theme-icon").textContent = isDark ? "Clair" : "Sombre";
+    }
+
+    var DEMO_ARTICLES = [{
+      title: "Environnement V2 pret (En attente du premier lancement)",
+      link: "[https://github.com](https://github.com)",
+      source: "Systeme V2",
+      category: "INSTITUTIONNEL",
+      impact: "IMPORTANT",
+      summary: "Lancez le workflow Veille Juridique V2 dans l'onglet Actions de GitHub pour alimenter ce second site.",
+      action_requise: "Ouvrir GitHub Actions et declencher Veille Juridique V2.",
+      echeance: "",
+      cible: "Admin",
+      pub_date: new Date().toISOString()
+    }];
+
+    function loadArticles() {
+      var cached = getStoredArray("vj2_cache_articles");
+      allArticles = cached.length > 0 ? cached : DEMO_ARTICLES;
+      dataStatus = cached.length > 0 ? "cache" : "sync";
+      populateSourcesDropdown();
+      renderPillsBar();
+      applyFilters();
+
+      fetch("./articles.json?t=" + Date.now())
+        .then(function(response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          return response.json();
+        })
+        .then(function(raw) {
+          var valid = Array.isArray(raw) ? raw.filter(function(a) { return a && typeof a === "object" && a.title && a.link; }) : [];
+          if (valid.length > 0) {
+            allArticles = valid;
+            dataStatus = "live";
+            try { localStorage.setItem("vj2_cache_articles", JSON.stringify(valid.slice(0, 100))); } catch (e) {}
+            populateSourcesDropdown();
+            renderPillsBar();
+            applyFilters();
+          } else {
+            dataStatus = "empty";
+            applyFilters();
+          }
+        })
+        .catch(function(err) {
+          if (cached.length === 0) {
+            dataStatus = "missing:" + err.message;
+            applyFilters();
+          }
+        });
+    }
+
+    function populateSourcesDropdown() {
+      var select = document.getElementById("source-filter");
+      var currentVal = select.value;
+      while (select.options.length > 1) { select.remove(1); }
+      var seen = {};
+      var sources = [];
+      for (var i = 0; i < allArticles.length; i++) {
+        var s = allArticles[i] && allArticles[i].source;
+        if (s && !seen[s]) { seen[s] = true; sources.push(s); }
+      }
+      sources.sort();
+      for (var j = 0; j < sources.length; j++) {
+        var opt = document.createElement("option");
+        opt.value = sources[j];
+        opt.textContent = sources[j];
+        select.appendChild(opt);
+      }
+      if (seen[currentVal]) select.value = currentVal;
+    }
+
+    function toggleDrawer() {
+      state.drawerOpen = !state.drawerOpen;
+      document.getElementById("filter-drawer").classList.toggle("hidden", !state.drawerOpen);
+      if (state.drawerOpen) document.getElementById("search-input").focus();
+    }
+
+    function toggleQuickFilter(key) {
+      state[key] = !state[key];
+      document.getElementById("btn-unread").classList.toggle("active-sky", state.unreadOnly);
+      document.getElementById("btn-saved").classList.toggle("active-amber", state.savedOnly);
+      applyFilters();
+    }
+
+    function makePill(bar, label, isActive, onClick, dotColor) {
+      var btn = document.createElement("button");
+      btn.onclick = onClick;
+      btn.className = "pill" + (isActive ? " active" : "");
+      if (dotColor) {
+        var dot = document.createElement("span");
+        dot.className = "dot";
+        dot.style.backgroundColor = dotColor;
+        btn.appendChild(dot);
+      }
+      var span = document.createElement("span");
+      span.textContent = label;
+      btn.appendChild(span);
+      bar.appendChild(btn);
+    }
+
+    function renderPillsBar() {
+      var bar = document.getElementById("pills-bar");
+      bar.innerHTML = "";
+
+      makePill(bar, "Tout", state.category === "ALL" && state.impact === "ALL" && !state.actionOnly, function() {
+        state.category = "ALL";
+        state.impact = "ALL";
+        state.actionOnly = false;
+        renderPillsBar();
+        applyFilters();
+      }, null);
+
+      var actionCount = 0;
+      var critCount = 0;
+      var impCount = 0;
+      for (var i = 0; i < allArticles.length; i++) {
+        var imp = String(allArticles[i].impact || "").toUpperCase();
+        if (imp === "CRITIQUE") critCount++;
+        if (imp === "IMPORTANT") impCount++;
+        if (allArticles[i].action_requise && String(allArticles[i].action_requise).trim() !== "") actionCount++;
+      }
+
+      if (actionCount > 0) {
+        makePill(bar, "A traiter (" + actionCount + ")", state.actionOnly, function() {
+          state.actionOnly = !state.actionOnly;
+          renderPillsBar();
+          applyFilters();
+        }, "#10b981");
+      }
+
+      if (critCount > 0) {
+        makePill(bar, "Critique (" + critCount + ")", state.impact === "CRITIQUE", function() {
+          state.impact = state.impact === "CRITIQUE" ? "ALL" : "CRITIQUE";
+          renderPillsBar();
+          applyFilters();
+        }, "#ef4444");
+      }
+
+      if (impCount > 0) {
+        makePill(bar, "Important (" + impCount + ")", state.impact === "IMPORTANT", function() {
+          state.impact = state.impact === "IMPORTANT" ? "ALL" : "IMPORTANT";
+          renderPillsBar();
+          applyFilters();
+        }, "#f59e0b");
+      }
+
+      var sep = document.createElement("span");
+      sep.className = "pill-sep";
+      bar.appendChild(sep);
+
+      var keys = Object.keys(CATEGORIES);
+      for (var k = 0; k < keys.length; k++) {
+        (function(key) {
+          var meta = CATEGORIES[key];
+          var exists = false;
+          for (var m = 0; m < allArticles.length; m++) {
+            if (allArticles[m].category === key) { exists = true; break; }
+          }
+          if (!exists) return;
+          makePill(bar, meta.label, state.category === key, function() {
+            state.category = state.category === key ? "ALL" : key;
+            renderPillsBar();
+            applyFilters();
+          }, meta.color);
+        })(keys[k]);
+      }
+    }
+
+    function resetAllFilters() {
+      state.category = "ALL";
+      state.impact = "ALL";
+      state.actionOnly = false;
+      state.unreadOnly = false;
+      state.savedOnly = false;
+      document.getElementById("search-input").value = "";
+      document.getElementById("source-filter").value = "ALL";
+      document.getElementById("period-filter").value = "ALL";
+      document.getElementById("btn-unread").classList.remove("active-sky");
+      document.getElementById("btn-saved").classList.remove("active-amber");
+      renderPillsBar();
+      applyFilters();
+    }
+
+    function markVisibleAsRead() {
+      var changed = false;
+      for (var i = 0; i < currentFiltered.length; i++) {
+        var link = currentFiltered[i].link;
+        if (link && state.readIds.indexOf(link) === -1) {
+          state.readIds.push(link);
+          changed = true;
+        }
+      }
+      if (changed) {
+        localStorage.setItem("vj2_read_ids", JSON.stringify(state.readIds));
+        applyFilters();
+      }
+    }
+
+    function applyFilters() {
+      var query = document.getElementById("search-input").value.toLowerCase().trim();
+      var sourceFilter = document.getElementById("source-filter").value;
+      var periodFilter = document.getElementById("period-filter").value;
+      var now = Date.now();
+
+      var unreadTotal = 0;
+      for (var u = 0; u < allArticles.length; u++) {
+        if (state.readIds.indexOf(allArticles[u].link) === -1) unreadTotal++;
+      }
+      document.getElementById("unread-badge").textContent = unreadTotal;
+
+      var hasDrawerFilter = query !== "" || sourceFilter !== "ALL" || periodFilter !== "ALL";
+      document.getElementById("drawer-dot").classList.toggle("hidden", !hasDrawerFilter);
+
+      var filtered = [];
+      for (var i = 0; i < allArticles.length; i++) {
+        var art = allArticles[i];
+        var artImpact = String(art.impact || "INFORMATIF").toUpperCase();
+        if (state.category !== "ALL" && art.category !== state.category) continue;
+        if (state.impact !== "ALL" && artImpact !== state.impact) continue;
+        if (state.actionOnly && (!art.action_requise || String(art.action_requise).trim() === "")) continue;
+        if (sourceFilter !== "ALL" && art.source !== sourceFilter) continue;
+        if (state.unreadOnly && state.readIds.indexOf(art.link) !== -1) continue;
+        if (state.savedOnly && state.savedIds.indexOf(art.link) === -1) continue;
+        if (periodFilter !== "ALL" && art.pub_date) {
+          var pubTime = new Date(art.pub_date).getTime();
+          if (!isNaN(pubTime)) {
+            var ageHours = (now - pubTime) / 3600000;
+            if (periodFilter === "24H" && ageHours > 24) continue;
+            if (periodFilter === "7D" && ageHours > 168) continue;
+          }
+        }
+        if (query) {
+          var haystack = ((art.title || "") + " " + (art.summary || "") + " " + (art.action_requise || "") + " " + (art.cible || "") + " " + (art.source || "")).toLowerCase();
+          if (haystack.indexOf(query) === -1) continue;
+        }
+        filtered.push(art);
+      }
+
+      currentFiltered = filtered;
+
+      var visibleUnread = 0;
+      for (var v = 0; v < filtered.length; v++) {
+        if (state.readIds.indexOf(filtered[v].link) === -1) visibleUnread++;
+      }
+      document.getElementById("mark-all-btn").classList.toggle("hidden", visibleUnread === 0);
+
+      var hasAnyFilter = state.category !== "ALL" || state.impact !== "ALL" || state.actionOnly || state.unreadOnly || state.savedOnly || hasDrawerFilter;
+      document.getElementById("reset-btn").classList.toggle("hidden", !hasAnyFilter);
+
+      var statusEl = document.getElementById("results-count");
+      if (dataStatus === "sync") {
+        statusEl.textContent = "Apercu V2 (en attente de articles.json)";
+      } else if (dataStatus.indexOf("missing:") === 0) {
+        statusEl.textContent = "Apercu V2 (" + dataStatus.split(":")[1] + ")";
+      } else if (dataStatus === "empty") {
+        statusEl.textContent = "Flux V2 vide";
+      } else {
+        statusEl.textContent = filtered.length + " sujet" + (filtered.length > 1 ? "s" : "");
+      }
+
+      renderCards(filtered);
+    }
+
+    function formatRelativeDate(dateStr) {
+      if (!dateStr) return "";
+      var date = new Date(dateStr);
+      if (isNaN(date.getTime())) return "";
+      var diffHours = Math.floor((Date.now() - date.getTime()) / 3600000);
+      if (diffHours < 1) return "Recent";
+      if (diffHours < 24) return diffHours + "h";
+      var diffDays = Math.floor(diffHours / 24);
+      if (diffDays === 1) return "Hier";
+      if (diffDays < 7) return diffDays + "j";
+      return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+    }
+
+    function toggleRead(link) {
+      if (state.readIds.indexOf(link) !== -1) {
+        state.readIds = state.readIds.filter(function(id) { return id !== link; });
+      } else {
+        state.readIds.push(link);
+      }
+      localStorage.setItem("vj2_read_ids", JSON.stringify(state.readIds));
+      applyFilters();
+    }
+
+    function toggleSaved(link) {
+      if (state.savedIds.indexOf(link) !== -1) {
+        state.savedIds = state.savedIds.filter(function(id) { return id !== link; });
+      } else {
+        state.savedIds.push(link);
+      }
+      localStorage.setItem("vj2_saved_ids", JSON.stringify(state.savedIds));
+      applyFilters();
+    }
+
+    function shareArticle(art, btnEl) {
+      var shareText = art.title;
+      if (art.summary) shareText += "\n\n" + art.summary;
+      if (art.action_requise) shareText += "\nAction : " + art.action_requise;
+      if (art.echeance) shareText += "\nEcheance : " + art.echeance;
+
+      if (navigator.share) {
+        navigator.share({
+          title: art.title,
+          text: shareText,
+          url: art.link
+        }).catch(function() {});
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareText + "\n" + art.link).then(function() {
+          btnEl.textContent = "Copie !";
+          setTimeout(function() { btnEl.textContent = "Partager"; }, 1800);
+        });
+      }
+    }
+
+    function renderCards(articles) {
+      var container = document.getElementById("articles-container");
+      container.innerHTML = "";
+
+      if (articles.length === 0) {
+        var empty = document.createElement("div");
+        empty.className = "empty-box";
+        empty.textContent = "Aucun sujet pour cette selection.";
+        container.appendChild(empty);
+        return;
+      }
+
+      for (var i = 0; i < articles.length; i++) {
+        (function(art) {
+          var cat = CATEGORIES[art.category] || CATEGORIES.AUTRE;
+          var impact = String(art.impact || "INFORMATIF").toUpperCase();
+          var isRead = state.readIds.indexOf(art.link) !== -1;
+          var isSaved = state.savedIds.indexOf(art.link) !== -1;
+
+          var card = document.createElement("article");
+          card.className = "card" + (isRead ? " is-read" : "");
+
+          var meta = document.createElement("div");
+          meta.className = "card-meta";
+
+          var metaLeft = document.createElement("div");
+          metaLeft.className = "meta-left";
+
+          var dot = document.createElement("span");
+          dot.className = "dot";
+          dot.style.backgroundColor = cat.color;
+
+          var catSpan = document.createElement("span");
+          catSpan.className = "meta-cat";
+          catSpan.textContent = cat.label;
+
+          var sep1 = document.createElement("span");
+          sep1.textContent = "-";
+
+          var srcSpan = document.createElement("span");
+          srcSpan.className = "meta-src";
+          srcSpan.textContent = art.source || "";
+
+          var sep2 = document.createElement("span");
+          sep2.textContent = "-";
+
+          var dateSpan = document.createElement("span");
+          dateSpan.className = "meta-date";
+          dateSpan.textContent = formatRelativeDate(art.pub_date);
+
+          metaLeft.appendChild(dot);
+          metaLeft.appendChild(catSpan);
+          metaLeft.appendChild(sep1);
+          metaLeft.appendChild(srcSpan);
+          metaLeft.appendChild(sep2);
+          metaLeft.appendChild(dateSpan);
+          meta.appendChild(metaLeft);
+
+          var metaTags = document.createElement("div");
+          metaTags.className = "meta-tags";
+
+          if (art.cible && String(art.cible).trim() !== "") {
+            var roleTag = document.createElement("span");
+            roleTag.className = "tag-role";
+            roleTag.textContent = art.cible;
+            metaTags.appendChild(roleTag);
+          }
+
+          if (impact === "CRITIQUE" || impact === "IMPORTANT") {
+            var tag = document.createElement("span");
+            tag.className = "tag-impact " + (impact === "CRITIQUE" ? "tag-critique" : "tag-important");
+            tag.textContent = impact === "CRITIQUE" ? "Critique" : "Important";
+            metaTags.appendChild(tag);
+          }
+
+          meta.appendChild(metaTags);
+
+          var h2 = document.createElement("h2");
+          h2.className = "card-title";
+          var titleLink = document.createElement("a");
+          titleLink.href = art.link;
+          titleLink.target = "_blank";
+          titleLink.textContent = art.title;
+          titleLink.onclick = function() {
+            if (!isRead) toggleRead(art.link);
+          };
+          h2.appendChild(titleLink);
+
+          card.appendChild(meta);
+          card.appendChild(h2);
+
+          if (art.summary) {
+            var p = document.createElement("p");
+            p.className = "card-summary";
+            p.textContent = art.summary;
+            card.appendChild(p);
+          }
+
+          if (art.echeance && String(art.echeance).trim() !== "") {
+            var dueSpan = document.createElement("div");
+            dueSpan.className = "due-pill";
+            dueSpan.textContent = "Echeance : " + art.echeance;
+            card.appendChild(dueSpan);
+          }
+
+          if (art.action_requise && String(art.action_requise).trim() !== "") {
+            var actBox = document.createElement("div");
+            actBox.className = "action-box";
+
+            var actLbl = document.createElement("span");
+            actLbl.className = "action-label";
+            actLbl.textContent = "Action :";
+
+            var actTxt = document.createElement("span");
+            actTxt.textContent = art.action_requise;
+
+            actBox.appendChild(actLbl);
+            actBox.appendChild(actTxt);
+            card.appendChild(actBox);
+          }
+
+          if (Array.isArray(art.related_sources) && art.related_sources.length > 0) {
+            var relBox = document.createElement("div");
+            relBox.className = "rel-box";
+
+            var relBtn = document.createElement("button");
+            relBtn.className = "rel-toggle";
+            var countRel = art.related_sources.length;
+            relBtn.textContent = "+ " + countRel + " autre" + (countRel > 1 ? "s sources" : " source");
+
+            var relList = document.createElement("div");
+            relList.className = "rel-list hidden";
+
+            for (var r = 0; r < countRel; r++) {
+              var relItem = art.related_sources[r];
+              var aRel = document.createElement("a");
+              aRel.className = "rel-item";
+              aRel.href = relItem.link;
+              aRel.target = "_blank";
+              aRel.textContent = relItem.source + " : " + relItem.title;
+              relList.appendChild(aRel);
+            }
+
+            relBtn.onclick = function() {
+              relList.classList.toggle("hidden");
+            };
+
+            relBox.appendChild(relBtn);
+            relBox.appendChild(relList);
+            card.appendChild(relBox);
+          }
+
+          var footer = document.createElement("div");
+          footer.className = "card-footer";
+
+          var srcLink = document.createElement("a");
+          srcLink.href = art.link;
+          srcLink.target = "_blank";
+          srcLink.className = "source-link";
+          srcLink.textContent = "Source";
+          srcLink.onclick = function() {
+            if (!isRead) toggleRead(art.link);
+          };
+
+          var actions = document.createElement("div");
+          actions.className = "card-actions";
+
+          var btnShare = document.createElement("button");
+          btnShare.className = "btn-act";
+          btnShare.textContent = "Partager";
+          btnShare.onclick = function() { shareArticle(art, btnShare); };
+
+          var btnRead = document.createElement("button");
+          btnRead.className = "btn-act" + (isRead ? " done" : "");
+          btnRead.textContent = isRead ? "Lu" : "Marquer lu";
+          btnRead.onclick = function() { toggleRead(art.link); };
+
+          var btnSave = document.createElement("button");
+          btnSave.className = "btn-act" + (isSaved ? " saved" : "");
+          btnSave.textContent = isSaved ? "Favori *" : "Favori";
+          btnSave.onclick = function() { toggleSaved(art.link); };
+
+          actions.appendChild(btnShare);
+          actions.appendChild(btnRead);
+          actions.appendChild(btnSave);
+          footer.appendChild(srcLink);
+          footer.appendChild(actions);
+          card.appendChild(footer);
+
+          container.appendChild(card);
+        })(articles[i]);
+      }
+    }
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(function() {});
+    }
+
+    initTheme();
+    loadArticles();
+  </script>
+</body>
+</html>
