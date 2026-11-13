@@ -1,0 +1,43 @@
+name: Veille Juridique V2 (Test & Batch IA)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-veille-v2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Exécuter la veille V2
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -u main_v2.py
+
+      - name: Sauvegarder l'historique SQLite V2 et le flux PWA V2
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add veille_history_v2.db docs/v2/articles.json
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto V2: maj historique et flux PWA V2"
+            git pull --rebase
+            git push
+          else
+            echo "Aucune nouvelle donnée V2 à enregistrer."
+          fi
