@@ -1,5 +1,372 @@
 [
   {
+    "title": "Reconnaître une présomption de légitime défense pour les forces de l'ordre - texte de la commission N° 168",
+    "link": "http://www.senat.fr/leg/ppl26-168.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le Sénat examine une proposition de loi visant à instaurer une présomption de légitime défense pour les forces de l'ordre dans l'exercice de leurs fonctions. Ce texte modifie le cadre juridique actuel en inversant potentiellement la charge de la preuve lors d'interventions, ce qui constitue une évolution majeure des règles d'engagement et de la responsabilité pénale des agents.",
+    "pub_date": "2026-11-11T02:03:32+00:00"
+  },
+  {
+    "title": "Diverses dispositions relatives à l'intégrité publique : dépôt au Sénat - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORGJwa1p3REd5djIxb0ExcnFKcmZpVFpRdFA5dkVISEtfZjdxNFVUT1huOU9pc0pLQVV2TUhkeTBTTGlHcFlBRjZCdVFKRzBlV2t0T0tSR0R5WjdNaW9wQ0NFbWtvRm92UTg2b0FkNzNQS2o3QzRybU1BVkpEcm93Q1Q1akJjUDRic3pPQ0pOMkNaMEtMWjI5dnpCUmo5M2ZJQ3psT04xdmRHc1U2X2MtOUUtTnFhY0NBLXVlWGVBYTI1d1lTMlRSZERWa1AxeHRNOEI1UmxKa01NQ1k?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "ANTICOR",
+    "impact": "IMPORTANT",
+    "summary": "Le gouvernement a déposé au Sénat un projet de loi visant à renforcer les dispositions relatives à l'intégrité publique. Ce texte structure l'évolution du cadre juridique de la probité et nécessite une veille attentive pour les organisations soumises à des obligations de conformité et de transparence.",
+    "pub_date": "2026-11-12T06:09:34+00:00",
+    "related_sources": [
+      {
+        "source": "Sénat - Textes récents",
+        "title": "Diverses dispositions relatives à l'intégrité publique (PJLO) - texte N° 164",
+        "link": "http://www.senat.fr/leg/pjl26-164.html"
+      }
+    ]
+  },
+  {
+    "title": "Lutte contre les discours incitant à la haine et aux actes racistes - texte N° 125",
+    "link": "http://www.senat.fr/leg/ppl26-125.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La proposition de loi n° 125 vise à durcir l'arsenal juridique contre les discours de haine et les actes racistes ou xénophobes. Ce texte législatif en cours d'examen au Sénat pourrait entraîner une évolution des obligations de modération pour les plateformes numériques et un renforcement des sanctions pénales associées.",
+    "pub_date": "2026-11-11T02:03:32+00:00"
+  },
+  {
+    "title": "Diverses dispositions relatives à l'intégrité publique (PJL) - texte N° 163",
+    "link": "http://www.senat.fr/leg/pjl26-163.html",
+    "source": "Sénat - Textes récents",
+    "category": "ANTICOR",
+    "impact": "IMPORTANT",
+    "summary": "Le projet de loi n° 163, déposé par le Premier ministre, vise à renforcer les mécanismes d'intégrité publique au sein des institutions françaises. Ce texte constitue un levier législatif structurant qui nécessite une veille juridique attentive pour anticiper les nouvelles obligations de conformité et de transparence imposées aux acteurs publics.",
+    "pub_date": "2026-11-11T02:03:32+00:00"
+  },
+  {
+    "title": "Avenir d'Europol - texte N° 148",
+    "link": "http://www.senat.fr/leg/ppr26-148.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La proposition de résolution n° 148 déposée au Sénat vise à renforcer la coopération opérationnelle entre les services répressifs européens via Europol. Ce texte souligne l'importance d'une coordination accrue face aux menaces criminelles transfrontalières et constitue une étape structurante dans l'évolution du cadre législatif de la coopération policière au sein de l'Union européenne.",
+    "pub_date": "2026-11-06T17:11:14+00:00"
+  },
+  {
+    "title": "Avenir d'Eurojust - texte N° 150",
+    "link": "http://www.senat.fr/leg/ppr26-150.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le Sénat a été saisi d'une proposition de résolution concernant l'avenir d'Eurojust, visant à renforcer la coopération judiciaire pénale au sein de l'Union européenne. Ce texte constitue une étape structurante dans l'évolution des mécanismes de lutte contre la criminalité transfrontalière et nécessite une attention particulière quant aux futures orientations stratégiques de l'agence.",
+    "pub_date": "2026-11-06T17:11:14+00:00"
+  },
+  {
+    "title": "Créer un corps de fonctionnaires de catégorie B pour les accompagnants - texte N° 127",
+    "link": "http://www.senat.fr/leg/ppl26-127.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La proposition de loi n° 127 vise à transformer le statut des accompagnants d'élèves en situation de handicap (AESH) en créant un corps de fonctionnaires de catégorie B. Ce texte marque une évolution structurelle majeure de la fonction publique visant à renforcer la stabilité professionnelle et la reconnaissance statutaire de ces agents.",
+    "pub_date": "2026-11-06T09:57:37+00:00"
+  },
+  {
+    "title": "FAQ – Réglementation sur la publicité dans le secteur de la rénovation énergétique - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSU9kZnlFNWZubFZBTndMbmhnMUZBYlBXTzZtY2tzVDZya09RLXljYjhLYkd6R0ljTGpTNnB4TUVlT2s3N1RrNUpUUng5bXFpR0Z4Rm55TGd3ZzdOWk5yUnVaNnFwS1BtQmFSQ1IwZlI1aTlpakV6Z2dFRlgteE1vcVBuZnI4Wl81WlRnQVZaYW1ib0h6Y0ZxRGx4WFpQNlc4ZnNVMVpZUm1RUjl3cDYxMFM4OWRGNGF3cUFoYUdPMjRWMXd5SDRvYjhMQzV2RmtSeHVj?oc=5",
+    "source": "DGCCRF",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La DGCCRF publie une FAQ clarifiant les règles strictes encadrant la publicité dans le secteur de la rénovation énergétique pour lutter contre les pratiques commerciales trompeuses. Les professionnels doivent impérativement se conformer à ces directives pour éviter des sanctions pénales et administratives liées à l'usage abusif d'allégations environnementales ou de labels officiels.",
+    "pub_date": "2026-11-10T10:22:02+00:00"
+  },
+  {
+    "title": "CELEX:32026D2508: Décision (PESC) 2026/2508 du Conseil du 9 novembre 2026 modifiant la décision (PESC) 2022/1968 relative à une mission d’assistance militaire de l’Union européenne en soutien à l’Ukraine (EUMAM Ukraine)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2508",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2508 modifie le cadre juridique de la mission EUMAM Ukraine afin d'ajuster les modalités de soutien militaire de l'Union européenne. Cet acte normatif formalise la poursuite et l'adaptation opérationnelle de l'assistance fournie à l'Ukraine, nécessitant une mise à jour des dispositifs de gouvernance et de coordination de la mission.",
+    "pub_date": "2026-11-10T23:00:00+00:00"
+  },
+  {
+    "title": "Périmètre de l'utilisation du produit du droit départemental de passage - texte N° 140",
+    "link": "http://www.senat.fr/leg/ppl26-140.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La proposition de loi n° 140, déposée au Sénat, vise à élargir les possibilités d'utilisation du produit du droit départemental de passage. Ce texte législatif en phase initiale d'examen cherche à assouplir les règles d'affectation de ces ressources financières pour les départements.",
+    "pub_date": "2026-11-13T02:03:44+00:00"
+  },
+  {
+    "title": "Création d'une commission d'enquête sur la gestion de l'amiante en outre-mer - texte N° 147",
+    "link": "http://www.senat.fr/leg/ppr26-147.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Sénat a été saisi d'une proposition de résolution visant à créer une commission d'enquête parlementaire sur la gestion de l'amiante dans les territoires d'outre-mer. Cette initiative parlementaire vise à évaluer les politiques publiques et les responsabilités sanitaires liées à l'exposition à l'amiante dans ces zones géographiques.",
+    "pub_date": "2026-11-13T02:03:44+00:00"
+  },
+  {
+    "title": "Règlement sur le logement abordable - texte N° 152",
+    "link": "http://www.senat.fr/leg/ppr26-152.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La proposition de résolution n° 152, déposée au Sénat par Mme Brigitte Devésa et M. Ahmed Laouedj, porte sur la mise en œuvre d'un règlement relatif au logement abordable. Ce texte s'inscrit dans le cadre des travaux parlementaires visant à définir les orientations législatives sur la crise du logement, sans constituer à ce stade une contrainte juridique immédiate.",
+    "pub_date": "2026-11-13T02:03:44+00:00"
+  },
+  {
+    "title": "Garantir un accès continu à l'eau potable dans les territoires ultramarins - texte N° 154",
+    "link": "http://www.senat.fr/leg/ppr26-154.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Sénat a été saisi d'une proposition de résolution visant à garantir un accès continu à l'eau potable dans les territoires ultramarins. Ce texte souligne une problématique structurelle de service public et appelle à une action politique pour sécuriser l'approvisionnement en eau dans ces zones géographiques.",
+    "pub_date": "2026-11-11T02:03:32+00:00"
+  },
+  {
+    "title": "Lutter contre la banalisation des discours de haine dans le débat public - texte N° 137",
+    "link": "http://www.senat.fr/leg/ppr26-137.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Sénat a été saisi d'une proposition de résolution visant à endiguer la banalisation des discours de haine au sein du débat public. Ce texte, déposé en application de l'article 34-1 de la Constitution, constitue une initiative politique de sensibilisation et de cadrage éthique sans portée normative contraignante immédiate.",
+    "pub_date": "2026-11-10T02:03:40+00:00"
+  },
+  {
+    "title": "Amende transactionnelle de 12 000 € à l’encontre de la société GMS MOTORS TRADING, exploitant un établissement à Angers - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQcVdLcGxISlVsNGJHaUdqZ1Vudl9YdXhqaVE5TGk1UXhLMEJaS3RWZzN0ZlB2X2pMT1pnd2NOdW5nQzZEODdiRzF6T0p4OTk0V3o2M0N6clFJUU1Zd2Rla0FEQzJoWWFhSk5rZ3dVSE1QQTJwVnV3NFdxemJsRzBiaS1GTW43cEY3YUc3U1VadEg0TXhWUGpMSUZLNmluTmVhcVN2TEpVTU9ES1c3a0gzNW93RlVpUWpjbnZidVZ3NkhGRXZOanBfcVhkd3lKVFRXSFhJQ0FPY1FWdWEwZF92ZkhQZ3AySkowQWFVMUxCOGlCZzFlbXg1MGlLdE9DcDVkVmdrMUo1cw?oc=5",
+    "source": "DGCCRF",
+    "category": "PDP",
+    "impact": "INFORMATIF",
+    "summary": "La DGCCRF a prononcé une amende transactionnelle de 12 000 € à l'encontre de la société GMS MOTORS TRADING située à Angers. Cette sanction fait suite à un manquement aux obligations de protection des consommateurs, relevant de la compétence de l'autorité en matière de pratiques commerciales.",
+    "pub_date": "2026-11-12T17:49:17+00:00"
+  },
+  {
+    "title": "Black Friday : attention aux bonnes affaires financées à crédit - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOalljSVNXc01jaWJZNUtPQXVoSmxaOElmZVU2TWlBRDRkS2VTekt0djdpc1E3OHpjUTRvbGlSbEh2T3JkN0M5TWZvU2xfc0RwLUhkVkE0dm8wekhTNjh4NElsaFJpVDNoUHVSRVpCbTVGa21lQjRGSTRjU29ZbTJhOVV1NnloOHJIcFJ2VjlNWEZJR3RMMXVzcURPTEZCTms0ckRoTlJDUEhNNVJkZ3M1eHJhaw?oc=5",
+    "source": "DGCCRF",
+    "category": "PDP",
+    "impact": "INFORMATIF",
+    "summary": "La DGCCRF met en garde les consommateurs contre le recours au crédit à la consommation pour financer les achats du Black Friday. L'autorité rappelle l'importance de la vigilance face aux taux d'intérêt et aux risques de surendettement liés aux facilités de paiement proposées par les commerçants.",
+    "pub_date": "2026-11-06T10:55:41+00:00"
+  },
+  {
+    "title": "CELEX:32004F0757R(02)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32004F0757R(02)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant une décision du Conseil de l'Union européenne. Cette mise à jour n'affecte pas la version française du texte et ne nécessite aucune action juridique ou opérationnelle.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2543: Décision (UE) 2026/2543 du Conseil du 9 novembre 2026 relative à la position à prendre, au nom de l’Union européenne, au sein du Comité mixte de l’EEE en ce qui concerne une modification de l’annexe II (Réglementations techniques, normes, essais et certification) et du protocole 37 (comportant la liste prévue à l’article 101) de l’accord EEE (Directive relative au miel) (Texte présentant de l'intérêt pour l'EEE)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2543",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision du Conseil définit la position de l'Union européenne concernant l'intégration de la nouvelle directive relative au miel au sein de l'accord EEE. Il s'agit d'une procédure technique visant à harmoniser les réglementations techniques et les normes de certification entre l'UE et les pays de l'EEE.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2541: Décision (UE) 2026/2541 du Conseil du 29 octobre 2026 portant nomination d’un suppléant du Comité des régions, proposé par la République italienne",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2541",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision (UE) 2026/2541 formalise la nomination d'un nouveau membre suppléant au sein du Comité des régions, sur proposition de la République italienne. Il s'agit d'un acte administratif de routine relatif à la composition des organes consultatifs de l'Union européenne, sans incidence directe sur la cybersécurité ou la conformité réglementaire.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2557: Décision (UE) 2026/2557 du Conseil du 9 novembre 2026 relative à la position à prendre, au nom de l’Union européenne, au sein du comité de coopération douanière institué par l’accord créant une association entre la Communauté européenne et la Turquie en ce qui concerne l’adoption d’une décision portant modalités d’application de la décision n° 1/95 du Conseil d’association CE-Turquie",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2557",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision du Conseil définit la position de l'Union européenne concernant l'adoption de modalités d'application liées à l'accord d'association CE-Turquie. Elle vise à harmoniser les procédures au sein du comité de coopération douanière pour faciliter les échanges commerciaux. Il s'agit d'un acte de gouvernance technique sans impact opérationnel immédiat pour les entreprises en dehors du cadre douanier.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2551: Décision d’exécution (UE) 2026/2551 du Conseil du 9 novembre 2026 autorisant la Slovénie à appliquer des taux d’accise réduits à l’essence sans plomb et au gazole utilisés comme carburants, conformément à l’article 19 de la directive 2003/96/CE",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2551",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La Commission européenne autorise la Slovénie à appliquer des taux d'accise réduits sur l'essence sans plomb et le gazole, conformément à l'article 19 de la directive 2003/96/CE. Cette décision constitue une mesure dérogatoire spécifique visant à permettre une flexibilité fiscale nationale sur les produits énergétiques.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32020D0472R(04)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32020D0472R(04)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant une décision de l'Union européenne. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2549: Décision (UE) 2026/2549 du Conseil du 9 novembre 2026 autorisant la participation aux négociations en vue d’un accord international destiné à remplacer l’accord international sur les bois tropicaux",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2549",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Conseil de l'Union européenne a autorisé l'ouverture de négociations pour remplacer l'accord international sur les bois tropicaux de 2006. Cette décision marque le début d'un processus diplomatique visant à moderniser le cadre juridique régissant le commerce durable des bois tropicaux au niveau mondial.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2535: Décision (UE) 2026/2535 du Conseil du 26 octobre 2026 relative à la position à prendre, au nom de l’Union européenne, au sein du Conseil des membres du Conseil oléicole international concernant la prorogation de l’accord international de 2015 sur l’huile d’olive et les olives de table",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2535",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision définit la position de l'Union européenne concernant la prorogation de l'accord international de 2015 sur l'huile d'olive et les olives de table au sein du Conseil oléicole international. Il s'agit d'un acte de gouvernance internationale visant à maintenir le cadre juridique régissant les échanges et les normes de qualité dans ce secteur.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2536: Décision (UE) 2026/2536 du Conseil du 26 octobre 2026 relative à la position à prendre, au nom de l’Union européenne, au sein du Conseil des membres du Conseil oléicole international, concernant la prolongation du délai imparti pour notifier l’acceptation de l’amendement de l’article 36 de l’accord international de 2015 sur l’huile d’olive et les olives de table",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2536",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision définit la position de l'Union européenne concernant la prolongation du délai d'acceptation d'un amendement à l'accord international de 2015 sur l'huile d'olive et les olives de table. Il s'agit d'un acte de gouvernance internationale visant à permettre aux membres du Conseil oléicole international de finaliser les procédures d'adhésion à cette modification technique.",
+    "pub_date": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2531: Décision (UE) 2026/2531 du Conseil du 29 octobre 2026 portant nomination d’un membre du Comité économique et social européen, proposé par la République de Malte",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2531",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision (UE) 2026/2531 formalise la nomination d'un nouveau membre au sein du Comité économique et social européen sur proposition de la République de Malte. Cet acte administratif relève du fonctionnement institutionnel courant de l'Union européenne et ne nécessite aucune action particulière.",
+    "pub_date": "2026-11-11T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D06026: Décision du Conseil du 10 novembre 2026 portant remplacement d'un membre suppléant du comité consultatif pour la coordination des systèmes de sécurité sociale pour la Suède",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D06026",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision du Conseil formalise le remplacement d'un membre suppléant au sein du comité consultatif pour la coordination des systèmes de sécurité sociale pour la Suède. Il s'agit d'un acte administratif de routine relatif à la gouvernance des organes consultatifs de l'Union européenne sans impact opérationnel ou juridique majeur.",
+    "pub_date": "2026-11-11T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32024L2853R(03)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32024L2853R(03)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant le texte CELEX:32024L2853. Cette correction ne concerne pas la version française du document, n'entraînant ainsi aucune modification juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-10T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2507: Décision (PESC) 2026/2507 du Conseil du 9 novembre 2026 modifiant la décision (PESC) 2024/2840 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de renforcer les capacités de la marine de la République du Congo dans le cadre de l’architecture de Yaoundé",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2507",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision (PESC) 2026/2507 modifie le cadre de soutien financier et logistique apporté par la Facilité européenne pour la paix à la marine de la République du Congo. Cette mesure vise à renforcer les capacités opérationnelles de sécurité maritime dans le cadre de l'architecture de Yaoundé, sans introduire de nouvelles obligations contraignantes pour les entités privées.",
+    "pub_date": "2026-11-10T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32023D0229R(01): Rectificatif à la décision (PESC) 2023/229 du Conseil du 2 février 2023 modifiant la décision (PESC) 2022/339 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de soutenir les forces armées ukrainiennes (JO L 32 du 3.2.2023)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32023D0229R(01)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Ce document constitue un rectificatif technique apporté à la décision (PESC) 2023/229 concernant le soutien financier et matériel aux forces armées ukrainiennes via la facilité européenne pour la paix. Il corrige des erreurs matérielles dans le texte initial sans modifier la portée stratégique ou opérationnelle de la mesure d'assistance.",
+    "pub_date": "2026-11-10T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32013L0055R(08)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32013L0055R(08)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant la directive 2013/55/UE relative à la reconnaissance des qualifications professionnelles. Cette mise à jour n'affecte pas la version française du texte et ne nécessite aucune action de conformité ou modification juridique.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R1844R(02)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1844R(02)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant le règlement CELEX:32026R1844. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D1849R(02)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1849R(02)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant une décision existante. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R1848R(03)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1848R(03)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant le règlement (UE) 2026/1848. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32025D1495R(03)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025D1495R(03)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant une décision de l'Union européenne. Cette modification ne s'appliquant pas à la version française, elle n'entraîne aucune conséquence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32025R0395R(07)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025R0395R(07)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant le règlement CELEX:32025R0395. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R1738R(03):            Berichtigung der Verordnung (EU) 2026/1738 des Europäischen Parlaments und des Rates vom 8. Juli 2026 über Anforderungen an die kreislauforientierte Konstruktion von Fahrzeugen und über die Bewirtschaftung von Altfahrzeugen, zur Änderung der Verordnungen (EU) Nr. 168/2013, (EU) 2018/858, (EU) 2019/1020 und (EU) 2023/1542 und zur Aufhebung der Richtlinien 2000/53/EG und 2005/64/EG (ABl. L, 2026/1738, 24.7.2026)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1738R(03)",
+    "source": "EUR-Lex Actualités",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant la version allemande du règlement (UE) 2026/1738 relatif à la conception circulaire des véhicules et à la gestion des véhicules hors d'usage. Cette correction n'affecte pas la version française du texte et ne modifie pas les obligations réglementaires en vigueur pour les opérateurs du secteur.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32025D0394R(07)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025D0394R(07)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant un acte juridique spécifique. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32025R1494R(05)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025R1494R(05)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique concernant le règlement CELEX:32025R1494. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D1845R(01)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1845R(01)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Il s'agit d'un rectificatif technique publié au Journal officiel de l'Union européenne concernant une décision spécifique. Cette modification ne concerne pas la version française du texte, n'entraînant ainsi aucune incidence juridique ou opérationnelle pour les entités francophones.",
+    "pub_date": "2026-11-09T23:00:00+00:00"
+  },
+  {
     "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (06 novembre 2026)",
     "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1470/",
     "source": "ANSSI (CERT-FR)",
