@@ -1,5 +1,365 @@
 [
   {
+    "title": "CELEX:32026R2568: Règlement d’exécution (UE) 2026/2568 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) 2024/386 instituant des mesures restrictives à l’encontre du Hamas et du Jihad islamique palestinien et de ceux qui soutiennent, facilitent ou permettent leurs actions violentes",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2568",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "CRITIQUE",
+    "summary": "Le règlement d’exécution (UE) 2026/2568 formalise l'application de mesures restrictives ciblées contre le Hamas et le Jihad islamique palestinien, ainsi que leurs soutiens financiers et logistiques. Cette mise en œuvre impose aux entités assujetties une obligation immédiate de gel des avoirs et d'interdiction de mise à disposition de fonds ou de ressources économiques au profit des personnes et entités listées.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Git (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1541/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité critique dans Git permet l'exécution de code arbitraire à distance, exposant les infrastructures de développement à des compromissions majeures. Il est impératif de mettre à jour les instances Git sans délai pour prévenir toute exploitation malveillante et garantir l'intégrité des chaînes logicielles.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R2558: Règlement d’exécution (UE) 2026/2558 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) 2024/2642 concernant des mesures restrictives eu égard aux activités déstabilisatrices menées par la Russie",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2558",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le règlement d'exécution (UE) 2026/2558 formalise l'application de mesures restrictives ciblées à l'encontre d'entités ou d'individus impliqués dans des activités déstabilisatrices russes. Ce texte impose aux opérateurs économiques une vigilance accrue et une mise en conformité immédiate avec les nouvelles listes de sanctions pour éviter tout risque juridique ou financier lié aux transactions avec les parties visées.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R2574: Règlement d’exécution (UE) 2026/2574 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) n° 269/2014 concernant des mesures restrictives eu égard aux actions compromettant ou menaçant l’intégrité territoriale, la souveraineté et l’indépendance de l’Ukraine",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2574",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le règlement d'exécution (UE) 2026/2574 met à jour la liste des personnes et entités visées par des mesures restrictives liées à la situation en Ukraine. Cette mise à jour impose aux opérateurs économiques de vérifier immédiatement leurs relations d'affaires afin de se conformer aux obligations de gel des avoirs et d'interdiction de mise à disposition de fonds.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2571: Décision (PESC) 2026/2571 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2020/1999 concernant des mesures restrictives en réaction aux graves violations des droits de l’homme et aux graves atteintes à ces droits",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2571",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2571 modifie le régime de sanctions de l'Union européenne visant les auteurs de graves violations des droits de l'homme. Cette mise à jour réglementaire impose une vigilance accrue aux entités assujetties concernant leurs relations d'affaires et leurs transactions avec les personnes ou entités nouvellement inscrites sur la liste des mesures restrictives.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2570: Décision (PESC) 2026/2570 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2024/385 instituant des mesures restrictives à l’encontre du Hamas et du Jihad islamique palestinien et de ceux qui soutiennent, facilitent ou permettent leurs actions violentes",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2570",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2570 actualise le régime de sanctions ciblées de l'Union européenne contre le Hamas et le Jihad islamique palestinien. Cette modification impose des mesures restrictives renforcées à l'encontre des entités et individus facilitant les actions violentes de ces organisations, nécessitant une mise à jour immédiate des procédures de filtrage et de conformité pour les opérateurs économiques.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2556: Décision (PESC) 2026/2556 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2024/2643 concernant des mesures restrictives eu égard aux activités déstabilisatrices menées par la Russie",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2556",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2556 actualise le cadre des mesures restrictives imposées par l'Union européenne en réponse aux activités déstabilisatrices de la Russie. Cette modification impose aux entités assujetties de vérifier la conformité de leurs opérations avec les nouvelles listes de sanctions et les restrictions sectorielles renforcées.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2546: Décision (PESC) 2026/2546 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2019/797 concernant des mesures restrictives contre les cyberattaques qui menacent l’Union ou ses États membres",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2546",
+    "source": "EUR-Lex Actualités",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2546 actualise le cadre juridique des mesures restrictives de l'Union européenne visant à sanctionner les cyberattaques menaçant ses intérêts ou ceux de ses États membres. Cette mise à jour renforce l'arsenal diplomatique et coercitif de l'UE pour répondre aux menaces cyber persistantes, nécessitant une veille accrue sur les entités ou individus nouvellement visés par ces régimes de sanctions.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2575: Décision (PESC) 2026/2575 du Conseil du 16 novembre 2026 modifiant la décision 2014/145/PESC concernant des mesures restrictives eu égard aux actions compromettant ou menaçant l’intégrité territoriale, la souveraineté et l’indépendance de l’Ukraine",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2575",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La décision (PESC) 2026/2575 actualise le régime de sanctions de l'Union européenne en réponse aux menaces persistantes contre l'intégrité territoriale de l'Ukraine. Cette mise à jour impose des mesures restrictives ciblées, nécessitant une vigilance accrue des entités assujetties pour la mise en conformité de leurs processus de filtrage et de gel des avoirs.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R2569: Règlement d’exécution (UE) 2026/2569 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) 2020/1998 concernant des mesures restrictives en réaction aux graves violations des droits de l’homme et aux graves atteintes à ces droits",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2569",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le règlement d'exécution (UE) 2026/2569 met en œuvre des mesures restrictives ciblées en réponse à des violations graves des droits de l'homme. Ce texte impose des obligations de gel des avoirs et d'interdiction de mise à disposition de fonds pour les entités ou personnes désignées, nécessitant une mise à jour immédiate des procédures de filtrage des tiers et de conformité (KYC/Sanctions) pour les entreprises opérant dans l'UE.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026R2550: Règlement d’exécution (UE) 2026/2550 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) 2019/796 concernant des mesures restrictives contre les cyberattaques qui menacent l’Union ou ses États membres",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2550",
+    "source": "EUR-Lex Actualités",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Le règlement d'exécution (UE) 2026/2550 formalise l'application de mesures restrictives ciblées à l'encontre d'entités ou d'individus responsables de cyberattaques menaçant l'Union européenne. Ce texte renforce le cadre juridique de réponse aux cybermenaces en permettant l'imposition de sanctions concrètes, telles que le gel des avoirs ou l'interdiction de mise à disposition de fonds, pour dissuader les acteurs malveillants.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (13 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1536/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Le noyau Linux de Red Hat présente plusieurs vulnérabilités critiques permettant l'exécution de code à distance, l'élévation de privilèges et le déni de service. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante des systèmes affectés.",
+    "pub_date": "2026-11-13T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (13 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1537/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Le noyau Linux d'Ubuntu présente plusieurs vulnérabilités critiques permettant l'exécution de code arbitraire et l'altération de l'intégrité des données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout contournement des politiques de sécurité et protéger les systèmes contre une exploitation malveillante.",
+    "pub_date": "2026-11-13T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (13 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1535/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Le noyau Linux de SUSE présente plusieurs vulnérabilités critiques pouvant entraîner une compromission de la confidentialité et de l'intégrité des données, ainsi qu'un contournement des politiques de sécurité. Il est impératif pour les administrateurs systèmes d'appliquer les correctifs de sécurité fournis par l'éditeur afin de maintenir la conformité et la résilience de l'infrastructure.",
+    "pub_date": "2026-11-13T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits IBM (13 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1539/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits IBM, incluant des risques d'exécution de code à distance et de déni de service. Il est impératif pour les organisations concernées de consulter les avis techniques du CERT-FR et d'appliquer les correctifs de sécurité fournis par l'éditeur pour limiter l'exposition aux cyberattaques.",
+    "pub_date": "2026-11-13T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans PostgreSQL (13 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1530/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Plusieurs vulnérabilités critiques ont été identifiées dans PostgreSQL, exposant les systèmes à des risques d'exécution de code à distance, de déni de service et de compromission de données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour maintenir l'intégrité et la confidentialité des données traitées, conformément aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-13T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Microsoft Edge (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1546/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant le navigateur Microsoft Edge. Il est recommandé aux utilisateurs et administrateurs d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Kerberos (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1540/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Des vulnérabilités critiques dans Kerberos exposent les systèmes à des risques d'exécution de code à distance, de déni de service et de compromission de données. Il est impératif d'appliquer les correctifs de sécurité fournis par les éditeurs pour maintenir l'intégrité et la disponibilité des infrastructures d'authentification.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Citrix App Layering (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1545/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité a été identifiée dans Citrix App Layering, permettant à un attaquant de contourner les politiques de sécurité en place. Il est recommandé aux administrateurs de consulter les bulletins de sécurité de l'éditeur et d'appliquer les correctifs nécessaires pour prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans MongoDB (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1544/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant plusieurs vulnérabilités critiques dans MongoDB pouvant mener à une exécution de code à distance et une compromission de la confidentialité des données. Il est impératif pour les organisations d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante et de se conformer aux obligations de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Trend Micro (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1542/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits Trend Micro, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations utilisatrices d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute compromission de la confidentialité et de l'intégrité de leurs systèmes.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans VMware Tanzu (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1543/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité critique a été identifiée dans VMware Tanzu, permettant l'exécution de code arbitraire à distance. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout risque d'intrusion ou de compromission des systèmes impactés.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "Projet de loi de finances de fin de gestion pour 2026 - texte N° 172",
+    "link": "http://www.senat.fr/leg/pjl26-172.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le projet de loi de finances de fin de gestion pour 2026, transmis au Sénat le 13 novembre 2026, constitue un acte législatif de régulation budgétaire. Ce texte vise à ajuster les crédits de l'État pour la fin de l'exercice en cours, sans impact direct immédiat sur la conformité cybersécurité ou juridique des entreprises.",
+    "pub_date": "2026-11-14T02:03:40+00:00"
+  },
+  {
+    "title": "Amende de 44 000 € prononcée à l’encontre de la société SISLEY INDUSTRIE (numéro de SIRET : 45098234300011) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOQU5tbFRBdmJnX1YwcDN5b0ZSN1VvNDdwVWlKcnd2ZVZKVkUxdmpkYjFuMGJWeFRFUXJBaTlSbmRBMjZ0TXI3RnppYXNNak9iZHJwWFBaX0dURDFjb3c1akVkQ1hId1NnclV3b29LMEplTjlXMnU5WmoyNEpfU1dzMUhLSHk5MnE2RGl2NWcwUFQwdGtmVWFBM3ZBd2YyRjRzSVVFU25RM3gxd2ZGUmhXamJKLTJTcTFpLW5ueWxIUllVOWhyMjhMWVdBS2xvVmF0amQ3cVoybVlOU0M3enUzakQySmhCT0xXalEzcTNZSlRmbFNpaXRGdmdBaTBpdw?oc=5",
+    "source": "DGCCRF",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La DGCCRF a prononcé une amende administrative de 44 000 € à l'encontre de la société SISLEY INDUSTRIE. Cette sanction fait suite à un manquement aux règles de protection des consommateurs, relevant de la surveillance habituelle des pratiques commerciales exercée par l'autorité.",
+    "pub_date": "2026-11-10T14:59:04+00:00"
+  },
+  {
+    "title": "Amende de 2 000 € prononcée à l’encontre de la société GROUPE SERVICES FRANCE (numéro de SIRET : 77567529100428) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOa1dYVmU4V2p5N2ZZRG9OZHc2SV9fMXNYMnBVb1lUaGl5R2FpdVNDY0o3eWZGb0ROQlN4OGpEV0lzUV9QZHdwQ2dMb0QyLVFkcGNJWndaaGpOQlpfNzRSQWxVTk5YNFJPSjYxbkZGekRCMTY4Qmt1R1BPQUExTnFzNXREbE5EZmFLSE1ld01FQmpQSzd1YnVRWVhyM2dGSUM2djQwbnVteGtGZWxSci1HOEpYVFRWN2dOb3ZHMGYwVFFrMnBRdHpHTHhNSVhTRElicExsejIyaDc0bURoSkV2ZS15dUdVVTZTRE82aXNzQ2YzaGkyMExneEszX2tSbHVqVWVLVg?oc=5",
+    "source": "DGCCRF",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "La DGCCRF a prononcé une amende administrative de 2 000 euros à l'encontre de la société GROUPE SERVICES FRANCE. Cette sanction relève d'une mesure de contrôle classique de la consommation et ne présente pas d'enjeu systémique ou de cybersécurité particulier.",
+    "pub_date": "2026-11-10T14:59:04+00:00"
+  },
+  {
+    "title": "CELEX:32025R0395R(08)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025R0395R(08)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Ce document constitue un rectificatif technique relatif à une réglementation européenne publiée au Journal officiel. L'avis précise explicitement que les modifications apportées ne concernent pas la version française du texte, n'induisant ainsi aucun changement juridique ou opérationnel pour les entités francophones.",
+    "pub_date": "2026-11-15T23:00:00+00:00"
+  },
+  {
+    "title": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-048/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "INFORMATIF",
+    "summary": "Le bulletin d'actualité du CERT-FR propose une synthèse hebdomadaire des vulnérabilités identifiées, visant à faciliter la priorisation des correctifs. Il constitue un outil de veille opérationnelle qui ne se substitue pas à l'analyse exhaustive des avis techniques individuels pour la gestion des risques de sécurité.",
+    "pub_date": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "title": "The naked nail trend: how skinification is reshaping nail care",
+    "link": "https://www.cosmeticsbusiness.com/the-naked-nail-trend-how-skinification-is-reshaping",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La tendance du 'naked nail' favorise l'émergence de produits de soin intégrant des actifs issus de la cosmétique cutanée pour améliorer la santé de l'ongle. Cette évolution impose aux fabricants une vigilance accrue sur la conformité des allégations santé et la sécurité des ingrédients utilisés dans ces nouvelles formulations hybrides.",
+    "pub_date": "2026-11-16T19:05:00+00:00"
+  },
+  {
+    "title": "Solabia appoints Muriel Koch as President and Chief Executive Officer",
+    "link": "https://www.cosmeticsbusiness.com/solabia-appoints-muriel-koch-as-president-and-chief",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Le groupe Solabia a officialisé la nomination de Muriel Koch au poste de Présidente-Directrice Générale à compter du 29 octobre 2026. Ce changement de gouvernance marque une étape stratégique pour le fournisseur international d'ingrédients destinés aux marchés de la cosmétique, de la nutrition et des sciences de la vie.",
+    "pub_date": "2026-11-16T16:38:00+00:00"
+  },
+  {
+    "title": "Solabia announces strategic partnership with Ethical Naturals Inc.",
+    "link": "https://www.cosmeticsbusiness.com/solabia-announces-strategic-partnership-with-ethical-naturals-inc",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Le groupe Solabia renforce sa position sur le marché des ingrédients nutraceutiques par une prise de participation majoritaire dans la société Ethical Naturals Inc. Cette opération stratégique permet à l'entreprise d'étendre son empreinte opérationnelle et commerciale aux États-Unis.",
+    "pub_date": "2026-11-16T16:36:00+00:00"
+  },
+  {
+    "title": "SCS awards celebrate the people and innovations advancing cosmetic science",
+    "link": "https://www.cosmeticsbusiness.com/scs-awards-celebrate-the-people-and-innovations-advancing",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La Society for Cosmetic Science (SCS) a dévoilé les lauréats de ses prix 2026, récompensant les avancées majeures en recherche d'ingrédients et en formulation. Cette distinction souligne l'excellence scientifique du secteur sans impliquer de changement réglementaire ou de risque juridique immédiat.",
+    "pub_date": "2026-11-16T15:00:00+00:00"
+  },
+  {
+    "title": "Sephora to Tropic Skincare: Inside beauty’s 2026 Christmas advert battle",
+    "link": "https://www.cosmeticsbusiness.com/inside-beautys-2026-christmas-campaigns",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Le secteur de la beauté intensifie ses stratégies marketing pour la période des fêtes 2026 avec des campagnes publicitaires à forte visibilité impliquant des célébrités et des formats créatifs variés. Cette dynamique concurrentielle souligne l'importance des enjeux de propriété intellectuelle et de conformité publicitaire dans la gestion de l'image de marque à l'échelle internationale.",
+    "pub_date": "2026-11-16T12:52:00+00:00"
+  },
+  {
+    "title": "Vaseline unveils first facial skin care range to target sun-induced melasma",
+    "link": "https://www.cosmeticsbusiness.com/vaseline-unveils-pro-derma-melasma-repair",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque Vaseline, propriété d'Unilever, étend son offre vers le segment des soins thérapeutiques du visage avec la gamme Pro Derma Melasma Repair. Ce lancement s'appuie sur une technologie brevetée, marquant une évolution stratégique vers des produits à visée dermatologique ciblée contre le mélasma.",
+    "pub_date": "2026-11-16T12:41:00+00:00"
+  },
+  {
+    "title": "Collagen in skin care: can topical creams really work?",
+    "link": "https://www.cosmeticsbusiness.com/collagen-in-skin-care-can-topical-creams-really",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article analyse la viabilité scientifique de l'intégration du collagène dans les produits de soin topiques et l'influence des innovations de la K-beauty sur ces formulations. Il s'agit d'une veille sectorielle sur l'efficacité des ingrédients cosmétiques sans implication juridique ou de sécurité immédiate.",
+    "pub_date": "2026-11-16T12:13:00+00:00"
+  },
+  {
+    "title": "The detoxifying ally for menopausal skin",
+    "link": "https://www.cosmeticsbusiness.com/the-detoxifying-ally-for-menopausal-skin",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article souligne les transformations biologiques cutanées liées à la ménopause, notamment l'accumulation de fer et de ferritine. Cette étude sectorielle met en lumière une opportunité d'innovation pour le développement de soins cosmétiques spécifiques visant à détoxifier la peau des femmes ménopausées.",
+    "pub_date": "2026-11-16T11:25:00+00:00"
+  },
+  {
+    "title": "E45 owner Karo Healthcare appoints new CEO to ‘scale the business’",
+    "link": "https://www.cosmeticsbusiness.com/e45-owner-karo-healthcare-appoints-new-ceo",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Karo Healthcare, propriétaire de la marque E45, a nommé Sue Egstrand au poste de PDG pour piloter sa stratégie de croissance européenne. Cette nomination marque une étape clé dans l'ambition du groupe de se positionner parmi les cinq principaux acteurs du secteur de la santé grand public en Europe.",
+    "pub_date": "2026-11-16T10:30:00+00:00"
+  },
+  {
+    "title": "Estée Lauder Companies and Duty Free Americas unveil beauty destination at Miami International Airport",
+    "link": "https://www.cosmeticsbusiness.com/estee-lauder-duty-free-americas-unveil-store-miami-international-airport",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Estée Lauder Companies et Duty Free Americas ont inauguré un nouvel espace de vente à l'aéroport international de Miami dans le cadre d'un partenariat stratégique renouvelé. Cette initiative vise à répondre à la demande croissante des voyageurs pour des expériences de vente au détail haut de gamme dans le secteur du travel retail.",
+    "pub_date": "2026-11-16T10:26:00+00:00"
+  },
+  {
+    "title": "CeraVe named ‘official moisturiser of Arrakis’ with Dune Part Three film tie-up",
+    "link": "https://www.cosmeticsbusiness.com/cerave-named-official-moisturiser-of-arrakis-with-dune",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque CeraVe annonce un partenariat marketing mondial avec la franchise cinématographique Dune pour la promotion de son troisième volet. Cette opération de communication stratégique ne présente aucun enjeu juridique ou de cybersécurité particulier, s'inscrivant dans une démarche classique de placement de produit et de co-branding.",
+    "pub_date": "2026-11-13T16:21:00+00:00"
+  },
+  {
+    "title": "e.l.f. Beauty targets 50% clean electricity use in product manufacturing by 2032",
+    "link": "https://www.cosmeticsbusiness.com/e-l-f-beauty-targets-50-clean-electricity-use-2032",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "e.l.f. Beauty a publié son nouveau rapport d'impact fixant un objectif de 50 % d'utilisation d'électricité propre pour la fabrication de ses produits d'ici 2032. Cette initiative s'inscrit dans une démarche volontaire de responsabilité sociétale et environnementale visant à réduire l'empreinte carbone de ses opérations industrielles.",
+    "pub_date": "2026-11-13T12:25:00+00:00"
+  },
+  {
+    "title": "Cosmetics Business picks: 7 need-to-know beauty launches for November",
+    "link": "https://www.cosmeticsbusiness.com/cb-picks-7-new-beauty-launches-nov26",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article présente une sélection de nouveaux lancements dans le secteur de la beauté pour le mois de novembre, incluant des fragrances et des extensions de gammes vers le soin corporel. Cette actualité constitue une veille sectorielle sur les tendances de consommation et le positionnement marketing des marques sans implication juridique ou cybersécurité particulière.",
+    "pub_date": "2026-11-13T12:24:00+00:00"
+  },
+  {
     "title": "Multiples vulnérabilités dans Microsoft Azure (12 novembre 2026)",
     "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1514/",
     "source": "ANSSI (CERT-FR)",
