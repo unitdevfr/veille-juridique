@@ -1,5 +1,365 @@
 [
   {
+    "title": "Amende de 910 000 € prononcée à l’encontre de la société ENSIO SAS (numéro de SIRET : 31050577100272) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOd3Y3MTNEME9kT2RYcDJwWlBxVDhrdlByUFF1TUhwSHpOcDlpcHhMWmotc1pkSUZmZGFxM3VmUlRKNkc2WHkwb1I1amRObGRwT2hORXV2c2FDMFVvT3Q0ZUVHcHdRbG9uSjd6U2dmNnc0Vm01dWJVcWVvWUozMV9neWJGUmdJVk5OM0tJbk8xOEdfemVDTlZxS1hYTmtDV0JHNVdZNmFiVHAwdy1IQnF1OFdMRDJ4eEFWSWNUbmY3RXd4ZFpDdUNkcWJWc1pDR182M1g0UkFQV1d5RXJJaDREOUFNMW5zM21ldjh4UmF0OHI4U2lXdVRVTTJ4cVZIRTVNdk93RGJCV0xNdw?oc=5",
+    "source": "DGCCRF",
+    "category": "PDP",
+    "impact": "CRITIQUE",
+    "summary": "La DGCCRF a infligé une amende administrative de 910 000 € à la société ENSIO SAS pour non-respect des délais de paiement des fournisseurs. Cette sanction souligne la sévérité des autorités dans le contrôle des pratiques commerciales restrictives et l'application des dispositions du Code de commerce.",
+    "pub_date": "2026-11-13T15:12:33+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Typo3 (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1553/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités dans le CMS Typo3, incluant des risques d'exécution de code à distance et de compromission de données. Il est impératif pour les administrateurs de systèmes de vérifier leurs versions et d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Juniper Networks Junos OS Evolved (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1551/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité critique a été identifiée dans Juniper Networks Junos OS Evolved, exposant les systèmes à une exécution de code arbitraire et à un déni de service à distance. Il est impératif pour les administrateurs de consulter les bulletins de sécurité de l'éditeur et d'appliquer les correctifs nécessaires pour prévenir tout risque d'exploitation.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Mitel MiCollab (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1547/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Plusieurs vulnérabilités critiques ont été identifiées dans la solution Mitel MiCollab, exposant les systèmes à des risques d'exécution de code à distance, de déni de service et de compromission de données. Il est impératif pour les administrateurs de consulter les bulletins de sécurité officiels et d'appliquer les correctifs fournis par l'éditeur afin de maintenir la conformité et la sécurité des infrastructures.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Tenable Identity Exposure (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1550/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant la solution Tenable Identity Exposure. Il est recommandé aux administrateurs de consulter les bulletins de sécurité de l'éditeur et d'appliquer les correctifs nécessaires pour prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Axis OS (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1549/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité critique a été identifiée dans Axis OS, permettant l'exécution de code arbitraire à distance. Il est impératif pour les organisations utilisant ces systèmes de surveiller les bulletins du CERT-FR et d'appliquer les correctifs de sécurité dès leur mise à disposition pour prévenir tout risque d'intrusion.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Microsoft SharePoint (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1555/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Microsoft a corrigé plusieurs vulnérabilités critiques dans SharePoint permettant l'exécution de code à distance et l'élévation de privilèges. Il est impératif pour les organisations d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute compromission des systèmes d'information.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans OpenSSL (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1554/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant plusieurs vulnérabilités dans OpenSSL pouvant entraîner un déni de service à distance. Il est recommandé aux administrateurs systèmes d'appliquer les correctifs de sécurité dès leur mise à disposition par l'éditeur pour maintenir la disponibilité des services exposés.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans GLPI (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1548/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité a été identifiée dans l'outil GLPI, exposant les systèmes à un risque d'atteinte à l'intégrité des données. Il est recommandé aux administrateurs de consulter les bulletins techniques du CERT-FR et d'appliquer les correctifs de sécurité dès leur mise à disposition pour prévenir toute exploitation malveillante.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans GitLab (17 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1552/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "GitLab a publié des correctifs pour plusieurs vulnérabilités critiques permettant des dénis de service, des fuites de données et des attaques SSRF. Il est impératif pour les organisations d'appliquer les mises à jour de sécurité fournies par l'éditeur afin de prévenir toute exploitation malveillante et de garantir la conformité aux exigences de sécurité des systèmes d'information.",
+    "pub_date": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "title": "Créer un statut légal pour les administrateurs ad hoc de mineur : dépôt à l'AN - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNbVlEVmdpNmw2bXN6a0tTSkRmalh1MUpiWkFWWmRHWG1LRWNRYTBnOTJCX0l1eHlJZG9NTmxCVjF5UWhCNzZidDIyYXN5NGEwNDh3ellIX0dwSWhld3lKcjhJUi1nendLX2tSZG9jNmd2WFEzR1NvVmh0Ul9ZTUFJcnZxLXAtaG01SEJjd2dvUFVGb0hCTXRDLU51SzZqWUwtYWIxNWNrVlJSVDgzbXlBUi1iYkJCYWlNY29aaHRIWm1WVm5Oem4zUHhXVWNMYzRvazB6eXVid3dLU2Z0MEE?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Une proposition de loi a été déposée à l'Assemblée nationale visant à instaurer un statut légal spécifique pour les administrateurs ad hoc chargés de représenter les mineurs. Cette initiative législative cherche à clarifier et sécuriser le cadre juridique de ces intervenants afin de mieux garantir la protection des intérêts des mineurs dans les procédures judiciaires.",
+    "pub_date": "2026-11-13T06:25:09+00:00"
+  },
+  {
+    "title": "PEA et PEA-PME : modification des emplois éligibles et aménagement des modalités de fonctionnement - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNQ2dZUVB1MVJVYVU4RkJfQVlOel85bVRHLUpSWFMyRXgtejgxZGNfZERJRDVycmpFdlFtaXNJYU1zbnZWNFhfZUYwaGNvVEJndlNiNS1JSTl5LWRYbTVYU3U2VFF3UlhyMG13cXFwYUxmaFVkZmRwYVBGWjNMbGZxSUtER2lmYVItcTdLZUVMdHU3NGZKLTBmek1kVTJkamtkZXdXcktrUDIydVpDemZKZ3ExS1BrRkw5WVVJM1E1Z1AxTE91QktCZ1c4UXhRYjFwMTQxb1Z0Smk2TEI5QlVmYTFWYlN3Zzl6d0NXUzltQ3pjTXlkNzRHNFBUVHB1ZDF5VkM0VmNR?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le décret n° 2024-753 modifie les conditions d'éligibilité des titres aux PEA et PEA-PME, notamment en intégrant les titres émis par des plateformes de financement participatif. Cette mise à jour réglementaire impose aux gestionnaires et investisseurs d'ajuster leurs portefeuilles et leurs processus de conformité aux nouvelles règles de fonctionnement.",
+    "pub_date": "2026-11-13T06:10:02+00:00"
+  },
+  {
+    "title": "Lutte contre la fraude fiscale : à quoi s’attendre avec le PLF 2027 ? - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRkZ2YmtxTFhOSWpORnJUcnVLRlViWVUwcXpWaGdqZHYyZi1vOUtaVWEyX3NPQ0JDZWdlTlA5UkYzRm02el82MGhSZy1aMFptamhWRnF0UEFGT1I3ZFRINE9mWmNmb003XzNoVEMtaWQyZ2hiYU5wZ21zZjJySjU3V1RKSzFvNlpYa3JuNHNiaFBtQlJWTDNQd0hBdWxOLWpUSnJmVVFPRnpWZw?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "ANTICOR",
+    "impact": "IMPORTANT",
+    "summary": "Le Projet de Loi de Finances (PLF) 2027 introduit de nouvelles mesures visant à renforcer la lutte contre la fraude fiscale. Ces dispositions impliquent une vigilance accrue pour les entreprises en matière de conformité fiscale et de transparence des données financières transmises à l'administration.",
+    "pub_date": "2026-11-13T08:15:47+00:00"
+  },
+  {
+    "title": "QPC : pouvoirs du juge des enfants en cas d'incompétence en raison de la nature criminelle des faits - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPS0VXem9ZWHJLNWdueVVTZjlFNGVTX01EbXduTDA4OXZrUHhfSmFiZG1pWURya19WS2pPTXY2cFFFZEcwZXZONmFmSnhTbVhzRmtTcjQ4Q1Z2Zm9MZkJ1T2JhaEF3a29femR2alE5WlcyY3hJazVTYkd2NGZpS0FhamVGWnFRNHlCeVdDYWlxT0JjRDdzMzEtZ21UUE13M2xsUU5iZDdhdENIbDVDZVZ1cXhkdkFQNDlwWEhlOWxBdktyX2hjWG9LMC1kV1poOTYySzJJaGdTbUIwd2tWTVdRaS1DZGhpVlgtRFZwWHNkNUhJVkllN1JlQWY0cw?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le Conseil constitutionnel a été saisi d'une question prioritaire de constitutionnalité (QPC) concernant les pouvoirs du juge des enfants lorsqu'il se déclare incompétent face à des faits de nature criminelle. Cette décision clarifie l'étendue des prérogatives judiciaires dans le cadre de la procédure pénale des mineurs, impactant directement l'articulation entre les juridictions spécialisées et les cours d'assises.",
+    "pub_date": "2026-11-16T06:32:56+00:00"
+  },
+  {
+    "title": "Encadrement des actes médicaux à visée esthétique - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQcXlaN1NUWVJCejBJSnhZMW0ySWtmeFVEcmtBTWFCUkJyWndPZ0pLamtGNmp3STlPSzYzUHRFQnBKcGFnaGNKSk4tOGQtR0QtTTAxWEVBQW1VbTdVS01TVWhtN3hpdjZHSUxTY1oxSmc4b1lpenNzZ1RhUExYVHFhM21VUXN1YXQ3YTNwRjVvV1RwVXUwUHNINlhtbFhxNUZJLTlCbGQ1VlYzdEtROGVTWGx3UFNmRkxyUGk2Sg?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "COSMETIQUE",
+    "impact": "IMPORTANT",
+    "summary": "Le cadre juridique des actes médicaux à visée esthétique fait l'objet d'un renforcement pour mieux protéger les patients face aux risques accrus liés à ces pratiques. Cette évolution réglementaire impose aux professionnels une vigilance accrue sur la conformité des actes et la sécurité des produits utilisés.",
+    "pub_date": "2026-11-16T06:21:10+00:00"
+  },
+  {
+    "title": "Sanctuariser la liberté des artistes - texte N° 169",
+    "link": "http://www.senat.fr/leg/ppl26-169.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La proposition de loi n° 169 déposée au Sénat vise à renforcer la protection juridique de la liberté de création, de diffusion et de programmation artistique. Ce texte ambitionne de sanctuariser ces libertés fondamentales face aux pressions croissantes, marquant une étape législative de réflexion sur le cadre protecteur des acteurs culturels.",
+    "pub_date": "2026-11-18T02:03:35+00:00"
+  },
+  {
+    "title": "CELEX:32026D2554: Décision (PESC) 2026/2554 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2023/2682 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de soutenir les acteurs militaires et les marines des États côtiers participant à des opérations de sûreté maritime dans le golfe de Guinée",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2554",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision (PESC) 2026/2554 modifie le cadre de la facilité européenne pour la paix afin de renforcer le soutien opérationnel aux forces navales des États côtiers du golfe de Guinée. Cette mesure vise à consolider les capacités de sûreté maritime dans une zone stratégique, sans imposer de nouvelles obligations réglementaires directes aux entreprises privées.",
+    "pub_date": "2026-11-16T23:00:00+00:00"
+  },
+  {
+    "title": "La CNIL a prononcé 38 nouvelles sanctions en procédure simplifiée depuis juin 2026",
+    "link": "https://www.cnil.fr/fr/38-sanctions-simplifiees",
+    "source": "CNIL",
+    "category": "PDP",
+    "impact": "INFORMATIF",
+    "summary": "La CNIL a rendu public un bilan faisant état de 38 sanctions prononcées via la procédure simplifiée entre juin et octobre 2026. Ces décisions concernent principalement des manquements liés aux cookies, à la sécurité des données et à la prospection commerciale, soulignant une activité de contrôle soutenue basée en grande partie sur des plaintes d'utilisateurs.",
+    "pub_date": "2026-11-17T12:00:00+00:00"
+  },
+  {
+    "title": "The Ordinary will close on Black Friday to prioritise blood donations over ‘hyperconsumerism’",
+    "link": "https://www.cosmeticsbusiness.com/the-ordinary-will-close-on-black-friday-to",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque The Ordinary, propriété du groupe Estée Lauder, a annoncé la fermeture de ses points de vente et de son site e-commerce lors du Black Friday. Cette initiative vise à promouvoir le don de sang aux États-Unis, au Canada, au Royaume-Uni et au Danemark, en s'opposant symboliquement à la culture de l'hyperconsommation.",
+    "pub_date": "2026-11-17T14:00:00+00:00"
+  },
+  {
+    "title": "Sephora eyes ten more UK stores in 2027 to accelerate growth",
+    "link": "https://www.cosmeticsbusiness.com/sephora-eyes-ten-more-uk-stores-in-2027",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'enseigne Sephora, filiale du groupe LVMH, prévoit l'ouverture de dix nouveaux points de vente au Royaume-Uni en 2027, portant son réseau total à 28 magasins. Cette stratégie d'expansion physique témoigne d'une volonté d'accélération de la croissance sur le marché britannique, sans implication juridique ou cybernétique immédiate.",
+    "pub_date": "2026-11-17T12:26:00+00:00"
+  },
+  {
+    "title": "Meet the Maestro: For perfumer Abdulla Ajmal, fragrance is in his blood",
+    "link": "https://www.cosmeticsbusiness.com/meet-the-maestro-perfumer-abdulla-ajmal-fragrance",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article présente le parcours d'Abdulla Ajmal et la stratégie de développement de la marque Ajmal Perfumes dans le secteur de la parfumerie au Moyen-Orient. Il met en lumière l'importance culturelle et commerciale de l'oud ainsi que les perspectives d'innovation de la maison pour ses futures gammes de produits.",
+    "pub_date": "2026-11-17T11:59:00+00:00"
+  },
+  {
+    "title": "How to make an eyelash serum: IFF shares its formulation insights",
+    "link": "https://www.cosmeticsbusiness.com/how-to-make-an-eyelash-serum-iff-shares",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article détaille les aspects techniques et les ingrédients clés pour la formulation de sérums destinés à la croissance et au renforcement des cils. Cette veille sectorielle souligne les tendances de formulation tout en rappelant implicitement l'importance de la conformité réglementaire des ingrédients actifs utilisés dans les produits cosmétiques.",
+    "pub_date": "2026-11-17T11:55:00+00:00"
+  },
+  {
+    "title": "L’Occitane’s Managing Director UK and Ireland departs after four years",
+    "link": "https://www.cosmeticsbusiness.com/loccitane-managing-director-uk-and-ireland-departs",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "Dianne Tieu, directrice générale de L'Occitane pour le Royaume-Uni et l'Irlande, quitte ses fonctions après quatre ans à la tête de la filiale. Ce changement de gouvernance constitue une actualité sectorielle standard sans impact juridique ou opérationnel immédiat sur la conformité de l'entreprise.",
+    "pub_date": "2026-11-17T11:55:00+00:00"
+  },
+  {
+    "title": "E.l.f. Beauty and Twitch break GRWM Guinness World Record",
+    "link": "https://www.cosmeticsbusiness.com/elf-beauty-and-twitch-break-grwm-guinness-world-record",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "E.l.f. Beauty a établi un record mondial du plus grand événement 'Get Ready With Me' en partenariat avec la plateforme Twitch lors de la TwitchCon. Cette initiative marketing illustre l'intégration croissante des stratégies d'influence numérique dans le secteur cosmétique pour renforcer l'engagement communautaire.",
+    "pub_date": "2026-11-17T11:41:00+00:00"
+  },
+  {
+    "title": "Rhode unveils first matte blush in founder Hailey Bieber’s 30th birthday collection",
+    "link": "https://www.cosmeticsbusiness.com/rhode-unveils-first-matte-blush-in-founder-biebers-30th-birthday-capsule",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "La marque Rhode, fondée par Hailey Bieber, élargit sa gamme de produits avec le lancement d'un blush mat et d'une pièce textile en édition limitée. Cette actualité commerciale marque une étape de développement produit pour la marque sans implication juridique ou de cybersécurité particulière.",
+    "pub_date": "2026-11-17T11:26:00+00:00"
+  },
+  {
+    "title": "A tube of this lash serum is sold every 30 seconds",
+    "link": "https://www.cosmeticsbusiness.com/a-tube-of-this-lash-serum-is-sold",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "INFORMATIF",
+    "summary": "L'article relate l'origine entrepreneuriale d'un sérum pour cils, devenu un succès commercial majeur après avoir été initialement conçu comme un cadeau personnel. Cette actualité sectorielle ne présente aucun enjeu juridique ou de cybersécurité immédiat, se limitant à une mise en avant marketing d'un produit cosmétique.",
+    "pub_date": "2026-11-17T10:20:00+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice.",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4071&message=4145",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cette publication du Village de la Justice constitue une revue de presse généraliste couvrant l'actualité juridique, le management et les évolutions de carrière. Elle ne présente pas d'enjeu juridique spécifique ou de risque cybersécurité immédiat, mais sert d'outil de veille sectorielle pour les professionnels du droit.",
+    "pub_date": "2026-11-18T08:25:14.176737+00:00"
+  },
+  {
+    "title": "Voici les nouvelles publications du Village de la justice.",
+    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4069&message=4143",
+    "source": "Village de la Justice",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Cette publication du Village de la Justice constitue une revue de presse généraliste couvrant l'actualité juridique, le management et les évolutions de carrière. Elle ne présente pas d'enjeu juridique spécifique ou de risque cybersécurité immédiat, mais sert de veille informative pour les professionnels du droit.",
+    "pub_date": "2026-11-18T08:25:14.176862+00:00"
+  },
+  {
+    "title": "Dalma Völler rejoint NEXT avocats - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNemREWnNuR2lDdW5MWlRfNDJzWVJjN0NIYVVRTTE3cUQwSHJlVHpHNUZVZGJPOEcwQ3U5ZnM0WEVGN0pmOUNWUTNoZjU1MFhES2RKMkFKaWlCc01BWWhyS01jNDV2Rks3VWFTM2FsamxBWjYyRldWX09tLUt3OWw3ZXV4c1c1b09XUE9VVTlNU0pDZw?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Le cabinet NEXT avocats annonce l'arrivée de Dalma Völler au sein de sa structure. Cette nomination constitue une actualité de gestion interne du cabinet sans impact juridique ou opérationnel direct pour les tiers.",
+    "pub_date": "2026-11-18T00:42:38+00:00"
+  },
+  {
+    "title": "Squair muscle son équipe corporate – M&A - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSzhJcjdzYzNBZlhCSmwxMU9qRVRxYm5uaEVHSnlJX2NxNVNINnRCWTJTMi1IQlRnOUpoUzl3Z0pjRFpFaTc4cHZub2pHRVdpeHBHRC05OGNycUIwc0V1ZnA5b1VFUFU5YW5zbzBSc0xISnBQbnJLYlJMZEk4YXlzSzhBVGRqSkpVd2xQRFpkaERRRTB1RlhJ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Le cabinet d'avocats Squair renforce son département corporate et M&A avec l'arrivée de nouveaux collaborateurs. Cette actualité témoigne d'une dynamique de croissance au sein de la structure, sans impact juridique ou réglementaire direct pour les tiers.",
+    "pub_date": "2026-11-13T01:19:26+00:00"
+  },
+  {
+    "title": "Création de Foucher Avocats, cabinet dédié au pénal et au contentieux des affaires - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcWZzM0tzY3RvSUU2MnBuNDdwM0FUNzlVakItSmJEUFRUS0dnaHFFcjhhTXBNNWFOMlUtcTdESkFvcnE0MVA0aHV1TkRaQXNTZTJDakdSTFBBaGdJTzF4YWJnekNVYllELVByMkFNRzBnbW5XMzVrUlAtT0lHbkREUjJOQ2w1YnZqcGFadjRhTEZpamFtMWMxVGxJWk5Zc29jaVFKUGV6MkRucjZtUnBIb1ZSRUQxRWxpbFcxY0syZWxEb3ZBVldMNmlkNXgwdGZtWWwtb25ySQ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Le cabinet Foucher Avocats a été officiellement créé, se spécialisant dans le droit pénal et le contentieux des affaires. Cette actualité relève de la vie des structures juridiques et n'implique aucun changement réglementaire ou risque de cybersécurité immédiat.",
+    "pub_date": "2026-11-16T08:03:02+00:00"
+  },
+  {
+    "title": "L'avocat en liquidation judiciaire peut-il se réinscrire en Sel ? - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxONEwxVVF5cERrdWVxcGlYekM4NTVSSXZnV0k2MTA4dXdSMi03aThzX1RPLXkzS0FwcFpsVWxCdU5CNVhGQUgwTXNpbkdkMlk3T1NfSFpPb1hmbFN1S0lPVnJvMnp1QldYQTVwZGtlczJFdXNNaEZhb2xWWHFhbUZEYzM0RjB2OExIeFgtYVhWZ010dUlUVUhjbzl1bncwcUprSjduVERUcTg4SFI3S1JGM0xDanZCRTdmUlcxYm9JdTNtT3phVHZpWEY0WDdMaHhDU2pYYWc1WWt0SHM?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette actualité traite de la possibilité pour un avocat ayant fait l'objet d'une liquidation judiciaire de se réinscrire au barreau via une Société d'Exercice Libéral (SEL). L'enjeu juridique porte sur l'interprétation des conditions d'honorabilité et de probité nécessaires à l'exercice de la profession après une procédure collective.",
+    "pub_date": "2026-11-18T00:55:14+00:00"
+  },
+  {
+    "title": "Une installation de climatisation est-elle un ouvrage ? - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOd2ZzZkUxbXB5YnZsMHlKbmtsc2NyRzF4dEc1UTZ0aVA2YjFZLUNSSU9zVlNnRnZvcmN3T0l1alZVWW5YSW9Mc0xTUnJsOXVXR3BYUDRlQWtIV2pVSXlBSHVWeHlxN0I3TFNLWFhHTF9EN3UxT0plZkJ0Vm82bzB5cmlPUnJsMkdDVXM3NVMtdE9sYUFOZWtLZjJnaDMweVNsc0s3andHald0azJWdzhyU0JMVVhCS2tQT0E?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "La Cour de cassation a précisé les critères permettant de qualifier une installation de climatisation d'ouvrage au sens de la garantie décennale. Cette décision clarifie l'étendue de la responsabilité des constructeurs en distinguant les éléments d'équipement indissociables de ceux qui ne le sont pas, impactant ainsi la gestion des contentieux en droit de la construction.",
+    "pub_date": "2026-11-12T06:15:46+00:00"
+  },
+  {
+    "title": "ACC Europe nomme Mark Maurice-Jones au poste de président - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWVpxVHRqUF9QN0hacEM1YkpSTC0tSlBfWkJWdzZkV0NyVG1CZXpEMW51MWpoMXExcFRmUEszR2dhYXpmZld6X09ELTNjczhDYmltdUtHNDUtb0NWTUJqLTRMSXFuV3piZWlGM3RFaEhoRzdNeFdKOWRQaVFLVFJKS2dXeDk5dFFZYmpXcl96V3ZjU3NMaFMwY3E4cHAtbnQ4cXVXaHNXUHh0VjFibVhpNQ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "L'Association of Corporate Counsel (ACC) Europe a annoncé la nomination de Mark Maurice-Jones au poste de président. Cette évolution au sein de la gouvernance de l'organisation représente un changement de leadership stratégique pour cette association dédiée aux juristes d'entreprise en Europe.",
+    "pub_date": "2026-11-18T01:01:37+00:00"
+  },
+  {
+    "title": "Bignon Lebray accompagne Koddex - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNLXBTYTIwc2JDODBMSjMzU1NVTFkzTnJqWG9Qd2xrOUR5dGJjMDQtVjRpanVuMi1lX29DSS1UQWpFUVplUFN4SzgxVlhrcmRkZWdQS1JIVEZIYk5ET2FZdmJ5dk44RHJtOElZU2ZCUC1HRkYyd0t5aTI3aV95NHhLWmFyajF1QQ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Le cabinet d'avocats Bignon Lebray a conseillé la société Koddex dans le cadre de son développement. Cette opération relève de l'accompagnement juridique classique en droit des affaires et ne présente pas d'enjeu de conformité ou de cybersécurité particulier.",
+    "pub_date": "2026-11-17T08:13:08+00:00"
+  },
+  {
+    "title": "Le Conseil d'Etat valide les orientations d'aménagement du schéma directeur de la région Ile-de-France - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdUo5Zk0tc1ZZRzl5emVwaWNJR1dYV3lKdEI0M1J1WkJDVzNicnhqTlBsWGlieml1SS1ZbmhTelVjb2p4RzlaLWUxQkE0a3ZnQTgxM1lTN1BGaGk5cFZmRC00TWlVTTVoeGFsSXZ4X2tVR0FSLTh1d3dvZ1QydnVQbU1ibGJNYnNLbFRIZjdwSE14TlczUDctcU9GMGRZc2NxTFBpaEY2Vjk0dVByYW81aHNUNGcwUUxCQVI2MnR0aFBJVk1XRkNTSWV4Qnp1SFNZUFVEbEZwanRqYmxCT1hHeElLTThmdFE0VloydUFlWkJKNFlwXy1SZw?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Conseil d'État a validé les orientations d'aménagement du Schéma directeur de la région Île-de-France (SDRIF-E), confirmant la légalité de ce document de planification stratégique. Cette décision sécurise le cadre juridique des projets d'urbanisme et d'aménagement du territoire francilien pour les prochaines années.",
+    "pub_date": "2026-11-17T06:00:00+00:00"
+  },
+  {
+    "title": "Bredin Prat conseille Koninklijke Philips N.V. - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdTNhZVcwWDFGS25QeEEzTURnU3p3QlE3WV9mb24tU0VhcGdOQUNDSFVkazlocUZWNTBBVWY5ZkM4VEVQc1BkSkFKdkNpVzR0V1ZGYkFGU1FvSkVCZE9Qd2s5bE1OXzVNSlBacVFoOU5hRjZDRjFWa0lORG5BLWhwVWttNDEtYXZCNERGRXBjNHZCdUp2Z1kwWA?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Le cabinet Bredin Prat a conseillé Koninklijke Philips N.V. dans le cadre d'une opération juridique stratégique. Cette actualité relève de la pratique transactionnelle du cabinet et ne présente pas d'enjeu de conformité ou de cybersécurité immédiat.",
+    "pub_date": "2026-11-17T11:14:31+00:00"
+  },
+  {
+    "title": "Adoption internationale et application des règles de conflit - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPeG5fX0J2TTFuZHZIbWxCT0N4TXJWOVJ6a3BfY3l1RGw2aTlmTVl0XzZuTjVxQUNudGU2LUxoLU5jUW9WTk1zNXdxLWVJeldyN25TbFN2RXY4M0xoLUV5UmhZMzIwanVuc1JPemctR3I1dkJDUU1hYjVrZE9OU2hET256bnVSemVjZ0pxc2VNMTd1SnA0OENXN0preUVUVzZzLUloVFVJRUFCMHhZbFpYMm5Iang4UFc5NVRzRjZEZXBoSThR?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cet article analyse les complexités juridiques liées à l'adoption internationale, notamment l'application des règles de conflit de lois pour déterminer la loi applicable. Il souligne les enjeux de reconnaissance des filiations et les défis procéduraux auxquels les praticiens du droit doivent faire face dans un contexte transfrontalier.",
+    "pub_date": "2026-11-16T06:57:01+00:00"
+  },
+  {
+    "title": "Discrimination liée au handicap : le salarié doit présenter des éléments laissant supposer son existence - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOOXJJckVmTGRibC0xX3RBUmNia0wtenVlMmp3WWx2eDNYV251eEZRSlRrM0FoVFlHcGJGMUpub2c3YThiQmhsS0VXcWtvQ2dpQUx6TXk2VFlTZGk3UTgtSnhBU3gxY2VnLXNyUnB0MUNfNzJ6SFlHaGkxeF9qQnZuRkNQQVNZVEpGRlNZMFFYaHVrZnhZa3d5LVVkekQxUVh2MG4wcG5ZdlF3OE1MOVB2bnhEekZPVmVmMldQT0NHUFgzQU5fdUwwUkh5ZFZRQURJWldQc1o0OEh2V21Nbk8tRGU5UW54Mzl1V1FGbWFvT00zaVRSSWIzUlZ2ODVDckxRT3NnNXdZSnBwWTJPUWplRjR5WGZWNi1wWlE?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "La Cour de cassation a rappelé que la charge de la preuve en matière de discrimination liée au handicap repose sur le salarié, qui doit présenter des éléments de fait laissant supposer l'existence d'une discrimination. Il appartient ensuite à l'employeur de prouver que sa décision est justifiée par des éléments objectifs étrangers à toute discrimination.",
+    "pub_date": "2026-11-16T06:00:00+00:00"
+  },
+  {
+    "title": "Pas de responsabilité de l'avocat faute de moyens sérieux permettant d'obtenir une cassation - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQXzIxb0wwS1Z3YjBTYXFadjlNa3RLX1dBMWdZY3N5LWlpeVFDTDZ6SVFJZTM4MjFEOVVnRkZLX3Flcmx2aEVWQkd0UGNlWUFqVktDSjhtSlVlem1rR0Y5ejBDRHppblZyUVlVTEpNRFJkU1FvSVM2TWdiaVVyWUFkVjdEbzNrRDAydzhMNzNnYXdLS2IzQmFqUkFVajBmdGFBOUZaLU40S2ozWXFMWlkyRGRmTlRnYUE0VDRzalA1a29mSWFLSzY1YjBQWGxZOUpPeEFTVDVNSUE5U3VoTlFfamZkejEyN0ZIeTB6dHplYy1HVlU1c2xnSTVQY0FhMlE?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "La Cour de cassation a confirmé l'absence de responsabilité professionnelle d'un avocat qui n'a pas soulevé de moyens de cassation jugés non sérieux. Cette décision rappelle que l'obligation de conseil et de diligence de l'avocat ne l'oblige pas à présenter des arguments voués à l'échec devant la haute juridiction.",
+    "pub_date": "2026-11-13T01:48:08+00:00"
+  },
+  {
     "title": "CELEX:32026R2568: Règlement d’exécution (UE) 2026/2568 du Conseil du 16 novembre 2026 mettant en œuvre le règlement (UE) 2024/386 instituant des mesures restrictives à l’encontre du Hamas et du Jihad islamique palestinien et de ceux qui soutiennent, facilitent ou permettent leurs actions violentes",
     "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2568",
     "source": "EUR-Lex Actualités",
@@ -1445,230 +1805,5 @@
     "impact": "INFORMATIF",
     "summary": "",
     "pub_date": "2026-11-12T12:30:25.516204+00:00"
-  },
-  {
-    "title": "Voici les nouvelles publications du Village de la justice",
-    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4055&message=4129",
-    "source": "Village de la Justice",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "Cet article présente une revue de presse générale concernant les actualités juridiques, le management et les carrières au sein du Village de la justice. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
-    "pub_date": "2026-11-12T12:31:10.629927+00:00"
-  },
-  {
-    "title": "Voici les nouvelles publications du Village de la justice",
-    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4054&message=4128",
-    "source": "Village de la Justice",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "Cet article présente une revue de presse générale concernant les actualités juridiques, le management et les carrières au sein du Village de la justice. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité pour les entreprises.",
-    "pub_date": "2026-11-12T12:31:17.052452+00:00"
-  },
-  {
-    "title": "Voici les nouvelles publications du Village de la justice.",
-    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4051&message=4125",
-    "source": "Village de la Justice",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "Cet article constitue une revue de presse généraliste publiée par le Village de la Justice couvrant les actualités juridiques, le management et les carrières. Il s'agit d'une veille informative sans enjeu juridique immédiat ou obligation de conformité spécifique pour les entreprises.",
-    "pub_date": "2026-11-12T12:31:54.902504+00:00"
-  },
-  {
-    "title": "La CNIL sera présente au Salon des maires et des collectivités locales 2026",
-    "link": "https://www.cnil.fr/fr/salon-maires-collectivites-2026",
-    "source": "CNIL",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "La CNIL annonce sa participation au Salon des maires et des collectivités locales 2026 afin de renforcer le dialogue avec les acteurs territoriaux. Cet événement constitue une opportunité de sensibilisation et d'accompagnement sur les enjeux de protection des données personnelles, sans toutefois introduire de nouvelle obligation réglementaire immédiate.",
-    "pub_date": "2026-11-10T12:00:00+00:00"
-  },
-  {
-    "title": "Bulletin d'actualité CERTFR-2026-ACT-047 (09 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-047/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "INFORMATIF",
-    "summary": "Ce bulletin du CERT-FR synthétise les vulnérabilités critiques identifiées au cours de la semaine écoulée. Il constitue une veille opérationnelle essentielle pour orienter la priorisation des correctifs de sécurité, bien qu'il ne dispense pas d'une analyse exhaustive des avis techniques complets.",
-    "pub_date": "2026-11-09T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Apple (10 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1487/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "INFORMATIF",
-    "summary": "",
-    "pub_date": "2026-11-10T00:00:00+00:00"
-  },
-  {
-    "title": "Are we going back to the 2000s celebrity fragrance wardrobe era?",
-    "link": "https://www.cosmeticsbusiness.com/return-to-the-2000s-celebrity-fragrance-wardrobe",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article analyse le retour de la tendance des parfums de célébrités, rappelant l'ère des années 2000. D'un point de vue juridique et réglementaire, cette multiplication des lancements impose une vigilance accrue sur la conformité des étiquetages, la sécurité des ingrédients et la protection des droits de propriété intellectuelle liés à l'image des personnalités.",
-    "pub_date": "2026-11-12T12:33:00+00:00"
-  },
-  {
-    "title": "Are we nearing peak K-beauty? Industry experts weigh in…",
-    "link": "https://www.cosmeticsbusiness.com/k-beauty-nearing-peak-fatigue-industry-experts-views",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article analyse la saturation du marché de la K-beauty face à son expansion croissante dans le commerce de détail occidental. Il souligne l'influence majeure des innovations coréennes sur les standards de l'industrie, tout en projetant les évolutions stratégiques du secteur à l'horizon 2027.",
-    "pub_date": "2026-11-12T12:29:00+00:00"
-  },
-  {
-    "title": "Symrise names Martin Huber new CFO to support ‘next phase of durable growth’",
-    "link": "https://www.cosmeticsbusiness.com/symrise-names-martin-huber-new-cfo-to-support",
-    "source": "Cosmetics Business",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Symrise a annoncé la nomination de Martin Huber au poste de directeur financier à compter du 1er avril 2027, en remplacement d'Olaf Klinger. Cette transition de gouvernance s'inscrit dans la stratégie de croissance à long terme de l'entreprise et ne présente aucun risque juridique ou de cybersécurité immédiat.",
-    "pub_date": "2026-11-12T12:23:00+00:00"
-  },
-  {
-    "title": "L'Oréal leads funding round for Chinese biotech company PAM2L",
-    "link": "https://www.cosmeticsbusiness.com/lor%C3%A9al-leads-funding-round-for-biotech-company-PAM2L",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'Oréal, via son fonds BOLD, réalise un investissement minoritaire dans la biotech chinoise PAM2L pour explorer de nouveaux bio-actifs. Cette opération stratégique vise à renforcer l'expertise en formulation du groupe tout en sécurisant l'accès à des innovations scientifiques propriétaires.",
-    "pub_date": "2026-11-12T12:13:00+00:00"
-  },
-  {
-    "title": "Live shopping is boosting beauty, converting digital discovery to in-store sales",
-    "link": "https://www.cosmeticsbusiness.com/live-shopping-is-boosting-beauty-in-store-sales",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'essor du live shopping sur les plateformes sociales comme TikTok Shop transforme le parcours client en favorisant la conversion du numérique vers le point de vente physique, particulièrement dans le secteur cosmétique. Cet enjeu stratégique nécessite une vigilance accrue sur la conformité des pratiques publicitaires et la protection des données personnelles lors des interactions en direct.",
-    "pub_date": "2026-11-12T12:09:00+00:00"
-  },
-  {
-    "title": "Neom Wellbeing CEO Isabel Malbois exits the business after five years",
-    "link": "https://www.cosmeticsbusiness.com/neom-wellbeing-ceo-isabel-malbois-exits-the-business",
-    "source": "Cosmetics Business",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "Isabel Malbois quitte son poste de PDG de la marque britannique Neom Wellbeing après cinq ans de mandat. Le cofondateur Oliver Mennell reprend la direction de l'entreprise en tant que président exécutif, marquant une transition dans la gouvernance de la société.",
-    "pub_date": "2026-11-12T11:18:00+00:00"
-  },
-  {
-    "title": "Stress-resilient skin",
-    "link": "https://www.cosmeticsbusiness.com/stress-resilient-skin",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Cet article présente une innovation technologique utilisant des cellules souches végétales pour atténuer les effets du stress psychologique sur la peau. D'un point de vue juridique, l'enjeu réside dans la conformité des allégations cosmétiques associées à cette technologie, qui doivent être étayées par des preuves scientifiques rigoureuses conformément aux règlements sur les produits cosmétiques.",
-    "pub_date": "2026-11-12T09:30:00+00:00"
-  },
-  {
-    "title": "How body contouring and firming products are getting a boost from the GLP-1 era",
-    "link": "https://www.cosmeticsbusiness.com/how-body-contouring-and-firming-products-are-getting",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'essor des produits de soin raffermissants est corrélé à l'utilisation croissante des traitements GLP-1, créant une nouvelle dynamique de marché pour le secteur cosmétique. Cet enjeu souligne la nécessité pour les entreprises de surveiller les allégations marketing liées à ces produits afin de se conformer aux réglementations sur la publicité et la sécurité des consommateurs.",
-    "pub_date": "2026-11-11T20:51:00+00:00"
-  },
-  {
-    "title": "TRI-K introduces TRIglyphix Soothe: advanced scalp soothing for lasting comfort",
-    "link": "https://www.cosmeticsbusiness.com/tri-k-introduces-triglyphix-soothe-advanced-scalp-soothing",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "TRI-K a lancé l'ingrédient TRIglyphix Soothe, destiné à apaiser les cuirs chevelus sensibles, lors du salon in-cosmetics Asia. Cette innovation permet aux formulateurs de répondre à la demande croissante pour des produits de soin capillaire ciblés, sans implication juridique ou de cybersécurité immédiate.",
-    "pub_date": "2026-11-11T14:52:00+00:00"
-  },
-  {
-    "title": "Influencer Stella Tzortzi on building a brand inspired by Mediterranean hair oiling rituals",
-    "link": "https://www.cosmeticsbusiness.com/influencer-stella-tzortzi-on-building-cee-cee",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'influenceuse Stella Tzortzi lance sa marque de soins capillaires Cee Cee, basée sur des rituels méditerranéens traditionnels. Cet article souligne l'émergence de nouvelles marques de cosmétiques naturelles portées par des créateurs de contenu, sans soulever de problématiques juridiques ou de cybersécurité immédiates.",
-    "pub_date": "2026-11-11T12:45:00+00:00"
-  },
-  {
-    "title": "Cardi B brings Grow-Good Beauty to Canada",
-    "link": "https://www.cosmeticsbusiness.com/cardi-b-brings-grow-good-beauty-to-canada",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque de soins capillaires Grow-Good Beauty, fondée par Cardi B, étend ses activités commerciales au Canada via un modèle de vente directe aux consommateurs. Cette expansion nécessite une mise en conformité avec les réglementations canadiennes sur les produits cosmétiques et les lois sur la protection des consommateurs en ligne.",
-    "pub_date": "2026-11-11T12:42:00+00:00"
-  },
-  {
-    "title": "Shiseido returns to profit in Q3 26, but Drunk Elephant records ‘severe underperformance’",
-    "link": "https://www.cosmeticsbusiness.com/shiseido-returns-to-profit-in-q3-26",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Shiseido a renoué avec la rentabilité au troisième trimestre 2026, malgré une baisse significative de 23 % des ventes mondiales de la marque Drunk Elephant. Cette contre-performance est principalement attribuée à des difficultés opérationnelles dans le secteur du commerce électronique aux États-Unis.",
-    "pub_date": "2026-11-11T12:35:00+00:00"
-  },
-  {
-    "title": "Phlur opens festive pop-up with Space NK to ‘build’ hype around Heavy Cream franchise",
-    "link": "https://www.cosmeticsbusiness.com/phlur-opens-festive-pop-up-with-space-nk",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque de parfumerie Phlur collabore avec le détaillant Space NK pour une opération marketing éphémère visant à promouvoir ses nouvelles gammes de produits. Cette initiative commerciale ne présente pas d'enjeu juridique ou de cybersécurité particulier, relevant d'une stratégie de développement de marque classique.",
-    "pub_date": "2026-11-11T12:32:00+00:00"
-  },
-  {
-    "title": "Indie brand Monte Club is shaking up the tired male grooming industry",
-    "link": "https://www.cosmeticsbusiness.com/indie-brand-monte-club-is-shaking-up-male-grooming",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque indépendante Monte Club cherche à dynamiser le secteur du soin masculin grâce à une stratégie marketing innovante et des produits primés. Cette actualité souligne l'évolution concurrentielle du marché des cosmétiques sans soulever d'enjeux juridiques ou de conformité immédiats.",
-    "pub_date": "2026-11-11T12:25:00+00:00"
-  },
-  {
-    "title": "Olaplex helps Henkel’s sales in Q3 as hair care acquisitions set to boost growth",
-    "link": "https://www.cosmeticsbusiness.com/olaplex-helps-henkel-sales-q3-hair-acquistions-boost-growth",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Henkel renforce son portefeuille dans le secteur des soins capillaires grâce à l'acquisition des marques Olaplex et Not Your Mother's. Cette stratégie vise à stimuler la croissance annuelle du groupe pour atteindre un objectif de 2 milliards d'euros de chiffre d'affaires d'ici 2030.",
-    "pub_date": "2026-11-11T11:44:00+00:00"
-  },
-  {
-    "title": "Sol de Janeiro and Smashbox among brands donating $83 million excess stock in new initiative",
-    "link": "https://www.cosmeticsbusiness.com/sol-de-janeiro-smashbox-brands-donating-excess-stock-beauty-vessel",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La start-up Vessel lance une initiative visant à réduire le gaspillage des stocks invendus dans l'industrie cosmétique en facilitant le don de produits plutôt que leur destruction. Ce modèle répond aux enjeux croissants de responsabilité sociétale des entreprises (RSE) et aux nouvelles réglementations européennes et internationales visant à interdire la destruction des invendus non alimentaires.",
-    "pub_date": "2026-11-11T11:30:00+00:00"
-  },
-  {
-    "title": "Why do chemicals in beauty products have a bad reputation? How better science communication can tackle misinformation",
-    "link": "https://www.cosmeticsbusiness.com/chemicals-beauty-products-bad-reputation-science-comms-tackle-misinformation",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'industrie cosmétique fait face à un défi croissant de désinformation concernant la sécurité des ingrédients chimiques. L'enjeu est de renforcer la communication scientifique pour aligner la perception publique sur les données réglementaires et techniques, afin de protéger la réputation du secteur.",
-    "pub_date": "2026-11-11T11:10:00+00:00"
-  },
-  {
-    "title": "From twist to drop: Meet Virospack autofill",
-    "link": "https://www.cosmeticsbusiness.com/from-twist-to-drop-meet-virospack-autofill",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Virospack a lancé l'Autofiller, un compte-gouttes à bouton-poussoir automatisé destiné aux sérums et huiles de faible viscosité. Cette innovation technique vise à améliorer l'expérience utilisateur et la précision du dosage dans le secteur de la cosmétique, sans implication juridique ou de cybersécurité particulière.",
-    "pub_date": "2026-11-11T08:00:00+00:00"
-  },
-  {
-    "title": "Maybelline New York updates its 35-year-old ‘Maybe she’s born with it’ tagline",
-    "link": "https://www.cosmeticsbusiness.com/maybelline-new-york-updates-its-35-year-old-tagline",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Maybelline New York a modernisé son slogan historique pour refléter une évolution dans la perception de la beauté et l'identité de la marque. Cette mise à jour stratégique de la propriété intellectuelle n'entraîne aucune obligation juridique immédiate mais marque un repositionnement marketing global.",
-    "pub_date": "2026-11-10T14:15:00+00:00"
   }
 ]
