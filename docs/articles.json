@@ -1,5 +1,365 @@
 [
   {
+    "title": "Amende de 2 390 000 € prononcée à l’encontre de la société LAFARGE BETONS (numéro de SIRET : 41481504303184 - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOcXE3TTVjQ1RfNmQtQ0U4Q1p4a1doZlgxSjAtcm1MZUktOHFhS3NPd0RSbXotbXdZVS1IaHBUZDNMVF9jOWs5Y0E4REJ5VlV6bkxqYXVmNmRGOE8tMUMtbmREaktya18wc0hBMlFDOGpwOTZDM3pNYWZQWDZNTEw0ZkdKOWFsNTRSb19rdll2ZG42T2hwdk1tVUFPZ21mSERUVGZSN1VTSHBsVjhVc2dHT1NLRUptd3BPbVRjQ3Z4eEVSTnh0VzQxVkRPRW5Rd1VzSU5QdmwxbnQxaDVRRUZ3UEZMdXpyZW1VY1hIa04tZzl4aW96QWpTcllZLUd6TEE?oc=5",
+    "source": "DGCCRF",
+    "category": "ANTICOR",
+    "impact": "CRITIQUE",
+    "summary": "La DGCCRF a prononcé une amende administrative de 2 390 000 euros à l'encontre de la société LAFARGE BETONS. Cette sanction majeure illustre la répression des manquements aux règles économiques et commerciales constatés par l'autorité de contrôle.",
+    "pub_date": "2026-11-20T14:39:23+00:00"
+  },
+  {
+    "title": "Amende de 115 000 € prononcée à l’encontre de la société FIVES MAINTENANCE (numéro de SIRET : 38006567200061) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPSWw5NThoU0tlUDZxNnpydWEzdlhFNkZlZXdCOGJOazdfRGIyYnl6WHRMUWFlUXpfLW1aVnJRQURXOERENm9WTGdqczlrdTN5UkdtQS1iYlQxZUFsU2NDRjJraXplTTBqMnhJTVJ5enBTWmVNd1lBY1p5cWJ5b05KM242SklEeU9ESEJ4RTdfV3Z6RHZxd0NVRTBkeU1qSHNhV0FKZWhaYnp4Q2laWWJCazJEYmFKdC1tRGg1TDhITUFJV1VTOTB4MFdzNVY5TG50bWN1aFJwbl9DTWVfaG5SdEo0bUFxOTN0aWNKZ3p4MDdiNVdyRzRxT1QzbVBQb0xx?oc=5",
+    "source": "DGCCRF",
+    "category": "AUTRE",
+    "impact": "CRITIQUE",
+    "summary": "La DGCCRF a prononcé une amende administrative de 115 000 euros à l'encontre de la société FIVES MAINTENANCE (SIRET 38006567200061). Cette sanction pécuniaire majeure souligne le non-respect des réglementations en vigueur par l'entreprise, constituant une mesure répressive significative de l'autorité de contrôle.",
+    "pub_date": "2026-11-18T11:39:50+00:00"
+  },
+  {
+    "title": "Amende de 105 000 € prononcée à l’encontre de la société SASU PATURAGES COMTOIS (numéro de SIRET : 50919946900016) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNRFVNMDRYcU5DdGtMUVdCeVh5X1ZoT29qMzJCeVBOWVlUN0Q1VW1FWWVJa2VIZUYtVndBcmpHaG5kd0kyQUNSS0NmdDJSWFhoM0JabjA1UE85MjlfbmNONm96aXhGOUJxYzlFNHNQV2x2Z3FSd0dTbjJFa0FIbTZ4Yk9ndXdncS0wQm5kMktwaUNERFFGRXNlMF9QRGJIa1lnMDU2d1pKZllfSEtvTFFjSGpXT0xVY3EzU0pBbmM2LV85cmduZlRldVIzWmRnZ3RaSC1QcHpXa0Q3eDhDWW9XM3JyWjNicjhrcVlXbkFfajdmekhRUmRqd1dzQTRMWTV6Wl8wRE0xMA?oc=5",
+    "source": "DGCCRF",
+    "category": "AUTRE",
+    "impact": "CRITIQUE",
+    "summary": "La DGCCRF a prononcé une amende administrative de 105 000 euros à l'encontre de la société SASU PATURAGES COMTOIS (SIRET 50919946900016). Cette sanction pécuniaire majeure souligne un manquement aux réglementations en vigueur relevé par l'autorité de contrôle.",
+    "pub_date": "2026-11-18T09:51:57+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans GitLab (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1591/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité critique a été identifiée dans GitLab, permettant à un tiers malveillant de procéder à une exécution de code arbitraire à distance. Les administrateurs systèmes doivent appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais afin de prévenir tout risque de compromission des environnements.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Metabase (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1585/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité critique a été découverte dans Metabase, permettant à un attaquant de réaliser une exécution de code arbitraire à distance. Cette faille nécessite une action corrective immédiate de la part des administrateurs pour sécuriser les systèmes affectés et prévenir toute exploitation active.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Projet de loi de finances de fin de gestion pour 2026 - texte de la commission N° 187",
+    "link": "http://www.senat.fr/leg/pjl26-187.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le Sénat a saisi le projet de loi de finances de fin de gestion pour 2026 à travers le texte de la commission N° 187 déposé le 20 novembre 2026. Ce texte budgétaire constitue une étape réglementaire majeure de fin d'exercice qu'il convient d'anticiper pour identifier les ajustements financiers et les impacts sur les politiques publiques.",
+    "pub_date": "2026-11-22T02:04:29+00:00"
+  },
+  {
+    "title": "Conformité des produits–ACTION FRANCE SAS enjointe d’informer les consommateurs de la présence d‘OGM autorisés dans un produit commercialisé - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOQVUycVo5TWI1ZzZ2bDB4OF8wZzIxWHoyN29qUXhCNzdDLXk3MDF3bHJaVm45TGJnMFhDSGNpYU1rNDhzaV9oNEplVXhiMllNQ2RIMkFPOE5KckJobU1kR3lhWThEaXR1TjI2TjZNTGF3Ry1COF9sd1NxcVZqSThaVnhYUzBSSDlSVjNzX2xEY1VsYkhJZGt1S3Jxejl3RG93N280MUNrckRJdE1JTU1YRzdhbThKNUtpX1kwTkV0MUdOVTNiNzV1ZUFSZHlYd1ZFWHNoVy1RVzk2aUgyM3V4V2VCczF4VDhfMzZOSF9WbTI2SVFqTmRkTVJDNjhUckFIbnJKTFd3?oc=5",
+    "source": "DGCCRF",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "La DGCCRF a enjoint la société ACTION FRANCE SAS d'informer les consommateurs de la présence d'organismes génétiquement modifiés (OGM) autorisés dans l'un de ses produits commercialisés. Cette mesure vise à garantir la transparence de l'information due aux acheteurs et à assurer la conformité des denrées vendues. L'entreprise doit se conformer rapidement à cette injonction pour éviter de nouvelles sanctions administratives.",
+    "pub_date": "2026-11-20T09:29:02+00:00"
+  },
+  {
+    "title": "CELEX:32026D2618: Décision (PESC) 2026/2618 du Conseil du 20 novembre 2026 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de soutenir les forces armées ukrainiennes par l’acquisition conjointe d’équipements militaires non conçus pour libérer une force létale",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2618",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Le Conseil de l'Union européenne a adopté la décision (PESC) 2026/2618 relative à une mesure d'assistance au titre de la facilité européenne pour la paix. Cette disposition vise à soutenir les forces armées ukrainiennes à travers l'acquisition conjointe d'équipements militaires spécifiques non conçus pour libérer une force létale. Elle formalise le cadre juridique et financier de ce soutien logistique et matériel au niveau européen.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "Conclusions de l’avocate générale à la Cour Laila Medina dans l’affaire C-643/25 | Verbraucherzentrale Bundesverband (ser - curia",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNY285M3Jnc3BfR2s4NlNTVE1DOGdGbTJUM0duMkVRaEwzX1VRUW1rZkVVaDB6SkY0czFxUVpqLXhtZWdlWUppX1lNYVk4ZDNIdmh3SkZBVXJxVGFmMks5TmVEMVhhRFJtVFFHYTloc2ZrQ3hFTXY2NlBCSW5Kb3c3M3FfVmEtQQ?oc=5",
+    "source": "Curia - CJUE",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Les conclusions de l'avocate générale Laila Medina dans l'affaire C-643/25, opposant l'association de protection des consommateurs Verbraucherzentrale Bundesverband à une entreprise, portent sur des enjeux cruciaux liés à la protection des données et au droit de la consommation. Cette prise de position préfigure l'orientation future de la Cour de justice de l'Union européenne sur des obligations de conformité applicables aux acteurs du numérique. Les entreprises doivent suivre attentivement l'évolution de ce dossier pour anticiper d'éventuels ajustements de leurs pratiques en matière de traitement des données.",
+    "pub_date": "2026-11-19T09:16:11+00:00"
+  },
+  {
+    "title": "Arrêt de la Cour dans l’affaire C-683/24 | Spielerschutz Sigma - curia",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbEVQLVp2VUhDY2ZCMVNUVEVVU2xpcHRFd3ZIcFFTYmZfSEE2QnJPeUJDS3AzYzl3XzhkM2RQTUliSG1MWF91M2dOeER1ZEFqUHZaaUpZWkk2VGFxUzFBeEQwZTNhczRtZzIzU2VLcnVaOWxkZkNCUkhGZlk1elZ6dUxFQjAyUQ?oc=5",
+    "source": "Curia - CJUE",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "La Cour de justice de l'Union européenne a rendu un arrêt dans l'affaire C-683/24 concernant la société Spielerschutz Sigma. Cette décision apporte des éclaircissements juridiques importants sur la réglementation applicable dans le secteur concerné au niveau européen. Les acteurs du domaine doivent analyser cette jurisprudence pour évaluer sa conformité avec leurs pratiques actuelles.",
+    "pub_date": "2026-11-19T08:53:03+00:00"
+  },
+  {
+    "title": "48e Assemblée mondiale pour la protection de la vie privée (GPA)",
+    "link": "https://www.cnil.fr/fr/48e-gpa",
+    "source": "CNIL",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "L'Assemblée mondiale pour la protection de la vie privée (GPA) a adopté cinq résolutions lors de sa réunion annuelle de novembre 2026, dont deux ciblent spécifiquement les enjeux liés à l'Intelligence artificielle. Ces nouvelles prises de position de plus de 130 autorités mondiales marquent une évolution normative majeure à anticiper pour la conformité des systèmes d'IA. Cet événement constitue une orientation stratégique structurant la coopération internationale en matière de protection des données.",
+    "pub_date": "2026-11-20T12:00:00+00:00"
+  },
+  {
+    "title": "Pixels de suivi dans les courriels : la CNIL sollicite un premier retour d’expérience sur sa recommandation",
+    "link": "https://www.cnil.fr/fr/recommandation-pixels-retour-dexperience",
+    "source": "CNIL",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "La CNIL sollicite un retour d'expérience auprès des expéditeurs de courriels et des fournisseurs de solutions concernant sa recommandation sur les pixels de suivi publiée le 14 avril 2026. Cette consultation, ouverte jusqu'au 3 décembre 2026, permet aux acteurs concernés de faire part de leur expérience pratique sur la mise en œuvre de ces exigences de conformité.",
+    "pub_date": "2026-11-20T12:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits VMware (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1598/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Plusieurs vulnérabilités ont été identifiées dans les produits VMware, permettant notamment l'exécution de code à distance, l'élévation de privilèges et des injections SQL. Les administrateurs et RSSI doivent appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout risque d'exploitation.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Siemens Industrial Edge  (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1590/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "De multiples vulnérabilités ont été découvertes dans les produits Siemens Industrial Edge, permettant potentiellement à un attaquant distant d'exécuter du code arbitraire. Cette alerte relève d'un avis technique de sécurité nécessitant une attention particulière des administrateurs pour planifier les correctifs nécessaires et sécuriser les infrastructures industrielles concernées.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits IBM (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1597/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "De multiples vulnérabilités ont été identifiées dans les produits IBM, permettant potentiellement une exécution de code à distance, une élévation de privilèges ou un déni de service. Les administrateurs systèmes doivent consulter les bulletins de sécurité émis par l'éditeur pour appliquer les correctifs nécessaires et anticiper les risques d'exploitation.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1592/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "De multiples vulnérabilités ont été identifiées dans le noyau Linux de Red Hat, exposant les systèmes à des risques d'exécution de code à distance, d'élévation de privilèges et de déni de service. Cet avis technique de sécurité nécessite une application rapide des correctifs fournis par l'éditeur pour sécuriser les infrastructures concernées.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1593/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant le noyau Linux de SUSE. Ces failles de sécurité peuvent permettre à un attaquant de compromettre la confidentialité et l'intégrité des données, ainsi que de provoquer une exécution de code arbitraire. Il est recommandé de planifier et d'appliquer les mises à jour correctives fournies par l'éditeur afin de sécuriser les systèmes concernés.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Mattermost (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1588/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités affectant les produits Mattermost. Ces failles peuvent permettre à un attaquant distant de provoquer un déni de service, de compromettre la confidentialité des données ou de contourner les politiques de sécurité. Il est recommandé d'appliquer les correctifs de sécurité mis à disposition par l'éditeur.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Apache Tomcat (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1587/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités découvertes dans Apache Tomcat. Ces failles exposent les systèmes à des risques de déni de service, ainsi qu'à des atteintes à la confidentialité et à l'intégrité des données. Il est recommandé aux administrateurs d'appliquer les correctifs de sécurité fournis par l'éditeur.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux de Debian (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1594/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "De multiples vulnérabilités ont été identifiées dans le noyau Linux de Debian, exposant les systèmes à des risques d'élévation de privilèges, d'atteinte à la confidentialité et de déni de service. Un avis technique de sécurité a été émis pour alerter les administrateurs. Il est fortement recommandé d'appliquer les correctifs fournis par l'éditeur dans les plus brefs délais pour sécuriser les infrastructures.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1596/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "De multiples vulnérabilités ont été identifiées dans le noyau Linux d'Ubuntu, permettant potentiellement une exécution de code arbitraire, une atteinte à l'intégrité des données et des dénis de service. Cette alerte de sécurité nécessite l'application rapide des correctifs fournis par l'éditeur afin de mitiger les risques opérationnels et de sécuriser les infrastructures.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Moodle (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1581/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Plusieurs vulnérabilités ont été identifiées dans la plateforme Moodle, exposant les systèmes à des risques d'atteinte à la confidentialité des données et de contournement de la politique de sécurité. Les administrateurs doivent consulter les avis techniques de sécurité officiels pour appliquer les correctifs nécessaires et sécuriser leurs environnements.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Tenable Security Center  (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1583/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités dans Tenable Security Center, incluant des risques d'exécution de code à distance, d'injections SQL et de contournement de politiques de sécurité. Les organisations utilisant ce logiciel doivent appliquer rapidement les correctifs de sécurité recommandés par l'éditeur pour prévenir tout risque de compromission.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans KeyCloak (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1586/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Une vulnérabilité a été identifiée dans KeyCloak, permettant à un tiers malveillant de contourner la politique de sécurité en place. Cette alerte technique appelle à la vigilance et nécessite l'application des correctifs de sécurité recommandés pour prémunir les systèmes contre d'éventuelles exploitations.",
+    "pub_date": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "title": "Favoriser le développement de l'oenotourisme - texte N° 173",
+    "link": "http://www.senat.fr/leg/ppl26-173.html",
+    "source": "Sénat - Textes récents",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Une proposition de loi visant à favoriser le développement de l'oenotourisme a été déposée au Sénat par Mme Nathalie DELATTRE le 13 novembre 2026. Ce texte législatif en cours d'examen constitue une veille de fond pour le secteur, sans imposer d'obligation juridique immédiate.",
+    "pub_date": "2026-11-21T02:03:41+00:00"
+  },
+  {
+    "title": "N° 3490 rapport - Rapport de M. Philippe Juvin de la commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion du projet de loi de finances de fin de gestion de finances de fin de gestion pour 2026.",
+    "link": "https://www.assemblee-nationale.fr/17/rapports/r3490.asp",
+    "source": "Assemblée Nationale",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Ce rapport de la commission mixte paritaire, présenté par M. Philippe Juvin à l'Assemblée Nationale, concerne le projet de loi de finances de fin de gestion pour 2026. Il s'inscrit dans le cadre du processus législatif financier et ne comporte pas d'action juridique ou technique urgente pour les acteurs de la cybersécurité.",
+    "pub_date": "2026-11-21T23:42:00+00:00"
+  },
+  {
+    "title": "N° 3490 annexe 0 - Rapport de la commission mixte paritaire chargée de proposer un texte sur les dispositions restant en discussion du projet de loi de finances de fin de gestion de finances de fin de gestion pour 2026.",
+    "link": "https://www.assemblee-nationale.fr/17/ta-commission/r3490-a0.asp",
+    "source": "Assemblée Nationale",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Ce rapport de la commission mixte paritaire de l'Assemblée nationale présente les dispositions en discussion du projet de loi de finances de fin de gestion pour 2026. Il s'inscrit dans le cadre du suivi institutionnel des lois de finances de fin d'année sans comporter d'obligation juridique immédiate en matière de cybersécurité ou de conformité.",
+    "pub_date": "2026-11-21T23:20:00+00:00"
+  },
+  {
+    "title": "Amende de 55 000 € prononcée à l’encontre de la société SOCIETE FRANCAISE GARDY (numéro de SIRET : 55203495100103) - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPV1NMRE1jU00zZnZqbUMyR2QwWndwZmx3ZWR3c2FZN084YnhuVmpKa2FFMmJ6S0ZGV1FlWHRZSWVPakh3Y2RWY1ZiZ3hoU2U0REhGZ1BTSjhiZ3dCTS1aNGNaRWdPSWc5UW1wNDNGYTVWb3BUMjdCX3NQQ1ZoQ1U1WC1Id1RaS1JWb0VhODlOdjZ5RVpkQUFjTkJKU2pXMWc1S0FjRmR3OGJCTWVhcEFaU19rWTlQaWZiZ1NJMVlBSHVGWEp0bGZDc0RJUmJQQ2lHejhRUEFJNkFYdWdqM1NLNkRmcjlCMm9PX2ZJQ3gycUVEb2lNSEtvb2xrUmZ5QmZ5RWd5bU5kTQ?oc=5",
+    "source": "DGCCRF",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "La DGCCRF a prononcé une amende administrative de 55 000 € à l'encontre de la société SOCIETE FRANCAISE GARDY. Cette sanction financière relève du contrôle de la conformité des pratiques commerciales ou réglementaires de l'entreprise. Elle constitue une mesure corrective de police administrative sans impact direct sur la cybersécurité.",
+    "pub_date": "2026-11-18T09:51:59+00:00"
+  },
+  {
+    "title": "CELEX:32026D2596: Décision d’exécution (UE) 2026/2596 du Conseil du 16 novembre 2026 établissant que les conditions de paiement partiel de la neuvième tranche au titre du plan pour l’Ukraine dans le cadre de la facilité pour l’Ukraine sont respectées de manière satisfaisante",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2596",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision d'exécution du Conseil valide le respect satisfaisant des conditions pour le paiement partiel de la neuvième tranche financière destinée à l'Ukraine. Elle s'inscrit dans le cadre du suivi de la facilité pour l'Ukraine, garantissant la régularité et la transparence de l'aide européenne allouée au pays.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2606: Décision d’exécution (UE) 2026/2606 du Conseil du 17 novembre 2026 modifiant la décision d’exécution (UE) 2026/410 relative à la mise à disposition de l’assistance financière au titre du règlement (UE) 2025/1106 en ce qui concerne l’Italie",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2606",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La décision d'exécution (UE) 2026/2606 du Conseil modifie les modalités d'octroi de l'assistance financière européenne initialement prévue pour l'Italie au titre du règlement (UE) 2025/1106. Cet acte s'inscrit dans le cadre de la gestion des fonds et des mécanismes de soutien financier de l'Union européenne. Il ne comporte pas d'obligation de mise en conformité immédiate pour les acteurs économiques ou les professionnels de la cybersécurité.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32021R2259R(01)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32021R2259R(01)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Publication d'un rectificatif concernant le règlement européen CELEX:32021R2259R(01) au Journal officiel de l'Union européenne. Cette correction textuelle ne concerne pas la version française et n'emporte aucune conséquence juridique ou opérationnelle en France. Aucune action n'est requise de la part des acteurs assujettis.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32014R1286R(09)",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32014R1286R(09)",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Publication d'un rectificatif concernant le règlement européen (UE) n° 1286/2014 relatif aux documents d'informations clés (DIC) pré-contractuels pour les produits d'investissement packagés et fondés sur l'assurance (PRIIP). Ce rectificatif technique ne modifie pas la version française du texte et ne requiert aucune action immédiate de la part des acteurs juridiques ou financiers concernés.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2620: Décision (PESC) 2026/2620 du Conseil du 20 novembre 2026 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de soutenir les forces armées ukrainiennes par l’acquisition conjointe d’équipements militaires conçus pour libérer une force létale",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2620",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Conseil de l'Union européenne a adopté la décision (PESC) 2026/2620 relative à une mesure d'assistance au titre de la facilité européenne pour la paix. Cette mesure vise à soutenir les forces armées ukrainiennes à travers l'acquisition conjointe d'équipements militaires létaux. Elle s'inscrit dans le cadre des actions institutionnelles de soutien à l'Ukraine menées par l'UE.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2608: Décision (UE) 2026/2608 du Conseil du 9 novembre 2026 relative à la position à prendre au nom de l'Union européenne au sein de l'Organisation mondiale des douanes en ce qui concerne une recommandation visant à amender la nomenclature annexée à la convention sur le système harmonisé et à l'approbation des notes explicatives, des avis de classement ou d'autres avis se rapportant à l'interprétation du système harmonisé et des recommandations visant à assurer l'interprétation uniforme du système harmonisé dans le cadre de la convention sur le système harmonisé",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2608",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Cette décision du Conseil de l'Union européenne définit la position à adopter par l'UE au sein de l'Organisation mondiale des douanes. Elle concerne l'amendement de la nomenclature du système harmonisé ainsi que l'approbation des notes explicatives et avis de classement associés. Il s'agit d'un acte de gouvernance internationale visant à assurer une interprétation uniforme des règles douanières.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "CELEX:32026D2609: Décision (UE) 2026/2609 du Conseil du 17 novembre 2026 autorisant l’ouverture de négociations en vue d’un accord entre l’Union européenne et la République arabe d’Égypte et d’un accord entre l’Union européenne et le Royaume hachémite de Jordanie sur la facilitation des investissements durables",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2609",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Conseil de l'Union européenne a adopté une décision autorisant l'ouverture de négociations pour des accords de facilitation des investissements durables avec l'Égypte et la Jordanie. Cette initiative vise à renforcer la coopération économique et à sécuriser les cadres juridiques des investissements entre l'UE et ces deux pays partenaires. Il s'agit d'une étape préliminaire de négociation sans obligation légale immédiate pour les acteurs économiques.",
+    "pub_date": "2026-11-22T23:00:00+00:00"
+  },
+  {
+    "title": "Arrêt de la Cour dans l’affaire C-354/25 | [Waisrinter] 1 - curia",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRHlubFU2UVpDVlpOSFJNakctTTBRYTZCYUZYNTU3TGtHRFR2QVhBbEdlckJ5UnBvNm1Ka1R4SEJKZ2daMy1qazVLWmlwdFhQUGg5NHdNN2d5ZGN1STdSbWZHaURFaHZxby1vdnZRaFo3Zk5JekItQ01ibDRGOEtoZThjZktYdw?oc=5",
+    "source": "Curia - CJUE",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La Cour de justice de l'Union européenne a rendu un arrêt dans l'affaire C-354/25. Cette décision s'inscrit dans le cadre de la jurisprudence de la Cour et fait l'objet d'une publication officielle sur Curia. Aucun impact opérationnel immédiat ou critique n'est signalé pour le moment.",
+    "pub_date": "2026-11-19T08:53:05+00:00"
+  },
+  {
+    "title": "Conclusions de l’avocat général à la Cour Maciej Szpunar dans l’affaire C-663/24 | Streamz e.a. - curia",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxObUdmSFoyc1g0M1ZHSnpKNHhDeDNlUWVLMXBtWGo0YUtVYVpwU0dJVDJVM2p2eFkwbk03NGM1cnBkZ3Z1RXpBNVBrVnJqdlhvc3FSbHJid0U2REEtY2VMNldkSzhqMVBDTmYtTXBDZFYyY0tSWElkTnJwM3RIeFFGRzk1azQ1Zw?oc=5",
+    "source": "Curia - CJUE",
+    "category": "PI",
+    "impact": "INFORMATIF",
+    "summary": "L'avocat général de la Cour de justice de l'Union européenne, Maciej Szpunar, a rendu ses conclusions dans l'affaire C-663/24 opposant Streamz et autres. Cette étape préliminaire offre une analyse juridique qui guidera la Cour dans sa future décision concernant des enjeux liés à la propriété intellectuelle ou au secteur des médias. Il s'agit d'un avis d'expert qui ne constitue pas encore un arrêt définitif mais permet d'anticiper la jurisprudence européenne.",
+    "pub_date": "2026-11-19T09:16:10+00:00"
+  },
+  {
+    "title": "Audience solennelle de la Cour de justice - curia",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaGdBSk5aSWVwWHdCZDlxbHBiWFpNNVhhbHVMREFfTGhuTjdWYkVKaGFBWDBZaTVaZlh0VnUwcXpiQk8wQUZWclhkNGZrdGFGNktRal9La1F1UEVOeG5vdkNTWjNMdzhWdzRMbl9NaVRHcGpLSFU5Q1c1N3RqTUs4RU1uLTZJdw?oc=5",
+    "source": "Curia - CJUE",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "La Cour de justice de l'Union européenne a tenu son audience solennelle, un événement institutionnel marquant la vie de la juridiction. Cette actualité générale ne comporte pas d'enjeu juridique immédiat ni d'impact concret pour la conformité ou la cybersécurité des entreprises.",
+    "pub_date": "2026-11-19T11:41:46+00:00"
+  },
+  {
+    "title": "C-0266-24-00000000PV-01-P-01_ARRET_328890-FR-1 - InfoCuria",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX2NTVlpJVVFNY2NlVW1BYWxiUTc1aDE1elkyMGIzRl9TRW5xTXFUNVhiLWlDOGhIZVN2UndBa3BWdVF3NFA5STNNdnFfTjY5cmtUT3lndXJ0QThNN1pxV1lqZnlpMTB1ZHpYNXFsd2w5dExLWDg5YVNHOVROUXIyYl9MdE03eGt5YVdiRUxoX1ZLTWRHTE9jMlVIbWQ3aWVTUVQzLUlmaDM3QQ?oc=5",
+    "source": "Curia - CJUE",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Publication d'un arrêt de la Cour de justice de l'Union européenne (CJUE) référencé sous le numéro C-0266-24 sur le portail InfoCuria. Cet document juridique s'inscrit dans le cadre de la jurisprudence européenne habituelle et ne comporte pas d'injonction de sanction immédiate ou d'alerte critique. Une analyse détaillée du texte est recommandée pour les praticiens du droit concernés par cette thématique spécifique.",
+    "pub_date": "2026-11-20T12:15:30+00:00"
+  },
+  {
+    "title": "IA et éducation : une résolution mondiale pour la protection des données",
+    "link": "https://www.cnil.fr/fr/gpa-ia-education",
+    "source": "CNIL",
+    "category": "PDP",
+    "impact": "INFORMATIF",
+    "summary": "En novembre 2026, l’Assemblée mondiale pour la protection de la vie privée a adopté une résolution consacrée à l’intelligence artificielle dans l’éducation. La CNIL détaille les onze principes clés issus de ce texte afin de guider les acteurs du secteur vers de meilleures pratiques en matière de protection des données.",
+    "pub_date": "2026-11-20T12:00:00+00:00"
+  },
+  {
     "title": "Conservation des mots de passe clients en clair : sanction de 5 millions d'euros - Le Monde du Droit",
     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPQXNnSHhabWtEdUlFS3N2Y25URG12NkV1aFAzV2hOWDhIdVZXMTJXTFo3SkhYMTF5TEpWcmJxYzB1c1J3cnZWY2IxdzN4Tk5QeEFWWldzVlBONUlOWVF4NTVRdUVaaXRyWjNwLTdZQWsyNUJYeGVwSW81VF9fU0dVTkZ3NDBBVlBzbm1XQk5HZ3JuOGdqRmRFOWVuZjRnMmpUdm9oXzZleV9VOUY2ZXZTLXpHMG1lQjZBcWJhZmlYd1NPZ0ZVWEpjb2JHSFQydENQRldvSlkxNXBqdk1UWXVzMVJxYXJDakRralc3OGxqLVI?oc=5",
     "source": "Le Monde du Droit",
@@ -1445,365 +1805,5 @@
     "impact": "INFORMATIF",
     "summary": "L'article présente une sélection de nouveaux lancements dans le secteur de la beauté pour le mois de novembre, incluant des fragrances et des extensions de gammes vers le soin corporel. Cette actualité constitue une veille sectorielle sur les tendances de consommation et le positionnement marketing des marques sans implication juridique ou cybersécurité particulière.",
     "pub_date": "2026-11-13T12:24:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Microsoft Azure (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1514/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "CRITIQUE",
-    "summary": "Des vulnérabilités critiques dans Microsoft Azure permettent l'exécution de code à distance, l'élévation de privilèges et la compromission de données. Ces failles exposent les organisations à des risques majeurs de sécurité et nécessitent l'application immédiate des correctifs fournis par l'éditeur pour garantir la conformité et la protection des systèmes d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans GitLab (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1520/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "CRITIQUE",
-    "summary": "Une vulnérabilité critique a été identifiée dans GitLab permettant l'exécution de code arbitraire à distance. Cette faille expose les infrastructures à une compromission totale, nécessitant une application immédiate des correctifs de sécurité fournis par l'éditeur pour prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Ivanti (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1506/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "CRITIQUE",
-    "summary": "L'ANSSI a émis une alerte concernant des vulnérabilités critiques dans les produits Ivanti permettant l'exécution de code à distance et l'exfiltration de données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur sans délai pour prévenir toute compromission des systèmes d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans Sonicwall SonicOS (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1507/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité affectant Sonicwall SonicOS expose les systèmes à des risques d'atteinte à la confidentialité et à l'intégrité des données. Il est impératif de surveiller les bulletins de sécurité de l'éditeur et d'appliquer les correctifs dès leur disponibilité pour prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans NetApp ONTAP tools pour VMware vSphere 10 (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1518/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité affectant NetApp ONTAP tools pour VMware vSphere 10 expose les systèmes à des risques de déni de service et d'altération de l'intégrité des données. Il est recommandé aux administrateurs de consulter les avis techniques de l'ANSSI et d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Microsoft .Net (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1512/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités dans Microsoft .Net pouvant mener à une exécution de code à distance, une élévation de privilèges ou un déni de service. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour limiter les risques d'exploitation sur les systèmes exposés.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Mozilla (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1505/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits Mozilla, incluant des risques d'exécution de code arbitraire et d'élévation de privilèges. Il est impératif de procéder aux mises à jour de sécurité recommandées par l'éditeur afin de garantir la confidentialité des données et la conformité aux exigences de protection des systèmes d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Microsoft Windows (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1513/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités dans Microsoft Windows permettant l'exécution de code à distance, l'élévation de privilèges et le déni de service. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour limiter les risques d'exploitation sur les systèmes exposés.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Palo Alto Networks (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1521/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits Palo Alto Networks, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations utilisatrices d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute compromission de leurs infrastructures critiques.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Citrix Secure Access client (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1519/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Des vulnérabilités dans le client Citrix Secure Access permettent à un attaquant d'obtenir une élévation de privilèges sur les systèmes affectés. Il est recommandé aux administrateurs de consulter les bulletins de sécurité de l'éditeur et d'appliquer les correctifs nécessaires pour prévenir tout risque d'exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Citrix XenServer (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1502/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Plusieurs vulnérabilités critiques ont été identifiées dans Citrix XenServer, exposant les systèmes à des risques d'élévation de privilèges et de compromission de la confidentialité des données. Il est impératif pour les administrateurs de consulter les avis techniques du CERT-FR et d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout contournement des politiques de sécurité.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les processeurs Intel (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1509/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités critiques dans les processeurs Intel permettant l'exécution de code arbitraire et l'élévation de privilèges. Les organisations doivent impérativement surveiller les publications du constructeur et appliquer les mises à jour de microcode ou de firmware dès leur disponibilité pour limiter les risques d'atteinte à la confidentialité des données.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans HPE Aruba Networking Private 5G Core (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1503/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Plusieurs vulnérabilités critiques ont été identifiées dans la solution HPE Aruba Networking Private 5G Core, exposant les infrastructures à des risques de compromission de la confidentialité et de l'intégrité des données. Il est impératif pour les organisations utilisatrices d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir tout contournement des politiques de sécurité en place.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans MongoDB Core Server (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1522/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités critiques dans MongoDB Core Server pouvant mener à une exécution de code arbitraire et à des compromissions de données. Les administrateurs doivent appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour garantir l'intégrité et la confidentialité des systèmes d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Traefik (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1517/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Des vulnérabilités critiques ont été identifiées dans le logiciel Traefik, exposant les systèmes à des risques de déni de service, ainsi qu'à des atteintes à la confidentialité et à l'intégrité des données. Il est impératif pour les administrateurs de systèmes de consulter les recommandations du CERT-FR et d'appliquer les correctifs de sécurité dès leur mise à disposition pour limiter l'exposition aux cyberattaques.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Microsoft (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1515/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités dans les produits Microsoft, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations de déployer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante de ces failles.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Xen (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1508/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités dans l'hyperviseur Xen pouvant entraîner une élévation de privilèges et une compromission de la confidentialité des données. Il est impératif pour les administrateurs systèmes d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir tout contournement des politiques de sécurité.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Google Pixel (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1525/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les appareils Google Pixel, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les utilisateurs et les administrateurs de parc de déployer les correctifs de sécurité fournis par le constructeur afin de prévenir toute compromission de la confidentialité des données.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Microsoft Office (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1511/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Microsoft a publié des correctifs pour plusieurs vulnérabilités critiques dans sa suite Office, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations de déployer ces mises à jour de sécurité afin de prévenir toute exploitation malveillante et de garantir la conformité aux exigences de protection des données.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Laravel (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1504/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Des vulnérabilités identifiées dans le framework Laravel permettent à un attaquant de contourner les politiques de sécurité en place. Il est recommandé aux administrateurs de systèmes d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Microsoft Edge (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1510/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant le navigateur Microsoft Edge. Il est recommandé aux administrateurs et utilisateurs d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Check Point (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1501/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant des vulnérabilités critiques dans les produits Check Point permettant l'exécution de code à distance. Les administrateurs doivent appliquer les correctifs de sécurité fournis par l'éditeur dans les plus brefs délais pour prévenir toute compromission des systèmes d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Mitel MiVoice MX-ONE (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1516/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Des vulnérabilités critiques ont été identifiées dans Mitel MiVoice MX-ONE, exposant les systèmes à une exécution de code à distance et à des compromissions de données. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout contournement des politiques de sécurité et protéger l'intégrité du système d'information.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans les produits Kaspersky (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1524/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité identifiée dans les produits Kaspersky permet à un attaquant distant de provoquer un déni de service. Il est recommandé aux administrateurs de consulter les bulletins techniques du CERT-FR et d'appliquer les correctifs de sécurité dès leur mise à disposition par l'éditeur.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Axis (12 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1523/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a publié une alerte concernant de multiples vulnérabilités affectant les produits Axis, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations utilisatrices de vérifier la version de leurs équipements et d'appliquer les correctifs de sécurité fournis par le constructeur afin de prévenir toute compromission.",
-    "pub_date": "2026-11-12T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Progress Telerik (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1533/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant Progress Telerik, pouvant entraîner des dénis de service ainsi que des atteintes à la confidentialité et à l'intégrité des données. Il est impératif pour les organisations utilisant ces solutions d'évaluer leur exposition et d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute exploitation malveillante.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Check Point (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1529/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Des vulnérabilités critiques affectant les produits Check Point permettent une élévation de privilèges et un contournement des politiques de sécurité. Il est impératif d'appliquer les correctifs fournis par l'éditeur pour prévenir tout risque d'intrusion ou de compromission des systèmes protégés.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Apple HomeView Software (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1526/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités dans le logiciel Apple HomeView, exposant les systèmes à des risques d'exécution de code à distance et de compromission de données. Il est impératif pour les organisations utilisant ce logiciel d'appliquer les correctifs de sécurité dès leur publication afin de garantir l'intégrité et la confidentialité des systèmes d'information.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans les produits Axis (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1534/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité critique a été identifiée dans les produits Axis, permettant l'exécution de code arbitraire à distance. Il est impératif de consulter les avis techniques du CERT-FR et d'appliquer les correctifs de sécurité fournis par le constructeur pour limiter les risques d'intrusion.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans Node.js (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1531/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant Node.js, pouvant entraîner des fuites de données, des contournements de sécurité ou des dénis de service. Il est impératif pour les organisations d'évaluer leur exposition et d'appliquer les correctifs de sécurité fournis par l'éditeur pour maintenir la conformité et la résilience de leurs infrastructures.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans les produits Citrix (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1528/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits Citrix, pouvant entraîner des dénis de service ainsi que des compromissions de confidentialité et d'intégrité des données. Il est impératif pour les organisations concernées d'appliquer les correctifs de sécurité fournis par l'éditeur afin de limiter les risques d'exploitation malveillante.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans le noyau Linux de Debian (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1538/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Le noyau Linux de Debian présente plusieurs vulnérabilités critiques permettant l'élévation de privilèges et l'atteinte à la confidentialité des données. Il est impératif d'appliquer les correctifs de sécurité fournis par le mainteneur pour garantir l'intégrité des systèmes et se conformer aux obligations de sécurisation des infrastructures informatiques.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans Opera Neon (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1532/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité a été identifiée dans le navigateur Opera Neon, permettant un contournement de la politique de sécurité. Il est recommandé aux utilisateurs et administrateurs de surveiller les mises à jour correctives publiées par l'éditeur pour limiter les risques d'exploitation.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "Multiples vulnérabilités dans VMware Tanzu Greenplum (13 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1527/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant VMware Tanzu Greenplum, permettant à un attaquant de compromettre la sécurité du système. Il est recommandé aux administrateurs de consulter les bulletins de sécurité de l'éditeur et d'appliquer les correctifs nécessaires pour limiter les risques d'exploitation.",
-    "pub_date": "2026-11-13T00:00:00+00:00"
-  },
-  {
-    "title": "N° 3463 - Proposition de loi de M. Laurent Mazaury visant à renforcer les sanctions contre la dissimulation volontaire dans l'espace public et lors des manifestations",
-    "link": "https://www.assemblee-nationale.fr/17/propositions/pion3463.asp",
-    "source": "Assemblée Nationale",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Cette proposition de loi déposée à l'Assemblée nationale vise à durcir le cadre répressif concernant la dissimulation volontaire du visage dans l'espace public et lors de manifestations. Le texte interroge l'équilibre entre le maintien de l'ordre public et les libertés individuelles, tout en marquant une volonté politique de renforcer les sanctions pénales existantes.",
-    "pub_date": "2026-11-10T00:00:00+00:00"
-  },
-  {
-    "title": "N° 3471 rapport - Rapport de Mme Mélanie Thomin sur la proposition de loi de Mme Mélanie Thomin visant à baisser les prix du carburant à la pompe par l'encadrement des marges des raffineurs (3269).",
-    "link": "https://www.assemblee-nationale.fr/17/rapports/r3471.asp",
-    "source": "Assemblée Nationale",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Ce rapport parlementaire examine une proposition de loi visant à réguler les prix du carburant par un encadrement strict des marges des raffineurs. Il s'inscrit dans un débat législatif sur le pouvoir d'achat et l'intervention de l'État dans la fixation des prix du secteur énergétique.",
-    "pub_date": "2026-11-10T00:00:00+00:00"
-  },
-  {
-    "title": "N° 3291 annexe 13 - Rapport de Mme Marie-Christine Dalloz sur le projet de loi de finances pour 2027 (n°3210).",
-    "link": "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a13.asp",
-    "source": "Assemblée Nationale",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Ce rapport budgétaire détaille les orientations financières et les priorités de l'État pour l'exercice 2027. Il constitue un document de veille institutionnelle permettant d'anticiper les futures allocations de ressources et les évolutions législatives potentielles dans les secteurs concernés.",
-    "pub_date": "2026-11-13T18:00:00+00:00"
-  },
-  {
-    "title": "« Made in France » : une origine qui doit pouvoir être démontrée - economie.gouv.fr",
-    "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPX19LanlOaFZXa3cxQXpwa3N3b01vLVNMcEkwYnZYbkc0RFd2VUJ2ekExb2tsX1BYYkREdUJpWHJUakFsMjhkY05aNXlxWnpZT0VMZ1RKOTUyMFdpXzhtVUNUMWNYako2VHNwVm1rN1QtTndsWnZpYlQyb3VsTVk4cTM5dTUtRk9BbVh3S19xN1NYSlFEdVZwS3RscEtZc2x2RUUyQkcxekFZa3pWVDc2T1hURDF0R1FvVG1WcXRvNUczUVZ6a2hoODhxVHM0V1dOY2MyX1FHV3NxUQ?oc=5",
-    "source": "DGCCRF",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "La DGCCRF rappelle que l'allégation « Made in France » est strictement encadrée par le Code de la consommation et doit reposer sur des preuves tangibles de transformation substantielle du produit. Les entreprises doivent être en mesure de justifier l'origine française de leurs marchandises pour éviter des sanctions pour pratiques commerciales trompeuses.",
-    "pub_date": "2026-11-13T08:49:50+00:00"
-  },
-  {
-    "title": "Arrêt du Tribunal dans l’affaire T-523/24 | Kerry et Kerry Ingredients (UK)/Commission - curia",
-    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZXd4Z1BINzYzeU1ZOVlBc0ZEWW51SFVoLWxJTzJBVG1aeHFvekdhNUdRTTdENXJzd2ZMd3VadHZGcEpKUWlIZWZ4cC1NQ2g0a01JeEZxOEZLclRjNjQzQjNFaVR4aGhsUm81bVBtNTFjbWNSMDlFS0FIdTZFcUxBSlhsSExwQQ?oc=5",
-    "source": "Curia - CJUE",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Le Tribunal de l'Union européenne a rendu un arrêt dans l'affaire T-523/24 concernant un recours en annulation déposé par Kerry et Kerry Ingredients (UK) contre la Commission européenne. Cette décision s'inscrit dans le cadre du contentieux administratif lié aux actes de la Commission et ne présente pas d'impact opérationnel immédiat en matière de cybersécurité ou de conformité réglementaire sectorielle.",
-    "pub_date": "2026-11-11T09:16:12+00:00"
-  },
-  {
-    "title": "Ordre du jour de la séance plénière du 12 novembre 2026",
-    "link": "https://www.cnil.fr/fr/ordre-du-jour-de-la-seance-pleniere-du-12-novembre-2026",
-    "source": "CNIL",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "La CNIL a tenu sa séance plénière le 12 novembre 2026 pour traiter des dossiers inscrits à son ordre du jour. Cette publication constitue une communication institutionnelle standard sur le fonctionnement interne de l'autorité de contrôle sans implication opérationnelle immédiate pour les acteurs du secteur.",
-    "pub_date": "2026-11-12T12:00:00+00:00"
   }
 ]
