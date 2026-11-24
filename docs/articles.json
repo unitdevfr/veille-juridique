@@ -1,5 +1,265 @@
 [
   {
+    "title": "Italian DPA fines Meta EUR 805 million for unlawful access to Facebook users’ photo galleries",
+    "link": "https://www.edpb.europa.eu/news/italian-dpa-fines-meta-eur-805-million-for-unlawful-access-to-facebook-users-photo-galleries_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "CRITIQUE",
+    "summary": "Sanction majeure de 805 millions d'euros infligée à Meta par l'autorité italienne pour accès illicite aux galeries photos des utilisateurs.",
+    "action_requise": "Évaluer les permissions d'accès aux données sensibles (photos/médias) dans les applications mobiles de l'entreprise.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-18T12:00:00+00:00"
+  },
+  {
+    "title": "Irish Data Protection Commission fines MTCH EUR 11 million following Inquiry into Tinder users’ personal data requests",
+    "link": "https://www.edpb.europa.eu/news/irish-data-protection-commission-fines-mtch-eur-11-million-following-inquiry-into-tinder-users_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "CRITIQUE",
+    "summary": "L'autorité irlandaise a infligé une amende de 11 millions d'euros à MTCH (Tinder) pour non-respect du droit d'accès des personnes concernées (Article 15 RGPD). Cette décision souligne la sévérité des autorités sur la gestion des demandes d'accès aux données personnelles.",
+    "action_requise": "Auditer la procédure interne de traitement des demandes d'accès (DSAR) pour garantir la conformité aux délais et exigences du RGPD.",
+    "echeance": "13 novembre 2026",
+    "cible": "DPO",
+    "pub_date": "2026-11-17T12:00:00+00:00"
+  },
+  {
+    "title": "Norwegian DPA fines private individual for credit check and publication of personal data without a lawful basis",
+    "link": "https://www.edpb.europa.eu/news/norwegian-dpa-fines-private-individual-for-credit-check-and-publication-of-personal-data_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Sanction prononcée par l'autorité norvégienne contre un particulier pour traitement de données sans base légale lors d'une vérification de crédit.",
+    "action_requise": "Vérifier la base légale des traitements de données lors des enquêtes de solvabilité.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+    "title": "The Norwegian Data Protection Authority fines Social Garden AS for publishing personal data without a lawful basis",
+    "link": "https://www.edpb.europa.eu/news/the-norwegian-data-protection-authority-fines-social-garden-as-for-publishing-personal-data_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Sanction contre Social Garden AS pour publication de données personnelles sans base légale, traitée via le mécanisme de guichet unique.",
+    "action_requise": "Auditer les pratiques de publication de données personnelles sur les sites web et réseaux sociaux.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+    "title": "Italian DPA fines a company EUR 25 500 over employee access rights and corporate email accounts",
+    "link": "https://www.edpb.europa.eu/news/italian-dpa-fines-a-company-eur-25-500-over-employee-access-rights-and-corporate-email_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Sanction italienne contre Techpartner S.r.l. concernant la gestion des droits d'accès des employés aux comptes de messagerie professionnelle.",
+    "action_requise": "Revoir la politique d'accès aux emails professionnels et les procédures de réponse aux droits des personnes.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-18T12:00:00+00:00"
+  },
+  {
+    "title": "Italian DPA fines radiology centre and IT provider a combined  EUR 28 000 for exposing patient health data",
+    "link": "https://www.edpb.europa.eu/news/italian-dpa-fines-radiology-centre-and-it-provider-a-combined-eur-28-000-for-exposing-patient_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Sanction conjointe contre un centre de radiologie et son prestataire IT pour défaut de sécurité ayant entraîné l'exposition de données de santé.",
+    "action_requise": "Renforcer les clauses de sécurité dans les contrats de sous-traitance IT et auditer les mesures de protection des données de santé.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-18T12:00:00+00:00"
+  },
+  {
+    "title": "Italian DPA fines Business School EUR 8 000 for unlawful telemarketing and failure to handle data subject request",
+    "link": "https://www.edpb.europa.eu/news/italian-dpa-fines-business-school-eur-8-000-for-unlawful-telemarketing-and-failure-to-handle_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Sanction contre une école de commerce pour prospection illégale et non-respect des droits des personnes.",
+    "action_requise": "Vérifier la conformité des bases de données de prospection et les processus de gestion des demandes d'accès/suppression.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-18T12:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Moxa (20 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1589/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Plusieurs vulnérabilités critiques ont été identifiées sur des infrastructures et logiciels courants (Palo Alto, Linux, Moxa, Citrix, SPIP, MongoDB, Microsoft Office). Ces failles permettent des exécutions de code à distance ou des élévations de privilèges.",
+    "action_requise": "Appliquer les correctifs de sécurité (patchs) sur les équipements et logiciels concernés selon les recommandations des éditeurs.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-20T00:00:00+00:00",
+    "related_sources": [
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans MongoDB (23 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1606/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans le noyau Linux de Debian LTS (20 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1595/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans SPIP (23 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1599/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans les produits Citrix (20 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1582/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans les produits Palo Alto Networks (20 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1584/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans Microsoft Office (23 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1604/"
+      }
+    ]
+  },
+  {
+    "title": "Opinion: California’s AB 496 deadline is fast approaching: How beauty brands can avoid getting caught out",
+    "link": "https://www.cosmeticsbusiness.com/opinion-california-s-ab-496-deadline-is-fast-approaching",
+    "source": "Cosmetics Business",
+    "category": "COSMETIQUE",
+    "impact": "IMPORTANT",
+    "summary": "L'entrée en vigueur de la loi californienne AB 496 impose l'interdiction de certains ingrédients cosmétiques. Les marques doivent vérifier la conformité de leurs formulations avant l'échéance.",
+    "action_requise": "Vérifier la composition des produits distribués en Californie par rapport à la liste des substances interdites.",
+    "echeance": "5 semaines",
+    "cible": "Conformité",
+    "pub_date": "2026-11-23T12:30:00+00:00"
+  },
+  {
+    "title": "Hausse du SMIC de 1,6% au 1er décembre : un « coup de pouce » qui interroge - Le Club des Juristes",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSWNBdUFjcjd3SURacDExNjh2YVEwSmxWNC1vN094WjF2UktOemtXelYxXy1EdWdVSEpVMnJmTmo0ZS10U0ZmOGJNMzJoSHB5eFk5NlF1aWVZT3lPMEdWamxyRlRIWmdZWURPNkJrMmZQaVFwa05RWjlud0swVGxnU3Qza0szWEgzc2VJUTdpNDZlcVQ5NzB2eVRDb0RUeDNqYzVEdHVtRjVzVll6bGRDdWpCcGU?oc=5",
+    "source": "Le Club des Juristes",
+    "category": "AUTRE",
+    "impact": "IMPORTANT",
+    "summary": "Hausse du SMIC de 1,6% effective au 1er décembre, nécessitant une mise à jour des grilles salariales.",
+    "action_requise": "Vérifier la conformité des salaires minima et mettre à jour les bulletins de paie.",
+    "echeance": "1er décembre",
+    "cible": "Conformité",
+    "pub_date": "2026-11-17T09:46:30+00:00"
+  },
+  {
+    "title": "E-reporting : données, périodicité, contrôles… ce que précise le BOFIP du 30 septembre 2026 - Lefebvre Dalloz Compétences",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdnVwTWFpMjZOdl83RDdDaDVMZFhtUUYwS1dYS3hsV29XdWc3bHpiX3BGbVI4dVVxdE51MEJ1TnZuSDdSNDRjYTZtVXVlMlNFUmZCdWJtcGM0WVNTNWFPSHYxNVNtMXFhUTIwZXhpYnJCZU5WQkxQclUwVlZzZXVDeEZCbl9MYzZfRFRSM2UyQXlxNFlQWk9yRnVSVlZ0b2UtMjVYRzBWbnhCTUswU3VyVmZVTUh1dThaUzNtbXFuS0MyWTJlZ1J5Z1VxVXRaQQ?oc=5",
+    "source": "Lefebvre Dalloz",
+    "category": "AUTRE",
+    "impact": "IMPORTANT",
+    "summary": "Précisions du BOFIP sur les modalités de l'e-reporting (données, périodicité, contrôles).",
+    "action_requise": "Adapter les processus comptables et les systèmes d'information aux nouvelles exigences de reporting.",
+    "echeance": "30 septembre 2026",
+    "cible": "Juriste",
+    "pub_date": "2026-11-19T08:55:57+00:00"
+  },
+  {
+    "title": "L’indemnité prévue en cas de non-réalisation d’une promesse unilatérale n’est pas une clause pénale - Open Lefebvre Dalloz",
+    "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQQmJmbXhEYnR3bUVLZFlKT0JRWDhsSFBzTTR1RXByaXU2aDF5dVNOMXNUUWx6WTQtQl9vUjl3Ny1jcE1Oa2tITTdKbTIyd0lKRWdXVDV0OEU0RFlhLW16N0ZmUldibGxia2dELWtzbzdGMWstR3R5VlZRRTlpdVZ5LTk0NWNTVU5MRWkzbG1hanhoMk9CSTVkdXZzSlVoeWNEM016aXNSSUNPamdNV3BKeUM1TGpqTG9aVzlMRVhVMUYxenVvZ2U4dGJleG1ya0RUY1hmbUdpMkNjVjlvcnJDT2N1R082WThPMkliZDByVXNXSGNQVzl6Yg?oc=5",
+    "source": "Lefebvre Dalloz",
+    "category": "AUTRE",
+    "impact": "IMPORTANT",
+    "summary": "Jurisprudence clarifiant que l'indemnité en cas de non-réalisation d'une promesse unilatérale n'est pas qualifiée de clause pénale.",
+    "action_requise": "Revoir la rédaction des clauses indemnitaires dans les promesses de vente ou contrats similaires.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-23T21:58:26+00:00"
+  },
+  {
+    "title": "Confidentialité des consultations des juristes d'entreprise : le cadre légal se précise - Association Française des Juristes d'Entreprise",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRXRNUHlKckVHVXVBSGVBSmVGc0JQTWRYdkFIWDNEYkgtNXVRY0lFQ1pjMXUxcHV2dHkwT3dZV2VRV3RVUXpqbXd3cFFmb0RKcnhqbTNkYjZLYkxtWGRKZG1UeVJCUFF1UmtneWdGcUxlSGlLdzA4d2pQWWxySGhTSmZ6VzVXMUVHbGRPbEFqY0huUVU3anB0X0ItVUxmWWJTVk1HUGNHaUxWSkJSR3NvRnhGTnVPdHR6dUpTUkxn?oc=5",
+    "source": "AFJE",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Évolution du cadre légal concernant la confidentialité des consultations des juristes d'entreprise.",
+    "action_requise": "Mettre à jour les procédures internes de protection des échanges juridiques.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-19T04:45:27+00:00"
+  },
+  {
+    "title": "Atelier : L'actualité des données en 2026 - Association Française des Juristes d'Entreprise",
+    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA5cDZwNHlKLWk2YWVLVld6aUVleXJrWnF5dlFwTDYzejBwZlJhekpFSHpmb2FDcExuMkhtS3l2dmJ3MFRtd2M4d25XTnB2X1p0clFnMTJDakRvdUtHV1R4SEx0RXk4aDl4Q3U1bWRvLVM0ZXc?oc=5",
+    "source": "AFJE",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "Atelier sur l'actualité des données personnelles en 2026.",
+    "action_requise": "Vérifier la mise en conformité des traitements de données avec les dernières évolutions réglementaires.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-17T15:58:41+00:00"
+  },
+  {
+    "title": "EDPB and DPAs from countries and organisation with EU adequacy decision take stock of progress and set 2027 priorities",
+    "link": "https://www.edpb.europa.eu/news/edpb-and-dpas-from-countries-and-organisation-with-eu-adequacy-decision-take-stock-of-progress_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "INFORMATIF",
+    "summary": "Réunion du CEPD avec les pays tiers bénéficiant d'une décision d'adéquation pour définir les priorités 2027.",
+    "action_requise": "",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-19T12:00:00+00:00"
+  },
+  {
+    "title": "Bulletin d'actualité CERTFR-2026-ACT-049 (23 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-049/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "INFORMATIF",
+    "summary": "Le bulletin d'actualité du CERT-FR synthétise les vulnérabilités majeures de la semaine écoulée. Il sert d'outil de priorisation pour la gestion des risques cyber.",
+    "action_requise": "Consulter le bulletin pour vérifier si des actifs critiques de l'entreprise sont exposés.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-23T00:00:00+00:00"
+  },
+  {
+    "title": "PLFSS pour 2027 : adoption au Sénat - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVVBQYk80TmxNX2Z1c1pXbUtUTk1WaGJnaVVvNE1FNDJoQlhLRUN4QWZJT3JkTXZWS214S3hDdDBfNkRGTm1lcGk1Q3J4N2twU1VLUE9fRnJJY0tuMzdLQ3BoMS1sdlViVk5qcXpPZmU2S0lrRmlmVndKR0MyZW5PTHhxVEp3dlpacE5ydTI3WXJzUGcwcjRsRkV0cHBYMWV2OFR2VFhjdw?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Le Projet de Loi de Financement de la Sécurité Sociale (PLFSS) pour 2027 a été adopté au Sénat. Ce texte impacte les cotisations et les obligations sociales des entreprises.",
+    "action_requise": "Anticiper les évolutions des charges sociales pour l'exercice 2027.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-19T06:20:34+00:00"
+  },
+  {
+    "title": "Hébergement touristique : frais de classement à compter de 2027 - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNTRWSHZrcm1qXzJDRXM4WVB3b0lHZ0dfTW44TVJPZ2NuNXkxdnFiY3ZWLVg2VThqa29TdS1kUVZfTUVJWXpRQTNTbHJDUU84cWFtQV9jOEtPNDhZbi05aXBCdTR4T0drcllKSnJLSFhoR0d3ZllnN2xHWmN1aEhEYzlzdXA2SWRpNENQVnllM3NYT3pEeFBjRHpncDQ0Y2ZoVTAtLWdBaXpvLThDSTFkVFZGREJsRUlwQlNMNEtyeEtTT00?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Une nouvelle réglementation sur les frais de classement pour l'hébergement touristique entrera en vigueur en 2027.",
+    "action_requise": "Mettre à jour les budgets prévisionnels pour les activités concernées.",
+    "echeance": "1er janvier 2027",
+    "cible": "Direction",
+    "pub_date": "2026-11-20T06:59:45+00:00"
+  },
+  {
+    "title": "Conférence : Mieux comprendre les allégations environnementales - Association Française des Juristes d'Entreprise",
+    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWnBiZnRlWkgzNHcxTHR2NTFxd1dFcFZ6RW1rRG5pMGVtaXJ0ZG5raGdjb1FOLXdJb1ZQczJYUEx1cWVvS3c1QnNCSzk4akF4VXdBOHNHT0g1ZF9TMTBmbUZhNmFDcDJGUlVaVnpZUHJFTVFSdUI3eFBpb1o1Y3V3X0lzQlIzOFUzUlFndkpITEc3b2hmM2RZb0RBdWxCNEFkdlJhSUZ1aFpJNzR6MUxNNjRVQWZSclJPdWNIWHBsbkpXT0ItODNXVlh0V2pnWVRLXy1IR25wb2JGb2d1UE9EVU9nMnh4VFND?oc=5",
+    "source": "AFJE",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Conférence sur la compréhension des allégations environnementales (Greenwashing).",
+    "action_requise": "Auditer les communications marketing pour conformité avec les règles environnementales.",
+    "echeance": "",
+    "cible": "Conformité",
+    "pub_date": "2026-11-23T07:30:27+00:00"
+  },
+  {
     "title": "Amende de 2 390 000 € prononcée à l’encontre de la société LAFARGE BETONS (numéro de SIRET : 41481504303184 - economie.gouv.fr",
     "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOcXE3TTVjQ1RfNmQtQ0U4Q1p4a1doZlgxSjAtcm1MZUktOHFhS3NPd0RSbXotbXdZVS1IaHBUZDNMVF9jOWs5Y0E4REJ5VlV6bkxqYXVmNmRGOE8tMUMtbmREaktya18wc0hBMlFDOGpwOTZDM3pNYWZQWDZNTEw0ZkdKOWFsNTRSb19rdll2ZG42T2hwdk1tVUFPZ21mSERUVGZSN1VTSHBsVjhVc2dHT1NLRUptd3BPbVRjQ3Z4eEVSTnh0VzQxVkRPRW5Rd1VzSU5QdmwxbnQxaDVRRUZ3UEZMdXpyZW1VY1hIa04tZzl4aW96QWpTcllZLUd6TEE?oc=5",
     "source": "DGCCRF",
@@ -1634,176 +1894,5 @@
     "impact": "IMPORTANT",
     "summary": "L'ANSSI a émis une alerte concernant de multiples vulnérabilités affectant les produits Trend Micro, incluant des risques d'exécution de code à distance et d'élévation de privilèges. Il est impératif pour les organisations utilisatrices d'appliquer les correctifs de sécurité fournis par l'éditeur afin de prévenir toute compromission de la confidentialité et de l'intégrité de leurs systèmes.",
     "pub_date": "2026-11-16T00:00:00+00:00"
-  },
-  {
-    "title": "Vulnérabilité dans VMware Tanzu (16 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1543/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "IMPORTANT",
-    "summary": "Une vulnérabilité critique a été identifiée dans VMware Tanzu, permettant l'exécution de code arbitraire à distance. Il est impératif d'appliquer les correctifs de sécurité fournis par l'éditeur pour prévenir tout risque d'intrusion ou de compromission des systèmes impactés.",
-    "pub_date": "2026-11-16T00:00:00+00:00"
-  },
-  {
-    "title": "Projet de loi de finances de fin de gestion pour 2026 - texte N° 172",
-    "link": "http://www.senat.fr/leg/pjl26-172.html",
-    "source": "Sénat - Textes récents",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Le projet de loi de finances de fin de gestion pour 2026, transmis au Sénat le 13 novembre 2026, constitue un acte législatif de régulation budgétaire. Ce texte vise à ajuster les crédits de l'État pour la fin de l'exercice en cours, sans impact direct immédiat sur la conformité cybersécurité ou juridique des entreprises.",
-    "pub_date": "2026-11-14T02:03:40+00:00"
-  },
-  {
-    "title": "Amende de 44 000 € prononcée à l’encontre de la société SISLEY INDUSTRIE (numéro de SIRET : 45098234300011) - economie.gouv.fr",
-    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOQU5tbFRBdmJnX1YwcDN5b0ZSN1VvNDdwVWlKcnd2ZVZKVkUxdmpkYjFuMGJWeFRFUXJBaTlSbmRBMjZ0TXI3RnppYXNNak9iZHJwWFBaX0dURDFjb3c1akVkQ1hId1NnclV3b29LMEplTjlXMnU5WmoyNEpfU1dzMUhLSHk5MnE2RGl2NWcwUFQwdGtmVWFBM3ZBd2YyRjRzSVVFU25RM3gxd2ZGUmhXamJKLTJTcTFpLW5ueWxIUllVOWhyMjhMWVdBS2xvVmF0amQ3cVoybVlOU0M3enUzakQySmhCT0xXalEzcTNZSlRmbFNpaXRGdmdBaTBpdw?oc=5",
-    "source": "DGCCRF",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La DGCCRF a prononcé une amende administrative de 44 000 € à l'encontre de la société SISLEY INDUSTRIE. Cette sanction fait suite à un manquement aux règles de protection des consommateurs, relevant de la surveillance habituelle des pratiques commerciales exercée par l'autorité.",
-    "pub_date": "2026-11-10T14:59:04+00:00"
-  },
-  {
-    "title": "Amende de 2 000 € prononcée à l’encontre de la société GROUPE SERVICES FRANCE (numéro de SIRET : 77567529100428) - economie.gouv.fr",
-    "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOa1dYVmU4V2p5N2ZZRG9OZHc2SV9fMXNYMnBVb1lUaGl5R2FpdVNDY0o3eWZGb0ROQlN4OGpEV0lzUV9QZHdwQ2dMb0QyLVFkcGNJWndaaGpOQlpfNzRSQWxVTk5YNFJPSjYxbkZGekRCMTY4Qmt1R1BPQUExTnFzNXREbE5EZmFLSE1ld01FQmpQSzd1YnVRWVhyM2dGSUM2djQwbnVteGtGZWxSci1HOEpYVFRWN2dOb3ZHMGYwVFFrMnBRdHpHTHhNSVhTRElicExsejIyaDc0bURoSkV2ZS15dUdVVTZTRE82aXNzQ2YzaGkyMExneEszX2tSbHVqVWVLVg?oc=5",
-    "source": "DGCCRF",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "La DGCCRF a prononcé une amende administrative de 2 000 euros à l'encontre de la société GROUPE SERVICES FRANCE. Cette sanction relève d'une mesure de contrôle classique de la consommation et ne présente pas d'enjeu systémique ou de cybersécurité particulier.",
-    "pub_date": "2026-11-10T14:59:04+00:00"
-  },
-  {
-    "title": "CELEX:32025R0395R(08)",
-    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32025R0395R(08)",
-    "source": "EUR-Lex Actualités",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "Ce document constitue un rectificatif technique relatif à une réglementation européenne publiée au Journal officiel. L'avis précise explicitement que les modifications apportées ne concernent pas la version française du texte, n'induisant ainsi aucun changement juridique ou opérationnel pour les entités francophones.",
-    "pub_date": "2026-11-15T23:00:00+00:00"
-  },
-  {
-    "title": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
-    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-048/",
-    "source": "ANSSI (CERT-FR)",
-    "category": "CYBER",
-    "impact": "INFORMATIF",
-    "summary": "Le bulletin d'actualité du CERT-FR propose une synthèse hebdomadaire des vulnérabilités identifiées, visant à faciliter la priorisation des correctifs. Il constitue un outil de veille opérationnelle qui ne se substitue pas à l'analyse exhaustive des avis techniques individuels pour la gestion des risques de sécurité.",
-    "pub_date": "2026-11-16T00:00:00+00:00"
-  },
-  {
-    "title": "The naked nail trend: how skinification is reshaping nail care",
-    "link": "https://www.cosmeticsbusiness.com/the-naked-nail-trend-how-skinification-is-reshaping",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La tendance du 'naked nail' favorise l'émergence de produits de soin intégrant des actifs issus de la cosmétique cutanée pour améliorer la santé de l'ongle. Cette évolution impose aux fabricants une vigilance accrue sur la conformité des allégations santé et la sécurité des ingrédients utilisés dans ces nouvelles formulations hybrides.",
-    "pub_date": "2026-11-16T19:05:00+00:00"
-  },
-  {
-    "title": "Solabia appoints Muriel Koch as President and Chief Executive Officer",
-    "link": "https://www.cosmeticsbusiness.com/solabia-appoints-muriel-koch-as-president-and-chief",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Le groupe Solabia a officialisé la nomination de Muriel Koch au poste de Présidente-Directrice Générale à compter du 29 octobre 2026. Ce changement de gouvernance marque une étape stratégique pour le fournisseur international d'ingrédients destinés aux marchés de la cosmétique, de la nutrition et des sciences de la vie.",
-    "pub_date": "2026-11-16T16:38:00+00:00"
-  },
-  {
-    "title": "Solabia announces strategic partnership with Ethical Naturals Inc.",
-    "link": "https://www.cosmeticsbusiness.com/solabia-announces-strategic-partnership-with-ethical-naturals-inc",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Le groupe Solabia renforce sa position sur le marché des ingrédients nutraceutiques par une prise de participation majoritaire dans la société Ethical Naturals Inc. Cette opération stratégique permet à l'entreprise d'étendre son empreinte opérationnelle et commerciale aux États-Unis.",
-    "pub_date": "2026-11-16T16:36:00+00:00"
-  },
-  {
-    "title": "SCS awards celebrate the people and innovations advancing cosmetic science",
-    "link": "https://www.cosmeticsbusiness.com/scs-awards-celebrate-the-people-and-innovations-advancing",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La Society for Cosmetic Science (SCS) a dévoilé les lauréats de ses prix 2026, récompensant les avancées majeures en recherche d'ingrédients et en formulation. Cette distinction souligne l'excellence scientifique du secteur sans impliquer de changement réglementaire ou de risque juridique immédiat.",
-    "pub_date": "2026-11-16T15:00:00+00:00"
-  },
-  {
-    "title": "Sephora to Tropic Skincare: Inside beauty’s 2026 Christmas advert battle",
-    "link": "https://www.cosmeticsbusiness.com/inside-beautys-2026-christmas-campaigns",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Le secteur de la beauté intensifie ses stratégies marketing pour la période des fêtes 2026 avec des campagnes publicitaires à forte visibilité impliquant des célébrités et des formats créatifs variés. Cette dynamique concurrentielle souligne l'importance des enjeux de propriété intellectuelle et de conformité publicitaire dans la gestion de l'image de marque à l'échelle internationale.",
-    "pub_date": "2026-11-16T12:52:00+00:00"
-  },
-  {
-    "title": "Vaseline unveils first facial skin care range to target sun-induced melasma",
-    "link": "https://www.cosmeticsbusiness.com/vaseline-unveils-pro-derma-melasma-repair",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque Vaseline, propriété d'Unilever, étend son offre vers le segment des soins thérapeutiques du visage avec la gamme Pro Derma Melasma Repair. Ce lancement s'appuie sur une technologie brevetée, marquant une évolution stratégique vers des produits à visée dermatologique ciblée contre le mélasma.",
-    "pub_date": "2026-11-16T12:41:00+00:00"
-  },
-  {
-    "title": "Collagen in skin care: can topical creams really work?",
-    "link": "https://www.cosmeticsbusiness.com/collagen-in-skin-care-can-topical-creams-really",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article analyse la viabilité scientifique de l'intégration du collagène dans les produits de soin topiques et l'influence des innovations de la K-beauty sur ces formulations. Il s'agit d'une veille sectorielle sur l'efficacité des ingrédients cosmétiques sans implication juridique ou de sécurité immédiate.",
-    "pub_date": "2026-11-16T12:13:00+00:00"
-  },
-  {
-    "title": "The detoxifying ally for menopausal skin",
-    "link": "https://www.cosmeticsbusiness.com/the-detoxifying-ally-for-menopausal-skin",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article souligne les transformations biologiques cutanées liées à la ménopause, notamment l'accumulation de fer et de ferritine. Cette étude sectorielle met en lumière une opportunité d'innovation pour le développement de soins cosmétiques spécifiques visant à détoxifier la peau des femmes ménopausées.",
-    "pub_date": "2026-11-16T11:25:00+00:00"
-  },
-  {
-    "title": "E45 owner Karo Healthcare appoints new CEO to ‘scale the business’",
-    "link": "https://www.cosmeticsbusiness.com/e45-owner-karo-healthcare-appoints-new-ceo",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Karo Healthcare, propriétaire de la marque E45, a nommé Sue Egstrand au poste de PDG pour piloter sa stratégie de croissance européenne. Cette nomination marque une étape clé dans l'ambition du groupe de se positionner parmi les cinq principaux acteurs du secteur de la santé grand public en Europe.",
-    "pub_date": "2026-11-16T10:30:00+00:00"
-  },
-  {
-    "title": "Estée Lauder Companies and Duty Free Americas unveil beauty destination at Miami International Airport",
-    "link": "https://www.cosmeticsbusiness.com/estee-lauder-duty-free-americas-unveil-store-miami-international-airport",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Estée Lauder Companies et Duty Free Americas ont inauguré un nouvel espace de vente à l'aéroport international de Miami dans le cadre d'un partenariat stratégique renouvelé. Cette initiative vise à répondre à la demande croissante des voyageurs pour des expériences de vente au détail haut de gamme dans le secteur du travel retail.",
-    "pub_date": "2026-11-16T10:26:00+00:00"
-  },
-  {
-    "title": "CeraVe named ‘official moisturiser of Arrakis’ with Dune Part Three film tie-up",
-    "link": "https://www.cosmeticsbusiness.com/cerave-named-official-moisturiser-of-arrakis-with-dune",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque CeraVe annonce un partenariat marketing mondial avec la franchise cinématographique Dune pour la promotion de son troisième volet. Cette opération de communication stratégique ne présente aucun enjeu juridique ou de cybersécurité particulier, s'inscrivant dans une démarche classique de placement de produit et de co-branding.",
-    "pub_date": "2026-11-13T16:21:00+00:00"
-  },
-  {
-    "title": "e.l.f. Beauty targets 50% clean electricity use in product manufacturing by 2032",
-    "link": "https://www.cosmeticsbusiness.com/e-l-f-beauty-targets-50-clean-electricity-use-2032",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "e.l.f. Beauty a publié son nouveau rapport d'impact fixant un objectif de 50 % d'utilisation d'électricité propre pour la fabrication de ses produits d'ici 2032. Cette initiative s'inscrit dans une démarche volontaire de responsabilité sociétale et environnementale visant à réduire l'empreinte carbone de ses opérations industrielles.",
-    "pub_date": "2026-11-13T12:25:00+00:00"
-  },
-  {
-    "title": "Cosmetics Business picks: 7 need-to-know beauty launches for November",
-    "link": "https://www.cosmeticsbusiness.com/cb-picks-7-new-beauty-launches-nov26",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article présente une sélection de nouveaux lancements dans le secteur de la beauté pour le mois de novembre, incluant des fragrances et des extensions de gammes vers le soin corporel. Cette actualité constitue une veille sectorielle sur les tendances de consommation et le positionnement marketing des marques sans implication juridique ou cybersécurité particulière.",
-    "pub_date": "2026-11-13T12:24:00+00:00"
   }
 ]
