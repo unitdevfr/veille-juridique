@@ -1,5 +1,133 @@
 [
   {
+    "title": "CELEX:32026D2622: Décision (PESC) 2026/2622 du Conseil du 25 novembre 2026 modifiant la décision 2014/512/PESC concernant des mesures restrictives eu égard aux actions de la Russie déstabilisant la situation en Ukraine",
+    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2622",
+    "source": "EUR-Lex Actualités",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Mise à jour des mesures restrictives de l'UE à l'encontre de la Russie et assistance financière à l'Ukraine.",
+    "action_requise": "Vérifier la mise à jour des listes de sanctions pour les opérations d'import/export.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-25T23:00:00+00:00",
+    "related_sources": [
+      {
+        "source": "EUR-Lex Actualités",
+        "title": "CELEX:32026R2632: Règlement (UE) 2026/2632 du Conseil du 25 novembre 2026 modifiant le règlement (UE) n° 833/2014 concernant des mesures restrictives eu égard aux actions de la Russie déstabilisant la situation en Ukraine",
+        "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2632"
+      },
+      {
+        "source": "EUR-Lex Actualités",
+        "title": "CELEX:32026D2623: Décision d’exécution (UE) 2026/2623 du Conseil du 23 novembre 2026 modifiant la décision d’exécution (UE) 2026/919 portant approbation d’une assistance à l’Ukraine pour la mise en œuvre de la stratégie de financement ukrainienne",
+        "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2623"
+      }
+    ]
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Mozilla (25 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1616/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Publication de multiples avis de sécurité (CERT-FR) concernant des vulnérabilités critiques dans Elastic, Chrome, OpenSSL, F5, Traefik, Mozilla et Microsoft Office.",
+    "action_requise": "Appliquer les correctifs de sécurité sur les infrastructures et logiciels concernés.",
+    "echeance": "Sous 72h",
+    "cible": "RSSI",
+    "pub_date": "2026-11-25T00:00:00+00:00",
+    "related_sources": [
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans les produits Elastic (24 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1614/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans Traefik (24 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1611/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans Google Chrome (24 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1608/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans Microsoft Office (25 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1620/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans OpenSSL (24 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1613/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans les produits F5 (24 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1612/"
+      }
+    ]
+  },
+  {
+    "title": "Recommandations de sécurisation des liaisons inter-sites (25 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/dur/CERTFR-2026-DUR-001/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "L'ANSSI publie des recommandations pour sécuriser les liaisons inter-sites face à la recrudescence des compromissions de réseaux.",
+    "action_requise": "Auditer la configuration des VPN et liaisons inter-sites selon les préconisations de l'ANSSI.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-25T00:00:00+00:00"
+  },
+  {
+    "title": "Dettes fiscales d'une société : poursuivre le dirigeant même sans action en responsabilité pour insuffisance d'actif - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOTEIzTFk2YktUR3JYbXNiTU8xcTVhNEFaQUpzdFY4MHF0eHhBQ1liZEVSMGJmejZTNVNqZWM0ekdLTjJUSGE5Y1BxYUotaXRiTEk3a3BXcmlNRU95Z0dEaXZicFZ3X1AzV1BmNmRHbWNDN2J2SlBzWS1GcHM5T01kb250Y2lOaDFSdVpLSk9BUzQ4dzQyLXdEaFpPSXdDeF9Ub1BRc3JFdmNrRy1hTXp6bmRUWW1wVGlncXg3Qm1zWGVxZHlscHJQLW05QWhiMlFLdk90ZlJFMVBPX2pSc0hVVi1Ob3E4SlJFM2d1OEt1Qy0ySi04SFpWZjQ4cEhWczUwdEZ2SnBsYzlpNlJsQTQtRm9YQQ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "AUTRE",
+    "impact": "IMPORTANT",
+    "summary": "Jurisprudence permettant de poursuivre le dirigeant pour dettes fiscales sans action en responsabilité pour insuffisance d'actif.",
+    "action_requise": "Informer la direction générale des risques accrus de responsabilité personnelle.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-24T06:47:00+00:00"
+  },
+  {
+    "title": "CEDH : une avocate interdite de représentation devant la Cour pour usage d'IA - Le Monde du Droit",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSXZSMmkwSEt0SXhtMGF1RmduNnBDa2ZFa3daazVnU2h4THJoblN6SnBJOGMxX0FYYTlfZTNoQ2xIM0lYQWZyeTQ2bnhZWU5HckJyeE95SnN4WXRfNTZkX3ZqRTR2SUtyenF2czNNTkdVbmcwTEc5bWl2d1hBMFRvcjhPTl85Sk81YWZDSGZjVlNlemZ4WnZzanYtR3FRaWlvbnR5YVU0Z21HWHVieUNJTjZWd3NBajZEQ1dPQmR0cEp2QQ?oc=5",
+    "source": "Le Monde du Droit",
+    "category": "PI",
+    "impact": "IMPORTANT",
+    "summary": "La CEDH a sanctionné une avocate pour l'usage non autorisé ou inapproprié d'outils d'intelligence artificielle dans le cadre de procédures judiciaires. Cette décision souligne les risques déontologiques et de fiabilité liés à l'usage de l'IA générative par les professionnels du droit.",
+    "action_requise": "Sensibiliser les équipes juridiques sur les risques liés à l'usage de l'IA et définir une charte d'utilisation interne.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-25T07:29:41+00:00"
+  },
+  {
+    "title": "Financement par une SAS du rachat de ses propres titres : la responsabilité du président est engagée - Open Lefebvre Dalloz",
+    "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNYktUeHdjbTRIZ3o3eVpTSFZPVG1RdVFkNng2dFM1SlplU2hGRWtVdjJLOFZTYUV4Q2wwaVY3YnRObkczckQ4SU1fSHFpRnY3dWkwX3FIOVQtN292WWloNTdpRFd5amN5QkdlWWdrM3NOdGt6bjduS2tuUUVHd3dKRFQ4VmZaV1NRanA4aTNpenY4SVN0MmRoaFluTU1mZDlyTmZqa0FyNGxISWlTMTNXbXBPTGl6OTN4Qm44Z3V4cGlIY0ZkVjRwaEUzN2hicHR0UmdVMFA4bThFMzNVWF9QSFprNVY3U1c5TDUwY2F5dUtISy1rNkRLRnBR?oc=5",
+    "source": "Lefebvre Dalloz",
+    "category": "INSTITUTIONNEL",
+    "impact": "IMPORTANT",
+    "summary": "Jurisprudence confirmant la responsabilité du président de SAS en cas de financement irrégulier par la société du rachat de ses propres titres.",
+    "action_requise": "Revoir les procédures de gouvernance et de financement des opérations sur titres avec la direction financière.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-24T19:34:35+00:00"
+  },
+  {
+    "title": "Reconversion professionnelle : plus d'un an après l’ANI, l’heure de la mise en œuvre - Lefebvre Dalloz Compétences",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeXVLVlVtaklxNzgyZHFULUVFNUhtMFkwVDlLQnMxMHRwUWJpWXN1cjZqNlZmUGQtVFRINE9MQV92NVVzZnhJVnBsRzhnV1pnb1RDdVNDRHljV0NmbmE3X1BlQ3c1cmZwaXdNSkJMajhVQnV6bnpVNkNEVjloSEVESmlySFFCRGVRd2FTYlY4Vy1lUHJ5VWYxQWxOVGtTSERoQ2RVNnd1YTF4UGxMb20tb3dYc05TTGdIRkxPX2xXVXQ?oc=5",
+    "source": "Lefebvre Dalloz",
+    "category": "INSTITUTIONNEL",
+    "impact": "INFORMATIF",
+    "summary": "Point d'étape sur la mise en œuvre de l'Accord National Interprofessionnel (ANI) concernant la reconversion professionnelle.",
+    "action_requise": "Vérifier la conformité des processus RH internes avec les nouvelles dispositions de l'ANI.",
+    "echeance": "",
+    "cible": "Conformité",
+    "pub_date": "2026-11-24T08:47:53+00:00"
+  },
+  {
     "title": "CSE : analyse de quelques jurisprudences récentes - Lefebvre Dalloz Compétences",
     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNaFR6ZXNmS2dwOTkzbFRSRkFjYjFaNy1FUGZMdUQtZGs0RWlFZ3B3a0U5MUI4ZFRCd0RJY1M1aUFqVF83aHJxcE5PRW1ObDd6OGJ2YTdqeE9ZWEhoSEFxeGFQZDZNdG5fbG1lWC01TnlqendYUHFqQzQyS1dqZjNlVDZrcnJlVG1WVU50bjQ4R1hQbkh4akNCdzVR?oc=5",
     "source": "Lefebvre Dalloz",
@@ -1933,68 +2061,5 @@
     "impact": "INFORMATIF",
     "summary": "L'enseigne Sephora, filiale du groupe LVMH, prévoit l'ouverture de dix nouveaux points de vente au Royaume-Uni en 2027, portant son réseau total à 28 magasins. Cette stratégie d'expansion physique témoigne d'une volonté d'accélération de la croissance sur le marché britannique, sans implication juridique ou cybernétique immédiate.",
     "pub_date": "2026-11-17T12:26:00+00:00"
-  },
-  {
-    "title": "Meet the Maestro: For perfumer Abdulla Ajmal, fragrance is in his blood",
-    "link": "https://www.cosmeticsbusiness.com/meet-the-maestro-perfumer-abdulla-ajmal-fragrance",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article présente le parcours d'Abdulla Ajmal et la stratégie de développement de la marque Ajmal Perfumes dans le secteur de la parfumerie au Moyen-Orient. Il met en lumière l'importance culturelle et commerciale de l'oud ainsi que les perspectives d'innovation de la maison pour ses futures gammes de produits.",
-    "pub_date": "2026-11-17T11:59:00+00:00"
-  },
-  {
-    "title": "How to make an eyelash serum: IFF shares its formulation insights",
-    "link": "https://www.cosmeticsbusiness.com/how-to-make-an-eyelash-serum-iff-shares",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article détaille les aspects techniques et les ingrédients clés pour la formulation de sérums destinés à la croissance et au renforcement des cils. Cette veille sectorielle souligne les tendances de formulation tout en rappelant implicitement l'importance de la conformité réglementaire des ingrédients actifs utilisés dans les produits cosmétiques.",
-    "pub_date": "2026-11-17T11:55:00+00:00"
-  },
-  {
-    "title": "L’Occitane’s Managing Director UK and Ireland departs after four years",
-    "link": "https://www.cosmeticsbusiness.com/loccitane-managing-director-uk-and-ireland-departs",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "Dianne Tieu, directrice générale de L'Occitane pour le Royaume-Uni et l'Irlande, quitte ses fonctions après quatre ans à la tête de la filiale. Ce changement de gouvernance constitue une actualité sectorielle standard sans impact juridique ou opérationnel immédiat sur la conformité de l'entreprise.",
-    "pub_date": "2026-11-17T11:55:00+00:00"
-  },
-  {
-    "title": "E.l.f. Beauty and Twitch break GRWM Guinness World Record",
-    "link": "https://www.cosmeticsbusiness.com/elf-beauty-and-twitch-break-grwm-guinness-world-record",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "E.l.f. Beauty a établi un record mondial du plus grand événement 'Get Ready With Me' en partenariat avec la plateforme Twitch lors de la TwitchCon. Cette initiative marketing illustre l'intégration croissante des stratégies d'influence numérique dans le secteur cosmétique pour renforcer l'engagement communautaire.",
-    "pub_date": "2026-11-17T11:41:00+00:00"
-  },
-  {
-    "title": "Rhode unveils first matte blush in founder Hailey Bieber’s 30th birthday collection",
-    "link": "https://www.cosmeticsbusiness.com/rhode-unveils-first-matte-blush-in-founder-biebers-30th-birthday-capsule",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque Rhode, fondée par Hailey Bieber, élargit sa gamme de produits avec le lancement d'un blush mat et d'une pièce textile en édition limitée. Cette actualité commerciale marque une étape de développement produit pour la marque sans implication juridique ou de cybersécurité particulière.",
-    "pub_date": "2026-11-17T11:26:00+00:00"
-  },
-  {
-    "title": "A tube of this lash serum is sold every 30 seconds",
-    "link": "https://www.cosmeticsbusiness.com/a-tube-of-this-lash-serum-is-sold",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'article relate l'origine entrepreneuriale d'un sérum pour cils, devenu un succès commercial majeur après avoir été initialement conçu comme un cadeau personnel. Cette actualité sectorielle ne présente aucun enjeu juridique ou de cybersécurité immédiat, se limitant à une mise en avant marketing d'un produit cosmétique.",
-    "pub_date": "2026-11-17T10:20:00+00:00"
-  },
-  {
-    "title": "Voici les nouvelles publications du Village de la justice.",
-    "link": "http://smtp.legiteam.net/newsletters/index.php?action=message&c=4071&message=4145",
-    "source": "Village de la Justice",
-    "category": "AUTRE",
-    "impact": "INFORMATIF",
-    "summary": "Cette publication du Village de la Justice constitue une revue de presse généraliste couvrant l'actualité juridique, le management et les évolutions de carrière. Elle ne présente pas d'enjeu juridique spécifique ou de risque cybersécurité immédiat, mais sert d'outil de veille sectorielle pour les professionnels du droit.",
-    "pub_date": "2026-11-18T08:25:14.176737+00:00"
   }
 ]
