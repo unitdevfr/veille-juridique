@@ -1,5 +1,182 @@
 [
   {
+    "title": "Vulnérabilité dans Palo Alto Networks PAN-OS (25 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1621/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "La vulnérabilité CVE-2026-43600 affectant Palo Alto Networks PAN-OS est confirmée comme étant activement exploitée par des attaquants.",
+    "action_requise": "Appliquer immédiatement les correctifs ou mesures de contournement préconisées par Palo Alto Networks.",
+    "echeance": "Immédiat",
+    "cible": "RSSI",
+    "pub_date": "2026-11-25T00:00:00+00:00"
+  },
+  {
+    "title": "Vulnérabilité dans Drupal (26 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1623/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "CRITIQUE",
+    "summary": "Une vulnérabilité dans Drupal (CVE-2026-136716) permet un contournement de la politique de sécurité et fait l'objet d'une exploitation active.",
+    "action_requise": "Appliquer immédiatement les correctifs de sécurité fournis par l'éditeur.",
+    "echeance": "Sous 72h",
+    "cible": "RSSI",
+    "pub_date": "2026-11-26T00:00:00+00:00"
+  },
+  {
+    "title": "Givaudan, Firmenich and IFF fined more than €500 million over fragrance cartel",
+    "link": "https://www.cosmeticsbusiness.com/givaudan-firmenich-iff-fined-more-500million-fragrance-cartel",
+    "source": "Cosmetics Business",
+    "category": "ANTICOR",
+    "impact": "CRITIQUE",
+    "summary": "Sanction de plus de 500 millions d'euros infligée par la Commission européenne et la CMA aux leaders du secteur des parfums pour entente illicite.",
+    "action_requise": "Renforcer les programmes de conformité concurrence et sensibiliser les équipes commerciales.",
+    "echeance": "",
+    "cible": "Juriste",
+    "pub_date": "2026-11-26T12:34:00+00:00"
+  },
+  {
+    "title": "Démarchage téléphonique : 34 635,44 € d'amende à l'encontre de la SAS MBS CONTACT pour avoir appelé des consommateurs inscrits sur Bloctel - economie.gouv.fr",
+    "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOSjVGZTgzM2FBQXJ5aDl1YnJJMGdHZ3E5Yy1rUFpob2ZOWjdNR2hCVlFGZ2FkWVQ4VlNmMl9NQVhtUThWbVlDYW1uN3NTYjgzMmVNUTEzTEEza1JoeVdxWkNMMzRiQ3pFTDdvT2lraTZUU3FqT0ktSHR6WDM5Q25PcGFsZHkzQ2M0eVpYdDNWdDNkLW8zcWtRZDlLVTBJbXZYZHRUNG10TURBWGI1Wi01aXVBY1l0YWxNeldEalNCOHhJeU9QaXZzR1gxblY5OVJ6N1pWN2poaWlfckw2NmpZLWhmNFpvWDdMVXpRRWpYYkxBY1N3dlE1VDlNZ2NVMnFKWDRVYnVqTQ?oc=5",
+    "source": "DGCCRF",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "La DGCCRF a sanctionné la société MBS CONTACT pour non-respect des règles de démarchage téléphonique auprès d'utilisateurs inscrits sur Bloctel. Cette décision rappelle l'importance de la mise à jour des listes d'opposition.",
+    "action_requise": "Vérifier la conformité des processus de prospection commerciale et la mise à jour régulière de la liste Bloctel.",
+    "echeance": "",
+    "cible": "Conformité",
+    "pub_date": "2026-11-26T11:10:43+00:00"
+  },
+  {
+    "title": "Hellenic DPA fines Teleperformance Greece EUR 100 000 for GDPR breaches",
+    "link": "https://www.edpb.europa.eu/news/hellenic-dpa-fines-teleperformance-greece-eur-100-000-for-gdpr-breaches_en",
+    "source": "EDPB (Comité Européen Data)",
+    "category": "PDP",
+    "impact": "IMPORTANT",
+    "summary": "L'autorité de protection des données grecque a infligé une amende de 100 000 € à Teleperformance Greece pour violation des principes de transparence et d'information des personnes (RGPD).",
+    "action_requise": "Auditer les mentions d'information et les procédures de transparence vis-à-vis des personnes concernées.",
+    "echeance": "",
+    "cible": "DPO",
+    "pub_date": "2026-11-25T12:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans Symfony (25 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1619/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Publication d'avis techniques (CERT-FR) concernant des vulnérabilités critiques dans les produits VMware, Schneider Electric, Symfony et Tenable Enclave Security.",
+    "action_requise": "Appliquer les correctifs de sécurité fournis par les éditeurs sur les infrastructures concernées.",
+    "echeance": "Sous 72h",
+    "cible": "RSSI",
+    "pub_date": "2026-11-25T00:00:00+00:00",
+    "related_sources": [
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans Tenable Enclave Security (25 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1615/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Multiples vulnérabilités dans les produits VMware (25 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1622/"
+      },
+      {
+        "source": "ANSSI (CERT-FR)",
+        "title": "Vulnérabilité dans les produits Schneider Electric (25 novembre 2026)",
+        "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1618/"
+      }
+    ]
+  },
+  {
+    "title": "Vulnérabilité dans Laravel (25 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1617/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Découverte d'une vulnérabilité dans le framework Laravel permettant un déni de service à distance. Une mise à jour est nécessaire pour sécuriser l'infrastructure.",
+    "action_requise": "Vérifier les versions de Laravel déployées et appliquer les correctifs de sécurité.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-25T00:00:00+00:00"
+  },
+  {
+    "title": "Multiples vulnérabilités dans les produits Tenable (26 novembre 2026)",
+    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1625/",
+    "source": "ANSSI (CERT-FR)",
+    "category": "CYBER",
+    "impact": "IMPORTANT",
+    "summary": "Multiples vulnérabilités critiques identifiées dans les produits Tenable, incluant des risques d'exécution de code à distance et d'injection SQL.",
+    "action_requise": "Auditer les instances Tenable et mettre à jour vers les versions corrigées.",
+    "echeance": "",
+    "cible": "RSSI",
+    "pub_date": "2026-11-26T00:00:00+00:00"
+  },
+  {
+    "title": "Comptes consolidés : quelles obligations pour une holding étrangère transférée en France ? - Lefebvre Dalloz Compétences",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSnh0Wll6NXpILXo1Q1BPaFpZc3IzdXhaOW5QVGs5VHc0MjBGcFhMcmstRmZsOGdpU1BDc010VTVXeGx3QmZidkdSakJDbHNEVVYxekFPNEo2SHBLbkJPRWNOQllGRnZwc1AyOE1KQk93ZVpOLTA3ZVpJc1pHWnk2emJUc1Zra18tV0pPQ1JHajgtYmNfQV8wcTFnU01pNGRMaU9jbzNCbHFERk1iaXZ0RFFab0R4S2ZDM1NFVzhzcDlIeU41UzNHRExidE5IUQ?oc=5",
+    "source": "Lefebvre Dalloz",
+    "category": "AUTRE",
+    "impact": "INFORMATIF",
+    "summary": "Veille juridique sur les obligations comptables, sociales et immobilières en entreprise.",
+    "action_requise": "Consulter les notes de synthèse pour les mises à jour des procédures internes.",
+    "echeance": "1er janvier 2027",
+    "cible": "Juriste",
+    "pub_date": "2026-11-26T12:59:58+00:00",
+    "related_sources": [
+      {
+        "source": "Lefebvre Dalloz",
+        "title": "Abondement correctif CPF : quand faut-il comptabiliser une provision ou une dette ? - Lefebvre Dalloz Compétences",
+        "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbjlaM2xWeGFsTlh5VzNJOU44eHR0M0dMZlNhSWtnc3pXRDd4REtfQmFHdlhGc3NTNVpVZ01wZGJHai1TTzBvbkZnWTlucXdyNkhyd1owaEluTlFNUHd3Q3JTc2E3aG9wTXVma0szLXhQVlp3cGMtb1dEU0VtSkZvaTZPSElaM1lUdGMyRzQzV3hpYjZ0MThXQVZNd0dLX0Zham5ZcFhZMEhBUFBwT3BZX3BXcHg2WGFvQTVRSXpjUTJJejdM?oc=5"
+      },
+      {
+        "source": "Lefebvre Dalloz",
+        "title": "Licenciement abusif : le salarié ayant dû céder des parts sociales peut être indemnisé - Open Lefebvre Dalloz",
+        "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNa0E5Q2dCV3BUcWlCcTEtU0ctZ2J3NzZtOGxXNnJMN1BMeDA3WG5XYzF2YVFHZ015ZURtbGkxOEpMY3VteUFlQzRIVW0tV0daNC12dF9oMWpmWmZJN3IwMzlFSUlfYzFYX0gxd1RCd092U3REZUVIUDRnNFE4UU1tNUt3WVBtRlJUSmFQMVZucWF1SEg1UWxVakU1WTRuand3dkh1eWVwQzN2U2NUNTVFMTNuNFZ5ekNNbzVsbDJ3RDRYSHV2SGZXQ01qaThXZlphX3V6STBINW5zR202Qzk2ZWQ4Ny00cHZwZjc3MXJDMA?oc=5"
+      },
+      {
+        "source": "Juritravail",
+        "title": "Territoires zéro chômeur de longue durée : l'expérimentation pérennisée au 1er janvier 2027 - Juritravail",
+        "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRGVBUGFLWHRTVWd5Q1NqSkNObnROb2hQUXZ1YzZvcFo3NjZkeUZzdlRMazlhMmZKSE5tUlE4eEszcHBhZWZ6THRIaG9iUVVZeDFPTG5OSGcwVzZTSnN2aGQtOFlQdWMzdldDVnNvaVZ2MEdEakd5bUlNM2lGZGNCUkVNWHZmRFRkc1huaVhKYjA0VUJDS3J2VmpubUR2SmFWcEVRWFpIVmpra0poV1ZLcTBSSWJGZjg5WWFiXzZ6ZzNROWRMM25FMlNPNTg5ZGF2MGc?oc=5"
+      },
+      {
+        "source": "Juritravail",
+        "title": "Transformer un local commercial ou des bureaux en habitation : les règles en 2026 - Juritravail",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNR1o2QmVqUmxUT1N2X3JldF9qd0x4TERaeGw5VGtZVjFRTFl6MlNmQzdRYk1PdkxXMFdMMzF6bnJSaXZqVUtQS0RqQlJpS0tXQzZVdzF5TGlqNTV1TzZab1dQOUNSMWZwenZQMmhtbFl0ZkVOUS04ZHFqamdjcE04LUxiYm8xVVI3WjdLX2ZfbC1odmZobkNsamRQSXJ1Snd5Vk05V2Nxbk5oeWU0SzY4NkJncE0wNHM1WEVpWFpkYmJxbGZYRmc?oc=5"
+      },
+      {
+        "source": "Juritravail",
+        "title": "Opposition à contrainte URSSAF : ce que change le décret du 27 juillet 2026 - Juritravail",
+        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQWlIZTBEdWlEZW11cG5uMVZFUnk5bGctbXpqVnVselpQeWZrT1Z1S3ViTXNmSFhDNTFkaDhrV2c5WVQwdUVRdmlJeExiYWRCTndMbDBIMGFvV2xUaElJTzRWZDh6YlhSRmUzc2xsM0RzQlI0eHFMSGtMRkRud0FwalBJSFZpbzFfRVFCN1V6c0hDTmUyTXl1ZnNvbE9SUjFXT3FCWmg5aXJvc2VEVEs3THlnYVhENDVXdk9oeEJR?oc=5"
+      },
+      {
+        "source": "AFJE",
+        "title": "Conférence : Entreprises sous tension - Association Française des Juristes d'Entreprise",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbF9BX0x5ZExpT085a2VIamlyak1XRHhUa3N5RnRLVEc1VXZ2SnZaSWFndzFNNC1NWVdFNHFnV3JJekt6Rm84YXpwN2JweTVsQkN5T0RyVndhekg4d3poYUl5TmpEVjZyaFF6SVhSRmllQ0locXV6di1qMmo0b1FlbnpRVXBRbUp6Z1NQbGloNS1QUQ?oc=5"
+      },
+      {
+        "source": "Lefebvre Dalloz",
+        "title": "Une semaine de jurisprudence sociale à la Cour de cassation - Open Lefebvre Dalloz",
+        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPc25MTTZQWjVEOEtkUTVqd1YwZkNvZXlZSUdMcFo0QkhQU3c4d0dPMk9aZlpIWng0LXZyM3lRQkF6NWdNYVNKaUI3dlVWRy03WVBKUlUzdGcyNjkzRkczQTczX0dOTnJQUjhuRlFzY2pNZ205LXVUZWY1OC1KWTExRlF5ZEkzRW5pQnUtbHJDWXVJanVwTU9iXzRpc3dBU1VybW5zcnp6RzBLX3hyNzd6VWhtMzhIazJZdHFwUHF4NTA4ZmNxWGNpeHdwWkRZM1hsb29mNA?oc=5"
+      },
+      {
+        "source": "AFJE",
+        "title": "Cartographie AFJE - CLM 2026 - Association Française des Juristes d'Entreprise",
+        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5PaFc0NXVXaDZhV2prVlpQZm9GcW9aYWdkMlAwTTYxS3ZDbklnQzB3Vy1vMV9nc2VhRkgwVU1pYlkxZ20yWUlhdEdRUjZuV1VWVFE4aHVHQUU?oc=5"
+      },
+      {
+        "source": "Juritravail",
+        "title": "Zone touristique internationale (ZTI) : travail le dimanche - Juritravail",
+        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPSmQ2NGJGTTdieUVYN0cwcnVYa3Y4S1FqdlpOZ21JSkk2RGxsQ1VjWVA1aUlTMmlIV3JtSmd1cllveXVHU3ZkRFREUXlmYXJ2VEMza3NWRU9zeUZjMzFhMzlwblNaYWQ3LVdfcG1KRjEzeE1nX3ptLW5QMl9va183N3VWZklYUmg3elpIbXczWkJpOXNIN0lDaTFaenFjTnlzY0NrRlNtUm1kd0Zla2RETlp1Q2cxb2djWnhKay1QZlZZN0Q0R1dvZjVyanNqQQ?oc=5"
+      },
+      {
+        "source": "Lefebvre Dalloz",
+        "title": "Clôture des comptes sociaux 2026 - Lefebvre Dalloz Compétences",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQVRjLTVJZ2Vha2JXcTFWdmR1cVNHZjRaVUdrWFhDYU1PN0FVVlAxeHZLZUp4ZlhSSk5nSnBnRDVLXzhnTDZ4SnNRdzdlWHhCdUk5ZndPUWt4azUzRmJYbk1EMkpzREwwRlhNMWNoSFRNd3JVV1FiY1VSSkR1X0F4a0lFdkJlY3ZF?oc=5"
+      }
+    ]
+  },
+  {
     "title": "CELEX:32026D2622: Décision (PESC) 2026/2622 du Conseil du 25 novembre 2026 modifiant la décision 2014/512/PESC concernant des mesures restrictives eu égard aux actions de la Russie déstabilisant la situation en Ukraine",
     "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2622",
     "source": "EUR-Lex Actualités",
@@ -1980,86 +2157,5 @@
     "impact": "IMPORTANT",
     "summary": "Une proposition de loi a été déposée à l'Assemblée nationale visant à instaurer un statut légal spécifique pour les administrateurs ad hoc chargés de représenter les mineurs. Cette initiative législative cherche à clarifier et sécuriser le cadre juridique de ces intervenants afin de mieux garantir la protection des intérêts des mineurs dans les procédures judiciaires.",
     "pub_date": "2026-11-13T06:25:09+00:00"
-  },
-  {
-    "title": "PEA et PEA-PME : modification des emplois éligibles et aménagement des modalités de fonctionnement - Le Monde du Droit",
-    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNQ2dZUVB1MVJVYVU4RkJfQVlOel85bVRHLUpSWFMyRXgtejgxZGNfZERJRDVycmpFdlFtaXNJYU1zbnZWNFhfZUYwaGNvVEJndlNiNS1JSTl5LWRYbTVYU3U2VFF3UlhyMG13cXFwYUxmaFVkZmRwYVBGWjNMbGZxSUtER2lmYVItcTdLZUVMdHU3NGZKLTBmek1kVTJkamtkZXdXcktrUDIydVpDemZKZ3ExS1BrRkw5WVVJM1E1Z1AxTE91QktCZ1c4UXhRYjFwMTQxb1Z0Smk2TEI5QlVmYTFWYlN3Zzl6d0NXUzltQ3pjTXlkNzRHNFBUVHB1ZDF5VkM0VmNR?oc=5",
-    "source": "Le Monde du Droit",
-    "category": "INSTITUTIONNEL",
-    "impact": "IMPORTANT",
-    "summary": "Le décret n° 2024-753 modifie les conditions d'éligibilité des titres aux PEA et PEA-PME, notamment en intégrant les titres émis par des plateformes de financement participatif. Cette mise à jour réglementaire impose aux gestionnaires et investisseurs d'ajuster leurs portefeuilles et leurs processus de conformité aux nouvelles règles de fonctionnement.",
-    "pub_date": "2026-11-13T06:10:02+00:00"
-  },
-  {
-    "title": "Lutte contre la fraude fiscale : à quoi s’attendre avec le PLF 2027 ? - Le Monde du Droit",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRkZ2YmtxTFhOSWpORnJUcnVLRlViWVUwcXpWaGdqZHYyZi1vOUtaVWEyX3NPQ0JDZWdlTlA5UkYzRm02el82MGhSZy1aMFptamhWRnF0UEFGT1I3ZFRINE9mWmNmb003XzNoVEMtaWQyZ2hiYU5wZ21zZjJySjU3V1RKSzFvNlpYa3JuNHNiaFBtQlJWTDNQd0hBdWxOLWpUSnJmVVFPRnpWZw?oc=5",
-    "source": "Le Monde du Droit",
-    "category": "ANTICOR",
-    "impact": "IMPORTANT",
-    "summary": "Le Projet de Loi de Finances (PLF) 2027 introduit de nouvelles mesures visant à renforcer la lutte contre la fraude fiscale. Ces dispositions impliquent une vigilance accrue pour les entreprises en matière de conformité fiscale et de transparence des données financières transmises à l'administration.",
-    "pub_date": "2026-11-13T08:15:47+00:00"
-  },
-  {
-    "title": "QPC : pouvoirs du juge des enfants en cas d'incompétence en raison de la nature criminelle des faits - Le Monde du Droit",
-    "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPS0VXem9ZWHJLNWdueVVTZjlFNGVTX01EbXduTDA4OXZrUHhfSmFiZG1pWURya19WS2pPTXY2cFFFZEcwZXZONmFmSnhTbVhzRmtTcjQ4Q1Z2Zm9MZkJ1T2JhaEF3a29femR2alE5WlcyY3hJazVTYkd2NGZpS0FhamVGWnFRNHlCeVdDYWlxT0JjRDdzMzEtZ21UUE13M2xsUU5iZDdhdENIbDVDZVZ1cXhkdkFQNDlwWEhlOWxBdktyX2hjWG9LMC1kV1poOTYySzJJaGdTbUIwd2tWTVdRaS1DZGhpVlgtRFZwWHNkNUhJVkllN1JlQWY0cw?oc=5",
-    "source": "Le Monde du Droit",
-    "category": "INSTITUTIONNEL",
-    "impact": "IMPORTANT",
-    "summary": "Le Conseil constitutionnel a été saisi d'une question prioritaire de constitutionnalité (QPC) concernant les pouvoirs du juge des enfants lorsqu'il se déclare incompétent face à des faits de nature criminelle. Cette décision clarifie l'étendue des prérogatives judiciaires dans le cadre de la procédure pénale des mineurs, impactant directement l'articulation entre les juridictions spécialisées et les cours d'assises.",
-    "pub_date": "2026-11-16T06:32:56+00:00"
-  },
-  {
-    "title": "Encadrement des actes médicaux à visée esthétique - Le Monde du Droit",
-    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQcXlaN1NUWVJCejBJSnhZMW0ySWtmeFVEcmtBTWFCUkJyWndPZ0pLamtGNmp3STlPSzYzUHRFQnBKcGFnaGNKSk4tOGQtR0QtTTAxWEVBQW1VbTdVS01TVWhtN3hpdjZHSUxTY1oxSmc4b1lpenNzZ1RhUExYVHFhM21VUXN1YXQ3YTNwRjVvV1RwVXUwUHNINlhtbFhxNUZJLTlCbGQ1VlYzdEtROGVTWGx3UFNmRkxyUGk2Sg?oc=5",
-    "source": "Le Monde du Droit",
-    "category": "COSMETIQUE",
-    "impact": "IMPORTANT",
-    "summary": "Le cadre juridique des actes médicaux à visée esthétique fait l'objet d'un renforcement pour mieux protéger les patients face aux risques accrus liés à ces pratiques. Cette évolution réglementaire impose aux professionnels une vigilance accrue sur la conformité des actes et la sécurité des produits utilisés.",
-    "pub_date": "2026-11-16T06:21:10+00:00"
-  },
-  {
-    "title": "Sanctuariser la liberté des artistes - texte N° 169",
-    "link": "http://www.senat.fr/leg/ppl26-169.html",
-    "source": "Sénat - Textes récents",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "La proposition de loi n° 169 déposée au Sénat vise à renforcer la protection juridique de la liberté de création, de diffusion et de programmation artistique. Ce texte ambitionne de sanctuariser ces libertés fondamentales face aux pressions croissantes, marquant une étape législative de réflexion sur le cadre protecteur des acteurs culturels.",
-    "pub_date": "2026-11-18T02:03:35+00:00"
-  },
-  {
-    "title": "CELEX:32026D2554: Décision (PESC) 2026/2554 du Conseil du 16 novembre 2026 modifiant la décision (PESC) 2023/2682 relative à une mesure d’assistance au titre de la facilité européenne pour la paix afin de soutenir les acteurs militaires et les marines des États côtiers participant à des opérations de sûreté maritime dans le golfe de Guinée",
-    "link": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2554",
-    "source": "EUR-Lex Actualités",
-    "category": "INSTITUTIONNEL",
-    "impact": "INFORMATIF",
-    "summary": "La décision (PESC) 2026/2554 modifie le cadre de la facilité européenne pour la paix afin de renforcer le soutien opérationnel aux forces navales des États côtiers du golfe de Guinée. Cette mesure vise à consolider les capacités de sûreté maritime dans une zone stratégique, sans imposer de nouvelles obligations réglementaires directes aux entreprises privées.",
-    "pub_date": "2026-11-16T23:00:00+00:00"
-  },
-  {
-    "title": "La CNIL a prononcé 38 nouvelles sanctions en procédure simplifiée depuis juin 2026",
-    "link": "https://www.cnil.fr/fr/38-sanctions-simplifiees",
-    "source": "CNIL",
-    "category": "PDP",
-    "impact": "INFORMATIF",
-    "summary": "La CNIL a rendu public un bilan faisant état de 38 sanctions prononcées via la procédure simplifiée entre juin et octobre 2026. Ces décisions concernent principalement des manquements liés aux cookies, à la sécurité des données et à la prospection commerciale, soulignant une activité de contrôle soutenue basée en grande partie sur des plaintes d'utilisateurs.",
-    "pub_date": "2026-11-17T12:00:00+00:00"
-  },
-  {
-    "title": "The Ordinary will close on Black Friday to prioritise blood donations over ‘hyperconsumerism’",
-    "link": "https://www.cosmeticsbusiness.com/the-ordinary-will-close-on-black-friday-to",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "La marque The Ordinary, propriété du groupe Estée Lauder, a annoncé la fermeture de ses points de vente et de son site e-commerce lors du Black Friday. Cette initiative vise à promouvoir le don de sang aux États-Unis, au Canada, au Royaume-Uni et au Danemark, en s'opposant symboliquement à la culture de l'hyperconsommation.",
-    "pub_date": "2026-11-17T14:00:00+00:00"
-  },
-  {
-    "title": "Sephora eyes ten more UK stores in 2027 to accelerate growth",
-    "link": "https://www.cosmeticsbusiness.com/sephora-eyes-ten-more-uk-stores-in-2027",
-    "source": "Cosmetics Business",
-    "category": "COSMETIQUE",
-    "impact": "INFORMATIF",
-    "summary": "L'enseigne Sephora, filiale du groupe LVMH, prévoit l'ouverture de dix nouveaux points de vente au Royaume-Uni en 2027, portant son réseau total à 28 magasins. Cette stratégie d'expansion physique témoigne d'une volonté d'accélération de la croissance sur le marché britannique, sans implication juridique ou cybernétique immédiate.",
-    "pub_date": "2026-11-17T12:26:00+00:00"
   }
 ]
